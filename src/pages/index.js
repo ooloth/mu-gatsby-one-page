@@ -12,7 +12,7 @@ export default IndexPage
 
 /*
 
-See below for all supporting imports, subcomponents & queries
+Supporting imports, subcomponents & queries...
 
 */
 
@@ -86,57 +86,85 @@ import Isotope from 'isotope-layout'
 const IsotopeTests = props => (
   <section>
     <h2>Isotope Test</h2>
-    <IsotopeContainer>
-      {isotopeItems.map(item => {
-        return (
-          <div key={item.key} className={item.classes}>
-            <Image sizes={props.sizes} />
-          </div>
-        )
-      })}
-    </IsotopeContainer>
+    <IsotopeContainer sizes={props.sizes} />
   </section>
 )
 
 const isotopeItems = [
-  { key: 1, classes: `w-25` },
-  { key: 2, classes: `w-50` },
-  { key: 3, classes: `w-25` },
-  { key: 4, classes: `w-25` },
-  { key: 5, classes: `w-25` },
-  { key: 6, classes: `w-50` }
+  { key: 1, classes: `js-isotope-item js-all js-category-1 w-25` },
+  { key: 2, classes: `js-isotope-item js-all js-category-2 w-50` },
+  { key: 3, classes: `js-isotope-item js-all js-category-2 w-25` },
+  { key: 4, classes: `js-isotope-item js-all js-category-1 w-25` },
+  { key: 5, classes: `js-isotope-item js-all js-category-1 w-25` },
+  { key: 6, classes: `js-isotope-item js-all js-category-2 w-50` }
 ]
+
+const FilterButtons = props => (
+  <div className="js-filter-buttons">
+    <button onClick={category => props.handleFilter((category = 'js-all'))} className="js-filter-button">
+      All
+    </button>
+    <button onClick={category => props.handleFilter((category = 'js-category-1'))} className="js-filter-button">
+      Category 1
+    </button>
+    <button onClick={category => props.handleFilter((category = 'js-category-2'))} className="js-filter-button">
+      Category 2
+    </button>
+  </div>
+)
 
 // Isotope Container (logic only)
 class IsotopeContainer extends React.Component {
   render() {
-    return <div>{this.props.children}</div>
+    return (
+      <div>
+        <FilterButtons handleFilter={this.filterItems} />
+        <div ref={node => (this.node = node)}>
+          {isotopeItems.map(item => {
+            return (
+              <div key={item.key} className={item.classes}>
+                <Image sizes={this.props.sizes} />
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
   }
 
-  state = { isotope: null }
+  state = { isotope: null, category: `.js-all` }
 
   // Set up Isotope here
   componentDidMount() {
-    const node = ReactDOM.findDOMNode(this)
-    // console.info(node)
+    // const node = ReactDOM.findDOMNode(this)
+    // const node =
+    console.info('node:', this.node)
 
     if (!this.state.isotope) {
       // console.log(`No Isotope! Let's initialize it.`)
       this.setState({
-        isotope: new Isotope(node)
+        isotope: new Isotope(this.node)
       })
       // console.log(`Here it is: ${this.state.isotope}`)
     } else {
       // console.log(`Already have Isotope! Let's reload it.`)
       this.state.isotope.reloadItems()
     }
+    this.filterItems()
   }
 
   // Update Isotope layout here
   componentDidUpdate() {
     if (this.state.isotope) {
-      this.state.isotope.reloadItems()
-      this.state.isotope.layout()
+      this.state.isotope.arrange({ filter: this.state.category })
+    }
+  }
+
+  filterItems = category => {
+    if (this.state.isotope) {
+      this.setState({
+        category: `.${category}`
+      })
     }
   }
 }
