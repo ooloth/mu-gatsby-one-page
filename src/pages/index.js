@@ -1,9 +1,10 @@
 const IndexPage = ({ data }) => (
-  <div>
+  <div className="tc">
     <h1>My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
-    <Slider sizes={data.placeholderImage.sizes} />
+    <ReactSlick sizes={data.placeholderImage.sizes} />
+    <IsotopeTests sizes={data.placeholderImage.sizes} />
   </div>
 )
 
@@ -20,7 +21,7 @@ See below for all supporting imports, subcomponents & queries
 import React from 'react'
 import Link from 'gatsby-link'
 
-/* Image Tests */
+/* Gatsby-Image Tests */
 
 import Image from 'gatsby-image'
 
@@ -31,13 +32,13 @@ const ImageTests = props => (
   </section>
 )
 
-/* Sliders */
+/* React-Slick Tests */
 
 import Slick from 'react-slick'
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
-class Slider extends React.Component {
+class ReactSlick extends React.Component {
   render() {
     const settings = {
       dots: true,
@@ -69,6 +70,78 @@ class Slider extends React.Component {
   }
 }
 
+/* 
+
+Isotope Test 
+
+- to explain how this setup works, see Hubert's answer here: https://stackoverflow.com/questions/25135261/react-js-and-isotope-js/29866950
+
+- as an alternative, use: https://github.com/eiriklv/react-masonry-component
+
+*/
+
+import ReactDOM from 'react-dom'
+import Isotope from 'isotope-layout'
+
+const IsotopeTests = props => (
+  <section>
+    <h2>Isotope Test</h2>
+    <IsotopeContainer>
+      {isotopeItems.map(item => {
+        return (
+          <div key={item.key} className={item.classes}>
+            <Image sizes={props.sizes} />
+          </div>
+        )
+      })}
+    </IsotopeContainer>
+  </section>
+)
+
+const isotopeItems = [
+  { key: 1, classes: `w-25` },
+  { key: 2, classes: `w-50` },
+  { key: 3, classes: `w-25` },
+  { key: 4, classes: `w-25` },
+  { key: 5, classes: `w-25` },
+  { key: 6, classes: `w-50` }
+]
+
+// Isotope Container (logic only)
+class IsotopeContainer extends React.Component {
+  render() {
+    return <div>{this.props.children}</div>
+  }
+
+  state = { isotope: null }
+
+  // Set up Isotope here
+  componentDidMount() {
+    const node = ReactDOM.findDOMNode(this)
+    // console.info(node)
+
+    if (!this.state.isotope) {
+      // console.log(`No Isotope! Let's initialize it.`)
+      this.setState({
+        isotope: new Isotope(node)
+      })
+      // console.log(`Here it is: ${this.state.isotope}`)
+    } else {
+      // console.log(`Already have Isotope! Let's reload it.`)
+      this.state.isotope.reloadItems()
+    }
+  }
+
+  // Update Isotope layout here
+  componentDidUpdate() {
+    if (this.state.isotope) {
+      this.state.isotope.reloadItems()
+      this.state.isotope.layout()
+    }
+  }
+}
+
+// Index page queries
 export const query = graphql`
   query BlurUpQuery {
     placeholderImage: imageSharp(id: { regex: "/placeholder/" }) {

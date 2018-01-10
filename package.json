@@ -15,6 +15,7 @@
     "gatsby-plugin-styled-components": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-sharp": "^1.6.16",
+    "isotope-layout": "^3.0.5",
     "object-fit-images": "^3.2.3",
     "react-icons": "^2.2.7",
     "react-slick": "^0.16.0",
