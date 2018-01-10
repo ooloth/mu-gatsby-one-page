@@ -28,7 +28,7 @@ import '../../node_modules/tachyons/css/tachyons.min.css'
 // import './index.css'
 
 const Layout = ({ children, data }) => (
-  <div className="bg-yellow">
+  <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
