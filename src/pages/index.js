@@ -5,6 +5,7 @@ const IndexPage = ({ data }) => (
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
     <IsotopeTests sizes={data.placeholderImage.sizes} />
+    <div className="pv7" />
   </div>
 )
 
@@ -72,7 +73,7 @@ class ReactSlick extends React.Component {
 
 /* 
 
-Isotope Test 
+Isotope Test (with filtering + "load more")
 
 - to explain how this setup works, see Hubert's answer here: https://stackoverflow.com/questions/25135261/react-js-and-isotope-js/29866950
 
@@ -91,36 +92,63 @@ const IsotopeTests = props => (
 )
 
 const isotopeItems = [
-  { key: 1, classes: `js-isotope-item js-all js-category-1 w-25` },
-  { key: 2, classes: `js-isotope-item js-all js-category-2 w-50` },
-  { key: 3, classes: `js-isotope-item js-all js-category-2 w-25` },
-  { key: 4, classes: `js-isotope-item js-all js-category-1 w-25` },
-  { key: 5, classes: `js-isotope-item js-all js-category-1 w-25` },
-  { key: 6, classes: `js-isotope-item js-all js-category-2 w-50` }
+  { key: 1, category: `category-1`, classes: `js-isotope-item all category-1 w-25 visible` },
+  { key: 2, category: `category-2`, classes: `js-isotope-item all category-2 w-50 visible` },
+  { key: 3, category: `category-2`, classes: `js-isotope-item all category-2 w-25 visible` },
+  { key: 4, category: `category-1`, classes: `js-isotope-item all category-1 w-25 visible` },
+  { key: 5, category: `category-1`, classes: `js-isotope-item all category-1 w-25 visible` },
+  { key: 6, category: `category-2`, classes: `js-isotope-item all category-2 w-50 visible` }
 ]
 
 const FilterButtons = props => (
   <div className="js-filter-buttons">
-    <button onClick={category => props.handleFilter((category = 'js-all'))} className="js-filter-button">
+    <button onClick={category => props.handleFilter((category = 'all'))} className="js-filter-button">
       All
     </button>
-    <button onClick={category => props.handleFilter((category = 'js-category-1'))} className="js-filter-button">
+    <button onClick={category => props.handleFilter((category = 'category-1'))} className="js-filter-button">
       Category 1
     </button>
-    <button onClick={category => props.handleFilter((category = 'js-category-2'))} className="js-filter-button">
+    <button onClick={category => props.handleFilter((category = 'category-2'))} className="js-filter-button">
       Category 2
     </button>
   </div>
 )
 
-// Isotope Container (logic only)
+// Isotope Container (logic for initialization + filtering + "load more")
 class IsotopeContainer extends React.Component {
   render() {
+    // Update classes on each Isotope item (to show the right category and # of items)
+
+    let counter = 0
+    // console.log(`category`, category)
+
+    const allItemsWithClassesUpdated = this.state.allItems.map(item => {
+      // Add "visible" class if item is right category and # limit hasn't been reached
+      if (
+        (item.category === this.state.category.substring(1) || this.state.category === `.all`) &&
+        counter < this.state.howManyToShow
+      ) {
+        const classList = item.classes.replace(`hidden`, `visible`)
+        item.classes = classList
+
+        // Increment counter
+        counter++
+
+        console.log(`counter`, counter)
+
+        // Otherwise, remove "visible class"
+      } else {
+        const classList = item.classes.replace(`visible`, `hidden`)
+        item.classes = classList
+      }
+      return item
+    })
+
     return (
       <div>
         <FilterButtons handleFilter={this.filterItems} />
         <div ref={node => (this.node = node)}>
-          {isotopeItems.map(item => {
+          {allItemsWithClassesUpdated.map((item, index) => {
             return (
               <div key={item.key} className={item.classes}>
                 <Image sizes={this.props.sizes} />
@@ -128,44 +156,82 @@ class IsotopeContainer extends React.Component {
             )
           })}
         </div>
+        {this.state.showLoadMoreBtn && <button onClick={this.showMoreItems}>Load more</button>}
       </div>
     )
   }
 
-  state = { isotope: null, category: `.js-all` }
+  state = {
+    isotope: null,
+    allItems: isotopeItems,
+    activeCategoryItems: isotopeItems,
+    category: `.all`,
+    initialNumber: 2,
+    increment: 2,
+    howManyToShow: 2,
+    showLoadMoreBtn: true
+  }
 
-  // Set up Isotope here
+  // Initialize Isotope
   componentDidMount() {
-    // const node = ReactDOM.findDOMNode(this)
-    // const node =
-    console.info('node:', this.node)
-
     if (!this.state.isotope) {
-      // console.log(`No Isotope! Let's initialize it.`)
       this.setState({
         isotope: new Isotope(this.node)
       })
-      // console.log(`Here it is: ${this.state.isotope}`)
     } else {
-      // console.log(`Already have Isotope! Let's reload it.`)
-      this.state.isotope.reloadItems()
+      this.state.isotope.arrange({ filter: `.visible` })
     }
-    this.filterItems()
   }
 
-  // Update Isotope layout here
+  // This is what actually updates Isotope (after state changes trigger a new render)
   componentDidUpdate() {
     if (this.state.isotope) {
-      this.state.isotope.arrange({ filter: this.state.category })
+      this.state.isotope.arrange({ filter: `.visible` })
     }
   }
 
   filterItems = category => {
     if (this.state.isotope) {
+      // To get the length of the activeCategoryItems array for the showMoreItems() method, filter allItems by the active category
+      let categoryItems = null
+      if (category === `all`) {
+        categoryItems = this.state.allItems
+      } else {
+        categoryItems = this.state.allItems.filter(item => item.category === category)
+      }
+
+      // Determine whether to show the "Load More" button
+      let showLoadMoreBtn = true
+      if (this.state.initialNumber >= categoryItems.length) {
+        showLoadMoreBtn = false
+      }
+
+      // Update the state (triggers render() + componentDidUpdate())
       this.setState({
-        category: `.${category}`
+        category: `.${category}`,
+        howManyToShow: this.state.initialNumber,
+        activeCategoryItems: categoryItems,
+        showLoadMoreBtn: showLoadMoreBtn
       })
     }
+  }
+
+  showMoreItems = () => {
+    // Increment the items showing by the increment
+    let newNumberToShow = this.state.howManyToShow + this.state.increment
+    let showLoadMoreBtn = true
+
+    // Cap the items showing to the total items in the active category
+    if (newNumberToShow >= this.state.activeCategoryItems.length) {
+      newNumberToShow = this.state.activeCategoryItems.length
+      showLoadMoreBtn = false
+    }
+
+    // Update the state (triggers render() + componentDidUpdate())
+    this.setState({
+      howManyToShow: newNumberToShow,
+      showLoadMoreBtn: showLoadMoreBtn
+    })
   }
 }
 
