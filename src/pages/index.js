@@ -434,3 +434,14 @@ React ScrollReveal Test
 //     interval: 100
 //   }
 // ])(Images)
+
+// Queries for index.js images...
+export const query = graphql`
+  query IndexPageQuery {
+    placeholderImage: imageSharp(id: { regex: "/placeholder/" }) {
+      sizes(maxWidth: 5000) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
