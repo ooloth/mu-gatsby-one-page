@@ -8,16 +8,13 @@
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === 'build-html') {
-    config.loader(
-      'null',
-      {
-        test: /isotope-layout/,
-        loader: 'null-loader'
-      },
-      {
-        test: /scrollreveal/,
-        loader: 'null-loader'
-      }
-    )
+    config.loader('null', {
+      test: /isotope-layout/,
+      loader: 'null-loader'
+    })
+    config.loader('null', {
+      test: /scrollreveal/,
+      loader: 'null-loader'
+    })
   }
 }
