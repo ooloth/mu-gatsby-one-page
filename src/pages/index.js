@@ -7,8 +7,6 @@ const IndexPage = ({ data }) => (
     <IsotopeTests sizes={data.placeholderImage.sizes} />
     {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
     <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
-    {/* <ReactScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
-    <ReactRevealTests sizes={data.placeholderImage.sizes} />
     <div className="pv7" />
   </div>
 )
@@ -436,57 +434,3 @@ React ScrollReveal Test
 //     interval: 100
 //   }
 // ])(Images)
-
-/*
-
-React-Reveal Test
-
-- see docs: https://github.com/rnosov/react-reveal
-- see example: https://github.com/rnosov/react-reveal-demo/blob/master/src/App.js
-
-*/
-
-import { Fade, Flip, Rotate, Zoom } from 'react-reveal'
-import placeholder from '../images/placeholder.jpg'
-
-const ReactRevealTests = props => (
-  <section className="bg-lightest-blue pv5">
-    <h2>React-Reveal Test</h2>
-    <h3>Fade animations</h3>
-    <div className="flex-ns">
-      <Fade bottom delay={0} duration={1000} className="w-third-ns">
-        <Image sizes={props.sizes} />
-      </Fade>
-      <Fade bottom delay={250} duration={1000} className="w-third-ns">
-        <Image sizes={props.sizes} />
-      </Fade>
-      <Fade bottom delay={500} duration={1000} className="w-third-ns">
-        <Image sizes={props.sizes} />
-      </Fade>
-    </div>
-
-    <h3>Zoom animations</h3>
-    <div className="flex-ns">
-      <Zoom delay={0} duration={1000} className="w-third-ns">
-        <Image sizes={props.sizes} />
-      </Zoom>
-      <Zoom delay={250} duration={1000} className="w-third-ns">
-        <Image sizes={props.sizes} />
-      </Zoom>
-      <Zoom delay={500} duration={1000} className="w-third-ns">
-        <Image sizes={props.sizes} />
-      </Zoom>
-    </div>
-  </section>
-)
-
-// Index page queries
-export const query = graphql`
-  query BlurUpQuery {
-    placeholderImage: imageSharp(id: { regex: "/placeholder/" }) {
-      sizes(maxWidth: 5211) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  }
-`
