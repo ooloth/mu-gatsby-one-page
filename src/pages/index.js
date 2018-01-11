@@ -5,6 +5,10 @@ const IndexPage = ({ data }) => (
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
     <IsotopeTests sizes={data.placeholderImage.sizes} />
+    {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
+    <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
+    {/* <ReactScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
+    <ReactRevealTests sizes={data.placeholderImage.sizes} />
     <div className="pv7" />
   </div>
 )
@@ -81,7 +85,6 @@ Isotope Test (with filtering + "load more")
 
 */
 
-import ReactDOM from 'react-dom'
 import Isotope from 'isotope-layout'
 
 const IsotopeTests = props => (
@@ -234,6 +237,245 @@ class IsotopeContainer extends React.Component {
     })
   }
 }
+
+/*
+
+ScrollReveal Tests
+
+- see solution from owner on GitHub: https://github.com/jlmakes/scrollreveal/issues/218
+- see his demo: https://codesandbox.io/s/z2wqk3vm1l
+
+*/
+
+import { findDOMNode } from 'react-dom'
+import ScrollReveal from 'scrollreveal'
+
+// Stateless functional component won't have refs.
+// https://reactjs.org/docs/refs-and-the-dom.html#refs-and-functional-components
+
+// const Item = ({ content }) => <li>{content}</li> // doesn’t work!
+
+// class Item extends React.Component {
+//   render() {
+//     return <li>{this.props.content}</li>
+//   }
+// }
+
+// const List = ({ children }) => (
+//   <div>
+//     <h3>List:</h3>
+//     {children}
+//   </div>
+// )
+
+// // ScrollReveal HOC
+// const WithScrollReveal = WrappedComponent =>
+//   class extends React.Component {
+//     // constructor(props) {
+//     //   super(props)
+//     //   this.target = []
+//     // }
+//     // componentDidMount() {
+//     //   ScrollReveal().reveal(this.target, this.props.options, this.props.interval)
+//     // }
+//     componentWillUnmount() {
+//       ScrollReveal().clean(this.childNodes)
+//     }
+//     // render() {
+//     //   const children = React.Children.map(this.props.children, child =>
+//     //     React.cloneElement(child, {
+//     //       ref: c => this.target.push(findDOMNode(c))
+//     //     })
+//     //   )
+//     //   return <WrappedComponent {...this.props}>{children}</WrappedComponent>
+//     // }
+
+//     bindRef(c) {
+//       this.component = c
+//     }
+
+//     componentDidMount() {
+//       const domElement = findDOMNode(this.component)
+//       ScrollReveal().reveal(domElement, this.props.options, this.props.interval)
+//     }
+
+//     render() {
+//       const that = this
+//       return (
+//         <WrappedComponent
+//           {...this.props}
+//           ref={function(c) {
+//             that.bindRef(c)
+//           }}
+//         />
+//       )
+//     }
+//   }
+
+// const RevealedList = WithScrollReveal(List)
+
+// const ScrollRevealTests = () => (
+//   <section className="bg-near-white pv5">
+//     <h2>ScrollReveal Test</h2>
+//     <RevealedList options={{ distance: '50px' }} interval={500}>
+//       <Item content="foo" />
+//       <Item content="bar" />
+//       <Item content="jam" />
+//     </RevealedList>
+//   </section>
+// )
+
+/*
+
+ScrollReveal Test #2
+
+- see: https://andrewshiau.wordpress.com/2017/04/02/use-scrollreveal-js-on-a-react-component/
+
+*/
+
+const ScrollRevealTest2 = props => (
+  <section className="pv5">
+    <h2>ScrollReveal Test #2</h2>
+    <RevealedComponent
+      sizes={props.sizes}
+      options={{
+        delay: '0',
+        duration: '1000',
+        distance: '40px',
+        reset: false
+      }}
+      interval={0}
+    />
+  </section>
+)
+
+// HOC for ScrollReveal: wrap the components to reveal like this: reveal(MyComponent)
+const reveal = WrappedComponent => {
+  return class RevealEnhancer extends React.Component {
+    bindRef(c) {
+      this.component = c
+    }
+
+    componentDidMount() {
+      const domElement = findDOMNode(this.component)
+      console.log(`options`, this.props.options)
+      ScrollReveal().reveal(domElement, this.props.options, this.props.interval)
+    }
+
+    render() {
+      const that = this
+      return (
+        <WrappedComponent
+          {...this.props}
+          ref={function(c) {
+            that.bindRef(c)
+          }}
+        />
+      )
+    }
+  }
+}
+
+class MyComponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <Image sizes={this.props.sizes} />
+      </div>
+    )
+  }
+}
+
+const RevealedComponent = reveal(MyComponent)
+
+/*
+
+React ScrollReveal Test
+
+*/
+
+// import withScrollReveal from 'react-scrollreveal'
+
+// const ReactScrollRevealTests = props => (
+//   <div>
+//     <h2>React ScrollReveal Test</h2>
+//     <FlyingImages sizes={props.sizes} />
+//   </div>
+// )
+
+// const Images = props => (
+//   <div className="flex-ns" ref={props.animationContainerReference}>
+//     <div className="sr-item--sequence w-third-ns">
+//       <Image sizes={props.sizes} />
+//     </div>
+//     <div className="sr-item--sequence w-third-ns">
+//       <Image sizes={props.sizes} />
+//     </div>
+//     <div className="sr-item--sequence w-third-ns">
+//       <Image sizes={props.sizes} />
+//     </div>
+//   </div>
+// )
+
+// const FlyingImages = withScrollReveal([
+//   {
+//     selector: '.sr-item',
+//     options: {
+//       reset: true
+//     }
+//   },
+//   {
+//     selector: '.sr-item--sequence',
+//     options: {
+//       reset: true,
+//       delay: 400
+//     },
+//     interval: 100
+//   }
+// ])(Images)
+
+/*
+
+React-Reveal Test
+
+- see docs: https://github.com/rnosov/react-reveal
+- see example: https://github.com/rnosov/react-reveal-demo/blob/master/src/App.js
+
+*/
+
+import { Fade, Flip, Rotate, Zoom } from 'react-reveal'
+import placeholder from '../images/placeholder.jpg'
+
+const ReactRevealTests = props => (
+  <section className="bg-lightest-blue pv5">
+    <h2>React-Reveal Test</h2>
+    <h3>Fade animations</h3>
+    <div className="flex-ns">
+      <Fade bottom delay={0} duration={1000} className="w-third-ns">
+        <Image sizes={props.sizes} />
+      </Fade>
+      <Fade bottom delay={250} duration={1000} className="w-third-ns">
+        <Image sizes={props.sizes} />
+      </Fade>
+      <Fade bottom delay={500} duration={1000} className="w-third-ns">
+        <Image sizes={props.sizes} />
+      </Fade>
+    </div>
+
+    <h3>Zoom animations</h3>
+    <div className="flex-ns">
+      <Zoom delay={0} duration={1000} className="w-third-ns">
+        <Image sizes={props.sizes} />
+      </Zoom>
+      <Zoom delay={250} duration={1000} className="w-third-ns">
+        <Image sizes={props.sizes} />
+      </Zoom>
+      <Zoom delay={500} duration={1000} className="w-third-ns">
+        <Image sizes={props.sizes} />
+      </Zoom>
+    </div>
+  </section>
+)
 
 // Index page queries
 export const query = graphql`
