@@ -329,7 +329,10 @@ import ScrollReveal from 'scrollreveal'
 
 ScrollReveal Test #2
 
-- see: https://andrewshiau.wordpress.com/2017/04/02/use-scrollreveal-js-on-a-react-component/
+- see the code that worked in the end: https://andrewshiau.wordpress.com/2017/04/02/use-scrollreveal-js-on-a-react-component/
+
+- see solution from owner on GitHub (didn't work for me...): https://github.com/jlmakes/scrollreveal/issues/218
+- see his demo: https://codesandbox.io/s/z2wqk3vm1l
 
 */
 
