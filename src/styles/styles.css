@@ -590,9 +590,12 @@ button,
   cursor: pointer;
 }
 
-/* TODO: add custom reset styles here */
+/* TODO: add/import any custom reset styles here */
 
-/* TODO: add third party styles here? */
+/* TODO: when postCSS is working, import and customize third party styles here */
+/* @import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css'; */
+
 .slick-slide {
   border: solid 5px red;
 }
@@ -613,7 +616,7 @@ button,
   * @import "components/forms";
   */
 
-/* TODO: add custom component classes here (using @apply class clusters) */
+/* TODO: add/import custom component classes here (using @apply class clusters) */
 
 /**
   * This injects all of Tailwind's utility classes, generated based on your
@@ -4882,7 +4885,7 @@ button,
   * @import "utilities/skew-transforms";
   */
 
-/* TODO: add custom utility classes here */
+/* TODO: add/import custom utility classes here */
 
 @media (min-width: 36em) {
   .sm\:list-reset {

@@ -13,17 +13,22 @@ const IndexPage = ({ data }) => (
 
 export default IndexPage
 
-/*
+/* 
 
-Supporting imports, subcomponents & queries...
+Vendor Imports 
 
 */
-
-/* General Imports */
 
 import React from 'react'
 import Link from 'gatsby-link'
 
+/*
+
+Custom Imports
+
+*/
+
+// TODO: drop Babel version after postCSS processing works...
 import theme from '../styles/tailwind-babel'
 // import theme from '../styles/tailwind'
 console.log(`Tailwind colors: ${theme.colors.black}`)
@@ -42,8 +47,6 @@ const ImageTests = props => (
 /* React-Slick Tests */
 
 import Slick from 'react-slick'
-import '../../node_modules/slick-carousel/slick/slick.css'
-import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
 class ReactSlick extends React.Component {
   render() {
@@ -440,7 +443,12 @@ React ScrollReveal Test
 //   }
 // ])(Images)
 
-// Queries for index.js images...
+/* 
+
+Index Page Queries
+
+*/
+
 export const query = graphql`
   query IndexPageQuery {
     placeholderImage: imageSharp(id: { regex: "/placeholder/" }) {
