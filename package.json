@@ -22,17 +22,18 @@
     "scrollreveal": "^3.3.6",
     "shortid": "^2.2.8",
     "styled-components": "^2.4.0",
-    "tachyons": "^4.9.0"
+    "tachyons": "^4.9.0",
+    "tailwindcss": "^0.4.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "tailwind":
+      "./node_modules/.bin/tailwind build ./src/styles/tailwind.css -c ./src/styles/tailwind.js -o ./src/styles/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

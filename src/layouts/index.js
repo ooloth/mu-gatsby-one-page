@@ -24,8 +24,9 @@ import styled from 'styled-components'
 // import Header from '../components/Header'
 // import Footer from '../components/Footer'
 
-import '../../node_modules/tachyons/css/tachyons.min.css'
+// import '../../node_modules/tachyons/css/tachyons.min.css'
 // import './index.css'
+import '../styles/styles.css'
 
 const Layout = ({ children, data }) => (
   <div>
