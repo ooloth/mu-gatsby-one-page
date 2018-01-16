@@ -34,11 +34,11 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "tailwind":
-      "./node_modules/.bin/tailwind build ./src/styles/tailwind.css -c ./src/styles/tailwind.js -o ./src/styles/styles.css",
+      "./node_modules/.bin/tailwind build ./src/styles/tailwind.css -c ./src/styles/tailwind.js -o ./src/styles/styles.css && babel --plugins transform-object-assign ./src/styles/tailwind.js -o ./src/styles/tailwind-babel.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "prettier": "^1.9.2"
   }

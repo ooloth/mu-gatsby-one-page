@@ -24,7 +24,8 @@ Supporting imports, subcomponents & queries...
 import React from 'react'
 import Link from 'gatsby-link'
 
-import theme from '../styles/tailwind'
+import theme from '../styles/tailwind-babel'
+// import theme from '../styles/tailwind'
 console.log(`Tailwind colors: ${theme.colors.black}`)
 
 /* Gatsby-Image Tests */
