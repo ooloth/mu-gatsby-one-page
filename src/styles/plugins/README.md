@@ -13,3 +13,5 @@ _Add custom styles for third-party plugins to this folder (they will be imported
 3. Use `@screen` to create media queries that reference my custom breakpoints
 
    * see: https://tailwindcss.com/docs/functions-and-directives#screen
+
+4. Scope styles to specific plugin instances using an `id` or `data-attribute`

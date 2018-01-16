@@ -4,14 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
-
+// IE11 polyfill for object-fit/position (used by gatsby-image)
 import objectFitImages from 'object-fit-images'
 
 exports.onClientEntry = () => {
-  // objectFitImages() // initialize object-fit-images polyfill (for object-fit/object-position in IE11)
-}
-
-exports.onInitialClientRender = () => {
-  objectFitImages() // initialize object-fit-images polyfill (for object-fit/object-position in IE11)
+  // console.log("We've started!")
+  objectFitImages()
 }

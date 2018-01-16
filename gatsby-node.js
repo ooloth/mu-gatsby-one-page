@@ -4,10 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // const path = require('path')
 // var cssModulesConfig = require('gatsby-1-config-css-modules')
+
 exports.modifyWebpackConfig = ({ config, stage }) => {
   // TODO: fix Tailwind postCSS integration...
   // Hopefully this makes Tailwind.css work during development...

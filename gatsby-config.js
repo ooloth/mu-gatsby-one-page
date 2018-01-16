@@ -21,8 +21,8 @@ module.exports = {
       }
     },
     `gatsby-plugin-preact`,
-    // `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
+    // `gatsby-plugin-react-next`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify` // must come last
