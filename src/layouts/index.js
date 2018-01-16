@@ -1,15 +1,7 @@
-import { injectGlobal } from 'styled-components'
-
-// Global styles
-injectGlobal`
-// ...
-`
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 
 // Import open-source fonts from Typefaces (includes @font-face automatically)
 // import 'typeface-playfair-display'
@@ -19,13 +11,11 @@ import styled from 'styled-components'
 // import '../fonts/Avenir-Pro-45-Book.woff'
 // import '../fonts/Avenir-Pro-85-Heavy.woff2'
 // import '../fonts/Avenir-Pro-85-Heavy.woff'
-// import './font-face.css'
+// import '../styles/font-face.css'
 
 // import Header from '../components/Header'
 // import Footer from '../components/Footer'
 
-// import '../../node_modules/tachyons/css/tachyons.min.css'
-// import './index.css'
 import '../styles/styles.css'
 
 const Layout = ({ children, data }) => (

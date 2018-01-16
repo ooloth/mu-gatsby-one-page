@@ -3,11 +3,11 @@ module.exports = {
     title: `Michael Uloth`
   },
   plugins: [
-    `gatsby-plugin-react-next`,
+    `gatsby-plugin-preact`,
+    // `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purify-css',
       options: {
-        /* Defaults */
         styleId: 'gatsby-inlined-css',
         purifyOptions: {
           info: true,
           minify: true
         }
       }
-    }
+    },
+    `gatsby-plugin-netlify` // must come last
   ]
 }

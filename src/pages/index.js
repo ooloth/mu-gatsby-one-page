@@ -1,14 +1,16 @@
 const IndexPage = ({ data }) => (
-  <div className="text-center">
-    <h1 className="py-4">My Website (Gatsby testing phase...)</h1>
+  // <Fragment>
+  <div class="text-center">
+    <h1 class="py-4">My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
     <IsotopeTests sizes={data.placeholderImage.sizes} />
     {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
     <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
-    <div className="py-7" />
+    <div class="py-7" />
   </div>
+  // </Fragment>
 )
 
 export default IndexPage
@@ -22,15 +24,20 @@ Supporting imports, subcomponents & queries...
 /* General Imports */
 
 import React from 'react'
+const Fragment = React.Fragment
+
 import Link from 'gatsby-link'
+
+import theme from '../styles/tailwind'
+console.log(`Tailwind colors: ${theme.colors.black}`)
 
 /* Gatsby-Image Tests */
 
 import Image from 'gatsby-image'
 
 const ImageTests = props => (
-  <section className="py-5">
-    <h2 className="pb-2">Gatsby-Image Test (Blur Up)</h2>
+  <section class="py-5">
+    <h2 class="pb-2">Gatsby-Image Test (Blur Up)</h2>
     <Image sizes={props.sizes} />
   </section>
 )
@@ -53,9 +60,9 @@ class ReactSlick extends React.Component {
       slidesToScroll: 1
     }
     return (
-      <div className="bg-blue-lightest py-5">
-        <h2 className="pb-2">React-Slick Test</h2>
-        <div className="mx-auto w-50">
+      <div class="bg-blue-lightest py-5">
+        <h2 class="pb-2">React-Slick Test</h2>
+        <div class="mx-auto w-50">
           <Slick {...settings}>
             <div>
               <Image sizes={this.props.sizes} />
@@ -86,8 +93,8 @@ Isotope Test (with filtering + "load more")
 import Isotope from 'isotope-layout'
 
 const IsotopeTests = props => (
-  <section className="py-5">
-    <h2 className="py-2">Isotope Test</h2>
+  <section class="py-5">
+    <h2 class="py-2">Isotope Test</h2>
     <IsotopeContainer sizes={props.sizes} />
   </section>
 )
@@ -101,16 +108,16 @@ const isotopeItems = [
   { key: 6, category: `category-2`, classes: `js-isotope-item all category-2 w-50 visible` }
 ]
 
-// TODO: use data-attributes instead of classnames as JS hooks
+// TODO: use data-attributes instead of classs as JS hooks
 const FilterButtons = props => (
-  <div className="js-filter-buttons">
-    <button onClick={category => props.handleFilter((category = 'all'))} className="js-filter-button m-2">
+  <div class="js-filter-buttons">
+    <button onClick={category => props.handleFilter((category = 'all'))} class="js-filter-button m-2">
       All
     </button>
-    <button onClick={category => props.handleFilter((category = 'category-1'))} className="js-filter-button m-2">
+    <button onClick={category => props.handleFilter((category = 'category-1'))} class="js-filter-button m-2">
       Category 1
     </button>
-    <button onClick={category => props.handleFilter((category = 'category-2'))} className="js-filter-button m-2">
+    <button onClick={category => props.handleFilter((category = 'category-2'))} class="js-filter-button m-2">
       Category 2
     </button>
   </div>
@@ -152,7 +159,7 @@ class IsotopeContainer extends React.Component {
         <div ref={node => (this.node = node)}>
           {allItemsWithClassesUpdated.map((item, index) => {
             return (
-              <div key={item.key} className={item.classes}>
+              <div key={item.key} class={item.classes}>
                 <Image sizes={this.props.sizes} />
               </div>
             )
@@ -314,7 +321,7 @@ import ScrollReveal from 'scrollreveal'
 // const RevealedList = WithScrollReveal(List)
 
 // const ScrollRevealTests = () => (
-//   <section className="bg-near-white pv5">
+//   <section class="bg-near-white pv5">
 //     <h2>ScrollReveal Test</h2>
 //     <RevealedList options={{ distance: '50px' }} interval={500}>
 //       <Item content="foo" />
@@ -336,8 +343,8 @@ ScrollReveal Test #2
 */
 
 const ScrollRevealTest2 = props => (
-  <section className="bg-yellow-lighter py-5">
-    <h2 className="mb-2">ScrollReveal Test #2</h2>
+  <section class="bg-yellow-lighter py-5">
+    <h2 class="mb-2">ScrollReveal Test #2</h2>
     <RevealedComponent
       sizes={props.sizes}
       options={{
@@ -381,7 +388,7 @@ const reveal = WrappedComponent => {
 class MyComponent extends React.Component {
   render() {
     return (
-      <div className="mx-auto w-75">
+      <div class="mx-auto w-75">
         <Image sizes={this.props.sizes} />
       </div>
     )
@@ -406,14 +413,14 @@ React ScrollReveal Test
 // )
 
 // const Images = props => (
-//   <div className="flex-ns" ref={props.animationContainerReference}>
-//     <div className="sr-item--sequence w-third-ns">
+//   <div class="flex-ns" ref={props.animationContainerReference}>
+//     <div class="sr-item--sequence w-third-ns">
 //       <Image sizes={props.sizes} />
 //     </div>
-//     <div className="sr-item--sequence w-third-ns">
+//     <div class="sr-item--sequence w-third-ns">
 //       <Image sizes={props.sizes} />
 //     </div>
-//     <div className="sr-item--sequence w-third-ns">
+//     <div class="sr-item--sequence w-third-ns">
 //       <Image sizes={props.sizes} />
 //     </div>
 //   </div>
@@ -441,7 +448,7 @@ export const query = graphql`
   query IndexPageQuery {
     placeholderImage: imageSharp(id: { regex: "/placeholder/" }) {
       sizes(maxWidth: 5000) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
   }

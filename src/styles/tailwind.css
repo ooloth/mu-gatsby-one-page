@@ -12,7 +12,15 @@
  * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
  */
 /* @import './tailwind-preflight.css'; */
+
 @tailwind preflight;
+
+/* TODO: add custom reset styles here */
+
+/* TODO: add third party styles here? */
+.slick-slide {
+  border: solid 5px red;
+}
 
 /**
   * Here you would add any of your custom component classes; stuff that you'd
@@ -29,6 +37,8 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
+
+/* TODO: add custom component classes here (using @apply class clusters) */
 
 /**
   * This injects all of Tailwind's utility classes, generated based on your
@@ -57,3 +67,5 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+
+/* TODO: add custom utility classes here */
