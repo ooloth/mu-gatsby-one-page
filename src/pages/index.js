@@ -1,6 +1,6 @@
 const IndexPage = ({ data }) => (
   <div class="text-center">
-    <h1 class="bg-pink-lighter py-4">My Website (Gatsby testing phase...)</h1>
+    <h1 class="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
