@@ -17,6 +17,7 @@
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-sharp": "^1.6.16",
     "isotope-layout": "^3.0.5",
+    "object-assign": "^4.1.1",
     "object-fit-images": "^3.2.3",
     "react-aux": "^1.1.0",
     "react-icons": "^2.2.7",

@@ -1,3 +1,6 @@
+// Object.assign() polyfill for border-colors...
+const objectAssign = require('object-assign')
+
 /*
 
 Tailwind - The Utility-First CSS Framework
@@ -379,7 +382,8 @@ module.exports = {
   |
   */
 
-  borderColors: Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: objectAssign({ default: colors['grey-light'] }, colors),
+  // borderColors: Object.assign({ default: colors['grey-light'] }, colors),
 
   /*
   |-----------------------------------------------------------------------------
