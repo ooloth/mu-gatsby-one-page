@@ -3,7 +3,6 @@ module.exports = {
     title: `Michael Uloth`
   },
   plugins: [
-    `gatsby-plugin-preact`,
     // `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
@@ -25,6 +24,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-preact`,
     `gatsby-plugin-netlify` // must come last
   ]
 }

@@ -1,5 +1,4 @@
 const IndexPage = ({ data }) => (
-  // <Fragment>
   <div class="text-center">
     <h1 class="py-4">My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
@@ -10,7 +9,6 @@ const IndexPage = ({ data }) => (
     <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
     <div class="py-7" />
   </div>
-  // </Fragment>
 )
 
 export default IndexPage
@@ -24,8 +22,6 @@ Supporting imports, subcomponents & queries...
 /* General Imports */
 
 import React from 'react'
-const Fragment = React.Fragment
-
 import Link from 'gatsby-link'
 
 import theme from '../styles/tailwind'
