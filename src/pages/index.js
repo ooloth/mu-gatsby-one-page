@@ -1,13 +1,14 @@
 const IndexPage = ({ data }) => (
-  <div class="text-center">
-    <h1 class="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
+  <div className="text-center">
+    <h1 className="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
     <IsotopeTests sizes={data.placeholderImage.sizes} />
     {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
     <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
-    <div class="py-7" />
+    <Chat />
+    {/* <div className="py-7" /> */}
   </div>
 )
 
@@ -38,8 +39,8 @@ console.log(`Tailwind colors: ${theme.colors.black}`)
 import Image from 'gatsby-image'
 
 const ImageTests = props => (
-  <section class="py-5">
-    <h2 class="pb-2">Gatsby-Image Test (Blur Up)</h2>
+  <section className="py-5">
+    <h2 className="pb-2">Gatsby-Image Test (Blur Up)</h2>
     <Image sizes={props.sizes} />
   </section>
 )
@@ -60,9 +61,9 @@ class ReactSlick extends React.Component {
       slidesToScroll: 1
     }
     return (
-      <div class="bg-blue-lightest py-5">
-        <h2 class="pb-2">React-Slick Test</h2>
-        <div class="mx-auto w-50">
+      <div className="bg-blue-lightest py-5">
+        <h2 className="pb-2">React-Slick Test</h2>
+        <div className="mx-auto w-50">
           <Slick {...settings}>
             <div>
               <Image sizes={this.props.sizes} />
@@ -93,8 +94,8 @@ Isotope Test (with filtering + "load more")
 import Isotope from 'isotope-layout'
 
 const IsotopeTests = props => (
-  <section class="py-5">
-    <h2 class="py-2">Isotope Test</h2>
+  <section className="py-5">
+    <h2 className="py-2">Isotope Test</h2>
     <IsotopeContainer sizes={props.sizes} />
   </section>
 )
@@ -110,14 +111,14 @@ const isotopeItems = [
 
 // TODO: use data-attributes instead of classs as JS hooks
 const FilterButtons = props => (
-  <div class="js-filter-buttons">
-    <button onClick={category => props.handleFilter((category = 'all'))} class="js-filter-button m-2">
+  <div className="js-filter-buttons">
+    <button onClick={category => props.handleFilter((category = 'all'))} className="js-filter-button m-2">
       All
     </button>
-    <button onClick={category => props.handleFilter((category = 'category-1'))} class="js-filter-button m-2">
+    <button onClick={category => props.handleFilter((category = 'category-1'))} className="js-filter-button m-2">
       Category 1
     </button>
-    <button onClick={category => props.handleFilter((category = 'category-2'))} class="js-filter-button m-2">
+    <button onClick={category => props.handleFilter((category = 'category-2'))} className="js-filter-button m-2">
       Category 2
     </button>
   </div>
@@ -159,7 +160,7 @@ class IsotopeContainer extends React.Component {
         <div ref={node => (this.node = node)}>
           {allItemsWithClassesUpdated.map((item, index) => {
             return (
-              <div key={item.key} class={item.classes}>
+              <div key={item.key} className={item.classes}>
                 <Image sizes={this.props.sizes} />
               </div>
             )
@@ -321,7 +322,7 @@ import ScrollReveal from 'scrollreveal'
 // const RevealedList = WithScrollReveal(List)
 
 // const ScrollRevealTests = () => (
-//   <section class="bg-near-white pv5">
+//   <section className="bg-near-white pv5">
 //     <h2>ScrollReveal Test</h2>
 //     <RevealedList options={{ distance: '50px' }} interval={500}>
 //       <Item content="foo" />
@@ -343,8 +344,8 @@ ScrollReveal Test #2
 */
 
 const ScrollRevealTest2 = props => (
-  <section class="bg-yellow-lighter py-5">
-    <h2 class="mb-2">ScrollReveal Test #2</h2>
+  <section className="bg-yellow-lighter py-5">
+    <h2 className="mb-2">ScrollReveal Test #2</h2>
     <RevealedComponent
       sizes={props.sizes}
       options={{
@@ -388,7 +389,7 @@ const reveal = WrappedComponent => {
 class MyComponent extends React.Component {
   render() {
     return (
-      <div class="mx-auto w-75">
+      <div className="mx-auto w-75">
         <Image sizes={this.props.sizes} />
       </div>
     )
@@ -413,14 +414,14 @@ React ScrollReveal Test
 // )
 
 // const Images = props => (
-//   <div class="flex-ns" ref={props.animationContainerReference}>
-//     <div class="sr-item--sequence w-third-ns">
+//   <div className="flex-ns" ref={props.animationContainerReference}>
+//     <div className="sr-item--sequence w-third-ns">
 //       <Image sizes={props.sizes} />
 //     </div>
-//     <div class="sr-item--sequence w-third-ns">
+//     <div className="sr-item--sequence w-third-ns">
 //       <Image sizes={props.sizes} />
 //     </div>
-//     <div class="sr-item--sequence w-third-ns">
+//     <div className="sr-item--sequence w-third-ns">
 //       <Image sizes={props.sizes} />
 //     </div>
 //   </div>
@@ -442,6 +443,80 @@ React ScrollReveal Test
 //     interval: 100
 //   }
 // ])(Images)
+
+/*
+
+Chatbot
+
+*/
+
+import ChatBot from 'react-simple-chatbot'
+
+const Chat = props => (
+  <section className="py-5 h-full">
+    <h2 className="mb-3">ChatBot!</h2>
+    <ChatBot
+      botDelay={1000}
+      bubbleStyle={bubbleStyle}
+      className=""
+      customDelay={0}
+      customStyle={{}}
+      footerStyle={{ display: `none` }}
+      hideBotAvatar={true}
+      hideHeader={true}
+      hideSubmitButton={true}
+      hideUserAvatar={true}
+      style={rootStyle}
+      userDelay={100}
+      steps={steps}
+    />
+  </section>
+)
+
+const rootStyle = { margin: `0 auto`, width: `90%`, height: `90vh`, fontFamily: `inherit` }
+
+const bubbleStyle = {
+  boxShadow: `0px 1px 1px rgba(0, 0, 0, 0.2)`,
+  outline: `none`,
+  border: `none`,
+  borderRadius: `3px`,
+  // backgroundColor: `white`,
+  padding: `6px 12px`,
+  // maxWidth: `90%`,
+  // minWidth: `44px`,
+  // minHeight: `12px`,
+  lineHeight: `1.45em`,
+  // fontFamily: `inherit`,
+  fontFeatureSettings: `'liga' 1, 'onum' 1, 'kern' 1`,
+  fontSize: `19px`
+  // color: `#222`
+}
+
+const steps = [
+  {
+    id: '1',
+    message: 'What number I am thinking?',
+    trigger: '2'
+  },
+  {
+    id: '2',
+    options: [
+      { value: 1, label: 'Number 1', trigger: '4' },
+      { value: 2, label: 'Number 2', trigger: '3' },
+      { value: 3, label: 'Number 3', trigger: '3' }
+    ]
+  },
+  {
+    id: '3',
+    message: 'Wrong answer, try again.',
+    trigger: '2'
+  },
+  {
+    id: '4',
+    message: 'Awesome! You are a telepath!',
+    end: true
+  }
+]
 
 /* 
 
