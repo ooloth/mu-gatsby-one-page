@@ -11,6 +11,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [],
+        precision: 8 // SASS default: 5
+      }
+    },
+    {
       resolve: 'gatsby-plugin-purify-css',
       options: {
         styleId: 'gatsby-inlined-css',

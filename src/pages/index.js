@@ -4,11 +4,13 @@ const IndexPage = ({ data }) => (
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
+    <ReactIDSwiper sizes={data.placeholderImage.sizes} />
     <IsotopeTests sizes={data.placeholderImage.sizes} />
     {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
     <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
     <Chat />
-    {/* <div className="py-7" /> */}
+    <Opera />
+    <Websites />
   </div>
 )
 
@@ -56,7 +58,7 @@ class ReactSlick extends React.Component {
       arrows: true, // to see arrows, disable slick-theme.css (the arrows are offscreen)
       infinite: true,
       autoplay: true,
-      speed: 500,
+      speed: 600,
       slidesToShow: 1,
       slidesToScroll: 1
     }
@@ -65,17 +67,122 @@ class ReactSlick extends React.Component {
         <h2 className="pb-2">React-Slick Test</h2>
         <div className="mx-auto w-50">
           <Slick {...settings}>
-            <div>
+            <figure>
               <Image sizes={this.props.sizes} />
-            </div>
-            <div>
+            </figure>
+            <figure>
               <Image sizes={this.props.sizes} />
-            </div>
-            <div>
+            </figure>
+            <figure>
               <Image sizes={this.props.sizes} />
-            </div>
+            </figure>
           </Slick>
         </div>
+      </div>
+    )
+  }
+}
+
+/*
+
+React ID Slider (Swiper wrapper) Test
+
+- Docs: https://github.com/kidjp85/react-id-swiper
+- Demos: http://kidjp85.github.io/react-id-swiper/
+
+- TIP: to make slides equal height, override .swiper-slide {height: 100%;} with .swiper-slide {height: auto;}
+- see: https://github.com/nolimits4web/Swiper/issues/2372
+
+*/
+
+import Swiper from 'react-id-swiper'
+
+const ReactIDSwiper = props => (
+  <section className="py-5">
+    <h2 className="pb-2">React-ID-Slider Test (Swiper wrapper)</h2>
+    <SwiperwithThumbnails sizes={props.sizes} />
+  </section>
+)
+
+class SwiperwithThumbnails extends React.Component {
+  /* Only needed when there is a thumbnail slider */
+  state = {
+    gallerySwiper: null,
+    thumbnailSwiper: null
+  }
+
+  /* Only needed when there is a thumbnail slider */
+  componentWillUpdate(nextProps, nextState) {
+    if (nextState.gallerySwiper && nextState.thumbnailSwiper) {
+      const { gallerySwiper, thumbnailSwiper } = nextState
+
+      gallerySwiper.controller.control = thumbnailSwiper
+      thumbnailSwiper.controller.control = gallerySwiper
+    }
+  }
+
+  /* Only needed when there is a thumbnail slider */
+  galleryRef = ref => {
+    if (ref) this.setState({ gallerySwiper: ref.swiper })
+  }
+
+  /* Only needed when there is a thumbnail slider */
+  thumbRef = ref => {
+    if (ref) this.setState({ thumbnailSwiper: ref.swiper })
+  }
+
+  render() {
+    const gallerySwiperParams = {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      speed: 600,
+      keyboard: true
+    }
+
+    const thumbnailSwiperParams = {
+      slideClass: 'swiper-nav-slide',
+      spaceBetween: 10,
+      centeredSlides: true,
+      slidesPerView: 4,
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+      speed: 600,
+      keyboard: true
+    }
+
+    return (
+      <div className="mx-auto w-50">
+        <Swiper {...gallerySwiperParams} ref={this.galleryRef}>
+          <figure>
+            <Image sizes={this.props.sizes} />
+          </figure>
+          <figure>
+            <Image sizes={this.props.sizes} />
+          </figure>
+          <figure>
+            <Image sizes={this.props.sizes} />
+          </figure>
+          <figure>
+            <Image sizes={this.props.sizes} />
+          </figure>
+        </Swiper>
+        <Swiper {...thumbnailSwiperParams} ref={this.thumbRef}>
+          <figure className="w-25">
+            <Image sizes={this.props.sizes} />
+          </figure>
+          <figure className="w-25">
+            <Image sizes={this.props.sizes} />
+          </figure>
+          <figure className="w-25">
+            <Image sizes={this.props.sizes} />
+          </figure>
+          <figure className="w-25">
+            <Image sizes={this.props.sizes} />
+          </figure>
+        </Swiper>
       </div>
     )
   }
@@ -88,7 +195,7 @@ Isotope Test (with filtering + "load more")
 - to explain how this setup works, see Hubert's answer here: https://stackoverflow.com/questions/25135261/react-js-and-isotope-js/29866950
 
 - as an alternative, use: https://github.com/eiriklv/react-masonry-component
-
+ 
 */
 
 import Isotope from 'isotope-layout'
@@ -126,51 +233,6 @@ const FilterButtons = props => (
 
 // Isotope Container (logic for initialization + filtering + "load more")
 class IsotopeContainer extends React.Component {
-  render() {
-    // Update classes on each Isotope item (to show the right category and # of items)
-
-    let counter = 0
-    // console.log(`category`, category)
-
-    const allItemsWithClassesUpdated = this.state.allItems.map(item => {
-      // Add "visible" class if item is right category and # limit hasn't been reached
-      if (
-        (item.category === this.state.category.substring(1) || this.state.category === `.all`) &&
-        counter < this.state.howManyToShow
-      ) {
-        const classList = item.classes.replace(`hidden`, `visible`)
-        item.classes = classList
-
-        // Increment counter
-        counter++
-
-        console.log(`counter`, counter)
-
-        // Otherwise, remove "visible class"
-      } else {
-        const classList = item.classes.replace(`visible`, `hidden`)
-        item.classes = classList
-      }
-      return item
-    })
-
-    return (
-      <div>
-        <FilterButtons handleFilter={this.filterItems} />
-        <div ref={node => (this.node = node)}>
-          {allItemsWithClassesUpdated.map((item, index) => {
-            return (
-              <div key={item.key} className={item.classes}>
-                <Image sizes={this.props.sizes} />
-              </div>
-            )
-          })}
-        </div>
-        {this.state.showLoadMoreBtn && <button onClick={this.showMoreItems}>Load more</button>}
-      </div>
-    )
-  }
-
   state = {
     isotope: null,
     allItems: isotopeItems,
@@ -186,7 +248,7 @@ class IsotopeContainer extends React.Component {
   componentDidMount() {
     if (!this.state.isotope) {
       this.setState({
-        isotope: new Isotope(this.node)
+        isotope: new Isotope(this.node, { filter: `.visible` })
       })
     } else {
       this.state.isotope.arrange({ filter: `.visible` })
@@ -242,6 +304,47 @@ class IsotopeContainer extends React.Component {
       howManyToShow: newNumberToShow,
       showLoadMoreBtn: showLoadMoreBtn
     })
+  }
+
+  render() {
+    // Update classes on each Isotope item (to show the right category and # of items)
+
+    let counter = 0
+    // console.log(`category`, category)
+
+    const allItemsWithClassesUpdated = this.state.allItems.map(item => {
+      // Add "visible" class if item is right category and # limit hasn't been reached
+      if (
+        (this.state.category === `.all` || item.category === this.state.category.substring(1)) &&
+        counter < this.state.howManyToShow
+      ) {
+        const classList = item.classes.replace(`hidden`, `visible`)
+        item.classes = classList
+        counter++
+
+        // Otherwise, remove "visible class"
+      } else {
+        const classList = item.classes.replace(`visible`, `hidden`)
+        item.classes = classList
+      }
+      return item
+    })
+
+    return (
+      <div>
+        <FilterButtons handleFilter={this.filterItems} />
+        <div ref={node => (this.node = node)}>
+          {allItemsWithClassesUpdated.map((item, index) => {
+            return (
+              <div key={item.key} className={item.classes}>
+                <Image sizes={this.props.sizes} />
+              </div>
+            )
+          })}
+        </div>
+        {this.state.showLoadMoreBtn && <button onClick={this.showMoreItems}>Load more</button>}
+      </div>
+    )
   }
 }
 
@@ -456,10 +559,10 @@ const Chat = props => (
   <section className="py-5 h-full">
     <h2 className="mb-3">ChatBot!</h2>
     <ChatBot
-      botDelay={1000}
+      botDelay={900}
       bubbleStyle={bubbleStyle}
       className=""
-      customDelay={0}
+      customDelay={500}
       customStyle={{}}
       footerStyle={{ display: `none` }}
       hideBotAvatar={true}
@@ -467,15 +570,23 @@ const Chat = props => (
       hideSubmitButton={true}
       hideUserAvatar={true}
       style={rootStyle}
-      userDelay={100}
+      userDelay={200}
       steps={steps}
     />
   </section>
 )
 
+// see: https://github.com/LucasBassetti/react-simple-chatbot/pull/10
+// ChatBotContainer.defaultProps = {
+// 	theme: {
+// 		background: '#f5f8fb'
+// 	}
+// }
+
 const rootStyle = { margin: `0 auto`, width: `90%`, height: `90vh`, fontFamily: `inherit` }
 
 const bubbleStyle = {
+  animationDuration: `.7s`,
   boxShadow: `0px 1px 1px rgba(0, 0, 0, 0.2)`,
   outline: `none`,
   border: `none`,
@@ -517,6 +628,84 @@ const steps = [
     end: true
   }
 ]
+
+/* 
+
+Opera content
+
+*/
+
+import placeholder from '../images/placeholder.jpg'
+
+const Opera = () => {
+  return (
+    <section className="mx-auto max-w-9 py-5 text-left">
+      <h2>Opera Stuff</h2>
+      <h3>About Me</h3>
+      <p className="max-w-8 leading-normal">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequatur deserunt. Delectus pariatur error
+        soluta. Repellendus natus odio consequatur veniam pariatur eaque amet debitis odit obcaecati, sapiente expedita,
+        dicta harum.
+      </p>
+      <h3>Work</h3>
+      <p className="max-w-8 leading-normal">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequatur deserunt.
+      </p>
+      <ul className="list-reset">
+        <li className="grid-opera">
+          <img src={placeholder} alt="" className="block shadow-lg" />
+          <h4 className="pt-4 text-2xl">Canadian Opera Company</h4>
+          <ul className="list-reset leading-normal">
+            <li>Role in Opera (Composer)</li>
+            <li>Role in Opera (Composer)</li>
+            <li>Role in Opera (Composer)</li>
+            <li>Role in Opera (Composer)</li>
+            <li>Role in Opera (Composer)</li>
+          </ul>
+        </li>
+
+        <li className="grid-opera">
+          <img src={placeholder} alt="" className="block shadow-lg" />
+          <h4>Canadian Opera Company</h4>
+          <ul className="list-reset">
+            <li>Role in Composer's Opera</li>
+            <li>Role in Opera (Composer)</li>
+          </ul>
+        </li>
+
+        <li className="grid-opera">
+          <img src={placeholder} alt="" className="block shadow-lg" />
+          <h4>Canadian Opera Company</h4>
+          <ul className="list-reset">li</ul>
+        </li>
+
+        <li className="grid-opera">
+          <img src={placeholder} alt="" className="block shadow-lg" />
+          <h4>Canadian Opera Company</h4>
+          <ul className="list-reset">li</ul>
+        </li>
+      </ul>
+      <a href="#">Show all</a>
+      <h3>Reviews</h3>
+      <h3>Listen</h3>
+      <h3>Contact</h3>
+    </section>
+  )
+}
+
+/* 
+
+Opera content
+
+*/
+
+const Websites = () => {
+  return (
+    <section className="py-5 text-left">
+      <h2>Website Stuff</h2>
+    </section>
+  )
+}
 
 /* 
 

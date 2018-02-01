@@ -60,10 +60,10 @@ Global Styles
 */
 
 // TODO: move these plugin style calls to tailwind.css once postCSS processing is working
-import '../../node_modules/slick-carousel/slick/slick.css'
-import '../../node_modules/slick-carousel/slick/slick-theme.css'
+// import '../../node_modules/slick-carousel/slick/slick.css'
+// import '../../node_modules/slick-carousel/slick/slick-theme.css'
 
-import '../styles/styles.css'
+import '../styles/styles.scss'
 
 /* 
 
