@@ -1,4 +1,8 @@
-/* Reset styles */
+/* 
+
+Reset styles 
+
+*/
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -576,19 +580,32 @@ button,
 [role=button] {
   cursor: pointer;
 }
+@import 'reset/reset';
 
-/* Plugin styles */
+/* 
+
+Plugin styles 
+
+*/
 
 @import 'plugins/react-id-swiper';
 @import 'plugins/react-simple-chat';
 @import 'plugins/react-slick';
 
-/* Component classes */
+/* 
+
+Component classes 
+
+*/
 
 /* @import "components/buttons"
    @import "components/forms" */
 
-/* Utility classes */
+/* 
+
+Utility classes 
+
+*/
 
 .container {
   width: 100%;
@@ -4833,9 +4850,14 @@ button,
 /* @import "utilities/background-patterns"
    @import "utilities/skew-transforms" */
 
-/* Override classes */
+/* 
+
+Override classes 
+
+*/
 
 @import 'supports/grid';
+@import 'debug/debug';
 
 @media (min-width: 36em) {
   .sm\:list-reset {
