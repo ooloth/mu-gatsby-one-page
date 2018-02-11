@@ -1,0 +1,15 @@
+.scroll-offset
+  display: block
+  // height of off-canvas nav + section heading:
+  height: calc(420px + 100px)
+  // offset height property:
+  margin-top: calc(-420px - 100px)
+  visibility: hidden
+  pointer-events: none
+
+@media screen and (min-width: 60em)
+  .scroll-offset
+    // height of off-canvas nav + section heading:
+    height: 100px
+    // offset height property:
+    margin-top: -100px

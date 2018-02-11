@@ -1,0 +1,169 @@
+// ========================
+   JS Classes: Slick Slider
+   ========================
+
+   1. Display/hiding
+   2. Dimensions
+   3. Vertical alignment
+   4. Dots
+   5. Arrows
+
+// =================
+   1. DISPLAY/HIDING
+   =================
+
+// Hide the media slider above mobile (the section uses an Isotope gallery on tablets and up instead)
+.js-media-slider
+  @media (--breakpoint-not-small)
+    display: none !important
+
+// Hide until loaded (to avoid flicker - if slider has a fixed height, use visibility)
+.js-slick-hero,
+.js-reviews-slider,
+.js-media-slider
+  // display: none
+  // visibility: hidden
+
+  &.slick-initialized
+    // display: block
+    // visibility: visible
+
+
+// =============
+   2. DIMENSIONS
+   =============
+
+// Constrain height of 3-slide center-mode sliders
+// .js-slick-center-mode .slick-slide
+//   @media (min-width: 60em)
+//     max-height: 75vh
+//     max-width: 75vh
+
+// .js-slick-center-mode, 
+// .js-slick-one-slide,
+// .js-slick-one-slide--arrows-no-dots
+//   padding-bottom: 4rem
+
+// Allow slide bottom shadow to show:
+// .slick-list
+//   padding-bottom: .5rem
+
+
+// =====================
+   3. VERTICAL ALIGNMENT
+   =====================
+
+// Vertically center each quotation
+.slick-initialized .slick-slide
+  float: none
+  display: inline-block
+  vertical-align: middle
+
+
+// =========
+   4. ARROWS
+   =========
+
+// NOTE: The vertical position of the arrows is set by a JS function (see main.js)
+.slick-next,
+.slick-prev
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  // bottom: 0
+  z-index: 1
+  // opacity: .6
+  display: block
+  outline: none
+  border: none
+  // border-radius: 100%
+  background: transparent
+  padding: 0
+  // height: 4rem
+  // width: 4rem
+  // font-family: 'FontAwesome'
+  font-family: 'Fontello'
+  font-size: 2.5rem
+  color: white
+  cursor: pointer
+  transition: color .15s ease-in-out
+
+  @media (--breakpoint-not-small)
+    // top: 30%
+
+  &:hover
+    color: var(--red)
+
+.slick-prev
+  left: .75rem
+
+  // @media (--breakpoint-large)
+  //   left: .3rem
+
+  &:before
+    margin-right: .35rem
+    // content: "\f053"
+    content: "\e805"
+
+.slick-next
+  text-align: right
+  right: .75rem
+
+  // @media (--breakpoint-large)
+  //   right: .3rem
+
+  &:before
+    margin-left: .35rem
+    // content: "\f054"
+    content: "\e804"
+
+// Put Instagram slider arrows below the track instead
+#instafeed
+  .slick-next,
+  .slick-prev
+    top: 100%
+    left: 50%
+    transform: translateY(40%)
+    font-size: 1.5rem
+    color: var(--dark-red)
+    transition: color .15s ease-in-out
+    &:hover
+      color: var(--red)
+  .slick-next
+    right: 40%
+  .slick-prev
+    left: 40%
+
+
+// =======
+   5. DOTS
+   =======
+
+// Hero slider dots
+.slick-dots
+  position: absolute
+  bottom: 0
+  padding-left: 0
+  text-align: left
+
+  li
+    display: inline-block
+    // margin-top: 2rem
+    margin-right: 1rem
+    cursor: pointer
+
+    button
+      background-color: var(--dark-red)
+      border: 3px solid var(--dark-red)
+      border-radius: 100%
+      padding: 0
+      height: 1rem
+      width: 1rem !important
+      color: transparent
+      // opacity: .5
+      cursor: pointer
+
+    &.slick-active button
+      background-color: transparent
+      border: 3px solid var(--dark-red)
+      // opacity: 1

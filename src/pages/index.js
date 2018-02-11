@@ -1,5 +1,5 @@
 const IndexPage = ({ data }) => (
-  <div className="text-center">
+  <div className="tc">
     <h1 className="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
@@ -27,13 +27,11 @@ import Link from 'gatsby-link'
 
 /*
 
-Custom Imports
+My Imports
 
 */
 
-// TODO: drop Babel version after postCSS processing works...
-import theme from '../styles/tailwind-babel'
-// import theme from '../styles/tailwind'
+import theme from '../styles/tailwind.config'
 console.log(`Tailwind colors: ${theme.colors.black}`)
 
 /* Gatsby-Image Tests */
@@ -219,13 +217,22 @@ const isotopeItems = [
 // TODO: use data-attributes instead of classs as JS hooks
 const FilterButtons = props => (
   <div className="js-filter-buttons">
-    <button onClick={category => props.handleFilter((category = 'all'))} className="js-filter-button m-2">
+    <button
+      onClick={category => props.handleFilter((category = 'all'))}
+      className="js-filter-button m-2"
+    >
       All
     </button>
-    <button onClick={category => props.handleFilter((category = 'category-1'))} className="js-filter-button m-2">
+    <button
+      onClick={category => props.handleFilter((category = 'category-1'))}
+      className="js-filter-button m-2"
+    >
       Category 1
     </button>
-    <button onClick={category => props.handleFilter((category = 'category-2'))} className="js-filter-button m-2">
+    <button
+      onClick={category => props.handleFilter((category = 'category-2'))}
+      className="js-filter-button m-2"
+    >
       Category 2
     </button>
   </div>
@@ -643,9 +650,9 @@ const Opera = () => {
       <h2>Opera Stuff</h2>
       <h3>About Me</h3>
       <p className="max-w-8 leading-normal">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequatur deserunt. Delectus pariatur error
-        soluta. Repellendus natus odio consequatur veniam pariatur eaque amet debitis odit obcaecati, sapiente expedita,
-        dicta harum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequatur deserunt.
+        Delectus pariatur error soluta. Repellendus natus odio consequatur veniam pariatur eaque
+        amet debitis odit obcaecati, sapiente expedita, dicta harum.
       </p>
       <h3>Work</h3>
       <p className="max-w-8 leading-normal">

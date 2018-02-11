@@ -1,0 +1,47 @@
+// See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patterns-with-apply
+
+/* 
+ *
+ * Balls
+ *
+ */
+
+.ball
+  @apply .absolute .z-max .br-100
+
+/* 
+ *
+ * Buttons
+ *
+ */
+
+.btn 
+  @apply .dib .br3 .bg-gold .pv2 .ph3 .white .animate
+
+  &:hover,
+  &:focus
+    @apply .bg-red
+
+/* 
+ *
+ * Containers
+ *
+ */
+
+/* 
+ *
+ * Headings
+ *
+ */
+
+.heading
+  @apply .f2 .black
+
+.subheading
+  @apply .f5 .ttu .tracked-normal
+
+/* 
+ *
+ * Sections
+ *
+ */

@@ -1,23 +1,12 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-// Object.assign() polyfill for border-colors...
-// const objectAssign = require('object-assign')
-
 /*
-
 Tailwind - The Utility-First CSS Framework
-
 A project by Adam Wathan (@adamwathan), Jonathan Reinink (@reinink),
 David Hemphill (@davidhemphill) and Steve Schoger (@steveschoger).
-
 Welcome to the Tailwind config file. This is where you can customize
 Tailwind specifically for your project. Don't be intimidated by the
 length of this file. It's really just a big JavaScript object and
 we've done our very best to explain each section.
-
 View the full documentation at https://tailwindcss.com.
-
-
 |-------------------------------------------------------------------------------
 | The default config
 |-------------------------------------------------------------------------------
@@ -50,90 +39,74 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
   transparent: 'transparent',
 
-  black: '#22292f',
-  'grey-darkest': '#3d4852',
-  'grey-darker': '#606f7b',
-  'grey-dark': '#8795a1',
-  grey: '#b8c2cc',
-  'grey-light': '#dae1e7',
-  'grey-lighter': '#f1f5f8',
-  'grey-lightest': '#f8fafc',
-  white: '#ffffff',
+  black: '#000',
+  'near-black': '#111',
+  'dark-gray': '#333',
+  'mid-gray': '#555',
+  gray: '#777',
+  silver: '#999',
+  'light-silver': '#aaa',
+  'moon-gray': '#ccc',
+  'light-gray': '#eee',
+  'near-white': '#f4f4f4',
+  white: '#fff',
 
-  'red-darkest': '#3b0d0c',
-  'red-darker': '#621b18',
-  'red-dark': '#cc1f1a',
-  red: '#e3342f',
-  'red-light': '#ef5753',
-  'red-lighter': '#f9acaa',
-  'red-lightest': '#fcebea',
+  'black-90': 'rgba(0,0,0,.9)',
+  'black-80': 'rgba(0,0,0,.8)',
+  'black-70': 'rgba(0,0,0,.7)',
+  'black-60': 'rgba(0,0,0,.6)',
+  'black-50': 'rgba(0,0,0,.5)',
+  'black-40': 'rgba(0,0,0,.4)',
+  'black-30': 'rgba(0,0,0,.3)',
+  'black-20': 'rgba(0,0,0,.2)',
+  'black-10': 'rgba(0,0,0,.1)',
+  'black-05': 'rgba(0,0,0,.05)',
+  'black-025': 'rgba(0,0,0,.025)',
+  'black-0125': 'rgba(0,0,0,.0125)',
 
-  'orange-darkest': '#462a16',
-  'orange-darker': '#613b1f',
-  'orange-dark': '#de751f',
-  orange: '#f6993f',
-  'orange-light': '#faad63',
-  'orange-lighter': '#fcd9b6',
-  'orange-lightest': '#fff5eb',
+  'white-90': 'rgba(255,255,255,.9)',
+  'white-80': 'rgba(255,255,255,.8)',
+  'white-70': 'rgba(255,255,255,.7)',
+  'white-60': 'rgba(255,255,255,.6)',
+  'white-50': 'rgba(255,255,255,.5)',
+  'white-40': 'rgba(255,255,255,.4)',
+  'white-30': 'rgba(255,255,255,.3)',
+  'white-20': 'rgba(255,255,255,.2)',
+  'white-10': 'rgba(255,255,255,.1)',
+  'white-05': 'rgba(255,255,255,.05)',
+  'white-025': 'rgba(255,255,255,.025)',
+  'white-0125': 'rgba(255,255,255,.0125)',
 
-  'yellow-darkest': '#453411',
-  'yellow-darker': '#684f1d',
-  'yellow-dark': '#f2d024',
-  yellow: '#ffed4a',
-  'yellow-light': '#fff382',
-  'yellow-lighter': '#fff9c2',
-  'yellow-lightest': '#fcfbeb',
-
-  'green-darkest': '#0f2f21',
-  'green-darker': '#1a4731',
-  'green-dark': '#1f9d55',
-  green: '#38c172',
-  'green-light': '#51d88a',
-  'green-lighter': '#a2f5bf',
-  'green-lightest': '#e3fcec',
-
-  'teal-darkest': '#0d3331',
-  'teal-darker': '#20504f',
-  'teal-dark': '#38a89d',
-  teal: '#4dc0b5',
-  'teal-light': '#64d5ca',
-  'teal-lighter': '#a0f0ed',
-  'teal-lightest': '#e8fffe',
-
-  'blue-darkest': '#12283a',
-  'blue-darker': '#1c3d5a',
-  'blue-dark': '#2779bd',
-  blue: '#3490dc',
-  'blue-light': '#6cb2eb',
-  'blue-lighter': '#bcdefa',
-  'blue-lightest': '#eff8ff',
-
-  'indigo-darkest': '#191e38',
-  'indigo-darker': '#2f365f',
-  'indigo-dark': '#5661b3',
-  indigo: '#6574cd',
-  'indigo-light': '#7886d7',
-  'indigo-lighter': '#b2b7ff',
-  'indigo-lightest': '#e6e8ff',
-
-  'purple-darkest': '#21183c',
-  'purple-darker': '#382b5f',
-  'purple-dark': '#794acf',
-  purple: '#9561e2',
-  'purple-light': '#a779e9',
-  'purple-lighter': '#d6bbfc',
-  'purple-lightest': '#f3ebff',
-
-  'pink-darkest': '#451225',
-  'pink-darker': '#6f213f',
-  'pink-dark': '#eb5286',
-  pink: '#f66d9b',
-  'pink-light': '#fa7ea8',
-  'pink-lighter': '#ffbbca',
-  'pink-lightest': '#ffebef'
-};
+  'dark-red': '#e7040f',
+  red: '#ff4136',
+  'light-red': '#ff725c',
+  orange: '#ff6300',
+  gold: '#ffb700',
+  yellow: '#ffd700',
+  'light-yellow': '#fbf1a9',
+  purple: '#5e2ca5',
+  'light-purple': '#a463f2',
+  'dark-pink': '#d5008f',
+  'hot-pink': '#ff41b4',
+  pink: '#ff80cc',
+  'light-pink': '#ffa3d7',
+  'dark-green': '#137752',
+  green: '#19a974',
+  'light-green': '#9eebcf',
+  navy: '#001b44',
+  'dark-blue': '#00449e',
+  blue: '#357edd',
+  'light-blue': '#96ccff',
+  'lightest-blue': '#cdecff',
+  'washed-blue': '#f6fffe',
+  'washed-green': '#e8fdf5',
+  'washed-yellow': '#fffceb',
+  'washed-red': '#ffdfdf'
+}
 
 module.exports = {
+  library: 'tachyons',
+
   /*
   |-----------------------------------------------------------------------------
   | Colors                                  https://tailwindcss.com/docs/colors
@@ -194,9 +167,34 @@ module.exports = {
   */
 
   fonts: {
-    sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
-    serif: ['Constantia', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', 'Lucida', 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', 'Georgia', 'serif'],
-    mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
+    'sans-serif': [
+      `system-ui`,
+      `BlinkMacSystemFont`,
+      `-apple-system`,
+      `Segoe UI`,
+      `Roboto`,
+      `Oxygen`,
+      `Ubuntu`,
+      `Cantarell`,
+      `Fira Sans`,
+      `Droid Sans`,
+      `Helvetica Neue`,
+      `sans-serif`
+    ],
+    serif: ['georgia', 'times', 'serif'],
+    'system-sans-serif': ['sans-serif'],
+    'system-serif': ['serif'],
+    code: ['Consolas', 'monaco', 'monospace'],
+    courier: ['Courier Next', 'courier', 'monospace'],
+    helvetica: ['helvetica neue', 'helvetica', 'sans-serif'],
+    avenir: ['avenir next', 'avenir', 'sans-serif'],
+    athelas: ['athelas', 'georgia', 'serif'],
+    georgia: ['georgia', 'serif'],
+    times: ['times', 'serif'],
+    bodoni: ['Bodoni MT', 'serif'],
+    calisto: ['Calisto MT', 'serif'],
+    garamond: ['garamond', 'serif'],
+    baskerville: ['baskerville', 'serif']
   },
 
   /*
@@ -217,17 +215,18 @@ module.exports = {
   | Class name: .text-{size}
   |
   */
-
   textSizes: {
-    xs: '.75rem', // 12px
-    sm: '.875rem', // 14px
-    base: '1rem', // 16px
-    lg: '1.125rem', // 18px
-    xl: '1.25rem', // 20px
-    '2xl': '1.5rem', // 24px
-    '3xl': '1.875rem', // 30px
-    '4xl': '2.25rem', // 36px
-    '5xl': '3rem' // 48px
+    '7': '.75rem',
+    '6': '.875rem',
+    '5': '1rem',
+    '4': '1.25rem',
+    '3': '1.5rem',
+    '2': '2.25rem',
+    '1': '3rem',
+    '-subheadline': '5rem',
+    '-headline': '6rem',
+    '-5': '5rem',
+    '-6': '6rem'
   },
 
   /*
@@ -245,15 +244,15 @@ module.exports = {
   */
 
   fontWeights: {
-    hairline: 100,
-    thin: 200,
-    light: 300,
-    normal: 400,
-    medium: 500,
-    semibold: 600,
-    bold: 700,
-    extrabold: 800,
-    black: 900
+    '1': 100,
+    '2': 200,
+    '3': 300,
+    '4': 400,
+    '5': 500,
+    '6': 600,
+    '7': 700,
+    '8': 800,
+    '9': 900
   },
 
   /*
@@ -269,9 +268,10 @@ module.exports = {
   */
 
   leading: {
-    none: 1,
-    tight: 1.25,
-    normal: 1.5,
+    none: 0,
+    solid: 1,
+    title: 1.25,
+    copy: 1.5,
     loose: 2
   },
 
@@ -288,9 +288,9 @@ module.exports = {
   */
 
   tracking: {
-    tight: '-0.05em',
-    normal: '0',
-    wide: '0.05em'
+    tight: '-.05em',
+    normal: '.1em',
+    mega: '.25em'
   },
 
   /*
@@ -305,8 +305,27 @@ module.exports = {
   | Class name: .text-{color}
   |
   */
-
   textColors: colors,
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Typography               https://github.com/tachyons-css/tachyons-typography
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you define your text colors. By default these use the
+  | color palette we defined above, however you're welcome to set these
+  | independently if that makes sense for your project.
+  |
+  | Class name: .text-{color}
+  |
+  */
+
+  typography: {
+    measure: '30em',
+    measureWide: '34em',
+    measureNarrow: '20em',
+    indent: '1em'
+  },
 
   /*
   |-----------------------------------------------------------------------------
@@ -321,7 +340,44 @@ module.exports = {
   |
   */
 
-  backgroundColors: colors,
+  backgroundColors: Object.assign({ inherit: 'inherit' }, colors),
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Background with Foreground colors
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you define your background and contrasting foreground
+  | colors.
+  |
+  | Class name: .bfg-{color}
+  |
+  */
+
+  backgroundForegroundColors: {
+    black: ['#111', '#f4f4f4'],
+    white: ['#f4f4f4', '#111']
+  },
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Rotate
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you define your element rotation.
+  | Class name: .rotate{-value}
+  |
+  */
+
+  rotate: {
+    '45': '45deg',
+    '90': '90deg',
+    '135': '135deg',
+    '180': '180deg',
+    '225': '225deg',
+    '270': '270deg',
+    '315': '315deg'
+  },
 
   /*
   |-----------------------------------------------------------------------------
@@ -339,9 +395,11 @@ module.exports = {
   borderWidths: {
     default: '1px',
     '0': '0',
-    '2': '2px',
-    '4': '4px',
-    '8': '8px'
+    '1': '.125rem',
+    '2': '.25rem',
+    '3': '.5rem',
+    '4': '1rem',
+    '5': '2rem'
   },
 
   /*
@@ -361,9 +419,13 @@ module.exports = {
   |
   */
 
-  // borderColors: objectAssign({ default: colors['grey-light'] }, colors),
-
-  borderColors: _extends({ default: colors['grey-light'] }, colors),
+  borderColors: Object.assign(
+    {
+      default: colors['grey-light'],
+      inherit: 'inherit'
+    },
+    colors
+  ),
 
   /*
   |-----------------------------------------------------------------------------
@@ -382,11 +444,14 @@ module.exports = {
   */
 
   borderRadius: {
-    none: '0',
-    sm: '.125rem',
-    default: '.25rem',
-    lg: '.5rem',
-    full: '9999px'
+    default: '.125rem',
+    '0': '0',
+    '1': '.125rem',
+    '2': '.25rem',
+    '3': '.5rem',
+    '4': '1rem',
+    '-100': '100%',
+    '-pill': '9999px'
   },
 
   /*
@@ -410,53 +475,30 @@ module.exports = {
   */
 
   width: {
-    auto: 'auto',
-    px: '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '1rem',
-    '4': '2rem',
-    '5': '4rem',
-    '6': '8rem',
-    '7': '16rem',
-    '8': '32rem',
-    '10': '10%',
-    '20': '20%',
-    '25': '25%',
-    '30': '30%',
-    '40': '40%',
-    '50': '50%',
-    '60': '60%',
-    '70': '70%',
-    '75': '75%',
-    '80': '80%',
-    '90': '90%',
-    '100': '100%',
-    // '3': '0.75rem',
-    // '4': '1rem',
-    // '6': '1.5rem',
-    // '8': '2rem',
-    // '10': '2.5rem',
-    // '12': '3rem',
-    // '16': '4rem',
-    // '24': '6rem',
-    // '32': '8rem',
-    // '48': '12rem',
-    // '64': '16rem',
-    '1/2': '50%',
-    '1/3': '33.33333%',
-    '2/3': '66.66667%',
-    '1/4': '25%',
-    '3/4': '75%',
-    '1/5': '20%',
-    '2/5': '40%',
-    '3/5': '60%',
-    '4/5': '80%',
-    '1/6': '16.66667%',
-    '5/6': '83.33333%',
-    full: '100%',
-    screen: '100vw'
+    '-auto': 'auto',
+    '-px': '1px',
+    '1': '1rem',
+    '2': '2rem',
+    '3': '4rem',
+    '4': '8rem',
+    '5': '16rem',
+    '-10': '10%',
+    '-20': '20%',
+    '-25': '25%',
+    '-30': '30%',
+    '-33': '33%',
+    '-34': '34%',
+    '-40': '40%',
+    '-50': '50%',
+    '-60': '60%',
+    '-70': '70%',
+    '-75': '75%',
+    '-80': '80%',
+    '-90': '90%',
+    '-100': '100%',
+    '-third': 'calc(100% / 3)',
+    '-two-thirds': 'calc(100% / 1.5)',
+    '-screen': '100vw'
   },
 
   /*
@@ -475,30 +517,22 @@ module.exports = {
   */
 
   height: {
-    auto: 'auto',
-    px: '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '1rem',
-    '4': '2rem',
-    '5': '4rem',
-    '6': '8rem',
-    '7': '16rem',
-    '8': '32rem',
-    // '3': '0.75rem',
-    // '4': '1rem',
-    // '6': '1.5rem',
-    // '8': '2rem',
-    // '10': '2.5rem',
-    // '12': '3rem',
-    // '16': '4rem',
-    // '24': '6rem',
-    // '32': '8rem',
-    // '48': '12rem',
-    // '64': '16rem',
-    full: '100%',
-    screen: '100vh'
+    '-auto': 'auto',
+    '-inherit': 'inherit',
+    '-px': '1px',
+    '1': '1rem',
+    '2': '2rem',
+    '3': '4rem',
+    '4': '8rem',
+    '5': '16rem',
+    '-25': '25%',
+    '-50': '50%',
+    '-75': '75%',
+    '-100': '100%',
+    'vh-25': '25vh',
+    'vh-50': '50vh',
+    'vh-75': '75vh',
+    'vh-100': '100vh'
   },
 
   /*
@@ -517,14 +551,6 @@ module.exports = {
 
   minWidth: {
     '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '1rem',
-    '4': '2rem',
-    '5': '4rem',
-    '6': '8rem',
-    '7': '16rem',
-    '8': '32rem',
     full: '100%'
   },
 
@@ -544,16 +570,8 @@ module.exports = {
 
   minHeight: {
     '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '1rem',
-    '4': '2rem',
-    '5': '4rem',
-    '6': '8rem',
-    '7': '16rem',
-    '8': '32rem',
-    full: '100%',
-    screen: '100vh'
+    '100': '100%',
+    vh100: '100vh'
   },
 
   /*
@@ -572,26 +590,17 @@ module.exports = {
   */
 
   maxWidth: {
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '1rem',
-    '4': '2rem',
-    '5': '4rem',
-    '6': '8rem',
-    '7': '16rem',
-    '8': '32rem',
-    '9': '64rem',
-    xs: '20rem',
-    sm: '30rem',
-    md: '40rem',
-    lg: '50rem',
-    xl: '60rem',
-    '2xl': '70rem',
-    '3xl': '80rem',
-    '4xl': '90rem',
-    '5xl': '100rem',
-    full: '100%'
+    '1': '1rem',
+    '2': '2rem',
+    '3': '4rem',
+    '4': '8rem',
+    '5': '16rem',
+    '6': '32rem',
+    '7': '48rem',
+    '8': '64rem',
+    '9': '96rem',
+    '-none': 'none',
+    '-100': '100%'
   },
 
   /*
@@ -609,15 +618,6 @@ module.exports = {
   */
 
   maxHeight: {
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '1rem',
-    '4': '2rem',
-    '5': '4rem',
-    '6': '8rem',
-    '7': '16rem',
-    '8': '32rem',
     full: '100%',
     screen: '100vh'
   },
@@ -640,18 +640,13 @@ module.exports = {
   padding: {
     px: '1px',
     '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
+    '1': '.25rem',
+    '2': '.5rem',
     '3': '1rem',
     '4': '2rem',
     '5': '4rem',
     '6': '8rem',
-    '7': '16rem',
-    '8': '32rem'
-    // '3': '0.75rem',
-    // '4': '1rem',
-    // '6': '1.5rem',
-    // '8': '2rem'
+    '7': '16rem'
   },
 
   /*
@@ -670,21 +665,36 @@ module.exports = {
   */
 
   margin: {
-    auto: 'auto',
-    px: '1px',
+    '-px': '1px',
     '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
+    '1': '.25rem',
+    '2': '.5rem',
     '3': '1rem',
     '4': '2rem',
     '5': '4rem',
     '6': '8rem',
     '7': '16rem',
-    '8': '32rem'
-    // '3': '0.75rem',
-    // '4': '1rem',
-    // '6': '1.5rem',
-    // '8': '2rem'
+    '-auto': 'auto'
+  },
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Position
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you define your positioning utility sizes. These can be
+  | percentage based, pixels, rems, or any other units.
+  |
+  | Class name: .{position?}-{size}
+  |
+  */
+
+  position: {
+    '0': '0',
+    '1': '1rem',
+    '2': '2rem',
+    '-1': '-1rem',
+    '-2': '-2rem'
   },
 
   /*
@@ -708,15 +718,10 @@ module.exports = {
     '1': '0.25rem',
     '2': '0.5rem',
     '3': '1rem',
-    '4': '2rem',
-    '5': '4rem',
-    '6': '8rem',
-    '7': '16rem',
-    '8': '32rem'
-    // '3': '0.75rem',
-    // '4': '1rem',
-    // '6': '1.5rem',
-    // '8': '2rem'
+    '4': '-2rem',
+    '5': '-4rem',
+    '6': '-8rem',
+    '7': '-16rem'
   },
 
   /*
@@ -736,10 +741,11 @@ module.exports = {
   */
 
   shadows: {
-    default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    md: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    lg: '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+    '1': '0px 0px 4px 2px rgba( 0, 0, 0, 0.2 )',
+    '2': '0px 0px 8px 2px rgba( 0, 0, 0, 0.2 )',
+    '3': '2px 2px 4px 2px rgba( 0, 0, 0, 0.2 )',
+    '4': '2px 2px 8px 0px rgba( 0, 0, 0, 0.2 )',
+    '5': '4px 4px 8px 0px rgba( 0, 0, 0, 0.2 )',
     none: 'none'
   },
 
@@ -759,11 +765,17 @@ module.exports = {
   zIndex: {
     auto: 'auto',
     '0': 0,
-    '10': 10,
-    '20': 20,
-    '30': 30,
-    '40': 40,
-    '50': 50
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '999': 999,
+    '9999': 9999,
+    max: 2147483647,
+    inherit: 'inherit',
+    initial: 'initial',
+    unset: 'unset'
   },
 
   /*
@@ -781,10 +793,62 @@ module.exports = {
 
   opacity: {
     '0': '0',
-    '25': '.25',
+    '025': '.025',
+    '05': '.05',
+    '10': '.1',
+    '20': '.2',
+    '30': '.3',
+    '40': '.4',
     '50': '.5',
-    '75': '.75',
+    '60': '.6',
+    '70': '.7',
+    '80': '.8',
+    '90': '.9',
     '100': '1'
+  },
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Aspect Ratio
+  |-----------------------------------------------------------------------------
+  |
+  | Here is where you define your aspect ratio utility values. By default we
+  | provide a sensible numeric scale. You can, of course, modify these
+  | values as needed.
+  |
+  | Class name: .aspect-ratio-{name}
+  |
+  */
+
+  aspectRatios: {
+    '16x9': '56.25%',
+    '9x16': '177.77%',
+    '4x3': '75%',
+    '3x4': '133.33%',
+    '6x4': '66.6%',
+    '4x6': '150%',
+    '8x5': '62.5%',
+    '5x8': '160%',
+    '7x5': '71.42%',
+    '5x7': '140%',
+    '1x1': '100%'
+  },
+
+  /*
+  |-----------------------------------------------------------------------------
+  | CMS                             https://github.com/tachyons-css/tachyons-cms
+  |-----------------------------------------------------------------------------
+  |
+  | CSS module for styling unqualified elements with Tachyons
+  | Class name: .nested-{name}
+  |
+  */
+
+  cms: {
+    copyLineHeight: '1.5',
+    headlineLineHeight: '1.5',
+    copyIndent: '1em',
+    copySeparator: '1.5em'
   },
 
   /*
@@ -825,6 +889,39 @@ module.exports = {
 
   /*
   |-----------------------------------------------------------------------------
+  | Table Stripes
+  |-----------------------------------------------------------------------------
+  |
+  | Class name: .striped--{name}
+  |
+  */
+
+  stripes: {
+    'light-silver': colors['light-silver'],
+    'moon-gray': colors['moon-gray'],
+    'light-gray': colors['light-gray'],
+    'near-white': colors['near-white']
+  },
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Debug
+  |-----------------------------------------------------------------------------
+  |
+  | Class name: .debug-{name}
+  |
+  */
+
+  // debug: {
+  //   '': 'debug'
+  //   debug: 'debug',
+  //   debugWhite: 'debug-white',
+  //   debugBlack: 'debug-black',
+  //   debugGrid: 'debug-grid'
+  // },
+
+  /*
+  |-----------------------------------------------------------------------------
   | Modules                  https://tailwindcss.com/docs/configuration#modules
   |-----------------------------------------------------------------------------
   |
@@ -841,9 +938,11 @@ module.exports = {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
     backgroundColors: ['responsive', 'hover'],
+    backgroundForegroundColors: ['responsive', 'hover'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
+    borders: ['responsive'],
     borderColors: ['responsive', 'hover'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
@@ -882,7 +981,17 @@ module.exports = {
     visibility: ['responsive'],
     whitespace: ['responsive'],
     width: ['responsive'],
-    zIndex: ['responsive']
+    zIndex: ['responsive'],
+    aspectRatios: ['responsive'],
+    rotate: ['responsive'],
+    boxSizing: [],
+    outline: ['responsive'],
+    cms: [],
+    typography: ['responsive'],
+    debug: [],
+    interactive: [],
+    reset: [],
+    stripes: []
   },
 
   /*
@@ -899,5 +1008,448 @@ module.exports = {
     prefix: '',
     important: false,
     separator: ':'
+  },
+
+  naming: {
+    backgroundColors: {
+      base: 'bg',
+      modifierPrefix: '-'
+    },
+    backgroundForegroundColors: {
+      base: 'bfg',
+      modifierPrefix: '-'
+    },
+    backgroundPositions: {
+      base: 'bg-',
+      sides: {
+        top: 'top',
+        right: 'right',
+        rightTop: 'right-top',
+        rightBottom: 'right-bottom',
+        bottom: 'bottom',
+        left: 'left',
+        leftTop: 'left-top',
+        leftBottom: 'left-bottom',
+        left: 'left',
+        center: 'center'
+      }
+    },
+    backgroundAttachment: {
+      fixed: 'bg-fixed',
+      local: 'bg-local',
+      scroll: 'bg-scroll'
+    },
+    backgroundRepeat: {
+      repeat: 'bg-repeat',
+      noRepeat: 'bg-no-repeat',
+      repeatX: 'bg-repeat-x',
+      repeatY: 'bg-repeat-y'
+    },
+    backgroundSize: {
+      contain: 'contain',
+      cover: 'cover'
+    },
+    borders: {
+      all: 'ba',
+      top: 'bt',
+      right: 'br',
+      bottom: 'bb',
+      left: 'bl',
+      none: 'bn'
+    },
+    borderColors: {
+      base: 'b',
+      modifierPrefix: '--'
+    },
+    borderStyle: {
+      solid: 'b--solid',
+      dashed: 'b--dashed',
+      dotted: 'b--dotted',
+      none: 'b--none'
+    },
+    borderWidths: {
+      base: 'bw',
+      withSides: 'b',
+      modifierPrefix: '-',
+      sides: {
+        top: 't',
+        right: 'r',
+        bottom: 'b',
+        left: 'l'
+      }
+    },
+    container: {
+      base: 'container'
+    },
+    cursor: {
+      auto: 'cursor-auto',
+      default: 'cursor-default',
+      pointer: 'pointer',
+      notAllowed: 'cursor-not-allowed'
+    },
+    display: {
+      block: 'db',
+      inlineBlock: 'dib',
+      inline: 'di',
+      inlineTable: 'dit',
+      table: 'dt',
+      tableCell: 'dtc',
+      tableRow: 'dt-row',
+      tableRowGroup: 'dt-row-group',
+      tableColumn: 'dt-column',
+      tableColumnGroup: 'dt-column-group',
+      hidden: 'dn',
+      tableFixed: 'dt--fixed',
+      collapse: 'collapse'
+    },
+    flex: {
+      flex: 'flex',
+      inlineFlex: 'inline-flex',
+      flexRow: 'flex-row',
+      flexRowReverse: 'flex-row-reverse',
+      flexCol: 'flex-column',
+      flexColReverse: 'flex-column-reverse',
+      flexWrap: 'flex-wrap',
+      flexWrapReverse: 'flex-wrap-reverse',
+      flexNoWrap: 'flex-nowrap',
+      itemsStart: 'items-start',
+      itemsEnd: 'items-end',
+      itemsCenter: 'items-center',
+      itemsBaseline: 'items-baseline',
+      itemsStretch: 'items-stretch',
+      selfAuto: 'self-auto',
+      selfStart: 'self-start',
+      selfEnd: 'self-end',
+      selfCenter: 'self-center',
+      selfStretch: 'self-stretch',
+      selfBaseline: 'self-baseline',
+      justifyStart: 'justify-start',
+      justifyEnd: 'justify-end',
+      justifyCenter: 'justify-center',
+      justifyBetween: 'justify-between',
+      justifyAround: 'justify-around',
+      contentCenter: 'content-center',
+      contentStart: 'content-start',
+      contentEnd: 'content-end',
+      contentBetween: 'content-between',
+      contentAround: 'content-around',
+      contentStretch: 'content-stretch',
+      flex1: 'flex-1',
+      flexAuto: 'flex-auto',
+      flexInitial: 'flex-initial',
+      flexNone: 'flex-none',
+      flexGrow: 'flex-grow-1',
+      flexShrink: 'flex-shrink-1',
+      flexNoGrow: 'flex-grow-0',
+      flexNoShrink: 'flex-shrink-0',
+      order0: 'order-0',
+      order1: 'order-1',
+      order2: 'order-2',
+      order3: 'order-3',
+      order4: 'order-4',
+      order5: 'order-5',
+      order6: 'order-6',
+      order7: 'order-7',
+      order8: 'order-8',
+      orderLast: 'order-last'
+    },
+    floats: {
+      floatRight: 'fr',
+      floatLeft: 'fl',
+      floatNone: 'fn',
+      clearLeft: 'cl',
+      clearRight: 'cr',
+      clearBoth: 'cb',
+      clearNone: 'cn',
+      clearfix: 'cf'
+    },
+    cms: {
+      copyLineHeight: 'nested-copy-line-height',
+      headlineLineHeight: 'nested-headline-line-height',
+      copyIndent: 'nested-copy-indent',
+      copySeparator: 'nested-copy-separator',
+      /* Typo */
+      copySeperator: 'nested-copy-seperator',
+      listReset: 'nested-list-reset',
+      img: 'nested-img',
+      links: 'nested-links'
+    },
+    forms: {
+      appearanceNone: 'appearance-none'
+    },
+    lists: {
+      listReset: 'list-reset'
+    },
+    opacity: {
+      base: 'o',
+      modifierPrefix: '-'
+    },
+    overflow: {
+      base: 'overflow-',
+      auto: 'auto',
+      hidden: 'hidden',
+      visible: 'visible',
+      scroll: 'scroll',
+      xScroll: 'x-scroll',
+      yScroll: 'y-scroll',
+      xVisible: 'x-visible',
+      yVisible: 'y-visible',
+      xHidden: 'x-hidden',
+      yHidden: 'y-hidden',
+      xAuto: 'x-auto',
+      yAuto: 'y-auto',
+      scrollingTouch: 'scrolling-touch',
+      scrollingAuto: 'scrolling-auto',
+      /* Deprecated */
+      container: 'container'
+    },
+    pointerEvents: {
+      pointerAuto: 'pointer-events-auto',
+      pointerNone: 'pointer-events-none'
+    },
+    position: {
+      static: 'static',
+      fixed: 'fixed',
+      absolute: 'absolute',
+      relative: 'relative',
+      pin: 'absolute--fill',
+      pinNone: 'pin-none',
+      modifierPrefix: '-',
+      sides: {
+        top: 'top',
+        bottom: 'bottom',
+        left: 'left',
+        right: 'right'
+      },
+      pinX: 'pin-x',
+      pinY: 'pin-y'
+    },
+    rotate: {
+      base: 'rotate',
+      modifierPrefix: '-'
+    },
+    resize: {
+      resize: 'resize',
+      resizeNone: 'resize-none',
+      resizeX: 'resize-x',
+      resizeY: 'resize-y'
+    },
+    svgFill: {
+      base: 'fill',
+      modifierPrefix: '-'
+    },
+    svgStroke: {
+      base: 'stroke',
+      modifierPrefix: '-'
+    },
+    aspectRatios: {
+      base: 'aspect-ratio',
+      modifierPrefix: '--',
+      object: 'aspect-ratio--object'
+    },
+    borderRadius: {
+      base: 'br',
+      withSides: 'br--',
+      modifierPrefix: '',
+      sidesSeparator: '--',
+      sides: {
+        top: 'top',
+        right: 'right',
+        bottom: 'bottom',
+        left: 'left'
+      }
+    },
+    boxSizing: {
+      borderBox: 'border-box',
+      contentBox: 'content-box'
+    },
+    shadow: {
+      base: 'shadow',
+      modifierPrefix: '-'
+    },
+    height: {
+      base: 'h',
+      modifierPrefix: '',
+      screen: 'vh'
+    },
+    maxHeight: {
+      base: 'max-h',
+      modifierPrefix: '-'
+    },
+    minHeight: {
+      base: 'min-h',
+      modifierPrefix: '-',
+      screen: 'min-vh'
+    },
+    width: {
+      base: 'w',
+      modifierPrefix: '',
+      screen: 'vw'
+    },
+    maxWidth: {
+      base: 'mw',
+      modifierPrefix: ''
+    },
+    minWidth: {
+      base: 'min-w',
+      modifierPrefix: '-'
+    },
+    margin: {
+      base: 'm',
+      modifierPrefix: '',
+      allModifierPrefix: 'a',
+      y: 'v',
+      x: 'h',
+      t: 't',
+      r: 'r',
+      b: 'b',
+      l: 'l',
+      center: 'center'
+    },
+    negativeMargin: {
+      base: 'n',
+      modifierPrefix: '',
+      allModifierPrefix: 'a',
+      y: 'v',
+      x: 'h',
+      t: 't',
+      r: 'r',
+      b: 'b',
+      l: 'l'
+    },
+    padding: {
+      base: 'p',
+      modifierPrefix: '',
+      allModifierPrefix: 'a',
+      y: 'v',
+      x: 'h',
+      t: 't',
+      r: 'r',
+      b: 'b',
+      l: 'l'
+    },
+    textAlign: {
+      left: 'tl',
+      center: 'tc',
+      right: 'tr',
+      justify: 'tj'
+    },
+    textColors: {
+      base: '',
+      modifierPrefix: '',
+      inherit: 'color-inherit'
+    },
+    fonts: {
+      base: '',
+      modifierPrefix: ''
+    },
+    leading: {
+      base: 'lh',
+      modifierPrefix: '-'
+    },
+    textSizes: {
+      base: 'f',
+      modifierPrefix: ''
+    },
+    textStyle: {
+      italic: 'i',
+      roman: 'fs-normal',
+      uppercase: 'ttu',
+      lowercase: 'ttl',
+      capitalize: 'ttc',
+      normalCase: 'ttn',
+      underline: 'underline',
+      lineThrough: 'strike',
+      noUnderline: 'no-underline',
+      antialiased: 'antialiased',
+      subpixelAntialiased: 'subpixel-antialiased'
+    },
+    textTracking: {
+      base: 'tracked',
+      modifierPrefix: '-'
+    },
+    fontWeights: {
+      base: 'fw',
+      modifierPrefix: '',
+      normal: 'normal',
+      bold: 'b'
+    },
+    textWrap: {
+      whitespaceNormal: 'ws-normal',
+      whitespaceNoWrap: 'nowrap',
+      whitespacePre: 'pre',
+      whitespacePreLine: 'pre-line',
+      whitespacePreWrap: 'pre-wrap',
+      breakWords: 'break-words',
+      breakNormal: 'break-normal',
+      truncate: 'truncate'
+    },
+    debug: {
+      debug: 'debug',
+      debugWhite: 'debug-white',
+      debugBlack: 'debug-black',
+      debugGrid: 'debug-grid'
+    },
+    userSelect: {
+      selectNone: 'select-none',
+      selectText: 'select-text'
+    },
+    verticalAlign: {
+      alignBaseline: 'v-base',
+      alignTop: 'v-top',
+      alignMiddle: 'v-mid',
+      alignBottom: 'v-btm',
+      alignTextTop: 'v-top-text',
+      alignTextBottom: 'v-btm-text',
+      alignSub: 'v-sub',
+      alignInherit: 'v-inherit',
+      alignSuper: 'v-super'
+    },
+    visibility: {
+      visible: 'visible',
+      invisible: 'invisible',
+      clip: 'clip'
+    },
+    zIndex: {
+      base: 'z',
+      modifierPrefix: '-'
+    },
+    outline: {
+      base: 'outline',
+      transparent: 'outline-transparent',
+      zero: 'outline-0'
+    },
+    typography: {
+      measure: 'measure',
+      measureWide: 'measure-wide',
+      measureNarrow: 'measure-narrow',
+      indent: 'indent',
+      smallCaps: 'small-caps'
+    },
+    interactive: {
+      dim: 'dim',
+      hideChild: 'hide-child',
+      underline: 'underline-hover',
+      grow: 'grow',
+      growLarge: 'grow-large',
+      shadow: 'shadow-hover',
+      bg: 'bg-animate',
+      glow: 'glow',
+      hoverInherit: 'hover-inherit',
+      hoverBgInherit: 'hover-bg-inherit'
+    },
+    reset: {
+      link: 'link',
+      list: 'list',
+      input: 'input-reset',
+      button: 'button-reset'
+    },
+    stripes: {
+      base: 'stripe',
+      modifierPrefix: '--',
+      withModifier: 'striped',
+      light: '-light',
+      dark: '-dark'
+    }
   }
-};
+}

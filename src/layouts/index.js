@@ -2,7 +2,10 @@ const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
-      meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
+      meta={[
+        { name: 'description', content: 'Sample' },
+        { name: 'keywords', content: 'sample, something' }
+      ]}
     />
     {/* <Header /> */}
     {children()}
@@ -30,7 +33,7 @@ import Link from 'gatsby-link'
 
 /* 
 
-Custom Imports 
+My Imports 
 
 */
 
@@ -51,7 +54,6 @@ Global Fonts
 // import '../fonts/Avenir-Pro-45-Book.woff'
 // import '../fonts/Avenir-Pro-85-Heavy.woff2'
 // import '../fonts/Avenir-Pro-85-Heavy.woff'
-// import '../styles/font-face.css'
 
 /* 
 
@@ -59,11 +61,14 @@ Global Styles
 
 */
 
-// TODO: move these plugin style calls to tailwind.css once postCSS processing is working
-// import '../../node_modules/slick-carousel/slick/slick.css'
-// import '../../node_modules/slick-carousel/slick/slick-theme.css'
-
-import '../styles/styles.scss'
+switch (process.env.NODE_ENV) {
+  case `development`:
+    require('../styles/builds/after-postcss/main.css')
+    break
+  case `production`:
+    require('../styles/builds/after-purgecss/main.css')
+    break
+}
 
 /* 
 

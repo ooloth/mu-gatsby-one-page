@@ -1,0 +1,396 @@
+/*
+ *
+ * Base
+ *
+ */
+@tailwind preflight {}/*
+ *
+ * Reset Styles
+ *
+ * 1. Body
+ * 2. Images
+ * 3. Links
+ * 4. Buttons
+ * 5. Lists
+ * 6. Forms
+ * 7. Tables
+ * 8. iOS issues
+ *
+ */
+/*
+ *
+ * 1. Body
+ *
+ */
+html,
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on; }
+
+/*
+ *
+ * 2. Images
+ *
+ */
+img {
+  height: auto;
+  vertical-align: middle; }
+
+img[width],
+img[height] {
+  max-width: none; }
+
+/*
+ *
+ * 3. Links
+ *
+ */
+a {
+  text-decoration: none;
+  color: inherit; }
+
+/*
+ *
+ * 4. Buttons
+ *
+ */
+/*
+ *
+ * 5. Lists
+ *
+ */
+ol,
+ul {
+  list-style: none;
+  padding-left: 0; }
+
+li > ol,
+li > ul {
+  margin-bottom: 0; }
+
+/*
+ *
+ * 6. Forms
+ *
+ */
+input,
+textarea {
+  appearance: none;
+  line-height: normal; }
+
+fieldset {
+  min-width: 0;
+  border: 0; }
+
+/*
+ *
+ * 7. Tables
+ *
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%; }
+
+/*
+ *
+ * 8. iOS issues
+ *
+ */
+/*
+ *
+ * Plugins
+ *
+ */
+/* Slick */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/*
+ *
+ * General
+ *
+ */
+/*
+ *
+ * Arrows
+ *
+ */
+/*
+ *
+ * Dots
+ *
+ */
+.slick-dots {
+  position: absolute;
+  bottom: -3rem;
+  right: 0;
+  margin: 0 1rem 1.25rem 0;
+  text-align: center;
+  list-style: none; }
+  @media (min-width: 62em) {
+    .slick-dots {
+      top: 0; } }
+
+.slick-dots > li {
+  display: inline-block;
+  margin-left: .75rem;
+  cursor: pointer; }
+  @media (min-width: 62em) {
+    .slick-dots > li {
+      display: block;
+      margin: 0.5rem 0 0 0; } }
+
+.slick-dots > li > button {
+  outline: none;
+  border-radius: 100%;
+  background-color: grey;
+  padding: 0;
+  height: 0.75rem;
+  width: 0.75rem;
+  color: transparent;
+  opacity: 0.5;
+  transition: all 1s ease-in-out;
+  cursor: pointer; }
+
+.slick-dots > li.slick-active > button {
+  opacity: 1;
+  background-color: red; }
+
+/*
+ *
+ * Components
+ *
+ */
+/*
+ *
+ * Balls
+ *
+ */
+.ball {
+  @apply .absolute .z-max .br-100 {} }
+
+/*
+ *
+ * Buttons
+ *
+ */
+.btn {
+  @apply .dib .br3 .bg-gold .pv2 .ph3 .white .animate {} }
+  .btn:hover, .btn:focus {
+    @apply .bg-red {} }
+
+/*
+ *
+ * Containers
+ *
+ */
+/*
+ *
+ * Headings
+ *
+ */
+.heading {
+  @apply .f2 .black {} }
+
+.subheading {
+  @apply .f5 .ttu .tracked-normal {} }
+
+/*
+ *
+ * Sections
+ *
+ */
+/*
+ *
+ * Utilities
+ *
+ */
+@tailwind utilities {}/*
+ *
+ * General Animations
+ *
+ */
+.animate {
+  transition: all 0.15s ease-in-out; }
+
+/*
+ *
+ * Ball Animations
+ *
+ */
+.anim-vertical {
+  animation: anim-vertical 8s ease-in-out 1.5s infinite alternate; }
+
+.anim-horizontal {
+  animation: anim-horizontal 11s ease-in-out 1.5s infinite alternate; }
+
+.anim-diagonal-right {
+  animation: anim-diagonal-right 13s ease-in-out 1.5s infinite alternate; }
+
+.anim-diagonal-left {
+  animation: anim-diagonal-left 15s ease-in-out 1.5s infinite alternate; }
+
+/*
+ *
+ * Ball Keyframes
+ *
+ */
+@keyframes anim-vertical {
+  0% {
+    transform: matrix(1, 0, 0, 1, 0, 0); }
+  100% {
+    transform: matrix(-1, 0, 0, -1, 0, -80); } }
+
+@keyframes anim-horizontal {
+  0% {
+    transform: matrix(1, 0, 0, 1, 0, 0); }
+  100% {
+    transform: matrix(-1, 0, 0, -1, -80, 0); } }
+
+@keyframes anim-diagonal-right {
+  0% {
+    transform: matrix(1, 0, 0, 1, 0, 0); }
+  100% {
+    transform: matrix(-1, 0, 0, -1, 80, -80); } }
+
+@keyframes anim-diagonal-left {
+  0% {
+    transform: matrix(1, 0, 0, 1, 0, 0); }
+  100% {
+    transform: matrix(-1, 0, 0, -1, -80, -80); } }
+
+/*
+ *
+ * General Positioning
+ *
+ */
+@responsive {
+  .top-0 {
+    top: 0; }
+  .top-50 {
+    top: 50%; }
+  .right-0 {
+    right: 0; }
+  .bottom-0 {
+    bottom: 0; }
+  .left-0 {
+    left: 0; }
+  .left-50 {
+    left: 50%; } }
+
+/*
+ *
+ * Transforms
+ *
+ */
+.origin-top {
+  transform-origin: top; }
+
+.origin-right {
+  transform-origin: right; }
+
+.origin-bottom {
+  transform-origin: bottom; }
+
+.origin-left {
+  transform-origin: left; }
+
+/*
+ *
+ * Overflow
+ *
+ */
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
+/*
+ *
+ * Width
+ *
+ */
+/*
+ *
+ * Height
+ *
+ */
+/*
+ *
+ * Supports
+ *
+ */

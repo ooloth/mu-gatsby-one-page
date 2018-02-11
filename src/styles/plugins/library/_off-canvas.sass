@@ -1,0 +1,21 @@
+// Make the aside fixed, and make sure the width and right cancel each other out.
+.js-slide-out-nav
+  position: fixed
+  top: 0
+  right: -150px
+  width: 150px
+  height: 100%
+  -webkit-overflow-scrolling: touch
+  overflow-y: scroll
+
+// Show the sidebar
+.js-show-nav
+  .js-slide-out-nav,
+  .js-header,
+  .site-content
+    transform: translateX(-150px)
+
+// Stop .site-content from scrolling under the sidebar
+.no-scroll
+  height: 100%
+  overflow: hidden

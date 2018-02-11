@@ -7,7 +7,7 @@
 // IE11 polyfill for object-fit/position (used by gatsby-image)
 import objectFitImages from 'object-fit-images'
 
-exports.onClientEntry = () => {
-  // console.log("We've started!")
-  objectFitImages()
-}
+// IE11 polyfill for fetch (no function call needed)
+import 'whatwg-fetch'
+
+exports.onClientEntry = () => objectFitImages()

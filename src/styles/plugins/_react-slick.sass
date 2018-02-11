@@ -1,0 +1,78 @@
+/* Slick */
+
+@import '../../../node_modules/slick-carousel/slick/slick.scss'
+
+/* 
+ *
+ * General 
+ *
+ */
+
+// .slick-track
+//   display: flex !important
+
+
+// .slick-slide
+//   display: flex !important
+//   height: auto !important
+
+
+// .slick-list
+//   overflow-x: hidden
+
+
+/* 
+ *
+ * Arrows 
+ *
+ */
+
+// .slick-slider
+//   position: relative
+
+/* 
+ *
+ * Dots 
+ *
+ */
+
+.slick-dots
+  position: absolute
+  bottom: -3rem
+  right: 0
+  margin: 0 1rem 1.25rem 0
+  text-align: center
+  list-style: none
+
+  @media (min-width: 62em)
+    top: 0
+  
+.slick-dots > li
+  display: inline-block
+  margin-left: .75rem
+  cursor: pointer
+
+  @media (min-width: 62em)
+    display: block
+    margin: 0.5rem 0 0 0
+
+.slick-dots > li > button
+  outline: none
+  // border: 3px solid pink
+  border-radius: 100%
+  background-color: grey
+  padding: 0
+  height: 0.75rem
+  width: 0.75rem
+  color: transparent
+  opacity: 0.5
+  // TODO: match the slider speed:
+  transition: all 1s ease-in-out  
+  cursor: pointer
+
+.slick-dots > li.slick-active > button
+  opacity: 1
+  // border: 3px solid pink
+  background-color: red
+  // height: 1.15rem
+  // width: 1.15rem

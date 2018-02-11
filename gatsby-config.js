@@ -10,23 +10,6 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    {
-      resolve: `gatsby-plugin-postcss-sass`,
-      options: {
-        postCssPlugins: [],
-        precision: 8 // SASS default: 5
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-purify-css',
-      options: {
-        styleId: 'gatsby-inlined-css',
-        purifyOptions: {
-          info: true,
-          minify: true
-        }
-      }
-    },
     // `gatsby-plugin-preact`, // doesn't work with react-simple-chatbot
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-next`, // disable if using preact

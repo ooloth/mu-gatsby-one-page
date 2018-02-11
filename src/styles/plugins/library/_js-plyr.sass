@@ -1,0 +1,80 @@
+// ================
+   JS Classes: Plyr
+   ================
+
+// Container styles
+.plyr--audio .plyr__controls
+  padding: 0px
+  background: transparent
+  border: 0
+  color: inherit
+
+// Play/pause buttons
+button[data-plyr='play'],
+button[data-plyr='pause']
+  display: table
+  text-align: center
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .2)
+  border-radius: 100%
+  background-color: var(--pink)
+  padding-right: .25rem
+  height: 3rem
+  width: 3rem
+
+  // &:hover,
+  // &:active
+  //   background-color: var(--black-80)
+  //   color: var(--pink)
+
+button[data-plyr='play'] > svg
+  display: table-cell
+  vertical-align: middle
+  margin: 0 auto
+
+button[data-plyr='pause'] > svg
+  display: table-cell
+  vertical-align: middle
+  margin-left: .5rem
+
+.plyr--audio .plyr__controls button:hover
+  background-color: var(--black-80)
+  color: var(--pink)
+
+// Progress bar (hide until played)
+.plyr .plyr__progress
+  // opacity: 0
+  // transition: all .3s ease-in-out
+
+// Progess bar (horizontal position)
+.plyr__controls .plyr__progress
+  margin-left: 0
+
+// Progress bar (height)
+.plyr input[type=range],
+.plyr--audio .plyr__progress--buffer,
+.plyr__progress--played
+  height: 2px
+
+// Progress bar (vertical position)
+.plyr--audio .plyr__progress--buffer,
+.plyr__progress--played
+  margin-top: 0
+
+// Progress bar (unplayed section colors, buffered and unbuffered)
+.plyr--audio .plyr__progress--buffer
+  // background-color: var(--black-10)
+  color: inherit
+
+// Progress bar (played section color)
+.plyr__progress--played
+  color: var(--pink)
+
+// Progress thumbnail indicator (hiddendon't remove functionality from DOM using display:none)
+.plyr input[type=range]::-webkit-slider-thumb
+  opacity: 0
+
+.plyr input[type=range]::-moz-range-thumb
+  opacity: 0
+
+.plyr input[type=range]::-ms-thumb
+  opacity: 0

@@ -1,0 +1,58 @@
+/* 
+ *
+ * General Animations
+ *
+ */
+
+.animate
+  transition: all 0.15s ease-in-out
+
+/* 
+ *
+ * Ball Animations
+ *
+ */
+
+.anim-vertical
+  animation: anim-vertical 8s ease-in-out 1.5s infinite alternate
+
+.anim-horizontal
+  animation: anim-horizontal 11s ease-in-out 1.5s infinite alternate
+
+.anim-diagonal-right
+  animation: anim-diagonal-right 13s ease-in-out 1.5s infinite alternate
+
+.anim-diagonal-left
+  animation: anim-diagonal-left 15s ease-in-out 1.5s infinite alternate
+
+/* 
+ *
+ * Ball Keyframes
+ *
+ */
+
+@keyframes anim-vertical
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, 0, -80)
+
+@keyframes anim-horizontal
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, -80, 0)
+
+@keyframes anim-diagonal-right
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, 80, -80)
+
+@keyframes anim-diagonal-left
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, -80, -80)
+
+

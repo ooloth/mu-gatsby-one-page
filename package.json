@@ -4,45 +4,56 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.145",
-    "gatsby-cli": "^1.1.28",
-    "gatsby-image": "^1.0.31",
+    "d3-ease": "^1.0.3",
+    "gatsby": "^1.9.192",
+    "gatsby-cli": "^1.1.39",
+    "gatsby-image": "^1.0.35",
     "gatsby-link": "^1.6.32",
-    "gatsby-plugin-netlify": "^1.0.13",
-    "gatsby-plugin-postcss-sass": "^1.0.16",
-    "gatsby-plugin-preact": "^1.0.14",
-    "gatsby-plugin-purify-css": "^2.2.1",
+    "gatsby-plugin-netlify": "^1.0.17",
+    "gatsby-plugin-preact": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-react-next": "^1.0.8",
-    "gatsby-plugin-sharp": "^1.6.24",
-    "gatsby-source-filesystem": "^1.5.11",
-    "gatsby-transformer-sharp": "^1.6.16",
+    "gatsby-plugin-sharp": "^1.6.27",
+    "gatsby-source-filesystem": "^1.5.18",
+    "gatsby-transformer-sharp": "^1.6.18",
     "isotope-layout": "^3.0.5",
-    "object-assign": "^4.1.1",
     "object-fit-images": "^3.2.3",
+    "postcss-cssnext": "^3.1.0",
     "react-aux": "^1.1.0",
     "react-icons": "^2.2.7",
     "react-id-swiper": "^1.5.8",
+    "react-inlinesvg": "^0.7.5",
+    "react-move": "^2.6.0",
+    "react-scroll": "^1.7.6",
     "react-simple-chatbot": "^0.2.9",
     "react-slick": "^0.16.0",
+    "react-waypoint": "^8.0.0",
     "scrollreveal": "^3.3.6",
     "shortid": "^2.2.8",
-    "tailwindcss": "^0.4.0"
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "dumconstantin/tailwindcss#tachyons",
+    "whatwg-fetch": "^2.0.3"
   },
   "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "tailwind":
-      "./node_modules/.bin/tailwind build ./src/styles/tailwind.scss -c ./src/styles/tailwind.js -o ./src/styles/styles.scss && babel --plugins transform-object-assign ./src/styles/tailwind.js -o ./src/styles/tailwind-babel.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass":
+      "node-sass-chokidar --source-map true src/styles/main.sass -o src/styles/builds/after-sass -w",
+    "watch:postcss":
+      "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css -w",
+    "watch:styles": "npm run watch:sass & npm run watch:postcss",
+    "build:sass": "node-sass-chokidar src/styles/main.sass -o src/styles/builds/after-sass",
+    "build:postcss":
+      "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css",
+    "build:purgecss": "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
+    "build:styles": "npm run build:sass && npm run build:postcss && npm run build:purgecss",
+    "dev": "gatsby develop & npm run watch:styles",
+    "build": "npm run build:styles && gatsby build"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "prettier": "^1.9.2"
+    "node-sass-chokidar": "0.0.3",
+    "postcss-cli": "^5.0.0",
+    "purgecss": "^0.20.0"
   }
 }

@@ -1,0 +1,21 @@
+// Note: structure HTML as:.img-placeholder > img
+
+.img-placeholder,
+.iframe-placeholder
+  background-color: pink
+  transition: background-color 0.5s ease
+  transition-delay: .3s
+
+  &.img-loaded
+    // background-color: inherit
+    background-color: transparent
+
+  img
+    // Hide image (until loaded)
+    opacity: 0
+    // Transition opacity
+    transition: opacity 0.6s ease
+
+  &.img-loaded img
+    // Show image when loaded
+    opacity: 1

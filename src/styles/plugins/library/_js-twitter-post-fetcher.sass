@@ -1,0 +1,76 @@
+// ================================
+   JS Classes: Twitter Post Fetcher
+   ================================
+
+
+#js-tweets
+  ul
+    list-style: none
+    margin-top: 0
+    margin-bottom: 0
+    // padding-left: 1rem
+    // padding-right: 1rem
+    text-align: center
+    // color: white
+
+  // Avatar, Name & Screen name
+  [data-scribe="component:author"]
+
+  // Avatar
+  [data-scribe="element:avatar"]
+    display: inline-block
+    width: 2rem
+    border-radius: 10px
+
+  // Name
+  [data-scribe="element:name"]
+    font-weight: bold
+
+  // Screen name & Mentions
+  [data-scribe="element:screen_name"],
+  [data-scribe="element:mention"]
+    transition: text-decoration .15s ease-in-out
+    &:hover
+      text-decoration: underline
+
+  // Links
+  [data-scribe="element:url"]
+    color: var(--red)
+    transition: text-decoration .15s ease-in-out
+    &:hover
+      text-decoration: underline
+
+// Reply, Retweet & Like buttons
+.interact
+  // display: none
+  margin-bottom: 0
+  // font-family: 'FontAwesome'
+  font-family: 'Fontello'
+
+  .twitter_reply_icon,
+  .twitter_retweet_icon,
+  .twitter_fav_icon
+    display: inline-block
+    visibility: hidden
+    width: 0
+    padding: 0 1.15rem
+    font-size: 1.15rem
+    color: var(--dark-red)
+    &:before
+      display: inline-block
+      visibility: visible
+      transition: color .15s ease-in-out
+    &:hover
+      color: var(--red)
+
+  .twitter_reply_icon:before
+    content: "\f112"
+
+  .twitter_retweet_icon:before
+    // content: "\f079"
+    content: "\e802"
+
+  .twitter_fav_icon:before
+    // content: "\f004"
+    content: "\e803"
+
