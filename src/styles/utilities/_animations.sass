@@ -9,21 +9,36 @@
 
 /* 
  *
- * Ball Animations
+ * Heading Animations
  *
  */
 
-.anim-vertical
-  animation: anim-vertical 8s ease-in-out 1.5s infinite alternate
+.goofy
+  &:hover,
+  &:focus
+    transform: scale(1.3) rotateX(-20deg) rotateY(10deg)
 
-.anim-horizontal
-  animation: anim-horizontal 11s ease-in-out 1.5s infinite alternate
+.goofy:hover span
+  display: inline-block
+  animation-name: dance
+  animation-duration: 0.4s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
 
-.anim-diagonal-right
-  animation: anim-diagonal-right 13s ease-in-out 1.5s infinite alternate
+.goofy:hover span:nth-child(even)
+  animation-delay: 0.15s
 
-.anim-diagonal-left
-  animation: anim-diagonal-left 15s ease-in-out 1.5s infinite alternate
+// .anim-vertical
+//   animation: anim-vertical 8s ease-in-out 1.5s infinite alternate
+
+// .anim-horizontal
+//   animation: anim-horizontal 11s ease-in-out 1.5s infinite alternate
+
+// .anim-diagonal-right
+//   animation: anim-diagonal-right 13s ease-in-out 1.5s infinite alternate
+
+// .anim-diagonal-left
+//   animation: anim-diagonal-left 15s ease-in-out 1.5s infinite alternate
 
 /* 
  *
@@ -31,28 +46,39 @@
  *
  */
 
-@keyframes anim-vertical
-  0%
-    transform: matrix(1, 0, 0, 1, 0, 0)
-  100%
-    transform: matrix(-1, 0, 0, -1, 0, -80)
+@keyframes dance
+  from
+    transform: translate(0, 0px) rotate(-12deg)
+    text-shadow: 10px 10px 3px rgba(0,0,0,0.1)
+  65%
+    transform: translate(0, 15px) rotate(12deg) scale(1.3)
+    text-shadow: -10px -10px 3px rgba(0,0,0,0.1)
+  to
+    transform: translate(0, 0px) rotate(-12deg)
+    text-shadow: 10px 10px 3px rgba(0,0,0,0.1)
 
-@keyframes anim-horizontal
-  0%
-    transform: matrix(1, 0, 0, 1, 0, 0)
-  100%
-    transform: matrix(-1, 0, 0, -1, -80, 0)
+// @keyframes anim-vertical
+//   0%
+//     transform: matrix(1, 0, 0, 1, 0, 0)
+//   100%
+//     transform: matrix(-1, 0, 0, -1, 0, -80)
 
-@keyframes anim-diagonal-right
-  0%
-    transform: matrix(1, 0, 0, 1, 0, 0)
-  100%
-    transform: matrix(-1, 0, 0, -1, 80, -80)
+// @keyframes anim-horizontal
+//   0%
+//     transform: matrix(1, 0, 0, 1, 0, 0)
+//   100%
+//     transform: matrix(-1, 0, 0, -1, -80, 0)
 
-@keyframes anim-diagonal-left
-  0%
-    transform: matrix(1, 0, 0, 1, 0, 0)
-  100%
-    transform: matrix(-1, 0, 0, -1, -80, -80)
+// @keyframes anim-diagonal-right
+//   0%
+//     transform: matrix(1, 0, 0, 1, 0, 0)
+//   100%
+//     transform: matrix(-1, 0, 0, -1, 80, -80)
+
+// @keyframes anim-diagonal-left
+//   0%
+//     transform: matrix(1, 0, 0, 1, 0, 0)
+//   100%
+//     transform: matrix(-1, 0, 0, -1, -80, -80)
 
 

@@ -5313,27 +5313,30 @@ table {
 
 /*
  *
- * Ball Animations
+ * Heading Animations
  *
  */
-.anim-vertical {
-  -webkit-animation: anim-vertical 8s ease-in-out 1.5s infinite alternate;
-          animation: anim-vertical 8s ease-in-out 1.5s infinite alternate;
+.goofy:hover,
+.goofy:focus {
+  -webkit-transform: scale(1.3) rotateX(-20deg) rotateY(10deg);
+          transform: scale(1.3) rotateX(-20deg) rotateY(10deg);
 }
 
-.anim-horizontal {
-  -webkit-animation: anim-horizontal 11s ease-in-out 1.5s infinite alternate;
-          animation: anim-horizontal 11s ease-in-out 1.5s infinite alternate;
+.goofy:hover span {
+  display: inline-block;
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
-.anim-diagonal-right {
-  -webkit-animation: anim-diagonal-right 13s ease-in-out 1.5s infinite alternate;
-          animation: anim-diagonal-right 13s ease-in-out 1.5s infinite alternate;
-}
-
-.anim-diagonal-left {
-  -webkit-animation: anim-diagonal-left 15s ease-in-out 1.5s infinite alternate;
-          animation: anim-diagonal-left 15s ease-in-out 1.5s infinite alternate;
+.goofy:hover span:nth-child(even) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
 }
 
 /*
@@ -5341,98 +5344,42 @@ table {
  * Ball Keyframes
  *
  */
-@-webkit-keyframes anim-vertical {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
+@-webkit-keyframes dance {
+  from {
+    -webkit-transform: translate(0, 0px) rotate(-12deg);
+            transform: translate(0, 0px) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
   }
 
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, 0, -80);
-            transform: matriX(-1, 0, 0, -1, 0, -80);
+  65% {
+    -webkit-transform: translate(0, 15px) rotate(12deg) scale(1.3);
+            transform: translate(0, 15px) rotate(12deg) scale(1.3);
+    text-shadow: -10px -10px 3px rgba(0, 0, 0, .1);
+  }
+
+  to {
+    -webkit-transform: translate(0, 0px) rotate(-12deg);
+            transform: translate(0, 0px) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
   }
 }
-@keyframes anim-vertical {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
+@keyframes dance {
+  from {
+    -webkit-transform: translate(0, 0px) rotate(-12deg);
+            transform: translate(0, 0px) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
   }
 
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, 0, -80);
-            transform: matriX(-1, 0, 0, -1, 0, -80);
-  }
-}
-
-@-webkit-keyframes anim-horizontal {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
+  65% {
+    -webkit-transform: translate(0, 15px) rotate(12deg) scale(1.3);
+            transform: translate(0, 15px) rotate(12deg) scale(1.3);
+    text-shadow: -10px -10px 3px rgba(0, 0, 0, .1);
   }
 
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, -80, 0);
-            transform: matriX(-1, 0, 0, -1, -80, 0);
-  }
-}
-
-@keyframes anim-horizontal {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, -80, 0);
-            transform: matriX(-1, 0, 0, -1, -80, 0);
-  }
-}
-
-@-webkit-keyframes anim-diagonal-right {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, 80, -80);
-            transform: matriX(-1, 0, 0, -1, 80, -80);
-  }
-}
-
-@keyframes anim-diagonal-right {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, 80, -80);
-            transform: matriX(-1, 0, 0, -1, 80, -80);
-  }
-}
-
-@-webkit-keyframes anim-diagonal-left {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, -80, -80);
-            transform: matriX(-1, 0, 0, -1, -80, -80);
-  }
-}
-
-@keyframes anim-diagonal-left {
-  0% {
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-            transform: matrix(1, 0, 0, 1, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: matriX(-1, 0, 0, -1, -80, -80);
-            transform: matriX(-1, 0, 0, -1, -80, -80);
+  to {
+    -webkit-transform: translate(0, 0px) rotate(-12deg);
+            transform: translate(0, 0px) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
   }
 }
 

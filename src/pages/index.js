@@ -3,7 +3,10 @@ const IndexPage = ({ data }) => (
     <main className="flex flex-column justify-center items-center pa3 h-100 avenir">
       <h1
         className="lh-solid fw9 ttu"
-        style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 9 )` }}
+        style={{
+          fontSize: `calc( (1vw + 1vh + .5vmin) * 9 )`,
+          textShadow: `6px 6px 5px rgba(0,0,0,0.1)`
+        }}
       >
         Hello
       </h1>
