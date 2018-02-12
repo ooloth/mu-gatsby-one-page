@@ -3,12 +3,12 @@ const IndexPage = ({ data }) => (
     <h1 className="lh-solid fw9 ttu" style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 9 )` }}>
       Hello
     </h1>
-    {/* <p className="pt3 pb4 tc lh-tall f4">
-      I'm Michael. I’m an opera singer and I build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
-    </p> */}
     <p className="pt3 pb4 tc lh-tall f4">
-      I'm Michael. I sing opera and build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
+      I'm Michael. I’m an opera singer and web developer. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
     </p>
+    {/* <p className="pt3 pb4 tc lh-tall f4">
+      I'm Michael. I sing opera and build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
+    </p> */}
     <nav className="flex">
       <Link to="/opera/" className="link">
         Opera

@@ -1,11 +1,11 @@
 const Hero = ({ content }) => {
   // Figure out text colour based on theme
   const { theme, title, titleMultiplier, blurb } = content
-  const color = theme === `black` ? `white` : `black`
+  const styles = theme === `black` ? `bg-black white` : `bg-green black`
 
   return (
     <section
-      className={`flex flex-column justify-center items-center bg-${theme} pv6 ph3 vh-100 ${color}`}
+      className={`flex flex-column justify-center items-center pv6 ph3 vh-100 ${styles}`}
       style={{ maxHeight: `30rem` }}
     >
       <h1

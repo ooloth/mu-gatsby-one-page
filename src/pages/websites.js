@@ -1,7 +1,7 @@
 const WebsitesPage = ({ data }) => (
   <main className="avenir">
     <Hero content={heroContent} />
-    <Work sites={data.sites.edges} coffeeshopImage={data.placeholderImage.sizes} />
+    <Work sites={data.sites.edges} />
     <Contact />
   </main>
 )
@@ -53,11 +53,11 @@ const Work = ({ sites }) => (
     {sites.map(site => {
       return <Site key={shortid()} site={site.node} />
     })}
-    {/* <Site site={coffeeshopSites} image={coffeeshopImage}  /> */}
   </section>
 )
 
 const Site = ({ site }) => {
+  // Intercept Coffeeshop JSON blurb and replace it with the version below with links
   if (site.title === 'Coffeeshop Creative') {
     site.blurb = <CoffeeshopBlurb />
   }
@@ -65,18 +65,8 @@ const Site = ({ site }) => {
     <article className="mb4 ph3 pb5 tc">
       {/* TODO: check out aspect-ratio component and my gatsby-image component from AT's site */}
       <Image sizes={site.image.childImageSharp.sizes} alt={site.alt} className="shadow-lg" />
-      <h3
-        className="dib mb3 pt5 f2 sm:f1 fw9 ttu tracked-slight"
-        // style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 2.5 )` }}
-      >
-        {site.title}
-      </h3>
-      <h4
-        className="sm:f4 ttu tracked-slight green"
-        // style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * .85 )` }}
-      >
-        {site.category}
-      </h4>
+      <h3 className="dib mb3 pt5 f2 sm:f1 fw9 ttu tracked-slight">{site.title}</h3>
+      <h4 className="sm:f4 ttu tracked-slight green">{site.category}</h4>
       <p className="ml-auto mr-auto pv4 lh-tall" style={{ maxWidth: `60ch` }}>
         {site.blurb}
       </p>
