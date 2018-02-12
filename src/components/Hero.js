@@ -15,7 +15,6 @@ const Hero = ({ content }) => {
           // webkitTextStroke: `5px black`,
           // textShadow: `8px 8px 16px rgb(0,0,0,.12)`,
           fontSize: `calc( (1vw + 1vh + .5vmin) * ${titleMultiplier} )`
-          // letterSpacing: `.03em`
         }}
       >
         {title}

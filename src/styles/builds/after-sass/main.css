@@ -251,6 +251,17 @@ table {
  * Containers
  *
  */
+.container {
+  @apply .ph3 {} }
+
+@screen md {
+  .container {
+    @apply .ph4 {} } }
+
+@screen lg {
+  .container {
+    @apply .ph5 {} } }
+
 /*
  *
  * Headings
@@ -279,6 +290,11 @@ table {
   @apply .custom-underline .animate {} }
   .link-inline:hover, .link-inline:focus {
     @apply .hover-custom-underline {} }
+
+.link-icon {
+  @apply .animate {} }
+  .link-icon:hover, .link-icon:focus {
+    @apply .green {} }
 
 /*
  *
@@ -442,9 +458,6 @@ table {
  * Font Size
  *
  */
-.f-18px {
-  font-size: 1.05rem; }
-
 /*
  *
  * Line Height

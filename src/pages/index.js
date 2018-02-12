@@ -1,35 +1,41 @@
 const IndexPage = ({ data }) => (
-  <main className="flex flex-column justify-center items-center pa3 vh-100 avenir">
-    <h1 className="lh-solid fw9 ttu" style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 9 )` }}>
-      Hello
-    </h1>
-    <p className="pt3 pb4 tc lh-tall f4">
-      I'm Michael. I’m an opera singer and web developer. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
-    </p>
-    {/* <p className="pt3 pb4 tc lh-tall f4">
+  <div className="relative vh-100">
+    <main className="flex flex-column justify-center items-center pa3 h-100 avenir">
+      <h1
+        className="lh-solid fw9 ttu"
+        style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 9 )` }}
+      >
+        Hello
+      </h1>
+      <p className="pt3 pb4 tc lh-tall f4">
+        I'm Michael. I’m an opera singer and web developer. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
+      </p>
+      {/* <p className="pt3 pb4 tc lh-tall f4">
       I'm Michael. I sing opera and build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
     </p> */}
-    <nav className="flex">
-      <Link to="/opera/" className="link">
-        Opera
-      </Link>
-      <Link to="/websites/" className="link ml3 sm:ml4">
-        Websites
-      </Link>
-    </nav>
+      <nav className="flex pb4">
+        <Link to="/opera/" className="link">
+          Opera
+        </Link>
+        <Link to="/websites/" className="link ml3 sm:ml4">
+          Websites
+        </Link>
+      </nav>
 
-    {/* <h1 className="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
+      {/* <h1 className="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
     <ReactIDSwiper sizes={data.placeholderImage.sizes} />
     <IsotopeTests sizes={data.placeholderImage.sizes} /> */}
-    {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
-    {/* <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
+      {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
+      {/* <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
     <Chat />
     <Opera />
     <Websites /> */}
-  </main>
+    </main>
+    <Footer className="absolute bottom-0 w-100 tc" />
+  </div>
 )
 
 export default IndexPage
@@ -41,7 +47,10 @@ export default IndexPage
  */
 
 import React from 'react'
+import Aux from 'react-aux'
 import Link from 'gatsby-link'
+
+import Footer from '../components/Footer'
 
 /*
  *
@@ -369,7 +378,8 @@ class IsotopeContainer extends React.Component {
     const allItemsWithClassesUpdated = this.state.allItems.map(item => {
       // Add "visible" class if item is right category and # limit hasn't been reached
       if (
-        (this.state.category === `.all` || item.category === this.state.category.substring(1)) &&
+        (this.state.category === `.all` ||
+          item.category === this.state.category.substring(1)) &&
         counter < this.state.howManyToShow
       ) {
         const classList = item.classes.replace(`hidden`, `visible`)
@@ -698,8 +708,8 @@ const Opera = () => {
       <h3>About Me</h3>
       <p className="max-w-8 leading-normal">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequatur deserunt.
-        Delectus pariatur error soluta. Repellendus natus odio consequatur veniam pariatur eaque
-        amet debitis odit obcaecati, sapiente expedita, dicta harum.
+        Delectus pariatur error soluta. Repellendus natus odio consequatur veniam pariatur
+        eaque amet debitis odit obcaecati, sapiente expedita, dicta harum.
       </p>
       <h3>Work</h3>
       <p className="max-w-8 leading-normal">

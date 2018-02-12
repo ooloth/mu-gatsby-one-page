@@ -23,6 +23,17 @@
  *
  */
 
+.container
+  @apply .ph3
+
+@screen md
+  .container
+    @apply .ph4
+
+@screen lg
+  .container
+    @apply .ph5
+
 /* 
  *
  * Headings
@@ -61,6 +72,12 @@
   &:hover,
   &:focus
     @apply .hover-custom-underline
+
+.link-icon
+  @apply .animate
+  &:hover,
+  &:focus
+    @apply .green
 
 /* 
  *

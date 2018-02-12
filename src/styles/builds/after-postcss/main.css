@@ -804,6 +804,27 @@ table {
  * Containers
  *
  */
+.container {
+  padding-left: 16px;
+  padding-left: 1rem;
+  padding-right: 16px;
+  padding-right: 1rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 /*
  *
  * Headings
@@ -876,6 +897,16 @@ table {
 .link-inline:focus {
   -webkit-box-shadow: inset 0 -10px 0px 0px rgba(46, 236, 150, .9);
           box-shadow: inset 0 -10px 0px 0px rgba(46, 236, 150, .9);
+}
+
+.link-icon {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.link-icon:hover,
+.link-icon:focus {
+  color: rgba(46, 236, 150, .9);;
 }
 
 /*
@@ -5540,11 +5571,6 @@ table {
  * Font Size
  *
  */
-.f-18px {
-  font-size: 16.8px;
-  font-size: 1.05rem;
-}
-
 /*
  *
  * Line Height
