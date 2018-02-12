@@ -91,7 +91,7 @@ let colors = {
   pink: '#ff80cc',
   'light-pink': '#ffa3d7',
   'dark-green': '#137752',
-  green: '#19a974',
+  green: 'rgba(46, 236, 150, .9);',
   'light-green': '#9eebcf',
   navy: '#001b44',
   'dark-blue': '#00449e',
@@ -517,18 +517,18 @@ module.exports = {
   */
 
   height: {
-    '-auto': 'auto',
-    '-inherit': 'inherit',
-    '-px': '1px',
-    '1': '1rem',
-    '2': '2rem',
-    '3': '4rem',
-    '4': '8rem',
-    '5': '16rem',
-    '-25': '25%',
-    '-50': '50%',
-    '-75': '75%',
-    '-100': '100%',
+    'h-auto': 'auto',
+    'h-inherit': 'inherit',
+    'h-px': '1px',
+    h1: '1rem',
+    h2: '2rem',
+    h3: '4rem',
+    h4: '8rem',
+    h5: '16rem',
+    'h-25': '25%',
+    'h-50': '50%',
+    'h-75': '75%',
+    'h-100': '100%',
     'vh-25': '25vh',
     'vh-50': '50vh',
     'vh-75': '75vh',
@@ -571,7 +571,7 @@ module.exports = {
   minHeight: {
     '0': '0',
     '100': '100%',
-    vh100: '100vh'
+    'vh-100': '100vh'
   },
 
   /*
@@ -1070,12 +1070,12 @@ module.exports = {
     borderWidths: {
       base: 'bw',
       withSides: 'b',
-      modifierPrefix: '-',
+      modifierPrefix: '',
       sides: {
-        top: 't',
-        right: 'r',
-        bottom: 'b',
-        left: 'l'
+        top: 't-',
+        right: 'r-',
+        bottom: 'b-',
+        left: 'l-'
       }
     },
     container: {
@@ -1268,7 +1268,7 @@ module.exports = {
       modifierPrefix: '-'
     },
     height: {
-      base: 'h',
+      base: '',
       modifierPrefix: '',
       screen: 'vh'
     },
@@ -1277,7 +1277,7 @@ module.exports = {
       modifierPrefix: '-'
     },
     minHeight: {
-      base: 'min-h',
+      base: 'min',
       modifierPrefix: '-',
       screen: 'min-vh'
     },

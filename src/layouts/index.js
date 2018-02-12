@@ -1,5 +1,5 @@
 const Layout = ({ children, data }) => (
-  <div>
+  <Aux>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -10,7 +10,7 @@ const Layout = ({ children, data }) => (
     {/* <Header /> */}
     {children()}
     {/* <Footer /> */}
-  </div>
+  </Aux>
 )
 
 Layout.propTypes = {
@@ -29,6 +29,7 @@ Vendor Imports
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Aux from 'react-aux'
 import Link from 'gatsby-link'
 
 /* 

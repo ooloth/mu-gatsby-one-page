@@ -1,35 +1,82 @@
 const IndexPage = ({ data }) => (
-  <div className="tc">
-    <h1 className="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
+  <main className="flex flex-column justify-center items-center pa3 vh-100 avenir">
+    <h1 className="lh-solid fw9 ttu" style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 9 )` }}>
+      Hello
+    </h1>
+    {/* <p className="pt3 pb4 tc lh-tall f4">
+      I'm Michael. I’m an opera singer and I build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
+    </p> */}
+    <p className="pt3 pb4 tc lh-tall f4">
+      I'm Michael. I sing opera and build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
+    </p>
+    <nav className="flex">
+      <Link to="/opera/" className="link">
+        Opera
+      </Link>
+      <Link to="/websites/" className="link ml3 sm:ml4">
+        Websites
+      </Link>
+    </nav>
+
+    {/* <h1 className="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
     <Link to="/page-2/">Go to page 2</Link>
     <ImageTests sizes={data.placeholderImage.sizes} />
     <ReactSlick sizes={data.placeholderImage.sizes} />
     <ReactIDSwiper sizes={data.placeholderImage.sizes} />
-    <IsotopeTests sizes={data.placeholderImage.sizes} />
+    <IsotopeTests sizes={data.placeholderImage.sizes} /> */}
     {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
-    <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
+    {/* <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
     <Chat />
     <Opera />
-    <Websites />
-  </div>
+    <Websites /> */}
+  </main>
 )
 
 export default IndexPage
 
-/* 
-
-Vendor Imports 
-
-*/
+/*
+ *
+ * Imports
+ * 
+ */
 
 import React from 'react'
 import Link from 'gatsby-link'
 
 /*
-
-My Imports
-
-*/
+ *
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * Old Stuff...
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * TODO: save these as reusable components for later...
+ * 
+ */
 
 import theme from '../styles/tailwind.config'
 console.log(`Tailwind colors: ${theme.colors.black}`)

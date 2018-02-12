@@ -2,25 +2,20 @@
 
 /* 
  *
- * Balls
- *
- */
-
-.ball
-  @apply .absolute .z-max .br-100
-
-/* 
- *
  * Buttons
  *
  */
 
-.btn 
-  @apply .dib .br3 .bg-gold .pv2 .ph3 .white .animate
+// .btn 
+//   @apply .bw1 .b--black .bg-black .pink .pv2 .ph3 .lh-solid .ttu .tracked-normal .animate
 
-  &:hover,
-  &:focus
-    @apply .bg-red
+//   &:hover,
+//   &:focus
+//     @apply .bg-pink .black
+
+// @screen sm
+//   .btn
+//     @apply .f4
 
 /* 
  *
@@ -39,6 +34,33 @@
 
 .subheading
   @apply .f5 .ttu .tracked-normal
+
+/* 
+ *
+ * Links
+ *
+ */
+
+.link 
+  @apply .shadow-lg .bw1 .b--black .bg-black .pv2 .ph3 .lh-tall .ttu .tracked-normal .white .animate
+
+  border-radius: 30px
+
+  &:hover,
+  &:focus
+    @apply .b--green .bg-green .black
+    // letter-spacing: .15em
+
+.link-white
+  &:hover,
+  &:focus
+    @apply .b--white .bg-white .black
+
+.link-inline
+  @apply .custom-underline .animate
+  &:hover,
+  &:focus
+    @apply .hover-custom-underline
 
 /* 
  *

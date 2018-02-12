@@ -29,6 +29,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on; }
+  @media (min-width: 36em) {
+    html,
+    body {
+      font-size: 1.05rem; } }
 
 /*
  *
@@ -239,22 +243,9 @@ table {
  */
 /*
  *
- * Balls
- *
- */
-.ball {
-  @apply .absolute .z-max .br-100 {} }
-
-/*
- *
  * Buttons
  *
  */
-.btn {
-  @apply .dib .br3 .bg-gold .pv2 .ph3 .white .animate {} }
-  .btn:hover, .btn:focus {
-    @apply .bg-red {} }
-
 /*
  *
  * Containers
@@ -273,6 +264,24 @@ table {
 
 /*
  *
+ * Links
+ *
+ */
+.link {
+  @apply .shadow-lg .bw1 .b--black .bg-black .pv2 .ph3 .lh-tall .ttu .tracked-normal .white .animate {}  border-radius: 30px; }
+  .link:hover, .link:focus {
+    @apply .b--green .bg-green .black {} }
+
+.link-white:hover, .link-white:focus {
+  @apply .b--white .bg-white .black {} }
+
+.link-inline {
+  @apply .custom-underline .animate {} }
+  .link-inline:hover, .link-inline:focus {
+    @apply .hover-custom-underline {} }
+
+/*
+ *
  * Sections
  *
  */
@@ -287,7 +296,7 @@ table {
  *
  */
 .animate {
-  transition: all 0.15s ease-in-out; }
+  transition: all 0.2s ease-in-out; }
 
 /*
  *
@@ -373,6 +382,45 @@ table {
 
 /*
  *
+ * Tailwinds shadows
+ *
+ */
+.shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+
+.shadow-md {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
+
+.shadow-lg {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
+
+/*
+ *
+ * Other shadows
+ *
+ */
+.hover-shadow:focus,
+.hover-shadow:hover {
+  box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.2); }
+
+.medium-shadow {
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1); }
+
+.larger-shadow {
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.3); }
+
+.deep-shadow {
+  box-shadow: 25px 32px 85px 0 rgba(0, 0, 0, 0.4); }
+
+.hover-deep-shadow:focus,
+.hover-deep-shadow:hover {
+  box-shadow: 25px 32px 85px 0 rgba(0, 0, 0, 0.4); }
+
+.deep-shadow--reverse {
+  box-shadow: 0px 32px 85px 0 rgba(0, 0, 0, 0.4); }
+
+/*
+ *
  * Overflow
  *
  */
@@ -391,6 +439,60 @@ table {
  */
 /*
  *
+ * Font Size
+ *
+ */
+.f-18px {
+  font-size: 1.05rem; }
+
+/*
+ *
+ * Line Height
+ *
+ */
+.lh-tall {
+  line-height: 1.7; }
+
+/*
+ *
+ * Line Length
+ *
+ */
+.measure {
+  max-width: 66ch; }
+
+.measure-narrow {
+  max-width: 45ch; }
+
+.measure-wide {
+  max-width: 80ch; }
+
+.pre-line {
+  white-space: pre-line; }
+
+/*
+ *
+ * Letter Spacing
+ *
+ */
+.tracked-slight {
+  letter-spacing: .025em; }
+
+/*
+ *
+ * Text Decoration
+ *
+ */
+.custom-underline {
+  box-shadow: inset 0 -3px 0px 0px rgba(46, 236, 150, 0.9); }
+
+.hover-custom-underline {
+  box-shadow: inset 0 -10px 0px 0px rgba(46, 236, 150, 0.9); }
+
+/*
+ *
  * Supports
  *
  */
+
+/*# sourceMappingURL=main.css.map */

@@ -15,6 +15,7 @@
     "gatsby-plugin-react-next": "^1.0.8",
     "gatsby-plugin-sharp": "^1.6.27",
     "gatsby-source-filesystem": "^1.5.18",
+    "gatsby-transformer-json": "^1.0.14",
     "gatsby-transformer-sharp": "^1.6.18",
     "isotope-layout": "^3.0.5",
     "object-fit-images": "^3.2.3",
@@ -31,24 +32,24 @@
     "scrollreveal": "^3.3.6",
     "shortid": "^2.2.8",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "dumconstantin/tailwindcss#tachyons",
+    "tailwindcss": "github:dumconstantin/tailwindcss#tachyons",
     "whatwg-fetch": "^2.0.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "watch:sass":
-      "node-sass-chokidar --source-map true src/styles/main.sass -o src/styles/builds/after-sass -w",
-    "watch:postcss":
-      "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css -w",
+    "watch:sass": "node-sass-chokidar --source-map true src/styles/main.sass -o src/styles/builds/after-sass -w",
+    "watch:postcss": "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css -w",
     "watch:styles": "npm run watch:sass & npm run watch:postcss",
     "build:sass": "node-sass-chokidar src/styles/main.sass -o src/styles/builds/after-sass",
-    "build:postcss":
-      "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css",
+    "build:postcss": "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css",
     "build:purgecss": "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
     "build:styles": "npm run build:sass && npm run build:postcss && npm run build:purgecss",
-    "dev": "gatsby develop & npm run watch:styles",
+    "dev": "npm i dumconstantin/tailwindcss#tachyons && npm run develop",
+    "develop": "gatsby develop & npm run watch:styles",
     "build": "npm run build:styles && gatsby build"
   },
   "devDependencies": {

@@ -1,3 +1,67 @@
+/*
+ *
+ * Font Size
+ *
+ */
+
+// see: https://css-tricks.com/font-size-viewport-units/
+$fluid: calc(1vw + 1vh + .5vmin)
+
+.f-18px
+  font-size: 1.05rem
+
+/*
+ *
+ * Line Height
+ *
+ */
+
+.lh-tall
+  line-height: 1.7
+
+/*
+ *
+ * Line Length
+ *
+ */
+
+.measure
+  max-width: 66ch
+
+.measure-narrow
+  max-width: 45ch
+
+.measure-wide
+  max-width: 80ch
+
+// Useful when adding line breaks to JSON with '\n'
+// See https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-text-string-in-react
+.pre-line
+  white-space: pre-line
+
+/*
+ *
+ * Letter Spacing
+ *
+ */
+
+.tracked-slight
+  letter-spacing: .025em
+
+/*
+ *
+ * Text Decoration
+ *
+ */
+
+.custom-underline
+  // border-bottom: 1px solid rgb(46, 236, 150)
+  box-shadow: inset 0 -3px 0px 0px rgba(46, 236, 150, .9)
+
+.hover-custom-underline
+    box-shadow: inset 0 -10px 0px 0px rgba(46, 236, 150, .9)
+
+
 // .body-font-size
 //   font-size: 1.125rem
 //   line-height: 1.8
