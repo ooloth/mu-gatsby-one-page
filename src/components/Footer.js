@@ -2,10 +2,10 @@ const Footer = ({ theme, className }) => {
   const bgColor = theme === `green` ? `bg-green` : null
   return (
     <footer
-      className={`flex justify-between items-baseline ph3 md:ph4 pb2 sm:pb3 tc ${bgColor} ${className}`}
+      className={`flex justify-between items-baseline ${bgColor} ${className} ph3 md:ph4 pb2 sm:pb3 tc avenir`}
     >
       <Copyright />
-      <SocialLinks />
+      <SocialLinks theme={theme} />
     </footer>
   )
 }
@@ -26,7 +26,9 @@ import React from 'react'
  * 
  */
 
-const Copyright = () => <p className="f6">&copy; {new Date().getFullYear()} Michael Uloth</p>
+const Copyright = () => (
+  <p className="f6 sm:f5">&copy; {new Date().getFullYear()} Michael Uloth</p>
+)
 
 /* 
  *
@@ -42,12 +44,12 @@ import FaEnvelopeO from 'react-icons/lib/fa/envelope-o'
 
 import HyperLink from './HyperLink'
 
-const SocialLinks = () => (
+const SocialLinks = ({ theme }) => (
   <ul>
     {links.map(link => {
       return (
         <li key={link.id} className="dib f4 sm:f3 ml2 sm:ml3">
-          <HyperLink href={link.url} className="link-icon">
+          <HyperLink href={link.url} className={theme === `green` ? `icon-on-green` : `icon`}>
             {link.icon}
           </HyperLink>
         </li>

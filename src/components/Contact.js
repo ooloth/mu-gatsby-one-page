@@ -2,7 +2,7 @@ const Contact = () => (
   <Aux>
     <section className="bg-green pt6 pb3 ph3 tc">
       <h2
-        className="lh-solid f1 fw9 ttu tracked-slight"
+        className="lh-solid f1 sm:f-4 fw9 ttu tracked-slight"
         // style={{
         //   // textStroke: `4px black`,
         //   // webkitTextStroke: `5px black`,
@@ -13,9 +13,8 @@ const Contact = () => (
       >
         Contact Me
       </h2>
-      <p className="ml-auto mr-auto pt3 pb4 measure-narrow tc lh-tall">
-        Want to work together? Tell me about your project <br className="dn sm:di" />and I'll be
-        happy to help.
+      <p className="ml-auto mr-auto pt3 pb4 measure-narrow tc lh-tall f4">
+        Want to work together? <br className="dn sm:di" />Tell me about your project!
       </p>
       <HyperLink href="mailto:hello@michaeluloth.com" className="link link-white dib mb6">
         Get in touch

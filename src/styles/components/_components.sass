@@ -73,11 +73,24 @@
   &:focus
     @apply .hover-custom-underline
 
-.link-icon
+/* 
+ *
+ * Icons
+ *
+ */
+
+.icon
   @apply .animate
   &:hover,
   &:focus
     @apply .green
+
+.icon-on-green
+  @apply .animate
+  &:hover,
+  &:focus
+    @apply .white
+    filter: drop-shadow( 0px 15px 5px rgba(0,0,0,0.11) )
 
 /* 
  *

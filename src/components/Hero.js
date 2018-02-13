@@ -5,17 +5,17 @@ const Hero = ({ content }) => {
 
   return (
     <section
-      className={`flex flex-column justify-center items-center overflow-hidden pv6 ph3 vh-100 ${styles}`}
-      style={{ maxHeight: `30rem` }}
+      className={`flex flex-column justify-center items-center overflow-hidden pv6 ph3 ${styles}`}
+      style={{
+        height: `100vh`
+        // maxHeight: `30rem`
+      }}
     >
       <h1
-        className="lh-solid fw9 ttu animate goofy"
+        className="lh-solid fw9 ttu goofy"
         style={{
-          // textStroke: `4px black`,
-          // webkitTextStroke: `5px black`,
-          // textShadow: `8px 8px 16px rgb(0,0,0,.12)`,
           fontSize: `calc( (1vw + 1vh + .5vmin) * ${titleMultiplier} )`,
-          textShadow: `6px 6px 5px rgba(0,0,0,0.1)`
+          textShadow: `6px 6px 10px rgba(0,0,0,0.11)`
         }}
       >
         {title.split('').map(letter => <span>{letter}</span>)}

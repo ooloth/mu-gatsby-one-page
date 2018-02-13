@@ -41,10 +41,10 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "watch:sass": "node-sass-chokidar --source-map true src/styles/main.sass -o src/styles/builds/after-sass -w",
+    "watch:sass": "node-sass-chokidar --source-map true src/styles/main.sass -o src/styles/builds/after-sass -i -q -w",
     "watch:postcss": "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css -w",
     "watch:styles": "npm run watch:sass & npm run watch:postcss",
-    "build:sass": "node-sass-chokidar src/styles/main.sass -o src/styles/builds/after-sass",
+    "build:sass": "node-sass-chokidar src/styles/main.sass -o src/styles/builds/after-sass -i",
     "build:postcss": "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css",
     "build:purgecss": "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
     "build:styles": "npm run build:sass && npm run build:postcss && npm run build:purgecss",

@@ -26,5 +26,5 @@ const heroContent = {
   theme: `green`,
   title: `Opera`,
   titleMultiplier: `8`,
-  blurb: `I’m a Canadian opera singer. I trained in Canada, and sing bass roles in Canada, the U.S. and Europe. Check out my previous work below.`
+  blurb: `I’m a Toronto-based opera singer performing bass roles in Canada, the U.S. and Europe. Check out my previous work below.`
 }

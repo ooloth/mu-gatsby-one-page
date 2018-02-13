@@ -1,10 +1,7 @@
-const tailwind = require('tailwindcss')
-const cssnext = require('postcss-cssnext')
-
 module.exports = {
   plugins: [
-    tailwind('./src/styles/tailwind.config.js'),
-    cssnext()
-    // any other postcss plugins you want...
+    require('tailwindcss')('./src/styles/tailwind.config.js'),
+    require('postcss-cssnext')(),
+    require('postcss-reporter')({ clearMessages: true })
   ]
 }

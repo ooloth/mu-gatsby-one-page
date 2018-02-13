@@ -29,8 +29,8 @@ import HyperLink from '../components/HyperLink'
 const heroContent = {
   theme: `black`,
   title: `Websites`,
-  titleMultiplier: `5.8`,
-  blurb: `I love building websites! Possibly too much...\nCheck out my recent work below.`
+  titleMultiplier: `5.75`,
+  blurb: `I love building websites! Maybe too much...\nCheck out my recent work below.`
 }
 
 /* 
@@ -43,7 +43,7 @@ import Image from 'gatsby-image'
 import shortid from 'shortid'
 
 const Work = ({ sites }) => (
-  <section className="mt4 mb3 pt5 pv4">
+  <section className="mt4 mb3 pt6 pv4">
     {/* <h2
       className="mb6 tc lh-solid f1 sm:f-5 fw9 ttu tracked-slight"
       // style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 5 )` }}
@@ -88,35 +88,35 @@ import Aux from 'react-aux'
 const CoffeeshopBlurb = () => (
   <Aux>
     I've also partnered with designer Stephen Bell of Coffeeshop Creative to build sites for{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="https://johngreermusic.com/" className="link-inline">
       John&nbsp;Greer
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://www.riccardoiannello.com/" className="link-inline">
       Riccardo Iannello
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://www.alonnashman.com/" className="link-inline">
       Alon&nbsp;Nashman
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://www.theaturtle.com/index.html" className="link-inline">
       Theaturtle
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://www.hitandrun.ca/" className="link-inline">
       Hit&nbsp;&&nbsp;Run Dance Productions
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://extensionmethod.com/" className="link-inline">
       Extension Method
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://dgvolo.com/index.html" className="link-inline">
       DG&nbsp;Volo&nbsp;&&nbsp;Company
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://wsbmassage.com/" className="link-inline">
       WSB&nbsp;Massage
     </HyperLink>,{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://stephanietritchew.com/" className="link-inline">
       Stephanie&nbsp;Tritchew
     </HyperLink>{' '}
     and{' '}
-    <HyperLink href="google.ca" className="link-inline">
+    <HyperLink href="http://kristinaagur.com/" className="link-inline">
       Kristina&nbsp;Agur
     </HyperLink>.
   </Aux>
@@ -140,7 +140,7 @@ export const query = graphql`
         node {
           image {
             childImageSharp {
-              sizes(maxWidth: 5000) {
+              sizes(maxWidth: 5184) {
                 ...GatsbyImageSharpSizes_withWebp
               }
             }
