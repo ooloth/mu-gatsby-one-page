@@ -11,9 +11,9 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
  */
 
 .btn { 
-  @apply .bw1 .b--black .bg-black .pink .pv2 .ph3 .lh-solid .ttu .tracked .animate;
+  @apply .bw1 .b--black .bg-black .green .pv2 .ph3 .lh-solid .ttu .tracked .animate;
 
-  &:hover, &:focus { @apply .bg-pink .black }
+  &:hover, &:focus { @apply .bg-green .black }
 
   @media (--sm) { @apply .f4 }
  }
@@ -74,20 +74,24 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   @apply .shadow-lg .bw1 .b--black .bg-black .pv2 .ph3 .lh-tall .ttu .tracked .white .animate;
   border-radius: 30px;
 
-  &:hover, &:focus { @apply .b--pink .bg-pink .black }
+  &:hover, &:focus { @apply .b--green .bg-green .black }
 }
 
 .link-white {
   &:hover, &:focus { @apply .b--white .bg-white .black }
 }
 
-/*
 .link-inline { 
-  @apply .custom-underline .animate;
+  @apply .animate;
+  border-bottom: 1px solid var(--green);
+  box-shadow: inset 0 -2px 0px 0px var(--green);
 
-  &:hover, &:focus { @apply .hover-custom-underline }
+  &:hover, &:focus { box-shadow: inset 0 -12px 0px 0px var(--green) }
+
+  
 }
-*/
+/* &:hover, &:focus { @apply .hover:fancy-underline } */
+
 
 /* 
  *

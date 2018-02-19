@@ -22,7 +22,7 @@
  *
  */
 
-/* @import './new'; */
+@import './new';
 
 /*
  *
@@ -30,7 +30,7 @@
  *
  */
 
-/* @import './components/components.css'; */
+@import './components/components.css';
 
 /*
  *
@@ -38,7 +38,7 @@
  *
  */
 
-/* @import './supports/grid.css'; */
+@import './supports/grid.css';
 
 /*
  *

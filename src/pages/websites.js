@@ -83,10 +83,10 @@ const Site = ({ site }) => {
  * 
  */
 
-import Aux from 'react-aux'
+// import Aux from 'react-aux'
 
 const CoffeeshopBlurb = () => (
-  <Aux>
+  <div>
     I've also partnered with designer Stephen Bell of Coffeeshop Creative to build sites for{' '}
     <HyperLink href="https://johngreermusic.com/" className="link-inline">
       John&nbsp;Greer
@@ -119,7 +119,7 @@ const CoffeeshopBlurb = () => (
     <HyperLink href="http://kristinaagur.com/" className="link-inline">
       Kristina&nbsp;Agur
     </HyperLink>.
-  </Aux>
+  </div>
 )
 
 /* 

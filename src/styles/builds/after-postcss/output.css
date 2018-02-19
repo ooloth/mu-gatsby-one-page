@@ -801,7 +801,14 @@ ul { -webkit-tap-highlight-color: rgba(0,0,0,0) }
  *
  */
 
-/* @import './new'; */
+/*
+
+NEW STYLES
+==========
+
+Add all new styles here (reset, plugin, utility, component) so they are easy to add to the Gatsby Starter project.
+
+*/
 
 /*
  *
@@ -809,7 +816,177 @@ ul { -webkit-tap-highlight-color: rgba(0,0,0,0) }
  *
  */
 
-/* @import './components/components.css'; */
+/* 
+
+See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patterns-with-apply
+
+*/
+
+/* 
+ *
+ * Buttons
+ *
+ */
+
+.btn {
+  border-width: .125rem;
+  border-color: #000;
+  background-color: #000;
+  color: #2eec96;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #2eec96;
+  color: #000;
+}
+
+@media (min-width: 36em) {
+  .btn {
+    font-size: 1.25rem;
+  }
+}
+
+/* 
+ *
+ * Containers
+ *
+ */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 64rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@supports (display: grid) {
+  .container {
+    max-width: 96rem;
+  }
+}
+
+/* 
+ *
+ * Headings
+ *
+ */
+
+.heading {
+  font-size: 2.25rem;
+  color: #000;
+}
+
+.subheading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+/* 
+ *
+ * Icons
+ *
+ */
+
+.icon {
+  transition: all .2s ease-in-out;
+}
+
+.icon:hover,
+.icon:focus {
+  color: #2eec96;
+}
+
+.icon-on-green {
+  transition: all .2s ease-in-out;
+}
+
+.icon-on-green:hover,
+.icon-on-green:focus {
+  color: #fff;
+  -webkit-filter: drop-shadow(0 15px 5px rgba(0, 0, 0, .11));
+          filter: drop-shadow(0 15px 5px rgba(0, 0, 0, .11));
+}
+
+/* 
+ *
+ * Links
+ *
+ */
+
+.link {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  border-width: .125rem;
+  border-color: #000;
+  background-color: #000;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 1.7;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #fff;
+  transition: all .2s ease-in-out;
+  border-radius: 30px;
+}
+
+.link:hover,
+.link:focus {
+  border-color: #2eec96;
+  background-color: #2eec96;
+  color: #000;
+}
+
+.link-white:hover,
+.link-white:focus {
+  border-color: #fff;
+  background-color: #fff;
+  color: #000;
+}
+
+.link-inline {
+  transition: all .2s ease-in-out;
+  border-bottom: 1px solid #2eec96;
+  box-shadow: inset 0 -2px 0 0 #2eec96;
+}
+
+.link-inline:hover,
+.link-inline:focus {
+  box-shadow: inset 0 -12px 0 0 #2eec96;
+}
+
+/* &:hover, &:focus { @apply .hover:fancy-underline } */
+
+/* 
+ *
+ * Sections
+ *
+ */
 
 /*
  *
@@ -817,7 +994,44 @@ ul { -webkit-tap-highlight-color: rgba(0,0,0,0) }
  *
  */
 
-/* @import './supports/grid.css'; */
+/* 
+ * 
+ * Grid component classes (only applied if grid is supported)
+ *
+ * NOTE: reset margins and widths here (not using utilities) so these resets
+ * only kick in if the grid layout is supported
+ * 
+ */
+
+/* 
+ * 
+ * Hero
+ *
+ */
+
+@supports (display: grid) {
+  @media (min-width: 48em) {
+    .hero-grid {
+      /* Grid styles */
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      align-items: center;
+      /* Resets for margins/widths */
+      max-width: 96rem;
+    }
+
+    .hero-grid > figure {
+      margin: 0;
+      padding-top: 0;
+      max-width: 100%;
+    }
+
+    .hero-grid > figure > div > div {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
 
 /*
  *
@@ -837,6 +1051,81 @@ ul { -webkit-tap-highlight-color: rgba(0,0,0,0) }
 .animate:hover,
 .animate:focus {
   transition: all .2s ease-in-out;
+}
+
+/* 
+ *
+ * Heading Animations
+ *
+ */
+
+.goofy:hover,
+.goofy:focus {
+  -webkit-transform: scale(1.3) rotateX(-20deg) rotateY(10deg);
+          transform: scale(1.3) rotateX(-20deg) rotateY(10deg);
+}
+
+.goofy:hover span {
+  display: inline-block;
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.goofy:hover span:nth-child(even) {
+  -webkit-animation-delay: .15s;
+          animation-delay: .15s;
+}
+
+/* 
+ *
+ * Heading Keyframes
+ *
+ */
+
+@-webkit-keyframes dance {
+  from {
+    -webkit-transform: translate(0, 0) rotate(-12deg);
+            transform: translate(0, 0) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
+  }
+
+  65% {
+    -webkit-transform: translate(0, 15px) rotate(12deg) scale(1.3);
+            transform: translate(0, 15px) rotate(12deg) scale(1.3);
+    text-shadow: -10px -10px 3px rgba(0, 0, 0, .1);
+  }
+
+  to {
+    -webkit-transform: translate(0, 0) rotate(-12deg);
+            transform: translate(0, 0) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
+  }
+}
+
+@keyframes dance {
+  from {
+    -webkit-transform: translate(0, 0) rotate(-12deg);
+            transform: translate(0, 0) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
+  }
+
+  65% {
+    -webkit-transform: translate(0, 15px) rotate(12deg) scale(1.3);
+            transform: translate(0, 15px) rotate(12deg) scale(1.3);
+    text-shadow: -10px -10px 3px rgba(0, 0, 0, .1);
+  }
+
+  to {
+    -webkit-transform: translate(0, 0) rotate(-12deg);
+            transform: translate(0, 0) rotate(-12deg);
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, .1);
+  }
 }
 
 /* 
@@ -7246,16 +7535,6 @@ Adapted from:
   text-decoration: none;
 }
 
-.fancy-underline {
-  border-bottom: 1px solid #ff80cc;
-  box-shadow: inset 0 -2px 0 0 #ff80cc;
-}
-
-.fancy-underline:hover,
-.fancy-underline:focus {
-  box-shadow: inset 0 -12px 0 0 #ff80cc;
-}
-
 /*
   *
   * Text transform
@@ -7316,16 +7595,6 @@ Adapted from:
   text-decoration: none;
 }
 
-.focus\:fancy-underline:focus {
-  border-bottom: 1px solid #ff80cc;
-  box-shadow: inset 0 -2px 0 0 #ff80cc;
-}
-
-.focus\:fancy-underline:hover,
-.fancy-underline:focus:focus {
-  box-shadow: inset 0 -12px 0 0 #ff80cc;
-}
-
 /*
   *
   * Text transform
@@ -7384,16 +7653,6 @@ Adapted from:
 
 .hover\:no-underline:hover {
   text-decoration: none;
-}
-
-.hover\:fancy-underline:hover {
-  border-bottom: 1px solid #ff80cc;
-  box-shadow: inset 0 -2px 0 0 #ff80cc;
-}
-
-.hover\:fancy-underline:hover,
-.fancy-underline:focus:hover {
-  box-shadow: inset 0 -12px 0 0 #ff80cc;
 }
 
 /*
@@ -13653,16 +13912,6 @@ Adapted from: http://tachyons.io/docs/debug-grid/
 
   .sm\:no-underline {
     text-decoration: none;
-  }
-
-  .sm\:fancy-underline {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .sm\:fancy-underline:hover,
-  .sm\:fancy-underline:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -13717,16 +13966,6 @@ Adapted from: http://tachyons.io/docs/debug-grid/
 
   .sm\:focus\:no-underline:focus {
     text-decoration: none;
-  }
-
-  .sm\:focus\:fancy-underline:focus {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .sm\:focus\:fancy-underline:hover,
-  .sm\:fancy-underline:focus:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -13781,16 +14020,6 @@ Adapted from: http://tachyons.io/docs/debug-grid/
 
   .sm\:hover\:no-underline:hover {
     text-decoration: none;
-  }
-
-  .sm\:hover\:fancy-underline:hover {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .sm\:hover\:fancy-underline:hover,
-  .sm\:fancy-underline:focus:hover {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -19872,16 +20101,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .md\:no-underline {
     text-decoration: none;
-  }
-
-  .md\:fancy-underline {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .md\:fancy-underline:hover,
-  .md\:fancy-underline:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -19936,16 +20155,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .md\:focus\:no-underline:focus {
     text-decoration: none;
-  }
-
-  .md\:focus\:fancy-underline:focus {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .md\:focus\:fancy-underline:hover,
-  .md\:fancy-underline:focus:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -20000,16 +20209,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .md\:hover\:no-underline:hover {
     text-decoration: none;
-  }
-
-  .md\:hover\:fancy-underline:hover {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .md\:hover\:fancy-underline:hover,
-  .md\:fancy-underline:focus:hover {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -26091,16 +26290,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .lg\:no-underline {
     text-decoration: none;
-  }
-
-  .lg\:fancy-underline {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .lg\:fancy-underline:hover,
-  .lg\:fancy-underline:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -26155,16 +26344,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .lg\:focus\:no-underline:focus {
     text-decoration: none;
-  }
-
-  .lg\:focus\:fancy-underline:focus {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .lg\:focus\:fancy-underline:hover,
-  .lg\:fancy-underline:focus:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -26219,16 +26398,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .lg\:hover\:no-underline:hover {
     text-decoration: none;
-  }
-
-  .lg\:hover\:fancy-underline:hover {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .lg\:hover\:fancy-underline:hover,
-  .lg\:fancy-underline:focus:hover {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -32310,16 +32479,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .xl\:no-underline {
     text-decoration: none;
-  }
-
-  .xl\:fancy-underline {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .xl\:fancy-underline:hover,
-  .xl\:fancy-underline:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -32374,16 +32533,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .xl\:focus\:no-underline:focus {
     text-decoration: none;
-  }
-
-  .xl\:focus\:fancy-underline:focus {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .xl\:focus\:fancy-underline:hover,
-  .xl\:fancy-underline:focus:focus {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform
@@ -32438,16 +32587,6 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 
   .xl\:hover\:no-underline:hover {
     text-decoration: none;
-  }
-
-  .xl\:hover\:fancy-underline:hover {
-    border-bottom: 1px solid #ff80cc;
-    box-shadow: inset 0 -2px 0 0 #ff80cc;
-  }
-
-  .xl\:hover\:fancy-underline:hover,
-  .xl\:fancy-underline:focus:hover {
-    box-shadow: inset 0 -12px 0 0 #ff80cc;
   }/*
   *
   * Text transform

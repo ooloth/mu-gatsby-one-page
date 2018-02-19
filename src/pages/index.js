@@ -50,7 +50,7 @@ export default IndexPage
  */
 
 import React from 'react'
-import Aux from 'react-aux'
+// import Aux from 'react-aux'
 import Link from 'gatsby-link'
 
 import Footer from '../components/Footer'

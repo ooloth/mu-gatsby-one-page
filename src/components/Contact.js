@@ -1,5 +1,5 @@
 const Contact = () => (
-  <Aux>
+  <div>
     <section className="bg-green pt6 pb3 ph3 tc">
       <h2
         className="lh-solid f1 sm:f-4 fw9 ttu tracked-slight"
@@ -21,7 +21,7 @@ const Contact = () => (
       </HyperLink>
     </section>
     <Footer theme="green" />
-  </Aux>
+  </div>
 )
 
 export default Contact
@@ -33,7 +33,7 @@ export default Contact
  */
 
 import React from 'react'
-import Aux from 'react-aux'
+// import Aux from 'react-aux'
 
 import Footer from './Footer'
 import HyperLink from './HyperLink'
