@@ -1,0 +1,39 @@
+/* 
+ * 
+ * Grid component classes (only applied if grid is supported)
+ *
+ * NOTE: reset margins and widths here (not using utilities) so these resets
+ * only kick in if the grid layout is supported
+ * 
+ */
+
+/* 
+ * 
+ * Hero
+ *
+ */
+
+
+@supports (display: grid) {
+  @media (--md) {
+    
+    .hero-grid {
+      /* Grid styles */
+      display: grid
+      grid-template-columns: 3fr 2fr
+      align-items: center
+    
+      /* Resets for margins/widths */
+      max-width: 96rem
+
+      & > figure
+        margin: 0
+        padding-top: 0
+        max-width: 100%
+
+      & > figure > div > div
+        width: auto
+        margin: 0
+    }
+  }
+}

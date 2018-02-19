@@ -1,0 +1,53 @@
+/*
+
+FONT FAMILY GROUPS
+==================
+
+Adapted from: 
+- http://tachyons.io/docs/typography/font-family/
+- https://tailwindcss.com/docs/fonts
+
+*/
+
+.sans-serif { 
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif 
+}
+.serif { 
+  font-family: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif 
+}
+.system-sans-serif { font-family: sans-serif }
+.system-serif      { font-family: serif }
+
+/*
+ *
+ * Monospace (for code) 
+ *
+ */
+
+code,
+.mono { font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace }
+.courier { font-family: 'Courier New', courier, monospace }
+
+/*
+ *
+ * Sans-serif
+ *
+ */
+
+.avenir    { font-family: 'avenir next', avenir, sans-serif }
+.helvetica { font-family: 'helvetica neue', helvetica, sans-serif }
+.raleway   { font-family: Raleway, sans-serif }
+
+/*
+ *
+ * Serif
+ *
+ */
+
+.athelas     { font-family: athelas, georgia, serif }
+.baskerville { font-family: baskerville, serif }
+.bodoni      { font-family: 'Bodoni MT', serif }
+.calisto     { font-family: 'Calisto MT', serif }
+.garamond    { font-family: garamond, serif }
+.georgia     { font-family: georgia, serif }
+.times       { font-family: times, serif }

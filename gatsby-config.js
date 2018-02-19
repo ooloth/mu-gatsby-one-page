@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Michael Uloth`
+    title: `Insert Title`
   },
   plugins: [
     {
@@ -10,19 +10,15 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`
-      }
-    },
-    // `gatsby-plugin-preact`, // doesn't work with react-simple-chatbot
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-react-next`, // disable if using preact
+    // `gatsby-plugin-react-next`, // disable if using preact
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify` // must come last
-  ]
+  ],
+  // I'll load my own Promise polyfill (only in browser that need it)
+  // See: https://www.gatsbyjs.org/docs/browser-support/#polyfills
+  polyfill: false
 }

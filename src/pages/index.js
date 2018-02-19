@@ -90,8 +90,8 @@ import Footer from '../components/Footer'
  * 
  */
 
-import theme from '../styles/tailwind.config'
-console.log(`Tailwind colors: ${theme.colors.black}`)
+// import theme from '../styles/tailwind.config'
+// console.log(`Tailwind colors: ${theme.colors.black}`)
 
 /* Gatsby-Image Tests */
 

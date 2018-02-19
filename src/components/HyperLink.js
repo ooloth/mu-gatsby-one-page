@@ -1,11 +1,7 @@
 /*
- *  Usage: 
+ *  Usage: <HyperLink href="..." className="...">
  * 
- *    <HyperLink href="..." className="...">
- * 
- *  Props: 
- * 
- *    1. "href" = url, mandatory
+ *  Props: "href" = url, mandatory
  *    
  */
 

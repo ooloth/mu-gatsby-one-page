@@ -1,0 +1,132 @@
+/*
+ *
+ * Base
+ *
+ */
+
+@import './base/_tailwind-preflight';
+@import './base/_reset';
+@import './base/_font-face';
+
+/*
+ *
+ * Plugins
+ *
+ */
+
+/* @import './plugins/react-slick.css'; */
+
+/*
+ *
+ * New styles (TODO: add to Gatsby starter for future projects)
+ *
+ */
+
+/* @import './new'; */
+
+/*
+ *
+ * Components
+ *
+ */
+
+/* @import './components/components.css'; */
+
+/*
+ *
+ * Supports
+ *
+ */
+
+/* @import './supports/grid.css'; */
+
+/*
+ *
+ * Utilities
+ *
+ */
+
+/* Animations */
+@import './utilities/animation';
+
+/* Backgrounds */
+@import './utilities/_background-attachment';
+@import './utilities/_background-color';
+@import './utilities/_background-position';
+@import './utilities/_background-repeat';
+@import './utilities/_background-size';
+
+/* Borders & outlines */
+@import './utilities/_border';
+@import './utilities/_border-color';
+@import './utilities/_border-radius';
+@import './utilities/_border-style';
+@import './utilities/_border-width';
+@import './utilities/_outline';
+
+/* Box shadow */
+@import './utilities/_box-shadow';
+
+/* CMS */
+@import './utilities/_cms';
+
+/* Images */
+@import './utilities/_object-fit';
+@import './utilities/_object-position';
+
+/* Interactivity */
+@import './utilities/_cursor';
+@import './utilities/_hide-child';
+
+/* Layout */
+@import './utilities/_columns';
+@import './utilities/_display';
+@import './utilities/_flexbox';
+@import './utilities/_floats';
+@import './utilities/_position';
+@import './utilities/_z-index';
+
+/* Sizing */
+@import './utilities/_aspect-ratio';
+@import './utilities/_height';
+@import './utilities/_overflow';
+@import './utilities/_width';
+
+/* Spacing */
+@import './utilities/_margins';
+@import './utilities/_negative-margins';
+@import './utilities/_padding';
+
+/* SVG */
+@import './utilities/_svg';
+
+/* Tables */
+@import './utilities/_tables';
+
+/* Transforms */
+@import './utilities/_rotation';
+@import './utilities/_transform-origin';
+
+/* Typography */
+@import './utilities/_color';
+@import './utilities/_font-family';
+@import './utilities/_font-size';
+@import './utilities/_font-style';
+@import './utilities/_font-weight';
+@import './utilities/_letter-spacing';
+@import './utilities/_line-height';
+@import './utilities/_line-wrapping';
+@import './utilities/_text-align';
+@import './utilities/_vertical-align';
+
+/* Visibility */
+@import './utilities/_opacity';
+@import './utilities/_visibility';
+
+/* Variables (import here to override any variables above) */
+@import './base/_variables';
+
+/* Debug */
+@import './utilities/_debug-children';
+@import './utilities/_debug-grid';
+/* @import './utilities/_debug'; */

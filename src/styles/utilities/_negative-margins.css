@@ -1,0 +1,146 @@
+/*
+
+NEGATIVE MARGINS
+================
+
+Adapted from: 
+- http://tachyons.io/docs/layout/spacing/
+- https://github.com/tachyons-css/tachyons/blob/master/src/_negative-margins.css
+
+*/
+
+@responsive {
+
+  /* All */
+  .na0 { margin: 0 }
+  .na1 { margin: -var(--spacing-1) }
+  .na2 { margin: -var(--spacing-2) }
+  .na3 { margin: -var(--spacing-3) }
+  .na4 { margin: -var(--spacing-4) }
+  .na5 { margin: -var(--spacing-5) }
+  .na6 { margin: -var(--spacing-6) }
+  .na7 { margin: -var(--spacing-7) }
+
+  /* Top */
+  .nt0 { margin-top: 0 }
+  .nt1 { margin-top: -var(--spacing-1) }
+  .nt2 { margin-top: -var(--spacing-2) }
+  .nt3 { margin-top: -var(--spacing-3) }
+  .nt4 { margin-top: -var(--spacing-4) }
+  .nt5 { margin-top: -var(--spacing-5) }
+  .nt6 { margin-top: -var(--spacing-6) }
+  .nt7 { margin-top: -var(--spacing-7) }
+
+  /* Right */
+  .nr0 { margin-right: 0 }
+  .nr1 { margin-right: -var(--spacing-1) }
+  .nr2 { margin-right: -var(--spacing-2) }
+  .nr3 { margin-right: -var(--spacing-3) }
+  .nr4 { margin-right: -var(--spacing-4) }
+  .nr5 { margin-right: -var(--spacing-5) }
+  .nr6 { margin-right: -var(--spacing-6) }
+  .nr7 { margin-right: -var(--spacing-7) }
+
+  /* Bottom */
+  .nb0 { margin-bottom: 0 }
+  .nb1 { margin-bottom: -var(--spacing-1) }
+  .nb2 { margin-bottom: -var(--spacing-2) }
+  .nb3 { margin-bottom: -var(--spacing-3) }
+  .nb4 { margin-bottom: -var(--spacing-4) }
+  .nb5 { margin-bottom: -var(--spacing-5) }
+  .nb6 { margin-bottom: -var(--spacing-6) }
+  .nb7 { margin-bottom: -var(--spacing-7) }
+
+  /* Left */
+  .nl0 { margin-left: 0 }
+  .nl1 { margin-left: -var(--spacing-1) }
+  .nl2 { margin-left: -var(--spacing-2) }
+  .nl3 { margin-left: -var(--spacing-3) }
+  .nl4 { margin-left: -var(--spacing-4) }
+  .nl5 { margin-left: -var(--spacing-5) }
+  .nl6 { margin-left: -var(--spacing-6) }
+  .nl7 { margin-left: -var(--spacing-7) }
+
+  /* Vertical (top + bottom) */
+  .nv0   {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .nv1  {
+    margin-top: -var(--spacing-1);
+    margin-bottom: -var(--spacing-1);
+  }
+
+  .nv2   {
+    margin-top: -var(--spacing-2);
+    margin-bottom: -var(--spacing-2);
+  }
+
+  .nv3   {
+    margin-top: -var(--spacing-3);
+    margin-bottom: -var(--spacing-3);
+  }
+
+  .nv4   {
+    margin-top: -var(--spacing-4);
+    margin-bottom: -var(--spacing-4);
+  }
+
+  .nv5   {
+    margin-top: -var(--spacing-5);
+    margin-bottom: -var(--spacing-5);
+  }
+
+  .nv6  {
+    margin-top: -var(--spacing-6);
+    margin-bottom: -var(--spacing-6);
+  }
+
+  .nv7  {
+    margin-top: -var(--spacing-7);
+    margin-bottom: -var(--spacing-7);
+  }
+
+  /* Horizontal (left + right) */
+  .nh0   {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nh1   {
+    margin-left: -var(--spacing-1);
+    margin-right: -var(--spacing-1);
+  }
+
+  .nh2   {
+    margin-left: -var(--spacing-2);
+    margin-right: -var(--spacing-2);
+  }
+
+  .nh3   {
+    margin-left: -var(--spacing-3);
+    margin-right: -var(--spacing-3);
+  }
+
+  .nh4   {
+    margin-left: -var(--spacing-4);
+    margin-right: -var(--spacing-4);
+  }
+
+  .nh5   {
+    margin-left: -var(--spacing-5);
+    margin-right: -var(--spacing-5);
+  }
+
+  .nh6  {
+    margin-left: -var(--spacing-6);
+    margin-right: -var(--spacing-6);
+  }
+
+  .nh7  {
+    margin-left: -var(--spacing-7);
+    margin-right: -var(--spacing-7);
+  }
+
+}

@@ -1,0 +1,92 @@
+/*
+
+WIDTH
+=====
+
+Adapted from: 
+- http://tachyons.io/docs/layout/widths/,
+- http://tachyons.io/docs/layout/max-widths/
+
+*/
+
+@responsive {
+
+  .w1 { width: var(--sizing-1) }
+  .w2 { width: var(--sizing-2) }
+  .w3 { width: var(--sizing-3) }
+  .w4 { width: var(--sizing-4) }
+  .w5 { width: var(--sizing-5) }
+  .w6 { width: var(--sizing-6) }
+  .w7 { width: var(--sizing-7) }
+  .w8 { width: var(--sizing-8) }
+  .w9 { width: var(--sizing-9) }
+
+  .w-auto { width: auto }
+
+  .mw1 { max-width: var(--sizing-1) }
+  .mw2 { max-width: var(--sizing-2) }
+  .mw3 { max-width: var(--sizing-3) }
+  .mw4 { max-width: var(--sizing-4) }
+  .mw5 { max-width: var(--sizing-5) }
+  .mw6 { max-width: var(--sizing-6) }
+  .mw7 { max-width: var(--sizing-7) }
+  .mw8 { max-width: var(--sizing-8) }
+  .mw9 { max-width: var(--sizing-9) }
+
+  .mw-none { max-width: none; }
+
+  /* 
+  * 
+  * Percentage of parent width
+  *
+  */
+
+  .w-10  { width: 10% }
+  .w-20  { width: 20% }
+  .w-25  { width: 25% }
+  .w-30  { width: 30% }
+  .w-40  { width: 40% }
+  .w-50  { width: 50% }
+  .w-60  { width: 60% }
+  .w-70  { width: 70% }
+  .w-75  { width: 75% }
+  .w-80  { width: 80% }
+  .w-90  { width: 90% }
+  .w-100 { width: 100% }
+
+  .w-third      { width: calc(100% / 3) }
+  .w-two-thirds { width: calc(100% / 1.5) }
+
+  .mw-10  { max-width: 10% }
+  .mw-20  { max-width: 20% }
+  .mw-25  { max-width: 25% }
+  .mw-30  { max-width: 30% }
+  .mw-40  { max-width: 40% }
+  .mw-50  { max-width: 50% }
+  .mw-60  { max-width: 60% }
+  .mw-70  { max-width: 70% }
+  .mw-75  { max-width: 75% }
+  .mw-80  { max-width: 80% }
+  .mw-90  { max-width: 90% }
+  .mw-100 { max-width: 100% }
+
+  .mw-third      { max-width: calc(100% / 3) }
+  .mw-two-thirds { max-width: calc(100% / 1.5) }
+
+  .min-w-100 { min-width: 100%; }
+
+  /* 
+  * 
+  * Percentage of viewport width
+  *
+  */
+
+  .vw-25  { width: 25vw }
+  .vw-50  { width: 50vw }
+  .vw-75  { width: 75vw }
+  .vw-100 { width: 100vw }
+
+  .min-vw-100 { min-width: 100vw }
+  .max-vw-100 { max-width: 100vw }
+
+}

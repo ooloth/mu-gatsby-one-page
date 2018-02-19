@@ -1,0 +1,96 @@
+/* 
+
+See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patterns-with-apply
+
+*/
+
+/* 
+ *
+ * Buttons
+ *
+ */
+
+.btn { 
+  @apply .bw1 .b--black .bg-black .pink .pv2 .ph3 .lh-solid .ttu .tracked .animate;
+
+  &:hover, &:focus { @apply .bg-pink .black }
+
+  @media (--sm) { @apply .f4 }
+ }
+
+/* 
+ *
+ * Containers
+ *
+ */
+
+.container { 
+  @apply .ml-auto .mr-auto .ph3 .mw8;
+
+  @media (--md) { @apply .ph4 }
+  @media (--lg) { @apply .ph5 }
+
+  @supports (display: grid) { @apply .mw9 }
+}
+
+/* 
+ *
+ * Headings
+ *
+ */
+
+.heading    { @apply .f2 .black }
+.subheading { @apply .f5 .ttu .tracked }
+
+/* 
+ *
+ * Icons
+ *
+ */
+
+.icon { 
+  @apply .animate;
+
+  &:hover, &:focus { @apply .green }
+}
+
+.icon-on-green { 
+  @apply .animate;
+
+  &:hover, &:focus {
+    @apply .white;
+    filter: drop-shadow( 0px 15px 5px rgba(0, 0, 0, 0.11) )
+  }
+
+}
+
+/* 
+ *
+ * Links
+ *
+ */
+
+.link {
+  @apply .shadow-lg .bw1 .b--black .bg-black .pv2 .ph3 .lh-tall .ttu .tracked .white .animate;
+  border-radius: 30px;
+
+  &:hover, &:focus { @apply .b--pink .bg-pink .black }
+}
+
+.link-white {
+  &:hover, &:focus { @apply .b--white .bg-white .black }
+}
+
+/*
+.link-inline { 
+  @apply .custom-underline .animate;
+
+  &:hover, &:focus { @apply .hover-custom-underline }
+}
+*/
+
+/* 
+ *
+ * Sections
+ *
+ */

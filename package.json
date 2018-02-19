@@ -19,8 +19,8 @@
     "gatsby-transformer-sharp": "^1.6.18",
     "isotope-layout": "^3.0.5",
     "object-fit-images": "^3.2.3",
-    "postcss-cssnext": "^3.1.0",
     "react-aux": "^1.1.0",
+    "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-id-swiper": "^1.5.8",
     "react-inlinesvg": "^0.7.5",
@@ -32,29 +32,19 @@
     "scrollreveal": "^3.3.6",
     "shortid": "^2.2.8",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "github:dumconstantin/tailwindcss#tachyons",
-    "whatwg-fetch": "^2.0.3"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "watch:sass": "node-sass-chokidar --source-map true src/styles/main.sass -o src/styles/builds/after-sass -i -q -w",
-    "watch:postcss": "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css -w",
-    "watch:styles": "npm run watch:sass & npm run watch:postcss",
-    "build:sass": "node-sass-chokidar src/styles/main.sass -o src/styles/builds/after-sass -i",
-    "build:postcss": "postcss src/styles/builds/after-sass/main.css -o src/styles/builds/after-postcss/main.css",
-    "build:purgecss": "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
-    "build:styles": "npm run build:sass && npm run build:postcss && npm run build:purgecss",
-    "dev": "npm i dumconstantin/tailwindcss#tachyons && npm run develop",
-    "develop": "gatsby develop & npm run watch:styles",
-    "build": "npm run build:styles && gatsby build"
+    "tailwindcss": "^0.4.1"
   },
   "devDependencies": {
-    "node-sass-chokidar": "0.0.3",
+    "autoprefixer": "^8.0.0",
     "postcss-cli": "^5.0.0",
+    "precss": "^3.1.0",
     "purgecss": "^0.20.0"
+  },
+  "scripts": {
+    "watch:postcss": "postcss src/styles/index.css -o src/styles/builds/after-postcss/output.css -w",
+    "build:postcss": "postcss src/styles/index.css -o src/styles/builds/after-postcss/output.css",
+    "build:purgecss": "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
+    "dev": "gatsby develop & npm run watch:postcss",
+    "build": "npm run build:postcss && npm run build:purgecss && gatsby build"
   }
 }
