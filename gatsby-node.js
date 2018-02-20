@@ -62,7 +62,10 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
 
     case 'build-html':
       // Ignore packages that causes errors during build:
-      config.loader('null', { test: /scrollreveal/, loader: 'null-loader' })
+      config.loader('null', {
+        test: [/scrollreveal/, /isotope-layout/],
+        loader: 'null-loader'
+      })
 
       break
 
