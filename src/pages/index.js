@@ -1,6 +1,6 @@
 const IndexPage = ({ data }) => (
   <div className="relative vh-100">
-    <main className="flex flex-column justify-center items-center pa3 h-100 avenir">
+    <main className="flex flex-column justify-center items-center pa3 h-100">
       <h1
         className="lh-solid fw9 ttu"
         style={{

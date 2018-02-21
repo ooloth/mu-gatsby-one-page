@@ -1,5 +1,5 @@
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div class="avenir">
     <Helmet
       title="Michael Uloth"
       meta={[

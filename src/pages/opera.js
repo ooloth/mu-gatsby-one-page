@@ -1,5 +1,5 @@
 const OperaPage = ({ data }) => (
-  <main className="avenir">
+  <main>
     <Hero content={heroContent} />
     {/* <Work sites={data.sites.edges} /> */}
   </main>
@@ -23,7 +23,7 @@ import Hero from '../components/Hero'
  */
 
 const heroContent = {
-  theme: `green`,
+  theme: ``,
   title: `Opera`,
   titleMultiplier: `8`,
   blurb: `I’m a Toronto-based opera singer performing bass roles in Canada, the U.S. and Europe. Check out my previous work below.`

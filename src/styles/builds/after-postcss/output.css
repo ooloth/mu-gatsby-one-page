@@ -812,6 +812,43 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
 
 /*
  *
+ * Base
+ *
+ */
+
+/*
+ *
+ * Plugins
+ *
+ */
+
+/*
+ *
+ * Components
+ *
+ */
+
+.pv-p75r {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+/*
+ *
+ * Utilities
+ *
+ */
+
+/*  TODO: remove :focus styles from :hover declarations (use a11y focus style, not the same as hover style) */
+
+/*
+ *
+ * Supports
+ *
+ */
+
+/*
+ *
  * Components
  *
  */
@@ -843,8 +880,7 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   transition: all .2s ease-in-out;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
   background-color: #2eec96;
   color: #000;
 }
@@ -916,8 +952,7 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   transition: all .2s ease-in-out;
 }
 
-.icon:hover,
-.icon:focus {
+.icon:hover {
   color: #2eec96;
 }
 
@@ -925,8 +960,7 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   transition: all .2s ease-in-out;
 }
 
-.icon-on-green:hover,
-.icon-on-green:focus {
+.icon-on-green:hover {
   color: #fff;
   -webkit-filter: drop-shadow(0 15px 5px rgba(0, 0, 0, .11));
           filter: drop-shadow(0 15px 5px rgba(0, 0, 0, .11));
@@ -941,32 +975,47 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
 .link {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
   border-width: .125rem;
-  border-color: #000;
-  background-color: #000;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  border-color: #2eec96;
+  background-color: #2eec96;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  line-height: 1.7;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: #fff;
+  color: #000;
   transition: all .2s ease-in-out;
   border-radius: 30px;
 }
 
-.link:hover,
-.link:focus {
-  border-color: #2eec96;
-  background-color: #2eec96;
-  color: #000;
+.link:hover {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
 }
 
-.link-white:hover,
-.link-white:focus {
+.link-black {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.link-black:hover {
   border-color: #fff;
   background-color: #fff;
   color: #000;
+}
+
+.link-white {
+  border-color: #fff;
+  background-color: #fff;
+  color: #000;
+}
+
+.link-white:hover {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
 }
 
 .link-inline {
@@ -975,18 +1024,9 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   box-shadow: inset 0 -2px 0 0 #2eec96;
 }
 
-.link-inline:hover,
-.link-inline:focus {
+.link-inline:hover {
   box-shadow: inset 0 -12px 0 0 #2eec96;
 }
-
-/* &:hover, &:focus { @apply .hover:fancy-underline } */
-
-/* 
- *
- * Sections
- *
- */
 
 /*
  *

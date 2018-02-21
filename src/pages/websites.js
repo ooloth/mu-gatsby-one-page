@@ -1,7 +1,7 @@
 const WebsitesPage = ({ data }) => (
-  <main className="avenir">
-    <Hero content={heroContent} />
-    <Work sites={data.sites.edges} />
+  <main>
+    <Hero content={data.allWebsitesJson.edges[0].node.hero} />
+    <Work sites={data.allWebsitesJson.edges[0].node.sites} />
     <Contact />
   </main>
 )
@@ -22,19 +22,6 @@ import HyperLink from '../components/HyperLink'
 
 /* 
  *
- * Hero Content
- * 
- */
-
-const heroContent = {
-  theme: `black`,
-  title: `Websites`,
-  titleMultiplier: `5.75`,
-  blurb: `I love building websites! Maybe too much...\nCheck out my recent work below.`
-}
-
-/* 
- *
  * Work
  * 
  */
@@ -43,7 +30,7 @@ import Image from 'gatsby-image'
 import shortid from 'shortid'
 
 const Work = ({ sites }) => (
-  <section className="mt4 mb3 pt6 pv4">
+  <section className="mt4 mb3 pb4">
     {/* <h2
       className="mb6 tc lh-solid f1 sm:f-5 fw9 ttu tracked-slight"
       // style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 5 )` }}
@@ -51,7 +38,7 @@ const Work = ({ sites }) => (
       Work
     </h2> */}
     {sites.map(site => {
-      return <Site key={shortid()} site={site.node} />
+      return <Site key={shortid()} site={site} />
     })}
   </section>
 )
@@ -128,6 +115,7 @@ const CoffeeshopBlurb = () => (
  * 
  */
 
+// TODO: update starter with this type of full-page query in pages/index.js
 export const query = graphql`
   query WebsitePageQuery {
     placeholderImage: imageSharp(id: { regex: "/placeholder.jpg/" }) {
@@ -135,21 +123,29 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_withWebp
       }
     }
-    sites: allWebsitesJson {
+    allWebsitesJson {
       edges {
         node {
-          image {
-            childImageSharp {
-              sizes(maxWidth: 5184) {
-                ...GatsbyImageSharpSizes_withWebp
+          hero {
+            theme
+            title
+            titleMultiplier
+            blurb
+          }
+          sites {
+            image {
+              childImageSharp {
+                sizes(maxWidth: 5184) {
+                  ...GatsbyImageSharpSizes_withWebp
+                }
               }
             }
+            alt
+            title
+            category
+            blurb
+            link
           }
-          alt
-          title
-          category
-          blurb
-          link
         }
       }
     }

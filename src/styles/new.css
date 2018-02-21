@@ -7,3 +7,41 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
 
 */
 
+/*
+ *
+ * Base
+ *
+ */
+
+
+
+/*
+ *
+ * Plugins
+ *
+ */
+
+
+
+/*
+ *
+ * Components
+ *
+ */
+
+.pv-p75r { padding-top: .75rem; padding-bottom: .75rem }
+
+
+/*
+ *
+ * Utilities
+ *
+ */
+
+/*  TODO: remove :focus styles from :hover declarations (use a11y focus style, not the same as hover style) */
+
+/*
+ *
+ * Supports
+ *
+ */
