@@ -40,6 +40,16 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
 
 /*  TODO: remove :focus styles from :hover declarations (use a11y focus style, not the same as hover style) */
 
+@variants responsive, hover, focus, group-hover {
+
+  .f-10 { font-size: 10rem }
+  .f-9  { font-size: 9rem }
+  .f-8  { font-size: 8rem }
+  .f-7  { font-size: 7rem }
+
+
+}
+
 /*
  *
  * Supports

@@ -30,7 +30,7 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   @media (--md) { @apply .ph4 }
   @media (--lg) { @apply .ph5 }
 
-  @supports (display: grid) { @apply .mw9 }
+  /* @supports (display: grid) { @apply .mw9 } */
 }
 
 /* 
@@ -49,8 +49,8 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
  */
 
 .icon {
-  @apply .dib .bg-black .pa2 .lh-solid .ttu .tracked .white .animate;
-  &:hover { @apply .bg-green .black }
+  @apply .dib .bg-green .pa2 .lh-solid .ttu .tracked .black .animate;
+  &:hover { @apply .bg-black .white }
 }
 
 .icon-on-green { 

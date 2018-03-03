@@ -1,95 +1,152 @@
 [
   {
-    "images": [
-      {
-        "image": "../images/websites/adrianne-pieczonka-website.jpg",
-        "alt":
-          "Adrianne Pieczonka featured on a special set of stamps issued by Canada Post honouring opera in Canada and the 50th anniversary of the first production of the opera Louis Riel."
-      },
-      {
-        "image": "../images/websites/adrianne-pieczonka-website.jpg",
-        "alt":
-          "Adrianne Pieczonka featured on a special set of stamps issued by Canada Post honouring opera in Canada and the 50th anniversary of the first production of the opera Louis Riel."
-      }
-    ],
-    "image": "../images/websites/adrianne-pieczonka-website.jpg",
-    "alt":
-      "Adrianne Pieczonka featured on a special set of stamps issued by Canada Post honouring opera in Canada and the 50th anniversary of the first production of the opera Louis Riel.",
+    "image": "../images/websites/adrianne-pieczonka-2.jpg",
+    "alt": "Adrianne Pieczonka as Elisabeth in Don Carlos at the Gran Teatre del Liceu.",
     "title": "Adrianne Pieczonka",
     "category": "Website",
     "tags": ["Design", "Development"],
-    "blurb":
-      "I worked with internationally-celebrated soprano Adrianne Pieczonka to create a bold, modern design to showcase her performances.",
+    "description":
+      "I worked with internationally-celebrated soprano Adrianne Pieczonka to create a bold new design to showcase her work.",
+    "details": [
+      {
+        "name": "Technologies",
+        "value": "Pug, Sass, JavaScript, Gulp, Git"
+      }
+    ],
     "link": "https://www.adriannepieczonka.com"
   },
   {
-    "image": "../images/websites/ego-film-arts-website.jpg",
-    "alt": "Portrait of Canadian film and theatre director Atom Egoyan",
+    "image": "../images/opera/anna-bolena-rochefort.jpg",
+    "alt": "\"Henry VIII and the Barber Surgeons\" by Hans Holbein the Younger, 1543.",
     "title": "Lord Rochefort",
     "category": "Opera",
     "tags": ["Role", "Cover"],
-    "blurb":
+    "description":
       "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+    "reviews": [
+      {
+        "quotation":
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus et similique laudantium, facere, totam quos cupiditate id, sequi officia veritatis reiciendis?",
+        "source": "Toronto Star",
+        "link": "Fake url..."
+      },
+      {
+        "quotation":
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus et similique laudantium, facere, totam quos cupiditate id, sequi officia veritatis reiciendis?",
+        "source": "Toronto Star",
+        "link": "Fake url..."
+      }
+    ],
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Anna Bolena"
+      },
+      {
+        "name": "Composer",
+        "value": "G. Donizetti"
+      },
+      {
+        "name": "Role",
+        "value": "Lord Rochefort (cover)"
+      },
+      {
+        "name": "Conductor",
+        "value": "Look it up..."
+      },
+      {
+        "name": "Director",
+        "value": "Look it up..."
+      },
+      {
+        "name": "Dates",
+        "value": "Look them up..."
+      }
+    ],
     "link": "http://www.egofilmarts.com/"
   },
   {
-    "image": "../images/websites/ego-film-arts-website.jpg",
-    "alt": "Portrait of Canadian film and theatre director Atom Egoyan",
+    "image": "../images/websites/atom-egoyan.jpg",
+    "alt": "Atom Egoyan during a press conference in Stepanakert. Photo by Nagorno Karabakh.",
     "title": "Ego Film Arts",
     "category": "Website",
     "tags": ["Design", "Development"],
-    "blurb":
+    "description":
       "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+    "details": [
+      {
+        "name": "Technologies used",
+        "value": "HTML, CSS, jQuery"
+      }
+    ],
     "link": "http://www.egofilmarts.com/"
   },
   {
-    "image": "../images/websites/ego-film-arts-website.jpg",
-    "alt": "Portrait of Canadian film and theatre director Atom Egoyan",
+    "image": "../images/opera/anna-bolena.jpg",
+    "alt": "\"Henry VIII's first interview with Anne Boleyn\" by D. MacLise, 1835.",
     "title": "Anna Bolena",
     "category": "Opera",
     "tags": ["Chorus"],
-    "blurb":
+    "description":
       "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      }
+    ],
     "link": "http://www.egofilmarts.com/"
   },
   {
     "image": "../images/adam-luther.jpg",
-    "alt": "Portrait of Canadian tenor Adam Luther",
+    "alt": "Canadian tenor Adam Luther. Image by Pierre Gautreau.",
     "title": "Adam Luther",
     "category": "Website",
     "tags": ["Design", "Development"],
-    "blurb":
+    "description":
       "Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.",
+    "details": [
+      {
+        "name": "Technologies used",
+        "value": "Pug, Sass, JavaScript"
+      }
+    ],
     "link": "https://adamluthertenor.com/"
   },
   {
     "image": "../images/laura-albino.jpg",
-    "alt": "Portrait of Canadian soprano Laura Albino",
+    "alt": "Canadian soprano Laura Albino. Image by Katie Cross Photography.",
     "title": "Laura Albino",
     "category": "Website",
     "tags": ["Design", "Development"],
-    "blurb":
+    "description":
       "Laura is an opera singer who wanted a new website to accompany her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
+    "details": [
+      {
+        "name": "Technologies used",
+        "value": "Pug, Sass, JavaScript"
+      }
+    ],
     "link": "https://lauraalbino.com/"
   },
   {
     "image": "../images/ileana-montalbetti.jpg",
-    "alt": "Portrait of Canadian soprano Ileana Montalbetti",
+    "alt": "Canadian soprano Ileana Montalbetti. Image by Bo Huang.",
     "title": "Ileana Montalbetti",
     "category": "Website",
     "tags": ["Design", "Development"],
-    "blurb":
+    "description":
       "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of this artist’s work.",
+    "details": [
+      {
+        "name": "Technologies used",
+        "value": "Pug, Sass, JavaScript"
+      }
+    ],
     "link": "http://www.ileanamontalbetti.com/"
-  },
-  {
-    "image": "../images/coffeeshop-creative.jpg",
-    "alt": "A composite photo showing headshots of twelve Coffeeshop Creative clients",
-    "title": "Coffeeshop Creative",
-    "category": "Website",
-    "tags": ["Development"],
-    "blurb":
-      "I've also partnered with designer Stephen Bell of Coffeeshop Creative to build sites for John Greer, Riccardo Iannello, Hit & Run Dance Productions, Alon Nashman, Theaturtle, Extension Method, DG Volo & Company, WSB Massage, Stephanie Tritchew and Kristina Agur.",
-    "link": "http://coffeeshopcreative.ca"
   }
 ]

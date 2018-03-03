@@ -785,15 +785,15 @@ table {
 
 /* Remove tap highlight on iOS */
 
-/*
 input,
 textarea,
 button,
 select,
 label,
 a,
-ul { -webkit-tap-highlight-color: rgba(0,0,0,0) }
-*/
+ul {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 /* 
 
@@ -946,6 +946,70 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
  */
 
 /*  TODO: remove :focus styles from :hover declarations (use a11y focus style, not the same as hover style) */
+
+.f-10 {
+  font-size: 10rem;
+}
+
+.f-9 {
+  font-size: 9rem;
+}
+
+.f-8 {
+  font-size: 8rem;
+}
+
+.f-7 {
+  font-size: 7rem;
+}
+
+.focus\:f-10:focus {
+  font-size: 10rem;
+}
+
+.focus\:f-9:focus {
+  font-size: 9rem;
+}
+
+.focus\:f-8:focus {
+  font-size: 8rem;
+}
+
+.focus\:f-7:focus {
+  font-size: 7rem;
+}
+
+.hover\:f-10:hover {
+  font-size: 10rem;
+}
+
+.hover\:f-9:hover {
+  font-size: 9rem;
+}
+
+.hover\:f-8:hover {
+  font-size: 8rem;
+}
+
+.hover\:f-7:hover {
+  font-size: 7rem;
+}
+
+.group:hover .group-hover\:f-10 {
+  font-size: 10rem;
+}
+
+.group:hover .group-hover\:f-9 {
+  font-size: 9rem;
+}
+
+.group:hover .group-hover\:f-8 {
+  font-size: 8rem;
+}
+
+.group:hover .group-hover\:f-7 {
+  font-size: 7rem;
+}
 
 /*
  *
@@ -1112,11 +1176,10 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   }
 }
 
-@supports (display: grid) {
-  .container {
-    max-width: 96rem;
-    max-width: var(--sizing-9);
-  }
+.container {
+  /*
+ @supports (display: grid) { @apply .mw9 }
+ */
 }
 
 /* 
@@ -1147,23 +1210,23 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
 
 .icon {
   display: inline-block;
-  background-color: #000;
-  background-color: var(--black);
+  background-color: #2eec96;
+  background-color: var(--green);
   padding: .5rem;
   padding: var(--spacing-2);
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: #fff;
-  color: var(--white);
+  color: #000;
+  color: var(--black);
   transition: all .2s ease-in-out;
 }
 
 .icon:hover {
-  background-color: #2eec96;
-  background-color: var(--green);
-  color: #000;
-  color: var(--black);
+  background-color: #000;
+  background-color: var(--black);
+  color: #fff;
+  color: var(--white);
 }
 
 .icon-on-green {
@@ -11403,6 +11466,70 @@ Adapted from: http://tachyons.io/docs/debug-grid/
 /* @import './utilities/debug'; */
 
 @media (min-width: 36em) {
+  .sm\:f-10 {
+    font-size: 10rem;
+  }
+
+  .sm\:f-9 {
+    font-size: 9rem;
+  }
+
+  .sm\:f-8 {
+    font-size: 8rem;
+  }
+
+  .sm\:f-7 {
+    font-size: 7rem;
+  }
+
+  .sm\:focus\:f-10:focus {
+    font-size: 10rem;
+  }
+
+  .sm\:focus\:f-9:focus {
+    font-size: 9rem;
+  }
+
+  .sm\:focus\:f-8:focus {
+    font-size: 8rem;
+  }
+
+  .sm\:focus\:f-7:focus {
+    font-size: 7rem;
+  }
+
+  .sm\:hover\:f-10:hover {
+    font-size: 10rem;
+  }
+
+  .sm\:hover\:f-9:hover {
+    font-size: 9rem;
+  }
+
+  .sm\:hover\:f-8:hover {
+    font-size: 8rem;
+  }
+
+  .sm\:hover\:f-7:hover {
+    font-size: 7rem;
+  }
+
+  .sm\:group:hover .group-hover\:f-10 {
+    font-size: 10rem;
+  }
+
+  .sm\:group:hover .group-hover\:f-9 {
+    font-size: 9rem;
+  }
+
+  .sm\:group:hover .group-hover\:f-8 {
+    font-size: 8rem;
+  }
+
+  .sm\:group:hover .group-hover\:f-7 {
+    font-size: 7rem;
+  }
+
   .sm\:bg-fixed {
     background-attachment: fixed;
   }
@@ -20093,6 +20220,70 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 }
 
 @media (min-width: 48em) {
+  .md\:f-10 {
+    font-size: 10rem;
+  }
+
+  .md\:f-9 {
+    font-size: 9rem;
+  }
+
+  .md\:f-8 {
+    font-size: 8rem;
+  }
+
+  .md\:f-7 {
+    font-size: 7rem;
+  }
+
+  .md\:focus\:f-10:focus {
+    font-size: 10rem;
+  }
+
+  .md\:focus\:f-9:focus {
+    font-size: 9rem;
+  }
+
+  .md\:focus\:f-8:focus {
+    font-size: 8rem;
+  }
+
+  .md\:focus\:f-7:focus {
+    font-size: 7rem;
+  }
+
+  .md\:hover\:f-10:hover {
+    font-size: 10rem;
+  }
+
+  .md\:hover\:f-9:hover {
+    font-size: 9rem;
+  }
+
+  .md\:hover\:f-8:hover {
+    font-size: 8rem;
+  }
+
+  .md\:hover\:f-7:hover {
+    font-size: 7rem;
+  }
+
+  .md\:group:hover .group-hover\:f-10 {
+    font-size: 10rem;
+  }
+
+  .md\:group:hover .group-hover\:f-9 {
+    font-size: 9rem;
+  }
+
+  .md\:group:hover .group-hover\:f-8 {
+    font-size: 8rem;
+  }
+
+  .md\:group:hover .group-hover\:f-7 {
+    font-size: 7rem;
+  }
+
   .md\:bg-fixed {
     background-attachment: fixed;
   }
@@ -28783,6 +28974,70 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 }
 
 @media (min-width: 62em) {
+  .lg\:f-10 {
+    font-size: 10rem;
+  }
+
+  .lg\:f-9 {
+    font-size: 9rem;
+  }
+
+  .lg\:f-8 {
+    font-size: 8rem;
+  }
+
+  .lg\:f-7 {
+    font-size: 7rem;
+  }
+
+  .lg\:focus\:f-10:focus {
+    font-size: 10rem;
+  }
+
+  .lg\:focus\:f-9:focus {
+    font-size: 9rem;
+  }
+
+  .lg\:focus\:f-8:focus {
+    font-size: 8rem;
+  }
+
+  .lg\:focus\:f-7:focus {
+    font-size: 7rem;
+  }
+
+  .lg\:hover\:f-10:hover {
+    font-size: 10rem;
+  }
+
+  .lg\:hover\:f-9:hover {
+    font-size: 9rem;
+  }
+
+  .lg\:hover\:f-8:hover {
+    font-size: 8rem;
+  }
+
+  .lg\:hover\:f-7:hover {
+    font-size: 7rem;
+  }
+
+  .lg\:group:hover .group-hover\:f-10 {
+    font-size: 10rem;
+  }
+
+  .lg\:group:hover .group-hover\:f-9 {
+    font-size: 9rem;
+  }
+
+  .lg\:group:hover .group-hover\:f-8 {
+    font-size: 8rem;
+  }
+
+  .lg\:group:hover .group-hover\:f-7 {
+    font-size: 7rem;
+  }
+
   .lg\:bg-fixed {
     background-attachment: fixed;
   }
@@ -37473,6 +37728,70 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
 }
 
 @media (min-width: 75em) {
+  .xl\:f-10 {
+    font-size: 10rem;
+  }
+
+  .xl\:f-9 {
+    font-size: 9rem;
+  }
+
+  .xl\:f-8 {
+    font-size: 8rem;
+  }
+
+  .xl\:f-7 {
+    font-size: 7rem;
+  }
+
+  .xl\:focus\:f-10:focus {
+    font-size: 10rem;
+  }
+
+  .xl\:focus\:f-9:focus {
+    font-size: 9rem;
+  }
+
+  .xl\:focus\:f-8:focus {
+    font-size: 8rem;
+  }
+
+  .xl\:focus\:f-7:focus {
+    font-size: 7rem;
+  }
+
+  .xl\:hover\:f-10:hover {
+    font-size: 10rem;
+  }
+
+  .xl\:hover\:f-9:hover {
+    font-size: 9rem;
+  }
+
+  .xl\:hover\:f-8:hover {
+    font-size: 8rem;
+  }
+
+  .xl\:hover\:f-7:hover {
+    font-size: 7rem;
+  }
+
+  .xl\:group:hover .group-hover\:f-10 {
+    font-size: 10rem;
+  }
+
+  .xl\:group:hover .group-hover\:f-9 {
+    font-size: 9rem;
+  }
+
+  .xl\:group:hover .group-hover\:f-8 {
+    font-size: 8rem;
+  }
+
+  .xl\:group:hover .group-hover\:f-7 {
+    font-size: 7rem;
+  }
+
   .xl\:bg-fixed {
     background-attachment: fixed;
   }

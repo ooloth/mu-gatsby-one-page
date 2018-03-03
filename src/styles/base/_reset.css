@@ -117,7 +117,7 @@ table {
  */
 
 /* Remove tap highlight on iOS */
-/*
+
 input,
 textarea,
 button,
@@ -125,4 +125,3 @@ select,
 label,
 a,
 ul { -webkit-tap-highlight-color: rgba(0,0,0,0) }
-*/

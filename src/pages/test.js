@@ -17,6 +17,7 @@ export default TestPage
  */
 
 import React from 'react'
+import shortid from 'shortid'
 
 /* 
  *
@@ -27,22 +28,21 @@ import React from 'react'
 // TODO: extract data
 
 const Hero = () => (
-  <section class="container bg-near-white pv6">
-    <p
-      class="mb4 sm:mb3 lh-solid fw9 ttu"
-      style={{
-        marginLeft: `-.25rem`,
-        fontSize: `calc( (1vw + 1vh + .5vmin) * 7.8 )`
-      }}
-    >
-      Hello<span class="green">.</span>
-    </p>
-    <h1 class="mb4 measure-narrow lh-copy f4 sm:f3 fw4" style={{ maxWidth: `34ch` }}>
-      I'm Michael Uloth, an opera singer and web developer based in Toronto.
-    </h1>
-    <p class="flex lh-copy f4">
-      See my recent work below.<span class="f3">👇</span>
-    </p>
+  <section class="bg-near-white pv6">
+    <div class="container">
+      <p
+        class="mb4 sm:mb3 lh-solid f-5 sm:f-7 md:f-10 fw9 ttu"
+        style={{ marginLeft: `-.25rem` }}
+      >
+        Hello<span class="green">.</span>
+      </p>
+      <h1 class="mb4 measure-narrow lh-copy f4 sm:f3 fw4" style={{ maxWidth: `34ch` }}>
+        I'm Michael Uloth, an opera singer and web developer based in Toronto.
+      </h1>
+      <p class="flex lh-copy f4">
+        See my recent work below.<span class="f3">👇</span>
+      </p>
+    </div>
   </section>
 )
 
@@ -94,14 +94,14 @@ class Work extends React.Component {
     return (
       <section class="pv6">
         <div class="container mb4">
-          <h2
+          {/* <h2
             class="mb2 f-4 sm:f-5 md:f-6 fw9 ttu"
             style={{
               marginLeft: `-.25rem`
             }}
           >
             Work<span class="green">.</span>
-          </h2>
+          </h2> */}
           <Filters
             operaIsChecked={this.state.operaIsChecked}
             websitesIsChecked={this.state.websitesIsChecked}
@@ -155,8 +155,6 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
  * Projects
  * 
  */
-
-import shortid from 'shortid'
 
 class Projects extends React.Component {
   state = { limit: 3, total: this.props.projects.length, allLoaded: false }
@@ -255,6 +253,7 @@ class Project extends React.Component {
   render() {
     return (
       <li
+        key={this.props.key}
         role="button"
         tabIndex="0"
         onClick={this.handleClick}
@@ -264,7 +263,11 @@ class Project extends React.Component {
         <span class="sr-only">Click to see project details</span>
         <div class="pv4 hover:bg-near-white animate">
           <ProjectHeader project={this.props.project} />
-          <div ref={el => (this.item = el)} class="overflow-hidden" style={{ height: 0 }}>
+          <div
+            ref={el => (this.item = el)}
+            class="relative z-2 overflow-hidden"
+            style={{ height: 0 }}
+          >
             <ProjectDetails project={this.props.project} />
           </div>
         </div>
@@ -282,11 +285,15 @@ class Project extends React.Component {
 const ProjectHeader = ({ project }) => (
   <div class="flex justify-between items-center container pv2">
     <div>
-      <h3 class="mb2 lh-solid f2 sm:f1 md:f-4 fw9 ttu">{project.title}</h3>
+      <h3 class="mb2 lh-solid f2 sm:f1 fw9 ttu">{project.title}</h3>
       <ul>
         <li class="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">{project.category}</li>
         {project.tags.map(tag => {
-          return <li class="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">{tag}</li>
+          return (
+            <li key={shortid()} class="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">
+              {tag}
+            </li>
+          )
         })}
       </ul>
     </div>
@@ -315,11 +322,12 @@ const ProjectDetails = ({ project }) => (
         gridGap: `1rem`
       }}
     >
-      {console.log('project', project)}
+      {/* Remove the "images" loop? */}
       {project.images ? (
         project.images.map(photo => {
           return (
             <Img
+              key={shortid()}
               sizes={photo.image.childImageSharp.sizes}
               alt={photo.alt}
               critical={true}
@@ -328,15 +336,52 @@ const ProjectDetails = ({ project }) => (
           )
         })
       ) : (
-        <Img
-          sizes={project.image.childImageSharp.sizes}
-          alt={project.alt}
-          critical={true}
-          className="shadow-lg"
-        />
+        <figure>
+          <Img
+            sizes={project.image.childImageSharp.sizes}
+            alt={project.alt}
+            critical={true}
+            className="shadow-lg"
+          />
+          <figcaption class="o-50 pt1 f6">{project.alt}</figcaption>
+        </figure>
       )}
     </div>
-    <p className="mb4 measure">{project.blurb}</p>
+
+    {project.reviews &&
+      project.reviews.map(review => {
+        return (
+          <blockquote key={shortid()} class="bw3 bt-0 br-0 bb-0 b--green mb4 pl3 measure">
+            <p class="mb2 f3">{review.quotation}</p>
+            {review.link ? (
+              <cite class="f4 fw7 fs-normal">
+                <HyperLink href={review.link} className="">
+                  {review.source}
+                </HyperLink>
+              </cite>
+            ) : (
+              <cite class="">&mdash; {review.source}</cite>
+            )}
+          </blockquote>
+        )
+      })}
+
+    <p class="mb4 measure">{project.description}</p>
+
+    <div class="mb4">
+      {project.details &&
+        project.details.map(detail => {
+          return (
+            detail.name !== `Dates` && (
+              <dl key={shortid()}>
+                <dt class="dib fw7">{detail.name}:&nbsp;</dt>
+                <dd class="dib">{detail.value}</dd>
+              </dl>
+            )
+          )
+        })}
+    </div>
+
     <HyperLink href={project.link} className="link mb4 tc">
       View site →
     </HyperLink>
@@ -356,59 +401,57 @@ import FaFacebook from 'react-icons/lib/fa/facebook'
 import FaEnvelopeO from 'react-icons/lib/fa/envelope-o'
 
 const Contact = () => (
-  <section class="container bg-near-white pt6 pb3">
-    <h2
-      class="mb2 f-3p5 sm:f-5 md:f-6 fw9 ttu"
-      style={{
-        marginLeft: `-.25rem`
-      }}
-    >
-      Contact<span class="green">.</span>
-    </h2>
+  <section class="bg-near-white pt6 pb3">
+    <div class="container ">
+      <h2
+        class="mb4 lh-solid f-3p5 sm:f-5 md:f-6 fw9 ttu"
+        style={{
+          marginLeft: `-.25rem`
+        }}
+      >
+        Contact<span class="green">.</span>
+      </h2>
 
-    <p class="mb4 measure-narrow lh-copy f4 sm:f3 fw4">
-      Want to work together? Tell me about your project!
-    </p>
+      <p class="mb4 pb3 measure-narrow lh-copy f4 sm:f3 fw4" style={{ maxWidth: `32ch` }}>
+        Want to work together? Tell me about your project! 👋
+      </p>
 
-    <div class="sm:flex sm:mb6">
-      <HyperLink href="mailto:hello@michaeluloth.com" className="link dib mr3 mb4 sm:mb0">
-        Email me
-      </HyperLink>
-      <ul class="mb6 sm:mb0">
-        {links.map(link => {
-          return (
-            <li key={link.id} className="dib mr3 f3">
-              <HyperLink href={link.url} className={`icon link-green-to-black`}>
-                {link.icon}
-              </HyperLink>
-            </li>
-          )
-        })}
-      </ul>
+      <div class="sm:flex sm:mb6">
+        <HyperLink href="mailto:hello@michaeluloth.com" className="link dib mr3 mb4 sm:mb0">
+          Email me
+        </HyperLink>
+        <ul class="mb6 sm:mb0">
+          {links.map(link => {
+            return (
+              <li key={shortid()} className="dib mr3 f3">
+                <HyperLink href={link.url} className={`icon`}>
+                  {link.icon}
+                </HyperLink>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+      <Copyright />
     </div>
-    <Copyright />
   </section>
 )
 
 const links = [
   {
-    id: 'facebook',
-    icon: <FaFacebook className="" style={{ width: `1.608rem`, height: `1.608rem` }} />,
+    icon: <FaFacebook className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://www.facebook.com/michaeluloth'
   },
   {
-    id: 'twitter',
-    icon: <FaTwitter className="" style={{ width: `1.608rem`, height: `1.608rem` }} />,
+    icon: <FaTwitter className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://twitter.com/ooloth'
   },
   {
-    id: 'linkedin',
-    icon: <FaLinkedin className="" style={{ width: `1.608rem`, height: `1.608rem` }} />,
+    icon: <FaLinkedin className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://www.linkedin.com/in/michael-uloth-848a1b98/'
   },
   {
-    id: 'github',
-    icon: <FaGithub className="" style={{ width: `1.608rem`, height: `1.608rem` }} />,
+    icon: <FaGithub className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://github.com/ooloth'
   }
 ]
@@ -429,16 +472,6 @@ export const query = graphql`
     allProjectsJson {
       edges {
         node {
-          images {
-            image {
-              childImageSharp {
-                sizes(maxWidth: 2000) {
-                  ...GatsbyImageSharpSizes_withWebp
-                }
-              }
-            }
-            alt
-          }
           image {
             childImageSharp {
               sizes(maxWidth: 2000) {
@@ -450,7 +483,16 @@ export const query = graphql`
           title
           category
           tags
-          blurb
+          description
+          reviews {
+            quotation
+            source
+            link
+          }
+          details {
+            name
+            value
+          }
           link
         }
       }
