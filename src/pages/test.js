@@ -118,7 +118,7 @@ class Work extends React.Component {
 const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
   <fieldset class="lh-solid f3 fw4 ttl">
     <legend class="sr-only">Choose which project types to show</legend>
-    <label class="custom-checkbox mr4 o-70 hover:o-100 animate cursor-pointer">
+    <label class="custom-checkbox mr4 animate cursor-pointer">
       <input
         type="checkbox"
         value="opera"
@@ -130,9 +130,10 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
       <span
         class="checkmark ba bw2 b--green cursor-pointer"
         style={{ marginBottom: `-8px`, width: `1.4rem`, height: `1.4rem` }}
-      />&nbsp;Opera
+      />
+      <span class="checkbox-label">&nbsp;Opera</span>
     </label>
-    <label class="custom-checkbox o-70 hover:o-100 animate cursor-pointer">
+    <label class="custom-checkbox animate cursor-pointer">
       <input
         type="checkbox"
         value="websites"
@@ -145,7 +146,7 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
         class="checkmark ba bw2 b--green cursor-pointer"
         style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
       />
-      &nbsp;Websites
+      <span class="checkbox-label">&nbsp;Websites</span>
     </label>
   </fieldset>
 )
@@ -283,7 +284,7 @@ class Project extends React.Component {
  */
 
 const ProjectHeader = ({ project }) => (
-  <div class="flex justify-between items-center container pv2">
+  <div class="group flex justify-between items-center container pv2">
     <div>
       <h3 class="mb2 lh-solid f2 sm:f1 fw9 ttu">{project.title}</h3>
       <ul>
@@ -313,9 +314,9 @@ import HyperLink from '../components/HyperLink'
 import Img from '../components/Img'
 
 const ProjectDetails = ({ project }) => (
-  <div class="container pt4 lh-copy">
+  <div class="container pt4 lh-tall">
     <div
-      class="mb4"
+      class="mb4 "
       style={{
         display: `grid`,
         gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr)`,
@@ -351,24 +352,26 @@ const ProjectDetails = ({ project }) => (
     {project.reviews &&
       project.reviews.map(review => {
         return (
-          <blockquote key={shortid()} class="bw3 bt-0 br-0 bb-0 b--green mb4 pl3 measure">
-            <p class="mb2 f3">{review.quotation}</p>
-            {review.link ? (
-              <cite class="f4 fw7 fs-normal">
-                <HyperLink href={review.link} className="">
-                  {review.source}
-                </HyperLink>
-              </cite>
-            ) : (
-              <cite class="">&mdash; {review.source}</cite>
-            )}
+          <blockquote key={shortid()} class="pv1">
+            <div class="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
+              <p class="mb2 f3">{review.quotation}</p>
+              {review.link ? (
+                <cite class="f4 fw7 fs-normal">
+                  <HyperLink href={review.link} className="">
+                    {review.source}
+                  </HyperLink>
+                </cite>
+              ) : (
+                <cite class="">&mdash; {review.source}</cite>
+              )}
+            </div>
           </blockquote>
         )
       })}
 
     <p class="mb4 measure">{project.description}</p>
 
-    <div class="mb4">
+    <div class="mb4 ">
       {project.details &&
         project.details.map(detail => {
           return (

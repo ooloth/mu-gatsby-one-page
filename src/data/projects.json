@@ -9,7 +9,7 @@
       "I worked with internationally-celebrated soprano Adrianne Pieczonka to create a bold new design to showcase her work.",
     "details": [
       {
-        "name": "Technologies",
+        "name": "Tools",
         "value": "Pug, Sass, JavaScript, Gulp, Git"
       }
     ],
@@ -21,22 +21,8 @@
     "title": "Lord Rochefort",
     "category": "Opera",
     "tags": ["Role", "Cover"],
-    "description":
-      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
-    "reviews": [
-      {
-        "quotation":
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus et similique laudantium, facere, totam quos cupiditate id, sequi officia veritatis reiciendis?",
-        "source": "Toronto Star",
-        "link": "Fake url..."
-      },
-      {
-        "quotation":
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus et similique laudantium, facere, totam quos cupiditate id, sequi officia veritatis reiciendis?",
-        "source": "Toronto Star",
-        "link": "Fake url..."
-      }
-    ],
+    "reviews": [],
+    "description": "",
     "details": [
       {
         "name": "Company",
@@ -48,7 +34,7 @@
       },
       {
         "name": "Composer",
-        "value": "G. Donizetti"
+        "value": "Gaetano Donizetti"
       },
       {
         "name": "Role",
@@ -56,18 +42,18 @@
       },
       {
         "name": "Conductor",
-        "value": "Look it up..."
+        "value": "Corrado Rovaris"
       },
       {
         "name": "Director",
-        "value": "Look it up..."
+        "value": "Stephen Lawless"
       },
       {
         "name": "Dates",
-        "value": "Look them up..."
+        "value": "April 28 - May 26, 2018"
       }
     ],
-    "link": "http://www.egofilmarts.com/"
+    "link": "https://www.coc.ca/productions/13097"
   },
   {
     "image": "../images/websites/atom-egoyan.jpg",
@@ -79,27 +65,52 @@
       "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
     "details": [
       {
-        "name": "Technologies used",
+        "name": "Tools",
         "value": "HTML, CSS, jQuery"
       }
     ],
     "link": "http://www.egofilmarts.com/"
   },
   {
-    "image": "../images/opera/anna-bolena.jpg",
-    "alt": "\"Henry VIII's first interview with Anne Boleyn\" by D. MacLise, 1835.",
-    "title": "Anna Bolena",
+    "image": "../images/opera/nightingale.jpg",
+    "alt":
+      "\"The Nightingale and Other Short Fables\" at the Canadian Opera Company, 2009. Image by Michael Cooper.",
+    "title": "Le Bonze",
     "category": "Opera",
-    "tags": ["Chorus"],
-    "description":
-      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+    "tags": ["Role", "Cover"],
+    "reviews": [],
+    "description": "",
     "details": [
       {
         "name": "Company",
         "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "The Nightingale and Other Short Fables"
+      },
+      {
+        "name": "Composer",
+        "value": "Igor Stravinsky"
+      },
+      {
+        "name": "Role",
+        "value": "Le Bonze (cover)"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "April 13 - May 19, 2018"
       }
     ],
-    "link": "http://www.egofilmarts.com/"
+    "link": "https://www.coc.ca/productions/13109"
   },
   {
     "image": "../images/adam-luther.jpg",
@@ -111,11 +122,59 @@
       "Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.",
     "details": [
       {
-        "name": "Technologies used",
+        "name": "Tools",
         "value": "Pug, Sass, JavaScript"
       }
     ],
     "link": "https://adamluthertenor.com/"
+  },
+  {
+    "image": "../images/opera/bound.jpg",
+    "alt":
+      "Danika Lorèn in BOUND, Against the Grain Theatre, 2017. Photo by Darryl Block Photography.",
+    "title": "Paul Muller",
+    "category": "Opera",
+    "tags": ["Role", "Workshop"],
+    "reviews": [
+      {
+        "quotation":
+          "Bass Michael Uloth brought a rich, melifluous tone and a striking figure to the stage. His singing is rich and low without feeling woofy or manufactured.",
+        "source": "Schmopera",
+        "link": "https://www.schmopera.com/equal-parts-stressful-and-reverent-atgbound/"
+      }
+    ],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Against the Grain Theatre"
+      },
+      {
+        "name": "Opera",
+        "value": "BOUND: A Handel Mash-up"
+      },
+      {
+        "name": "Composer",
+        "value": "George Frideric Handel"
+      },
+      {
+        "name": "Role",
+        "value": "Paul Muller"
+      },
+      {
+        "name": "Conductor",
+        "value": "Christopher Mokrzewski"
+      },
+      {
+        "name": "Director",
+        "value": "Joel Ivany"
+      },
+      {
+        "name": "Dates",
+        "value": "December 2017"
+      }
+    ],
+    "link": "http://againstthegraintheatre.com/bound/"
   },
   {
     "image": "../images/laura-albino.jpg",
@@ -127,11 +186,59 @@
       "Laura is an opera singer who wanted a new website to accompany her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
     "details": [
       {
-        "name": "Technologies used",
+        "name": "Tools",
         "value": "Pug, Sass, JavaScript"
       }
     ],
     "link": "https://lauraalbino.com/"
+  },
+  {
+    "image": "../images/opera/claude-vivier.jpg",
+    "alt": "Claude Vivier. Photo by Boosey and Hawkes.",
+    "title": "Bass",
+    "category": "Opera",
+    "tags": ["Role"],
+    "reviews": [
+      {
+        "quotation":
+          "Bass Michael Uloth’s Merlin was beckoning, intense, and often played the voice of cosmic joy (wow — can he ever laugh at top volume, too).",
+        "source": "National Post",
+        "link":
+          "http://nationalpost.com/entertainment/music/review-viviers-kopernikus-at-banff-centre-the-ideal-opera-of-the-future/wcm/88611ef6-616b-4692-a789-52de62554fae"
+      }
+    ],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "\"Open Space: Opera in the 21st Century\", Banff Centre for the Arts"
+      },
+      {
+        "name": "Opera",
+        "value": "Kopernikus"
+      },
+      {
+        "name": "Composer",
+        "value": "Claude Vivier"
+      },
+      {
+        "name": "Role",
+        "value": "Bass"
+      },
+      {
+        "name": "Conductor",
+        "value": "Christopher Mokrzewski"
+      },
+      {
+        "name": "Director",
+        "value": "Joel Ivany"
+      },
+      {
+        "name": "Dates",
+        "value": "June 2017"
+      }
+    ],
+    "link": "http://againstthegraintheatre.com/category/kopernikus/"
   },
   {
     "image": "../images/ileana-montalbetti.jpg",
@@ -143,7 +250,7 @@
       "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of this artist’s work.",
     "details": [
       {
-        "name": "Technologies used",
+        "name": "Tools",
         "value": "Pug, Sass, JavaScript"
       }
     ],

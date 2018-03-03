@@ -103,6 +103,12 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
   display: none;
 }
 
+.custom-checkbox .checkmark { opacity: .5 }
+.custom-checkbox .checkbox-label { opacity: .5 }
+
+.custom-checkbox input:checked ~ .checkmark { opacity: 1 }
+.custom-checkbox input:checked ~ .checkbox-label { opacity: 1 }
+
 /* Show the checkmark when checked */
 .custom-checkbox input:checked ~ .checkmark:after { display: block }
 
