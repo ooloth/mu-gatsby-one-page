@@ -477,7 +477,7 @@ export const query = graphql`
         node {
           image {
             childImageSharp {
-              sizes(maxWidth: 2000) {
+              sizes(maxWidth: 940) {
                 ...GatsbyImageSharpSizes_withWebp
               }
             }
