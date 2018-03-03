@@ -10,7 +10,7 @@ Adapted from:
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   /* Cursor */
   .cursor-auto        { cursor: auto }

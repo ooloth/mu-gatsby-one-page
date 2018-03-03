@@ -16,7 +16,10 @@ const Contact = () => (
       <p className="ml-auto mr-auto pt3 pb4 measure-narrow tc lh-tall f4">
         Want to work together? <br className="dn sm:di" />Tell me about your project!
       </p>
-      <HyperLink href="mailto:hello@michaeluloth.com" className="link link-white dib mb6">
+      <HyperLink
+        href="mailto:hello@michaeluloth.com"
+        className="link link-black-to-white dib mb6"
+      >
         Get in touch
       </HyperLink>
     </section>

@@ -11,7 +11,7 @@ Adapted from: http://tachyons.io/docs/themes/borders/
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .b--black         { border-color: var(--black) }
   .b--near-black    { border-color: var(--near-black) }

@@ -9,7 +9,7 @@ Adapted from:
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
 .visible   { visibility: visible }
 .invisible { visibility: hidden }

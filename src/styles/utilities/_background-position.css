@@ -7,7 +7,7 @@ Adapted from: https://github.com/tachyons-css/tachyons/blob/master/src/_backgrou
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .bg-center { 
     background-repeat: no-repeat;

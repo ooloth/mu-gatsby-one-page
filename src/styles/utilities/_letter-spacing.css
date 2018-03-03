@@ -7,7 +7,7 @@ Adapted from: http://tachyons.io/docs/typography/tracking/
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .tracked       { letter-spacing: .1em }
   .tracked-sm    { letter-spacing: .05em }

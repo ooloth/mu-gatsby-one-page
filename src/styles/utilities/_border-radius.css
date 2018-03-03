@@ -9,7 +9,7 @@ Adapted from: http://tachyons.io/docs/themes/border-radius/
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .br0     { border-radius: var(--border-radius-none) }
   .br1     { border-radius: var(--border-radius-1) }

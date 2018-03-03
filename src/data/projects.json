@@ -1,0 +1,95 @@
+[
+  {
+    "images": [
+      {
+        "image": "../images/websites/adrianne-pieczonka-website.jpg",
+        "alt":
+          "Adrianne Pieczonka featured on a special set of stamps issued by Canada Post honouring opera in Canada and the 50th anniversary of the first production of the opera Louis Riel."
+      },
+      {
+        "image": "../images/websites/adrianne-pieczonka-website.jpg",
+        "alt":
+          "Adrianne Pieczonka featured on a special set of stamps issued by Canada Post honouring opera in Canada and the 50th anniversary of the first production of the opera Louis Riel."
+      }
+    ],
+    "image": "../images/websites/adrianne-pieczonka-website.jpg",
+    "alt":
+      "Adrianne Pieczonka featured on a special set of stamps issued by Canada Post honouring opera in Canada and the 50th anniversary of the first production of the opera Louis Riel.",
+    "title": "Adrianne Pieczonka",
+    "category": "Website",
+    "tags": ["Design", "Development"],
+    "blurb":
+      "I worked with internationally-celebrated soprano Adrianne Pieczonka to create a bold, modern design to showcase her performances.",
+    "link": "https://www.adriannepieczonka.com"
+  },
+  {
+    "image": "../images/websites/ego-film-arts-website.jpg",
+    "alt": "Portrait of Canadian film and theatre director Atom Egoyan",
+    "title": "Lord Rochefort",
+    "category": "Opera",
+    "tags": ["Role", "Cover"],
+    "blurb":
+      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+    "link": "http://www.egofilmarts.com/"
+  },
+  {
+    "image": "../images/websites/ego-film-arts-website.jpg",
+    "alt": "Portrait of Canadian film and theatre director Atom Egoyan",
+    "title": "Ego Film Arts",
+    "category": "Website",
+    "tags": ["Design", "Development"],
+    "blurb":
+      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+    "link": "http://www.egofilmarts.com/"
+  },
+  {
+    "image": "../images/websites/ego-film-arts-website.jpg",
+    "alt": "Portrait of Canadian film and theatre director Atom Egoyan",
+    "title": "Anna Bolena",
+    "category": "Opera",
+    "tags": ["Chorus"],
+    "blurb":
+      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+    "link": "http://www.egofilmarts.com/"
+  },
+  {
+    "image": "../images/adam-luther.jpg",
+    "alt": "Portrait of Canadian tenor Adam Luther",
+    "title": "Adam Luther",
+    "category": "Website",
+    "tags": ["Design", "Development"],
+    "blurb":
+      "Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.",
+    "link": "https://adamluthertenor.com/"
+  },
+  {
+    "image": "../images/laura-albino.jpg",
+    "alt": "Portrait of Canadian soprano Laura Albino",
+    "title": "Laura Albino",
+    "category": "Website",
+    "tags": ["Design", "Development"],
+    "blurb":
+      "Laura is an opera singer who wanted a new website to accompany her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
+    "link": "https://lauraalbino.com/"
+  },
+  {
+    "image": "../images/ileana-montalbetti.jpg",
+    "alt": "Portrait of Canadian soprano Ileana Montalbetti",
+    "title": "Ileana Montalbetti",
+    "category": "Website",
+    "tags": ["Design", "Development"],
+    "blurb":
+      "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of this artist’s work.",
+    "link": "http://www.ileanamontalbetti.com/"
+  },
+  {
+    "image": "../images/coffeeshop-creative.jpg",
+    "alt": "A composite photo showing headshots of twelve Coffeeshop Creative clients",
+    "title": "Coffeeshop Creative",
+    "category": "Website",
+    "tags": ["Development"],
+    "blurb":
+      "I've also partnered with designer Stephen Bell of Coffeeshop Creative to build sites for John Greer, Riccardo Iannello, Hit & Run Dance Productions, Alon Nashman, Theaturtle, Extension Method, DG Volo & Company, WSB Massage, Stephanie Tritchew and Kristina Agur.",
+    "link": "http://coffeeshopcreative.ca"
+  }
+]

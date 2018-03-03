@@ -7,7 +7,7 @@ Adapted from: http://tachyons.io/docs/themes/skins/
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .black-90      { color: var(--black-90) }
   .black-80      { color: var(--black-80) }

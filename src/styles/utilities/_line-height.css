@@ -7,7 +7,7 @@ Adapted from: http://tachyons.io/docs/typography/line-height
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .lh-solid { line-height: 1 }
   .lh-title { line-height: 1.25 }

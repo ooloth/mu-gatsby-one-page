@@ -7,7 +7,7 @@ Adapted from: https://tailwindcss.com/docs/shadows
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .shadow	{ box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10) }
 

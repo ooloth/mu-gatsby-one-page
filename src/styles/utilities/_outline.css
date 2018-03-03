@@ -7,7 +7,7 @@ Adapted from: https://github.com/tachyons-css/tachyons/blob/master/src/_outlines
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .outline             { outline: 1px solid }
   .outline-transparent { outline: 1px solid transparent }

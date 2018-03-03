@@ -17,7 +17,7 @@ const Hero = ({ content }) => {
 
   return (
     <section
-      className={`flex flex-column justify-center items-center pv6 ph3 ${styles}`}
+      className={`flex flex-column justify-center items-center pv5 ph3 ${styles}`}
       style={
         {
           // height: `100vh`

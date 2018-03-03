@@ -7,7 +7,7 @@ Adapted from: http://tachyons.io/docs/themes/opacity/
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .o-100 { opacity: 1 }
   .o-90  { opacity: .9 }

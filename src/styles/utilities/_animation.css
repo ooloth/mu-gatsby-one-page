@@ -4,9 +4,32 @@
  *
  */
 
-.animate,
-.animate:hover,
-.animate:focus { transition: all .2s ease-in-out }
+.animate { transition: all .2s ease-in-out }
+
+/* 
+ *
+ * Hand Keyframes
+ *
+ */
+
+.anim-point { animation: point 2s infinite }
+
+@keyframes point {
+  // from { transform: translateY(-5%) }
+  // to { transform: translateY(10%) }
+  0%, 20%, 50%, 70%, 90%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-15px);
+  }
+	60% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}
 
 
 /* 

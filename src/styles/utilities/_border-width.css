@@ -9,7 +9,7 @@ Adapted from: http://tachyons.io/docs/themes/borders/
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .bw0 { border-width: var(--border-width-none) }
   .bw1 { border-width: var(--border-width-1) }

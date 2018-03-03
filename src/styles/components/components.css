@@ -48,10 +48,9 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
  *
  */
 
-.icon { 
-  @apply .animate;
-
-  &:hover { @apply .green }
+.icon {
+  @apply .dib .bg-black .pa2 .lh-solid .ttu .tracked .white .animate;
+  &:hover { @apply .bg-green .black }
 }
 
 .icon-on-green { 
@@ -72,19 +71,31 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
  */
 
 .link {
-  @apply .shadow-lg .bw1 .b--green .bg-green .pv-p75r .ph3 .ttu .tracked .black .animate;
+  @apply .dib .bg-black .pv2 .ph3 .lh-copy .ttu .tracked .white .animate;
+  &:hover { @apply .bg-green .black }
+}
+
+/*
+.link {
+  @apply .shadow-lg .bw1 .pv-p75r .ph3 .ttu .tracked .animate;
 
   border-radius: 30px;
 
-  &:hover { @apply .b--black .bg-black .white }
+  &:hover { @apply .b--green .bg-green .black }
+}
+*/
+
+.link-green-to-black {
+  @apply .bg-green .black;
+  &:hover { @apply .bg-black .white }
 }
 
-.link-black {
+.link-black-to-white {
   @apply .b--black .bg-black .white;
   &:hover { @apply .b--white .bg-white .black }
 }
 
-.link-white {
+.link-white-to-black {
   @apply .b--white .bg-white .black;
   &:hover { @apply .b--black .bg-black .white }
 }

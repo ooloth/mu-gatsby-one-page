@@ -7,7 +7,7 @@ Adapted from: http://tachyons.io/docs/typography/font-weight/
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .fw1    { font-weight: 100 }
   .fw2    { font-weight: 200 }

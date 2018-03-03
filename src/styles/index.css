@@ -4,9 +4,10 @@
  *
  */
 
-@import './base/_tailwind-preflight';
-@import './base/_reset';
-@import './base/_font-face';
+@import './base/tailwind-preflight';
+@import './base/reset';
+@import './base/a11y';
+@import './base/font-face';
 
 /*
  *
@@ -50,83 +51,83 @@
 @import './utilities/animation';
 
 /* Backgrounds */
-@import './utilities/_background-attachment';
-@import './utilities/_background-color';
-@import './utilities/_background-position';
-@import './utilities/_background-repeat';
-@import './utilities/_background-size';
+@import './utilities/background-attachment';
+@import './utilities/background-color';
+@import './utilities/background-position';
+@import './utilities/background-repeat';
+@import './utilities/background-size';
 
 /* Borders & outlines */
-@import './utilities/_border';
-@import './utilities/_border-color';
-@import './utilities/_border-radius';
-@import './utilities/_border-style';
-@import './utilities/_border-width';
-@import './utilities/_outline';
+@import './utilities/border';
+@import './utilities/border-color';
+@import './utilities/border-radius';
+@import './utilities/border-style';
+@import './utilities/border-width';
+@import './utilities/outline';
 
 /* Box shadow */
-@import './utilities/_box-shadow';
+@import './utilities/box-shadow';
 
 /* CMS */
-@import './utilities/_cms';
+@import './utilities/cms';
 
 /* Images */
-@import './utilities/_object-fit';
-@import './utilities/_object-position';
+@import './utilities/object-fit';
+@import './utilities/object-position';
 
 /* Interactivity */
-@import './utilities/_cursor';
-@import './utilities/_hide-child';
+@import './utilities/cursor';
+@import './utilities/hide-child';
 
 /* Layout */
-@import './utilities/_columns';
-@import './utilities/_display';
-@import './utilities/_flexbox';
-@import './utilities/_floats';
-@import './utilities/_position';
-@import './utilities/_z-index';
+@import './utilities/columns';
+@import './utilities/display';
+@import './utilities/flexbox';
+@import './utilities/floats';
+@import './utilities/position';
+@import './utilities/z-index';
 
 /* Sizing */
-@import './utilities/_aspect-ratio';
-@import './utilities/_height';
-@import './utilities/_overflow';
-@import './utilities/_width';
+@import './utilities/aspect-ratio';
+@import './utilities/height';
+@import './utilities/overflow';
+@import './utilities/width';
 
 /* Spacing */
-@import './utilities/_margins';
-@import './utilities/_negative-margins';
-@import './utilities/_padding';
+@import './utilities/margins';
+@import './utilities/negative-margins';
+@import './utilities/padding';
 
 /* SVG */
-@import './utilities/_svg';
+@import './utilities/svg';
 
 /* Tables */
-@import './utilities/_tables';
+@import './utilities/tables';
 
 /* Transforms */
-@import './utilities/_rotation';
-@import './utilities/_transform-origin';
+@import './utilities/rotation';
+@import './utilities/transform-origin';
 
 /* Typography */
-@import './utilities/_color';
-@import './utilities/_font-family';
-@import './utilities/_font-size';
-@import './utilities/_font-style';
-@import './utilities/_font-weight';
-@import './utilities/_letter-spacing';
-@import './utilities/_line-height';
-@import './utilities/_line-wrapping';
-@import './utilities/_text-align';
-@import './utilities/_vertical-align';
+@import './utilities/color';
+@import './utilities/font-family';
+@import './utilities/font-size';
+@import './utilities/font-style';
+@import './utilities/font-weight';
+@import './utilities/letter-spacing';
+@import './utilities/line-height';
+@import './utilities/line-wrapping';
+@import './utilities/text-align';
+@import './utilities/vertical-align';
 
 /* Visibility */
-@import './utilities/_opacity';
-@import './utilities/_visibility';
+@import './utilities/opacity';
+@import './utilities/visibility';
 
 /* Variables (import here to override any variables above) */
-@import './base/_variables';
+@import './base/variables';
 
 /* Debug */
-@import './utilities/_debug-children';
-@import './utilities/_debug-grid';
-/* @import './utilities/_debug'; */
+@import './utilities/debug-children';
+@import './utilities/debug-grid';
+/* @import './utilities/debug'; */

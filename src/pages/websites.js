@@ -30,7 +30,7 @@ import Image from 'gatsby-image'
 import shortid from 'shortid'
 
 const Work = ({ sites }) => (
-  <section className="mt4 mb3 pb4">
+  <section className="mb3 pb4">
     {/* <h2
       className="mb6 tc lh-solid f1 sm:f-5 fw9 ttu tracked-slight"
       // style={{ fontSize: `calc( (1vw + 1vh + .5vmin) * 5 )` }}
@@ -57,7 +57,7 @@ const Site = ({ site }) => {
       <p className="ml-auto mr-auto pv4 lh-tall" style={{ maxWidth: `60ch` }}>
         {site.blurb}
       </p>
-      <HyperLink href={site.link} className="link dib">
+      <HyperLink href={site.link} className="link link-black-to-green dib">
         View site
       </HyperLink>
     </article>
@@ -80,6 +80,9 @@ const CoffeeshopBlurb = () => (
     </HyperLink>,{' '}
     <HyperLink href="http://www.riccardoiannello.com/" className="link-inline">
       Riccardo Iannello
+    </HyperLink>,{' '}
+    <HyperLink href="https://www.rachelkrehm.com/" className="link-inline">
+      Rachel&nbsp;Krehm
     </HyperLink>,{' '}
     <HyperLink href="http://www.alonnashman.com/" className="link-inline">
       Alon&nbsp;Nashman

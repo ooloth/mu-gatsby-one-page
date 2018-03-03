@@ -7,7 +7,7 @@ Adapted from: https://github.com/tachyons-css/tachyons/blob/master/src/_skins.cs
 
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .bg-black-90      { background-color: var(--black-90) }
   .bg-black-80      { background-color: var(--black-80) }

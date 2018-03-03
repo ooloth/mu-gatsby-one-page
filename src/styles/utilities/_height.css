@@ -7,7 +7,7 @@ Adapted from: http://tachyons.io/docs/layout/heights/
    
 */
 
-@variants responsive, hover, focus {
+@variants responsive, hover, focus, group-hover {
 
   .h1 { height: var(--sizing-1) }
   .h2 { height: var(--sizing-2) }

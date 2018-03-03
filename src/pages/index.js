@@ -17,10 +17,10 @@ const IndexPage = ({ data }) => (
       I'm Michael. I sing opera and build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
     </p> */}
       <nav className="flex pb4">
-        <Link to="/opera/" className="link">
+        <Link to="/opera/" className="link link-black-to-green">
           Opera
         </Link>
-        <Link to="/websites/" className="link ml3 sm:ml4">
+        <Link to="/websites/" className="link link-black-to-green ml3 sm:ml4">
           Websites
         </Link>
       </nav>
