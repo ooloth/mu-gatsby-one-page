@@ -17,7 +17,6 @@ export default TestPage
  */
 
 import React from 'react'
-import shortid from 'shortid'
 
 /* 
  *
@@ -52,10 +51,19 @@ const Hero = () => (
  * 
  */
 
-// TODO: enabling filtering by "Opera" vs. "Website"
+import shortid from 'shortid'
 
 class Work extends React.Component {
-  state = { operaIsChecked: true, websitesIsChecked: true }
+  state = { projects: this.props.projects, operaIsChecked: true, websitesIsChecked: true }
+
+  // Add a key to each project (to prevent unnecessary rerendering)
+  componentDidMount = () => {
+    const projectsWithKeys = this.props.projects.map(project => {
+      project.node.key = shortid.generate()
+      return project
+    })
+    this.setState({ projects: projectsWithKeys })
+  }
 
   handleFilterClick = event => {
     switch (event.target.value) {
@@ -78,13 +86,13 @@ class Work extends React.Component {
   render() {
     let filteredProjects
     if (this.state.operaIsChecked && this.state.websitesIsChecked) {
-      filteredProjects = this.props.projects
+      filteredProjects = this.state.projects
     } else if (this.state.operaIsChecked && !this.state.websitesIsChecked) {
-      filteredProjects = this.props.projects.filter(project => {
+      filteredProjects = this.state.projects.filter(project => {
         return project.node.category === 'Opera' || project.node.category === 'opera'
       })
     } else if (!this.state.operaIsChecked && this.state.websitesIsChecked) {
-      filteredProjects = this.props.projects.filter(project => {
+      filteredProjects = this.state.projects.filter(project => {
         return project.node.category === 'Website' || project.node.category === 'website'
       })
     } else {
@@ -158,14 +166,20 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
  */
 
 class Projects extends React.Component {
-  state = { limit: 3, total: this.props.projects.length, allLoaded: false }
+  state = { limit: 5, total: this.props.projects.length, allLoaded: false }
+
+  componentDidMount = () => {
+    if (this.state.limit >= this.state.total) {
+      this.setState({ allLoaded: true })
+    }
+  }
 
   handleClick = () => {
     if (this.state.limit < this.state.total) {
-      if (this.state.limit + 3 < this.state.total) {
-        this.setState({ limit: this.state.limit + 3 })
-      } else if (this.state.limit + 3 === this.state.total) {
-        this.setState({ limit: this.state.limit + 3, allLoaded: true })
+      if (this.state.limit + 5 < this.state.total) {
+        this.setState({ limit: this.state.limit + 5 })
+      } else if (this.state.limit + 5 === this.state.total) {
+        this.setState({ limit: this.state.limit + 5, allLoaded: true })
       } else {
         this.setState({ limit: this.state.total, allLoaded: true })
       }
@@ -181,7 +195,7 @@ class Projects extends React.Component {
       <div>
         <ul>
           {visibleProjects.map(project => {
-            return <Project key={shortid()} project={project.node} />
+            return <Project key={project.node.key} project={project.node} />
           })}
         </ul>
         {!this.state.allLoaded && (
@@ -288,7 +302,7 @@ const ProjectHeader = ({ project }) => (
     <div>
       <h3 class="mb2 lh-solid f2 sm:f1 fw9 ttu">{project.title}</h3>
       <ul>
-        <li class="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">{project.category}</li>
+        {/* <li class="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">{project.category}</li> */}
         {project.tags.map(tag => {
           return (
             <li key={shortid()} class="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">

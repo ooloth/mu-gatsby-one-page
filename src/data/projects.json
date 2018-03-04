@@ -4,7 +4,7 @@
     "alt": "Adrianne Pieczonka as Elisabeth in Don Carlos at the Gran Teatre del Liceu.",
     "title": "Adrianne Pieczonka",
     "category": "Website",
-    "tags": ["Design", "Development"],
+    "tags": ["Website", "Design", "Code"],
     "description":
       "I worked with internationally-celebrated soprano Adrianne Pieczonka to create a bold new design to showcase her work.",
     "details": [
@@ -18,9 +18,9 @@
   {
     "image": "../images/opera/anna-bolena-rochefort.jpg",
     "alt": "\"Henry VIII and the Barber Surgeons\" by Hans Holbein the Younger, 1543.",
-    "title": "Lord Rochefort",
+    "title": "Anna Bolena",
     "category": "Opera",
-    "tags": ["Role", "Cover"],
+    "tags": ["Canadian Opera Company"],
     "reviews": [],
     "description": "",
     "details": [
@@ -60,7 +60,7 @@
     "alt": "Atom Egoyan during a press conference in Stepanakert. Photo by Nagorno Karabakh.",
     "title": "Ego Film Arts",
     "category": "Website",
-    "tags": ["Design", "Development"],
+    "tags": ["Website", "Design", "Code"],
     "description":
       "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
     "details": [
@@ -75,9 +75,9 @@
     "image": "../images/opera/nightingale.jpg",
     "alt":
       "\"The Nightingale and Other Short Fables\" at the Canadian Opera Company, 2009. Image by Michael Cooper.",
-    "title": "Le Bonze",
+    "title": "Le Rossignol",
     "category": "Opera",
-    "tags": ["Role", "Cover"],
+    "tags": ["Canadian Opera Company"],
     "reviews": [],
     "description": "",
     "details": [
@@ -117,7 +117,7 @@
     "alt": "Canadian tenor Adam Luther. Image by Pierre Gautreau.",
     "title": "Adam Luther",
     "category": "Website",
-    "tags": ["Design", "Development"],
+    "tags": ["Website", "Design", "Code"],
     "description":
       "Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.",
     "details": [
@@ -132,9 +132,9 @@
     "image": "../images/opera/bound.jpg",
     "alt":
       "Danika Lorèn in BOUND, Against the Grain Theatre, 2017. Photo by Darryl Block Photography.",
-    "title": "Paul Muller",
+    "title": "BOUND",
     "category": "Opera",
-    "tags": ["Role", "Workshop"],
+    "tags": ["Against the Grain Theatre"],
     "reviews": [
       {
         "quotation":
@@ -181,7 +181,7 @@
     "alt": "Canadian soprano Laura Albino. Image by Katie Cross Photography.",
     "title": "Laura Albino",
     "category": "Website",
-    "tags": ["Design", "Development"],
+    "tags": ["Website", "Design", "Code"],
     "description":
       "Laura is an opera singer who wanted a new website to accompany her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
     "details": [
@@ -195,9 +195,9 @@
   {
     "image": "../images/opera/claude-vivier.jpg",
     "alt": "Claude Vivier. Photo by Boosey and Hawkes.",
-    "title": "Bass",
+    "title": "Kopernikus",
     "category": "Opera",
-    "tags": ["Role"],
+    "tags": ["Banff Centre for the Arts"],
     "reviews": [
       {
         "quotation":
@@ -245,7 +245,7 @@
     "alt": "Canadian soprano Ileana Montalbetti. Image by Bo Huang.",
     "title": "Ileana Montalbetti",
     "category": "Website",
-    "tags": ["Design", "Development"],
+    "tags": ["Website", "Design", "Code"],
     "description":
       "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of this artist’s work.",
     "details": [
