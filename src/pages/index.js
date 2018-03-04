@@ -1,790 +1,512 @@
 const IndexPage = ({ data }) => (
-  <div className="relative vh-100">
-    <main className="flex flex-column justify-center items-center pa3 h-100">
-      <h1
-        className="lh-solid fw9 ttu"
-        style={{
-          fontSize: `calc( (1vw + 1vh + .5vmin) * 9 )`
-          // textShadow: `6px 6px 5px rgba(0,0,0,0.1)`
-        }}
-      >
-        Hello
-      </h1>
-      <p className="pt3 pb4 tc lh-tall f4">
-        I'm Michael. I’m an opera singer and web developer. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
-      </p>
-      {/* <p className="pt3 pb4 tc lh-tall f4">
-      I'm Michael. I sing opera and build websites. <br className="dn sm:di" />How&nbsp;can&nbsp;I&nbsp;help?
-    </p> */}
-      <nav className="flex pb4">
-        <Link to="/opera/" className="link link-black-to-green">
-          Opera
-        </Link>
-        <Link to="/websites/" className="link link-black-to-green ml3 sm:ml4">
-          Websites
-        </Link>
-      </nav>
-
-      {/* <h1 className="bg-orange-lighter py-4">My Website (Gatsby testing phase...)</h1>
-    <Link to="/page-2/">Go to page 2</Link>
-    <ImageTests sizes={data.placeholderImage.sizes} />
-    <ReactSlick sizes={data.placeholderImage.sizes} />
-    <ReactIDSwiper sizes={data.placeholderImage.sizes} />
-    <IsotopeTests sizes={data.placeholderImage.sizes} /> */}
-      {/* <ScrollRevealTests sizes={data.placeholderImage.sizes} /> */}
-      {/* <ScrollRevealTest2 sizes={data.placeholderImage.sizes} />
-    <Chat />
-    <Opera />
-    <Websites /> */}
-    </main>
-    <Footer className="absolute bottom-0 w-100 tc" />
-  </div>
+  <main>
+    <Hero />
+    <Work projects={data.allProjectsJson.edges} />
+    <Contact />
+  </main>
 )
 
 export default IndexPage
 
-/*
+/* 
  *
- * Imports
+ * General
  * 
  */
 
 import React from 'react'
-// import Aux from 'react-aux'
-import Link from 'gatsby-link'
 
-import Footer from '../components/Footer'
-
-/*
+/* 
  *
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * Old Stuff...
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * TODO: save these as reusable components for later...
+ * Hero
  * 
  */
 
-// import theme from '../styles/tailwind.config'
-// console.log(`Tailwind colors: ${theme.colors.black}`)
-
-/* Gatsby-Image Tests */
-
-import Image from 'gatsby-image'
-
-const ImageTests = props => (
-  <section className="py-5">
-    <h2 className="pb-2">Gatsby-Image Test (Blur Up)</h2>
-    <Image sizes={props.sizes} />
+const Hero = () => (
+  <section class="bg-near-white pv6">
+    <div class="container">
+      <p
+        class="mb4 sm:mb3 lh-solid f-5 sm:f-7 md:f-10 fw9 ttu"
+        style={{ marginLeft: `-.25rem` }}
+      >
+        Hello<span class="green">.</span>
+      </p>
+      <h1 class="mb4 measure-narrow lh-copy f4 sm:f3 fw4" style={{ maxWidth: `34ch` }}>
+        I'm Michael Uloth, an opera singer and web developer based in Toronto.
+      </h1>
+      <p class="flex lh-copy f4">
+        See my recent work below.<span class="f3">👇</span>
+      </p>
+    </div>
   </section>
 )
-
-/* React-Slick Tests */
-
-import Slick from 'react-slick'
-
-class ReactSlick extends React.Component {
-  render() {
-    const settings = {
-      dots: true,
-      arrows: true, // to see arrows, disable slick-theme.css (the arrows are offscreen)
-      infinite: true,
-      autoplay: true,
-      speed: 600,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    }
-    return (
-      <div className="bg-blue-lightest py-5">
-        <h2 className="pb-2">React-Slick Test</h2>
-        <div className="mx-auto w-50">
-          <Slick {...settings}>
-            <figure>
-              <Image sizes={this.props.sizes} />
-            </figure>
-            <figure>
-              <Image sizes={this.props.sizes} />
-            </figure>
-            <figure>
-              <Image sizes={this.props.sizes} />
-            </figure>
-          </Slick>
-        </div>
-      </div>
-    )
-  }
-}
-
-/*
-
-React ID Slider (Swiper wrapper) Test
-
-- Docs: https://github.com/kidjp85/react-id-swiper
-- Demos: http://kidjp85.github.io/react-id-swiper/
-
-- TIP: to make slides equal height, override .swiper-slide {height: 100%;} with .swiper-slide {height: auto;}
-- see: https://github.com/nolimits4web/Swiper/issues/2372
-
-*/
-
-import Swiper from 'react-id-swiper'
-
-const ReactIDSwiper = props => (
-  <section className="py-5">
-    <h2 className="pb-2">React-ID-Slider Test (Swiper wrapper)</h2>
-    <SwiperwithThumbnails sizes={props.sizes} />
-  </section>
-)
-
-class SwiperwithThumbnails extends React.Component {
-  /* Only needed when there is a thumbnail slider */
-  state = {
-    gallerySwiper: null,
-    thumbnailSwiper: null
-  }
-
-  /* Only needed when there is a thumbnail slider */
-  componentWillUpdate(nextProps, nextState) {
-    if (nextState.gallerySwiper && nextState.thumbnailSwiper) {
-      const { gallerySwiper, thumbnailSwiper } = nextState
-
-      gallerySwiper.controller.control = thumbnailSwiper
-      thumbnailSwiper.controller.control = gallerySwiper
-    }
-  }
-
-  /* Only needed when there is a thumbnail slider */
-  galleryRef = ref => {
-    if (ref) this.setState({ gallerySwiper: ref.swiper })
-  }
-
-  /* Only needed when there is a thumbnail slider */
-  thumbRef = ref => {
-    if (ref) this.setState({ thumbnailSwiper: ref.swiper })
-  }
-
-  render() {
-    const gallerySwiperParams = {
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      speed: 600,
-      keyboard: true
-    }
-
-    const thumbnailSwiperParams = {
-      slideClass: 'swiper-nav-slide',
-      spaceBetween: 10,
-      centeredSlides: true,
-      slidesPerView: 4,
-      touchRatio: 0.2,
-      slideToClickedSlide: true,
-      speed: 600,
-      keyboard: true
-    }
-
-    return (
-      <div className="mx-auto w-50">
-        <Swiper {...gallerySwiperParams} ref={this.galleryRef}>
-          <figure>
-            <Image sizes={this.props.sizes} />
-          </figure>
-          <figure>
-            <Image sizes={this.props.sizes} />
-          </figure>
-          <figure>
-            <Image sizes={this.props.sizes} />
-          </figure>
-          <figure>
-            <Image sizes={this.props.sizes} />
-          </figure>
-        </Swiper>
-        <Swiper {...thumbnailSwiperParams} ref={this.thumbRef}>
-          <figure className="w-25">
-            <Image sizes={this.props.sizes} />
-          </figure>
-          <figure className="w-25">
-            <Image sizes={this.props.sizes} />
-          </figure>
-          <figure className="w-25">
-            <Image sizes={this.props.sizes} />
-          </figure>
-          <figure className="w-25">
-            <Image sizes={this.props.sizes} />
-          </figure>
-        </Swiper>
-      </div>
-    )
-  }
-}
 
 /* 
+ *
+ * Work
+ * 
+ */
 
-Isotope Test (with filtering + "load more")
+import shortid from 'shortid'
 
-- to explain how this setup works, see Hubert's answer here: https://stackoverflow.com/questions/25135261/react-js-and-isotope-js/29866950
+class Work extends React.Component {
+  state = { projects: this.props.projects, operaIsChecked: true, websitesIsChecked: true }
 
-- as an alternative, use: https://github.com/eiriklv/react-masonry-component
- 
-*/
-
-import Isotope from 'isotope-layout'
-
-const IsotopeTests = props => (
-  <section className="py-5">
-    <h2 className="py-2">Isotope Test</h2>
-    <IsotopeContainer sizes={props.sizes} />
-  </section>
-)
-
-const isotopeItems = [
-  { key: 1, category: `category-1`, classes: `js-isotope-item all category-1 w-25 visible` },
-  { key: 2, category: `category-2`, classes: `js-isotope-item all category-2 w-50 visible` },
-  { key: 3, category: `category-2`, classes: `js-isotope-item all category-2 w-25 visible` },
-  { key: 4, category: `category-1`, classes: `js-isotope-item all category-1 w-25 visible` },
-  { key: 5, category: `category-1`, classes: `js-isotope-item all category-1 w-25 visible` },
-  { key: 6, category: `category-2`, classes: `js-isotope-item all category-2 w-50 visible` }
-]
-
-// TODO: use data-attributes instead of classs as JS hooks
-const FilterButtons = props => (
-  <div className="js-filter-buttons">
-    <button
-      onClick={category => props.handleFilter((category = 'all'))}
-      className="js-filter-button m-2"
-    >
-      All
-    </button>
-    <button
-      onClick={category => props.handleFilter((category = 'category-1'))}
-      className="js-filter-button m-2"
-    >
-      Category 1
-    </button>
-    <button
-      onClick={category => props.handleFilter((category = 'category-2'))}
-      className="js-filter-button m-2"
-    >
-      Category 2
-    </button>
-  </div>
-)
-
-// Isotope Container (logic for initialization + filtering + "load more")
-class IsotopeContainer extends React.Component {
-  state = {
-    isotope: null,
-    allItems: isotopeItems,
-    activeCategoryItems: isotopeItems,
-    category: `.all`,
-    initialNumber: 2,
-    increment: 2,
-    howManyToShow: 2,
-    showLoadMoreBtn: true
-  }
-
-  // Initialize Isotope
-  componentDidMount() {
-    if (!this.state.isotope) {
-      this.setState({
-        isotope: new Isotope(this.node, { filter: `.visible` })
-      })
-    } else {
-      this.state.isotope.arrange({ filter: `.visible` })
-    }
-  }
-
-  // This is what actually updates Isotope (after state changes trigger a new render)
-  componentDidUpdate() {
-    if (this.state.isotope) {
-      this.state.isotope.arrange({ filter: `.visible` })
-    }
-  }
-
-  filterItems = category => {
-    if (this.state.isotope) {
-      // To get the length of the activeCategoryItems array for the showMoreItems() method, filter allItems by the active category
-      let categoryItems = null
-      if (category === `all`) {
-        categoryItems = this.state.allItems
-      } else {
-        categoryItems = this.state.allItems.filter(item => item.category === category)
-      }
-
-      // Determine whether to show the "Load More" button
-      let showLoadMoreBtn = true
-      if (this.state.initialNumber >= categoryItems.length) {
-        showLoadMoreBtn = false
-      }
-
-      // Update the state (triggers render() + componentDidUpdate())
-      this.setState({
-        category: `.${category}`,
-        howManyToShow: this.state.initialNumber,
-        activeCategoryItems: categoryItems,
-        showLoadMoreBtn: showLoadMoreBtn
-      })
-    }
-  }
-
-  showMoreItems = () => {
-    // Increment the items showing by the increment
-    let newNumberToShow = this.state.howManyToShow + this.state.increment
-    let showLoadMoreBtn = true
-
-    // Cap the items showing to the total items in the active category
-    if (newNumberToShow >= this.state.activeCategoryItems.length) {
-      newNumberToShow = this.state.activeCategoryItems.length
-      showLoadMoreBtn = false
-    }
-
-    // Update the state (triggers render() + componentDidUpdate())
-    this.setState({
-      howManyToShow: newNumberToShow,
-      showLoadMoreBtn: showLoadMoreBtn
+  // Add a key to each project (to prevent unnecessary rerendering)
+  componentDidMount = () => {
+    const projectsWithKeys = this.props.projects.map(project => {
+      project.node.key = shortid.generate()
+      return project
     })
+    this.setState({ projects: projectsWithKeys })
+  }
+
+  handleFilterClick = event => {
+    switch (event.target.value) {
+      case `opera`:
+        if (event.target.checked) this.setState({ operaIsChecked: true })
+        else if (!this.state.websitesIsChecked)
+          this.setState({ operaIsChecked: true, websitesIsChecked: true })
+        else this.setState({ operaIsChecked: false })
+        break
+
+      case `websites`:
+        if (event.target.checked) this.setState({ websitesIsChecked: true })
+        else if (!this.state.operaIsChecked)
+          this.setState({ operaIsChecked: true, websitesIsChecked: true })
+        else this.setState({ websitesIsChecked: false })
+        break
+    }
   }
 
   render() {
-    // Update classes on each Isotope item (to show the right category and # of items)
+    let filteredProjects
+    if (this.state.operaIsChecked && this.state.websitesIsChecked) {
+      filteredProjects = this.state.projects
+    } else if (this.state.operaIsChecked && !this.state.websitesIsChecked) {
+      filteredProjects = this.state.projects.filter(project => {
+        return project.node.category === 'Opera' || project.node.category === 'opera'
+      })
+    } else if (!this.state.operaIsChecked && this.state.websitesIsChecked) {
+      filteredProjects = this.state.projects.filter(project => {
+        return project.node.category === 'Website' || project.node.category === 'website'
+      })
+    } else {
+      console.log('Something weird in the render method of <Work />...')
+    }
 
-    let counter = 0
-    // console.log(`category`, category)
+    return (
+      <section class="pv6">
+        <div class="container mb4">
+          {/* <h2
+            class="mb2 f-4 sm:f-5 md:f-6 fw9 ttu"
+            style={{
+              marginLeft: `-.25rem`
+            }}
+          >
+            Work<span class="green">.</span>
+          </h2> */}
+          <Filters
+            operaIsChecked={this.state.operaIsChecked}
+            websitesIsChecked={this.state.websitesIsChecked}
+            handleChange={this.handleFilterClick}
+          />
+        </div>
+        <Projects projects={filteredProjects} />
+      </section>
+    )
+  }
+}
 
-    const allItemsWithClassesUpdated = this.state.allItems.map(item => {
-      // Add "visible" class if item is right category and # limit hasn't been reached
-      if (
-        (this.state.category === `.all` ||
-          item.category === this.state.category.substring(1)) &&
-        counter < this.state.howManyToShow
-      ) {
-        const classList = item.classes.replace(`hidden`, `visible`)
-        item.classes = classList
-        counter++
+// TODO: style these checkboxes
+const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
+  <fieldset class="lh-solid f3 fw4 ttl">
+    <legend class="sr-only">Choose which project types to show</legend>
+    <label class="custom-checkbox mr4 animate cursor-pointer">
+      <input
+        type="checkbox"
+        value="opera"
+        onChange={event => handleChange(event)}
+        checked={operaIsChecked}
+        class="ba bw2 b--green cursor-pointer"
+        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
+      />
+      <span
+        class="checkmark ba bw2 b--green cursor-pointer"
+        style={{ marginBottom: `-8px`, width: `1.4rem`, height: `1.4rem` }}
+      />
+      <span class="checkbox-label">&nbsp;Opera</span>
+    </label>
+    <label class="custom-checkbox animate cursor-pointer">
+      <input
+        type="checkbox"
+        value="websites"
+        onClick={event => handleChange(event)}
+        checked={websitesIsChecked}
+        class="ba bw2 b--green cursor-pointer"
+        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
+      />
+      <span
+        class="checkmark ba bw2 b--green cursor-pointer"
+        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
+      />
+      <span class="checkbox-label">&nbsp;Websites</span>
+    </label>
+  </fieldset>
+)
 
-        // Otherwise, remove "visible class"
+/* 
+ *
+ * Projects
+ * 
+ */
+
+class Projects extends React.Component {
+  state = { limit: 5, total: this.props.projects.length, allLoaded: false }
+
+  componentDidMount = () => {
+    if (this.state.limit >= this.state.total) {
+      this.setState({ allLoaded: true })
+    }
+  }
+
+  handleClick = () => {
+    if (this.state.limit < this.state.total) {
+      if (this.state.limit + 5 < this.state.total) {
+        this.setState({ limit: this.state.limit + 5 })
+      } else if (this.state.limit + 5 === this.state.total) {
+        this.setState({ limit: this.state.limit + 5, allLoaded: true })
       } else {
-        const classList = item.classes.replace(`visible`, `hidden`)
-        item.classes = classList
+        this.setState({ limit: this.state.total, allLoaded: true })
       }
-      return item
+    }
+  }
+
+  render() {
+    const visibleProjects = this.props.projects.filter((project, index) => {
+      if (index < this.state.limit) return project
     })
 
     return (
       <div>
-        <FilterButtons handleFilter={this.filterItems} />
-        <div ref={node => (this.node = node)}>
-          {allItemsWithClassesUpdated.map((item, index) => {
-            return (
-              <div key={item.key} className={item.classes}>
-                <Image sizes={this.props.sizes} />
-              </div>
-            )
+        <ul>
+          {visibleProjects.map(project => {
+            return <Project key={project.node.key} project={project.node} />
           })}
-        </div>
-        {this.state.showLoadMoreBtn && <button onClick={this.showMoreItems}>Load more</button>}
+        </ul>
+        {!this.state.allLoaded && (
+          <div class="container pt5">
+            <button onClick={this.handleClick} class="link">
+              Load more
+            </button>
+          </div>
+        )}
       </div>
     )
   }
 }
 
-/*
+/* 
+ *
+ * Project
+ * 
+ */
 
-ScrollReveal Tests
+// DOCS: https://github.com/muicss/loadjs#documentation
+// DOCS: https://greensock.com/docs/TweenMax
+// Forum: https://greensock.com/forums/topic/15749-gsap-with-create-react-app/
 
-- see solution from owner on GitHub: https://github.com/jlmakes/scrollreveal/issues/218
-- see his demo: https://codesandbox.io/s/z2wqk3vm1l
+import loadjs from 'loadjs'
 
-*/
+// TODO: extract expand/collapse functionality into a "Collapse" component
 
-import { findDOMNode } from 'react-dom'
-import ScrollReveal from 'scrollreveal'
+// TODO: add tags for "Opera", "Website", "Design & Development", "Development", "Cover", "Mainstage", etc? Or only list the detailed ones inside the details (maybe as a row of tags at the bottom...)
 
-// Stateless functional component won't have refs.
-// https://reactjs.org/docs/refs-and-the-dom.html#refs-and-functional-components
+class Project extends React.Component {
+  state = { expanded: false }
 
-// const Item = ({ content }) => <li>{content}</li> // doesn’t work!
-
-// class Item extends React.Component {
-//   render() {
-//     return <li>{this.props.content}</li>
-//   }
-// }
-
-// const List = ({ children }) => (
-//   <div>
-//     <h3>List:</h3>
-//     {children}
-//   </div>
-// )
-
-// // ScrollReveal HOC
-// const WithScrollReveal = WrappedComponent =>
-//   class extends React.Component {
-//     // constructor(props) {
-//     //   super(props)
-//     //   this.target = []
-//     // }
-//     // componentDidMount() {
-//     //   ScrollReveal().reveal(this.target, this.props.options, this.props.interval)
-//     // }
-//     componentWillUnmount() {
-//       ScrollReveal().clean(this.childNodes)
-//     }
-//     // render() {
-//     //   const children = React.Children.map(this.props.children, child =>
-//     //     React.cloneElement(child, {
-//     //       ref: c => this.target.push(findDOMNode(c))
-//     //     })
-//     //   )
-//     //   return <WrappedComponent {...this.props}>{children}</WrappedComponent>
-//     // }
-
-//     bindRef(c) {
-//       this.component = c
-//     }
-
-//     componentDidMount() {
-//       const domElement = findDOMNode(this.component)
-//       ScrollReveal().reveal(domElement, this.props.options, this.props.interval)
-//     }
-
-//     render() {
-//       const that = this
-//       return (
-//         <WrappedComponent
-//           {...this.props}
-//           ref={function(c) {
-//             that.bindRef(c)
-//           }}
-//         />
-//       )
-//     }
-//   }
-
-// const RevealedList = WithScrollReveal(List)
-
-// const ScrollRevealTests = () => (
-//   <section className="bg-near-white pv5">
-//     <h2>ScrollReveal Test</h2>
-//     <RevealedList options={{ distance: '50px' }} interval={500}>
-//       <Item content="foo" />
-//       <Item content="bar" />
-//       <Item content="jam" />
-//     </RevealedList>
-//   </section>
-// )
-
-/*
-
-ScrollReveal Test #2
-
-- see the code that worked in the end: https://andrewshiau.wordpress.com/2017/04/02/use-scrollreveal-js-on-a-react-component/
-
-- see solution from owner on GitHub (didn't work for me...): https://github.com/jlmakes/scrollreveal/issues/218
-- see his demo: https://codesandbox.io/s/z2wqk3vm1l
-
-*/
-
-const ScrollRevealTest2 = props => (
-  <section className="bg-yellow-lighter py-5">
-    <h2 className="mb-2">ScrollReveal Test #2</h2>
-    <RevealedComponent
-      sizes={props.sizes}
-      options={{
-        delay: '0',
-        duration: '1000',
-        distance: '40px',
-        reset: false
-      }}
-      interval={0}
-    />
-  </section>
-)
-
-// HOC for ScrollReveal: wrap the components to reveal like this: reveal(MyComponent)
-const reveal = WrappedComponent => {
-  return class RevealEnhancer extends React.Component {
-    bindRef(c) {
-      this.component = c
-    }
-
-    componentDidMount() {
-      const domElement = findDOMNode(this.component)
-      console.log(`options`, this.props.options)
-      ScrollReveal().reveal(domElement, this.props.options, this.props.interval)
-    }
-
-    render() {
-      const that = this
-      return (
-        <WrappedComponent
-          {...this.props}
-          ref={function(c) {
-            that.bindRef(c)
-          }}
-        />
-      )
+  componentDidMount = () => {
+    if (!loadjs.isDefined('gsap')) {
+      loadjs('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js', 'gsap')
     }
   }
-}
 
-class MyComponent extends React.Component {
+  handleClick = () => {
+    if (this.state.expanded) {
+      this.setState({ expanded: false })
+      this.collapse()
+    } else {
+      this.setState({ expanded: true })
+      this.expand()
+    }
+  }
+
+  expand = () => {
+    loadjs.ready('gsap', () => {
+      // Invalidate the temporary inline styles (which match the starting state for the animation and are added to prevent a flash of content in the ending position)
+      this.item.style = null
+
+      const expand = TweenMax.to(this.item, 1, {
+        height: this.item.offsetHeight,
+        autoAlpha: 1,
+        ease: Power4.easeInOut
+      })
+
+      // Store tween in DOM node
+      this.item.animation = expand
+    })
+  }
+
+  collapse = () => {
+    loadjs.ready('gsap', () => this.item.animation.reverse())
+  }
+
   render() {
     return (
-      <div className="mx-auto w-75">
-        <Image sizes={this.props.sizes} />
-      </div>
+      <li
+        key={this.props.key}
+        role="button"
+        tabIndex="0"
+        onClick={this.handleClick}
+        onKeyUp={e => e.key === 'Enter' && this.handleClick()}
+        class="relative cursor-pointer"
+      >
+        <span class="sr-only">Click to see project details</span>
+        <div class="pv4 hover:bg-near-white animate">
+          <ProjectHeader project={this.props.project} />
+          <div
+            ref={el => (this.item = el)}
+            class="relative z-2 overflow-hidden"
+            style={{ height: 0 }}
+          >
+            <ProjectDetails project={this.props.project} />
+          </div>
+        </div>
+      </li>
     )
   }
 }
 
-const RevealedComponent = reveal(MyComponent)
+/* 
+ *
+ * Project Header
+ * 
+ */
 
-/*
+const ProjectHeader = ({ project }) => (
+  <div class="group flex justify-between items-center container pv2">
+    <div>
+      <h3 class="mb2 lh-solid f2 sm:f1 fw9 ttu">{project.title}</h3>
+      <ul>
+        {project.tags.map(tag => {
+          return (
+            <li key={shortid()} class="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">
+              {tag}
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+    <div aria-hidden="true" class="dn md:db o-0 group-hover:o-100 f1 animate">
+      🕵️‍♀️
+    </div>
+  </div>
+)
 
-React ScrollReveal Test
+/* 
+ *
+ * Project Details
+ * 
+ */
 
-*/
+import HyperLink from '../components/HyperLink'
+import Img from '../components/Img'
 
-// import withScrollReveal from 'react-scrollreveal'
+const ProjectDetails = ({ project }) => (
+  <div class="container pt4 lh-tall">
+    <div
+      class="mb4 "
+      style={{
+        display: `grid`,
+        gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr)`,
+        gridGap: `1rem`
+      }}
+    >
+      {/* Remove the "images" loop? */}
+      {project.images ? (
+        project.images.map(photo => {
+          return (
+            <Img
+              key={shortid()}
+              sizes={photo.image.childImageSharp.sizes}
+              alt={photo.alt}
+              critical={true}
+              className="shadow-lg"
+            />
+          )
+        })
+      ) : (
+        <figure>
+          <Img
+            sizes={project.image.childImageSharp.sizes}
+            alt={project.alt}
+            critical={true}
+            className="shadow-lg"
+          />
+          <figcaption class="o-50 pt1 f6">{project.alt}</figcaption>
+        </figure>
+      )}
+    </div>
 
-// const ReactScrollRevealTests = props => (
-//   <div>
-//     <h2>React ScrollReveal Test</h2>
-//     <FlyingImages sizes={props.sizes} />
-//   </div>
-// )
+    {project.reviews &&
+      project.reviews.map(review => {
+        return (
+          <blockquote key={shortid()} class="pv1">
+            <div class="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
+              <p class="mb2 f3">{review.quotation}</p>
+              {review.link ? (
+                <cite class="f4 fw7 fs-normal">
+                  <HyperLink href={review.link} className="">
+                    {review.source}
+                  </HyperLink>
+                </cite>
+              ) : (
+                <cite class="">&mdash; {review.source}</cite>
+              )}
+            </div>
+          </blockquote>
+        )
+      })}
 
-// const Images = props => (
-//   <div className="flex-ns" ref={props.animationContainerReference}>
-//     <div className="sr-item--sequence w-third-ns">
-//       <Image sizes={props.sizes} />
-//     </div>
-//     <div className="sr-item--sequence w-third-ns">
-//       <Image sizes={props.sizes} />
-//     </div>
-//     <div className="sr-item--sequence w-third-ns">
-//       <Image sizes={props.sizes} />
-//     </div>
-//   </div>
-// )
+    <p class="mb4 measure">{project.description}</p>
 
-// const FlyingImages = withScrollReveal([
-//   {
-//     selector: '.sr-item',
-//     options: {
-//       reset: true
-//     }
-//   },
-//   {
-//     selector: '.sr-item--sequence',
-//     options: {
-//       reset: true,
-//       delay: 400
-//     },
-//     interval: 100
-//   }
-// ])(Images)
+    <div class="mb4 ">
+      {project.details &&
+        project.details.map(detail => {
+          return (
+            detail.name !== `Dates` && (
+              <dl key={shortid()}>
+                <dt class="dib fw7">{detail.name}:&nbsp;</dt>
+                <dd class="dib">{detail.value}</dd>
+              </dl>
+            )
+          )
+        })}
+    </div>
 
-/*
+    <HyperLink href={project.link} className="link mb4 tc">
+      View site →
+    </HyperLink>
+  </div>
+)
 
-Chatbot
+/* 
+ *
+ * Contact
+ * 
+ */
 
-*/
+import FaTwitter from 'react-icons/lib/fa/twitter'
+import FaGithub from 'react-icons/lib/fa/github'
+import FaLinkedin from 'react-icons/lib/fa/linkedin'
+import FaFacebook from 'react-icons/lib/fa/facebook'
+import FaEnvelopeO from 'react-icons/lib/fa/envelope-o'
 
-import ChatBot from 'react-simple-chatbot'
+const Contact = () => (
+  <section class="bg-near-white pt6 pb3">
+    <div class="container ">
+      <h2
+        class="mb4 lh-solid f-3p5 sm:f-5 md:f-6 fw9 ttu"
+        style={{
+          marginLeft: `-.25rem`
+        }}
+      >
+        Contact<span class="green">.</span>
+      </h2>
 
-const Chat = props => (
-  <section className="py-5 h-full">
-    <h2 className="mb-3">ChatBot!</h2>
-    <ChatBot
-      botDelay={900}
-      bubbleStyle={bubbleStyle}
-      className=""
-      customDelay={500}
-      customStyle={{}}
-      footerStyle={{ display: `none` }}
-      hideBotAvatar={true}
-      hideHeader={true}
-      hideSubmitButton={true}
-      hideUserAvatar={true}
-      style={rootStyle}
-      userDelay={200}
-      steps={steps}
-    />
+      <p class="mb4 pb3 measure-narrow lh-copy f4 sm:f3 fw4" style={{ maxWidth: `32ch` }}>
+        Want to work together? Tell me about your project! 👋
+      </p>
+
+      <div class="sm:flex sm:mb6">
+        <HyperLink href="mailto:hello@michaeluloth.com" className="link dib mr3 mb4 sm:mb0">
+          Email me
+        </HyperLink>
+        <ul class="mb6 sm:mb0">
+          {links.map(link => {
+            return (
+              <li key={shortid()} className="dib mr3 f3">
+                <HyperLink href={link.url} className={`icon`}>
+                  {link.icon}
+                </HyperLink>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+      <Copyright />
+    </div>
   </section>
 )
 
-// see: https://github.com/LucasBassetti/react-simple-chatbot/pull/10
-// ChatBotContainer.defaultProps = {
-// 	theme: {
-// 		background: '#f5f8fb'
-// 	}
-// }
-
-const rootStyle = { margin: `0 auto`, width: `90%`, height: `90vh`, fontFamily: `inherit` }
-
-const bubbleStyle = {
-  animationDuration: `.7s`,
-  boxShadow: `0px 1px 1px rgba(0, 0, 0, 0.2)`,
-  outline: `none`,
-  border: `none`,
-  borderRadius: `3px`,
-  // backgroundColor: `white`,
-  padding: `6px 12px`,
-  // maxWidth: `90%`,
-  // minWidth: `44px`,
-  // minHeight: `12px`,
-  lineHeight: `1.45em`,
-  // fontFamily: `inherit`,
-  fontFeatureSettings: `'liga' 1, 'onum' 1, 'kern' 1`,
-  fontSize: `19px`
-  // color: `#222`
-}
-
-const steps = [
+const links = [
   {
-    id: '1',
-    message: 'What number I am thinking?',
-    trigger: '2'
+    icon: <FaFacebook className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
+    url: 'https://www.facebook.com/michaeluloth'
   },
   {
-    id: '2',
-    options: [
-      { value: 1, label: 'Number 1', trigger: '4' },
-      { value: 2, label: 'Number 2', trigger: '3' },
-      { value: 3, label: 'Number 3', trigger: '3' }
-    ]
+    icon: <FaTwitter className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
+    url: 'https://twitter.com/ooloth'
   },
   {
-    id: '3',
-    message: 'Wrong answer, try again.',
-    trigger: '2'
+    icon: <FaLinkedin className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
+    url: 'https://www.linkedin.com/in/michael-uloth-848a1b98/'
   },
   {
-    id: '4',
-    message: 'Awesome! You are a telepath!',
-    end: true
+    icon: <FaGithub className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
+    url: 'https://github.com/ooloth'
   }
 ]
 
 /* 
+ *
+ * Copyright
+ * 
+ */
 
-Opera content
+const Copyright = () => (
+  <p className="f6 sm:f5">&copy; {new Date().getFullYear()} Michael Uloth</p>
+)
 
-*/
-
-import placeholder from '../images/placeholder.jpg'
-
-const Opera = () => {
-  return (
-    <section className="mx-auto max-w-9 py-5 text-left">
-      <h2>Opera Stuff</h2>
-      <h3>About Me</h3>
-      <p className="max-w-8 leading-normal">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequatur deserunt.
-        Delectus pariatur error soluta. Repellendus natus odio consequatur veniam pariatur
-        eaque amet debitis odit obcaecati, sapiente expedita, dicta harum.
-      </p>
-      <h3>Work</h3>
-      <p className="max-w-8 leading-normal">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, consequatur deserunt.
-      </p>
-      <ul className="list-reset">
-        <li className="grid-opera">
-          <img src={placeholder} alt="" className="block shadow-lg" />
-          <h4 className="pt-4 text-2xl">Canadian Opera Company</h4>
-          <ul className="list-reset leading-normal">
-            <li>Role in Opera (Composer)</li>
-            <li>Role in Opera (Composer)</li>
-            <li>Role in Opera (Composer)</li>
-            <li>Role in Opera (Composer)</li>
-            <li>Role in Opera (Composer)</li>
-          </ul>
-        </li>
-
-        <li className="grid-opera">
-          <img src={placeholder} alt="" className="block shadow-lg" />
-          <h4>Canadian Opera Company</h4>
-          <ul className="list-reset">
-            <li>Role in Composer's Opera</li>
-            <li>Role in Opera (Composer)</li>
-          </ul>
-        </li>
-
-        <li className="grid-opera">
-          <img src={placeholder} alt="" className="block shadow-lg" />
-          <h4>Canadian Opera Company</h4>
-          <ul className="list-reset">li</ul>
-        </li>
-
-        <li className="grid-opera">
-          <img src={placeholder} alt="" className="block shadow-lg" />
-          <h4>Canadian Opera Company</h4>
-          <ul className="list-reset">li</ul>
-        </li>
-      </ul>
-      <a href="#">Show all</a>
-      <h3>Reviews</h3>
-      <h3>Listen</h3>
-      <h3>Contact</h3>
-    </section>
-  )
-}
-
-/* 
-
-Opera content
-
-*/
-
-const Websites = () => {
-  return (
-    <section className="py-5 text-left">
-      <h2>Website Stuff</h2>
-    </section>
-  )
-}
-
-/* 
-
-Index Page Queries
-
-*/
-
+// TODO: update starter with this type of full-page query in pages/index.js
 export const query = graphql`
   query IndexPageQuery {
-    placeholderImage: imageSharp(id: { regex: "/placeholder/" }) {
-      sizes(maxWidth: 5000) {
-        ...GatsbyImageSharpSizes_withWebp
+    allProjectsJson {
+      edges {
+        node {
+          image {
+            childImageSharp {
+              sizes(maxWidth: 940) {
+                ...GatsbyImageSharpSizes_withWebp
+              }
+            }
+          }
+          alt
+          title
+          category
+          tags
+          description
+          reviews {
+            quotation
+            source
+            link
+          }
+          details {
+            name
+            value
+          }
+          link
+        }
       }
     }
   }

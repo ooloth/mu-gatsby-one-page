@@ -119,38 +119,38 @@ const CoffeeshopBlurb = () => (
  */
 
 // TODO: update starter with this type of full-page query in pages/index.js
-export const query = graphql`
-  query WebsitePageQuery {
-    placeholderImage: imageSharp(id: { regex: "/placeholder.jpg/" }) {
-      sizes(maxWidth: 5000) {
-        ...GatsbyImageSharpSizes_withWebp
-      }
-    }
-    allWebsitesJson {
-      edges {
-        node {
-          hero {
-            theme
-            title
-            titleMultiplier
-            blurb
-          }
-          sites {
-            image {
-              childImageSharp {
-                sizes(maxWidth: 5184) {
-                  ...GatsbyImageSharpSizes_withWebp
-                }
-              }
-            }
-            alt
-            title
-            category
-            blurb
-            link
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query WebsitePageQuery {
+//     placeholderImage: imageSharp(id: { regex: "/placeholder.jpg/" }) {
+//       sizes(maxWidth: 5000) {
+//         ...GatsbyImageSharpSizes_withWebp
+//       }
+//     }
+//     allWebsitesJson {
+//       edges {
+//         node {
+//           hero {
+//             theme
+//             title
+//             titleMultiplier
+//             blurb
+//           }
+//           sites {
+//             image {
+//               childImageSharp {
+//                 sizes(maxWidth: 5184) {
+//                   ...GatsbyImageSharpSizes_withWebp
+//                 }
+//               }
+//             }
+//             alt
+//             title
+//             category
+//             blurb
+//             link
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
