@@ -1,21 +1,5 @@
 [
   {
-    "image": "../images/websites/adrianne-pieczonka-2.jpg",
-    "alt": "Adrianne Pieczonka as Elisabeth in Don Carlos at the Gran Teatre del Liceu.",
-    "title": "Adrianne Pieczonka",
-    "category": "Website",
-    "tags": ["Website", "Design", "Code"],
-    "description":
-      "I worked with internationally-celebrated soprano Adrianne Pieczonka to create a bold new design to showcase her work.",
-    "details": [
-      {
-        "name": "Tools",
-        "value": "Pug, Sass, JavaScript, Gulp, Git"
-      }
-    ],
-    "link": "https://www.adriannepieczonka.com"
-  },
-  {
     "image": "../images/opera/anna-bolena.jpg",
     "alt": "\"Henry VIII's first interview with Anne Boleyn\" by D. MacLise, 1835.",
     "title": "Anna Bolena",
@@ -54,22 +38,6 @@
       }
     ],
     "link": "https://www.coc.ca/productions/13097"
-  },
-  {
-    "image": "../images/websites/atom-egoyan.jpg",
-    "alt": "Atom Egoyan during a press conference in Stepanakert. Photo by Nagorno Karabakh.",
-    "title": "Ego Film Arts",
-    "category": "Website",
-    "tags": ["Website", "Design", "Code"],
-    "description":
-      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
-    "details": [
-      {
-        "name": "Tools",
-        "value": "HTML, CSS, jQuery"
-      }
-    ],
-    "link": "http://www.egofilmarts.com/"
   },
   {
     "image": "../images/opera/nightingale.jpg",
@@ -111,22 +79,6 @@
       }
     ],
     "link": "https://www.coc.ca/productions/13109"
-  },
-  {
-    "image": "../images/adam-luther.jpg",
-    "alt": "Canadian tenor Adam Luther. Image by Pierre Gautreau.",
-    "title": "Adam Luther",
-    "category": "Website",
-    "tags": ["Website", "Design", "Code"],
-    "description":
-      "Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.",
-    "details": [
-      {
-        "name": "Tools",
-        "value": "Pug, Sass, JavaScript"
-      }
-    ],
-    "link": "https://adamluthertenor.com/"
   },
   {
     "image": "../images/opera/bound.jpg",
@@ -177,22 +129,6 @@
     "link": "http://againstthegraintheatre.com/bound/"
   },
   {
-    "image": "../images/laura-albino.jpg",
-    "alt": "Canadian soprano Laura Albino. Image by Katie Cross Photography.",
-    "title": "Laura Albino",
-    "category": "Website",
-    "tags": ["Website", "Design", "Code"],
-    "description":
-      "Laura is an opera singer who wanted a new website to accompany her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
-    "details": [
-      {
-        "name": "Tools",
-        "value": "Pug, Sass, JavaScript"
-      }
-    ],
-    "link": "https://lauraalbino.com/"
-  },
-  {
     "image": "../images/opera/claude-vivier.jpg",
     "alt": "Claude Vivier. Photo by Boosey and Hawkes.",
     "title": "Kopernikus",
@@ -239,21 +175,5 @@
       }
     ],
     "link": "http://againstthegraintheatre.com/category/kopernikus/"
-  },
-  {
-    "image": "../images/ileana-montalbetti.jpg",
-    "alt": "Canadian soprano Ileana Montalbetti. Image by Bo Huang.",
-    "title": "Ileana Montalbetti",
-    "category": "Website",
-    "tags": ["Website", "Design", "Code"],
-    "description":
-      "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of this artist’s work.",
-    "details": [
-      {
-        "name": "Tools",
-        "value": "Pug, Sass, JavaScript"
-      }
-    ],
-    "link": "http://www.ileanamontalbetti.com/"
   }
 ]
