@@ -1,8 +1,30 @@
 module.exports = {
   siteMetadata: {
-    title: `Insert Title`
+    title: `Michael Uloth`,
+    description: `Michael Uloth is a Toronto-based opera singer and web developer.`,
+    siteUrl: `https://www.michaeluloth.com`,
+    language: `en`,
+    locale: `en_CA`,
+    twitterHandle: `@ooloth`
+    // image: update siteImage variable in layouts/index.js
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-accessibilityjs`,
+      options: {
+        injectStyles: false,
+        errorClassName: false,
+        onError: error => console.log(error)
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        defaultSizes: `gzip`,
+        disable: true,
+        production: true
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -10,15 +32,14 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
-    // `gatsby-plugin-react-next`, // disable if using preact
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify` // must come last
-  ],
-  // I'll load my own Promise polyfill (only in browser that need it)
-  // See: https://www.gatsbyjs.org/docs/browser-support/#polyfills
-  polyfill: false
+  ]
 }
