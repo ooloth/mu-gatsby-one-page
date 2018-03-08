@@ -1,11 +1,13 @@
 /*
  *  Usage: <HyperLink href="..." className="...">
  * 
- *  Props: "href" = url, mandatory
+ *  Props: 
+ *    "href" = url, mandatory
+ *    "srText" = string, optional (use if link has no visible text, like an icon)
  *    
  */
 
-const HyperLink = ({ href, className, children }) => {
+const HyperLink = ({ href, srText, className, children }) => {
   // If link is external, add target and rel attributes
   const isExternal = href.indexOf(`http`) === -1 ? false : true
 
@@ -16,6 +18,7 @@ const HyperLink = ({ href, className, children }) => {
       rel={isExternal ? 'noopener nofollow' : null}
       className={className}
     >
+      {srText && <span class="sr-only">{srText}</span>}
       {children}
     </a>
   )

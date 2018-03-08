@@ -67,33 +67,24 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
 
 /* The container */
 .custom-checkbox {
-    display: inline-block;
-    position: relative;
-    padding-left: 1.5rem;
-    // margin-bottom: 12px;
-    cursor: pointer;
-    // font-size: 22px;
-    // -webkit-user-select: none;
-    // -moz-user-select: none;
-    // -ms-user-select: none;
-    // user-select: none;
+  display: inline-block;
+  position: relative;
+  padding-left: 1.5rem;
+  cursor: pointer;
 }
 
 /* Hide the browser's default checkbox */
 .custom-checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
 /* Create a custom checkbox */
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    // height: 25px;
-    // width: 25px;
-    // background-color: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */

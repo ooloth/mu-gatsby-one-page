@@ -1,3 +1,53 @@
+/*
+ *
+ * Global State
+ * 
+ */
+
+import { Provider, Subscribe, Container } from 'unstated'
+
+class CounterContainer extends Container {
+  state = { count: 0 }
+
+  increment() {
+    this.setState({ count: this.state.count + 1 })
+  }
+
+  decrement() {
+    this.setState({ count: this.state.count - 1 })
+  }
+}
+
+const Counter = () => (
+  <Subscribe to={[CounterContainer]}>
+    {counter => (
+      <div class="pv4 bg-pink tc">
+        <button onClick={() => counter.decrement()} class="mr3 bg-white pa3 f3">
+          -
+        </button>
+        <span>{counter.state.count}</span>
+        <button onClick={() => counter.increment()} class="ml3 bg-white pa3 f3">
+          +
+        </button>
+      </div>
+    )}
+  </Subscribe>
+)
+
+// TODO: NOTE - <Provider><Counter /></Provider> is nested in and rendered below in <Projects />
+
+// TODO: try implementing this for the projects...
+
+class ProjectsContainer extends Container {
+  // How to pass in the state from Work? Props don't work...
+}
+
+/*
+ *
+ * Work
+ * 
+ */
+
 class Work extends React.Component {
   state = {
     projects: null,
@@ -79,6 +129,12 @@ class Work extends React.Component {
           <h3 class="fw4">operaIsChecked: {operaIsChecked ? `true` : `false`}</h3>
           <h3 class="mb4 fw4">websitesIsChecked: {websitesIsChecked ? `true` : `false`}</h3> */}
 
+          {/* <Provider>
+            <Counter />
+          </Provider> */}
+
+          <h2 class="sr-only">Opera and Website Projects</h2>
+
           <Filters
             operaIsChecked={operaIsChecked}
             websitesIsChecked={websitesIsChecked}
@@ -115,6 +171,12 @@ export default Work
 
 import React from 'react'
 import shortid from 'shortid'
+
+/*
+ *
+ * Filters
+ * 
+ */
 
 // TODO: style these checkboxes
 const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (

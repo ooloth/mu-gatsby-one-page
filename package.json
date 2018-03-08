@@ -24,6 +24,7 @@
     "shortid": "^2.2.8",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^0.4.3",
+    "unstated": "^1.0.3",
     "what-input": "^5.0.5"
   },
   "devDependencies": {

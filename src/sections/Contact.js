@@ -21,8 +21,12 @@ const Contact = () => (
         <ul class="mb6 sm:mb0">
           {links.map(link => {
             return (
-              <li key={shortid()} className="dib mr3 f3">
-                <HyperLink href={link.url} className={`icon`}>
+              <li key={shortid.generate()} className="dib mr3 f3">
+                <HyperLink
+                  href={link.url}
+                  className="icon"
+                  srText={`Follow me on ${link.name}`}
+                >
                   {link.icon}
                 </HyperLink>
               </li>
@@ -37,18 +41,22 @@ const Contact = () => (
 
 const links = [
   {
+    name: `Facebook`,
     icon: <FaFacebook className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://www.facebook.com/michaeluloth'
   },
   {
+    name: `Twitter`,
     icon: <FaTwitter className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://twitter.com/ooloth'
   },
   {
+    name: `LinkedIn`,
     icon: <FaLinkedin className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://www.linkedin.com/in/michael-uloth-848a1b98/'
   },
   {
+    name: `GitHub`,
     icon: <FaGithub className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
     url: 'https://github.com/ooloth'
   }
