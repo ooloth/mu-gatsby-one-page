@@ -182,8 +182,9 @@ import shortid from 'shortid'
 const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
   <fieldset class="lh-solid f3 fw4 ttl">
     <legend class="sr-only">Choose which project types to show</legend>
-    <label class="custom-checkbox mr4 animate cursor-pointer">
+    <label for="opera" class="custom-checkbox mr4 animate cursor-pointer">
       <input
+        id="opera"
         type="checkbox"
         value="opera"
         onChange={event => handleChange(event)}
@@ -197,8 +198,9 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
       />
       <span class="checkbox-label">&nbsp;Opera</span>
     </label>
-    <label class="custom-checkbox animate cursor-pointer">
+    <label for="websites" class="custom-checkbox animate cursor-pointer">
       <input
+        id="websites"
         type="checkbox"
         value="websites"
         onClick={event => handleChange(event)}
@@ -327,7 +329,7 @@ class Project extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate', nextState === this.state)
+    // console.log('shouldComponentUpdate', nextState === this.state)
     if (nextState !== this.state) return true
     else return false
     // console.log(`nextProps`, nextProps)
@@ -342,7 +344,7 @@ class Project extends React.Component {
     const { expanded } = this.state
 
     return (
-      <div
+      <li
         role="button"
         tabIndex="0"
         onClick={this.handleClick}
@@ -360,7 +362,7 @@ class Project extends React.Component {
             <ProjectDetails project={project} />
           </div>
         </div>
-      </div>
+      </li>
     )
   }
 }
@@ -437,7 +439,7 @@ class ProjectDetails extends React.Component {
               )
             })
           ) : (
-            <figure>
+            <figure role="group">
               <Img
                 sizes={project.image.childImageSharp.sizes}
                 alt={project.alt}

@@ -4,7 +4,7 @@ const Contact = () => (
       <h2
         class="mb4 lh-solid f-3p5 sm:f-5 md:f-6 fw9 ttu"
         style={{
-          marginLeft: `-.25rem`
+          marginLeft: `-.03em`
         }}
       >
         Contact<span class="green">.</span>
