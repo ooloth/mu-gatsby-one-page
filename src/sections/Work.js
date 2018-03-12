@@ -81,13 +81,16 @@ class Work extends React.Component {
             handleChange={this.handleFilterClick}
           />
         </div>
-        {this.state.projects && (
+        {/* This ternary is needed to prevent a flash of collapsed space on the initial render (before the merged, keyed projects list has been added to state, which triggers a second render). Is there a way to avoid this delay and double-render? */}
+        {projects ? (
           <Projects
             projects={projects}
             limit={limit}
             operaIsChecked={operaIsChecked}
             websitesIsChecked={websitesIsChecked}
           />
+        ) : (
+          <div style={{ height: `1100px` }} />
         )}
         {!allLoaded && (
           <div className="container pt5">
