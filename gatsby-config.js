@@ -35,7 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`
     },
-    `gatsby-plugin-preact`,
+    // `gatsby-plugin-preact`,
+    `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,

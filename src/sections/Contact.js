@@ -1,24 +1,24 @@
 const Contact = () => (
-  <section class="bg-near-white pt6 pb3">
-    <div class="container ">
+  <section className="bg-near-white pt6 pb3">
+    <div className="container ">
       <h2
-        class="mb4 lh-solid f-3p5 sm:f-5 md:f-6 fw9 ttu"
+        className="mb4 lh-solid f-3p5 sm:f-5 md:f-6 fw9 ttu"
         style={{
           marginLeft: `-.03em`
         }}
       >
-        Contact<span class="green">.</span>
+        Contact<span className="green">.</span>
       </h2>
 
-      <p class="mb4 pb3 measure-narrow lh-copy f4 sm:f3 fw4" style={{ maxWidth: `32ch` }}>
+      <p className="mb4 pb3 measure-narrow lh-copy f4 sm:f3 fw4" style={{ maxWidth: `32ch` }}>
         Want to work together? Tell me about your project! 👋
       </p>
 
-      <div class="sm:flex sm:mb6">
+      <div className="sm:flex sm:mb6">
         <HyperLink href="mailto:hello@michaeluloth.com" className="link dib mr3 mb4 sm:mb0">
           Email me
         </HyperLink>
-        <ul class="mb6 sm:mb0">
+        <ul className="mb6 sm:mb0">
           {links.map(link => {
             return (
               <li key={shortid.generate()} className="dib mr3 f3">

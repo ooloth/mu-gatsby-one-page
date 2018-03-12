@@ -18,7 +18,7 @@ const HyperLink = ({ href, srText, className, children }) => {
       rel={isExternal ? 'noopener nofollow' : null}
       className={className}
     >
-      {srText && <span class="sr-only">{srText}</span>}
+      {srText && <span className="sr-only">{srText}</span>}
       {children}
     </a>
   )

@@ -1,5 +1,5 @@
 const BaseLayout = ({ children, data }) => (
-  <div class="avenir">
+  <div className="avenir">
     <SiteMetadata site={data.site.siteMetadata} />
     {children()}
     <BasicStructuredData />
