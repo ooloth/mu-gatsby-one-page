@@ -81,7 +81,7 @@ class Work extends React.Component {
             handleChange={this.handleFilterClick}
           />
         </div>
-        {/* This ternary is needed to prevent a flash of collapsed space on the initial render (before the merged, keyed projects list has been added to state, which triggers a second render). Is there a way to avoid this delay and double-render? */}
+        {/* TODO: This ternary is needed to prevent a flash of collapsed space on the initial render (before the merged, keyed projects list has been added to state (which triggers a second render). Is there a way to avoid this delay and double-render? Will animating the items in be a good enough solution? Should I merge/key the arrays on pages/index.js? Should I switch from JSON to JS so the keys are already in place? Should I use an existing field as the key? */}
         {projects ? (
           <Projects
             projects={projects}
@@ -213,7 +213,7 @@ class Project extends React.Component {
       this.setState({ expanded: true })
 
       // Invalidate the temporary inline styles (which match the starting state for the animation and are added to prevent a flash of content in the ending position)
-      this.item.style = null
+      this.item.removeAttribute('style')
 
       // Expand the section to its natural height
       TweenMax.fromTo(
