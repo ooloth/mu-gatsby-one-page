@@ -1,6 +1,6 @@
 const Contact = () => (
   <section className="bg-near-white pt6 pb3">
-    <div className="container ">
+    <div className="container">
       <h2
         className="mb4 lh-solid f-3p5 sm:f-5 md:f-6 fw9 ttu"
         style={{
@@ -18,21 +18,23 @@ const Contact = () => (
         <HyperLink href="mailto:hello@michaeluloth.com" className="link dib mr3 mb4 sm:mb0">
           Email me
         </HyperLink>
-        <ul className="mb6 sm:mb0">
-          {links.map(link => {
-            return (
-              <li key={shortid.generate()} className="dib mr3 f3">
-                <HyperLink
-                  href={link.url}
-                  className="icon"
-                  srText={`Follow me on ${link.name}`}
-                >
-                  {link.icon}
-                </HyperLink>
-              </li>
-            )
-          })}
-        </ul>
+        <nav aria-label="Social media links">
+          <ul className="mb6 sm:mb0">
+            {links.map(link => {
+              return (
+                <li key={shortid.generate()} className="dib mr3 f3">
+                  <HyperLink
+                    href={link.url}
+                    className="icon"
+                    srText={`Follow me on ${link.name}`}
+                  >
+                    {link.icon}
+                  </HyperLink>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
       </div>
       <Copyright />
     </div>
