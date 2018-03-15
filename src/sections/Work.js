@@ -1,40 +1,8 @@
 class Work extends React.Component {
   state = {
-    projects: null,
-    total: null,
     limit: 5,
     operaIsChecked: true,
     websitesIsChecked: true
-  }
-
-  componentDidMount = () => {
-    // Merge the opera and website arrays (alternate categories)
-    const mergedProjects = this.mergeProjectArrays()
-
-    // Add a key to each project (to prevent unnecessary rerendering)
-    const projectsWithKeys = [...mergedProjects].map(project => {
-      project.key = shortid.generate()
-      return project
-    })
-
-    // Wait to render projects until we have the merged version with keys
-    this.setState({ projects: projectsWithKeys, total: projectsWithKeys.length })
-  }
-
-  mergeProjectArrays = () => {
-    const array1 = this.props.websites
-    const array2 = this.props.operas
-    let combinedArray = []
-
-    // General function for merging arrays in an alternating pattern
-    for (let i = 0; i < 10000; i++) {
-      if (array1[i] && array2[i]) combinedArray.push(array1[i], array2[i])
-      else if (array1[i]) combinedArray.push(array1[i])
-      else if (array2[i]) combinedArray.push(array2[i])
-      else break
-    }
-
-    return combinedArray
   }
 
   handleFilterClick = event => {
@@ -56,10 +24,12 @@ class Work extends React.Component {
   }
 
   handleLoadMore = () => {
+    const total = this.props.projects.length
+
     // Increment the number of projects shown (up to the total number of projects)
-    if (this.state.limit < this.state.total) {
-      if (this.state.limit + 5 > this.state.total) {
-        this.setState({ limit: this.state.total })
+    if (this.state.limit < total) {
+      if (this.state.limit + 5 > total) {
+        this.setState({ limit: total })
       } else {
         this.setState({ limit: this.state.limit + 5 })
       }
@@ -67,31 +37,36 @@ class Work extends React.Component {
   }
 
   render() {
-    const { projects, total, limit, operaIsChecked, websitesIsChecked } = this.state
+    const { limit, operaIsChecked, websitesIsChecked } = this.state
+    const { projects } = this.props
+    const total = this.props.projects.length
     const allLoaded = limit < total ? false : true
+
+    // Reduce project list to the active category
+    const projectsInActiveCategory = projects.filter(project => {
+      if (operaIsChecked && websitesIsChecked) return project
+      else if (operaIsChecked) return project.node.category === `Opera`
+      else if (websitesIsChecked) return project.node.category === `Website`
+      else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
+    })
 
     return (
       <section className="pv6">
-        <div className="container mb4">
-          <h2 className="sr-only">Opera and Website Projects</h2>
+        <h2 className="sr-only">Opera and Website Projects</h2>
 
-          <Filters
-            operaIsChecked={operaIsChecked}
-            websitesIsChecked={websitesIsChecked}
-            handleChange={this.handleFilterClick}
-          />
-        </div>
-        {/* TODO: This ternary is needed to prevent a flash of collapsed space on the initial render (before the merged, keyed projects list has been added to state (which triggers a second render). Is there a way to avoid this delay and double-render? Will animating the items in be a good enough solution? Should I merge/key the arrays on pages/index.js? Should I switch from JSON to JS so the keys are already in place? Should I use an existing field as the key? */}
-        {projects ? (
-          <Projects
-            projects={projects}
-            limit={limit}
-            operaIsChecked={operaIsChecked}
-            websitesIsChecked={websitesIsChecked}
-          />
-        ) : (
-          <div style={{ height: `1100px` }} />
-        )}
+        <Filters
+          operaIsChecked={operaIsChecked}
+          websitesIsChecked={websitesIsChecked}
+          handleChange={this.handleFilterClick}
+        />
+
+        <Projects
+          // Reduce number of projects shown to the current limit
+          projects={projectsInActiveCategory.slice(0, limit)}
+          operaIsChecked={operaIsChecked}
+          websitesIsChecked={websitesIsChecked}
+        />
+
         {!allLoaded && (
           <div className="container pt5">
             <button onClick={this.handleLoadMore} className="link">
@@ -112,7 +87,7 @@ export default Work
  * 
  */
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import shortid from 'shortid'
 
 /*
@@ -122,8 +97,9 @@ import shortid from 'shortid'
  */
 
 const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
-  <fieldset className="lh-solid f3 fw4 ttl">
+  <fieldset className="container mb4 lh-solid f3 fw4 ttl">
     <legend className="sr-only">Choose which project types to show</legend>
+
     <label htmlFor="opera" className="custom-checkbox mr4 animate cursor-pointer">
       <input
         id="opera"
@@ -140,6 +116,7 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
       />
       <span className="checkbox-label">&nbsp;Opera</span>
     </label>
+
     <label htmlFor="websites" className="custom-checkbox animate cursor-pointer">
       <input
         id="websites"
@@ -165,24 +142,13 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
  * 
  */
 
-const Projects = ({ projects, limit, operaIsChecked, websitesIsChecked }) => {
-  // Reduce project list to the active category
-  const projectsInActiveCategory = [...projects].filter(project => {
-    if (operaIsChecked && websitesIsChecked) return project
-    else if (operaIsChecked) return project.node.category === `Opera`
-    else if (websitesIsChecked) return project.node.category === `Website`
-    else console.error(`Error in projectsInActiveCategory calculation in <Projects />`)
-  })
-
-  return (
-    <ul>
-      {/* Reduce visible projects to the current limit */}
-      {projectsInActiveCategory.slice(0, limit).map((project, index) => {
-        return <Project key={project.key} project={project.node} />
-      })}
-    </ul>
-  )
-}
+const Projects = ({ projects, operaIsChecked, websitesIsChecked }) => (
+  <ul>
+    {projects.map(project => {
+      return <Project key={project.key} project={project.node} />
+    })}
+  </ul>
+)
 
 /* 
  *
@@ -294,14 +260,13 @@ const ProjectHeader = ({ project, expanded }) => (
       </ul>
     </div>
 
-    {!expanded && (
-      <div aria-hidden="true" className="dn md:db o-0 group-hover:o-100 f1 fw9 animate">
-        +
-      </div>
-    )}
-    {expanded && (
+    {expanded ? (
       <div aria-hidden="true" className="dn md:db f1 fw9 animate">
         -
+      </div>
+    ) : (
+      <div aria-hidden="true" className="dn md:db o-0 group-hover:o-100 f1 fw9 animate">
+        +
       </div>
     )}
   </div>
@@ -374,7 +339,7 @@ const ProjectDetails = ({ project }) => (
 
     <p className="mb4 measure">{project.description}</p>
 
-    <div className="mb4 ">
+    <div className="mb4">
       {project.details &&
         project.details.map(detail => {
           return (

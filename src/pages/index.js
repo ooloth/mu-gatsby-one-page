@@ -1,10 +1,37 @@
-const IndexPage = ({ data }) => (
-  <main>
-    <Hero />
-    <Work operas={data.allOperaJson.edges} websites={data.allWebsitesJson.edges} />
-    <Contact />
-  </main>
-)
+const IndexPage = ({ data }) => {
+  // Merge opera and website projects (alternate website, opera, website, etc.)
+  const array1 = data.allWebsitesJson.edges
+  const array2 = data.allOperaJson.edges
+  let combinedArray = []
+
+  // General function for merging arrays in an alternating pattern
+  for (let i = 0; i < 10000; i++) {
+    if (array1[i] && array2[i]) combinedArray.push(array1[i], array2[i])
+    else if (array1[i]) combinedArray.push(array1[i])
+    else if (array2[i]) combinedArray.push(array2[i])
+    else break
+  }
+
+  // Add a unique key to each project (to prevent unnecessary rerendering)
+  const projectsWithKeys = [...combinedArray].map(project => {
+    project.key = shortid.generate()
+    return project
+  })
+
+  console.log('projectsWithKeys', projectsWithKeys)
+
+  return (
+    <main>
+      <Hero />
+      <Work
+        projects={projectsWithKeys}
+        operas={data.allOperaJson.edges}
+        websites={data.allWebsitesJson.edges}
+      />
+      <Contact />
+    </main>
+  )
+}
 
 export default IndexPage
 
@@ -15,7 +42,7 @@ export default IndexPage
  */
 
 import React from 'react'
-import { Provider, Subscribe, Container } from 'unstated'
+import shortid from 'shortid'
 
 import Hero from '../sections/Hero'
 import Work from '../sections/Work'
