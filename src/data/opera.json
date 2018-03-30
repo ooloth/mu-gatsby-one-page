@@ -1,49 +1,9 @@
 [
   {
-    "image": "../images/opera/anna-bolena.jpg",
-    "alt": "\"Henry VIII's first interview with Anne Boleyn\" by D. MacLise, 1835.",
-    "title": "Anna Bolena",
-    "category": "Opera",
-    "tags": ["Canadian Opera Company"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Canadian Opera Company"
-      },
-      {
-        "name": "Opera",
-        "value": "Anna Bolena"
-      },
-      {
-        "name": "Role",
-        "value": "Lord Rochefort (cover)"
-      },
-      {
-        "name": "Composer",
-        "value": "Gaetano Donizetti"
-      },
-      {
-        "name": "Conductor",
-        "value": "Corrado Rovaris"
-      },
-      {
-        "name": "Director",
-        "value": "Stephen Lawless"
-      },
-      {
-        "name": "Dates",
-        "value": "April 28 - May 26, 2018"
-      }
-    ],
-    "link": "https://www.coc.ca/productions/13097"
-  },
-  {
     "image": "../images/opera/nightingale.jpg",
     "alt":
-      "\"The Nightingale and Other Short Fables\" at the Canadian Opera Company, 2009. Image by Michael Cooper.",
-    "title": "Le Rossignol",
+      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+    "title": "The Nightingale",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -55,11 +15,11 @@
       },
       {
         "name": "Opera",
-        "value": "The Nightingale and Other Short Fables"
+        "value": "The Nightingale & Other Short Fables"
       },
       {
         "name": "Role",
-        "value": "Le Bonze (cover)"
+        "value": "Bonze"
       },
       {
         "name": "Composer",
@@ -175,5 +135,586 @@
       }
     ],
     "link": "http://againstthegraintheatre.com/category/kopernikus/"
+  },
+  {
+    "image": "../images/opera/apostles.jpg",
+    "alt":
+      "Michael Uloth, Daniel Lichti and Lawrence Wiliford as Judas, Peter and John in Pax Christi Chorale's 2017 performance of The Apostles. Image by Dahlia Katz.jpg",
+    "title": "The Apostles",
+    "category": "Opera",
+    "tags": ["Pax Christi Chorale"],
+    "reviews": [
+      {
+        "quotation":
+          "Michael Uloth carried the drama of the second half of the work, being the main character of Judas in Part IV including the longest piece of exposition in the entire work in “The Betrayal.” Providing a clear interpretation, his voice carried as the changing orchestrations underlay.",
+        "source": "Ludwig Van Toronto",
+        "link":
+          "https://www.ludwig-van.com/toronto/2017/05/01/scrutiny-a-surprising-rendition-with-pax-christi-chorales-the-apostles/"
+      },
+      {
+        "quotation":
+          "The two important roles with the most manifest suffering were wonderfully realized by mezzo Krisztina Szabo as Mary Magdalene and bass Michael Uloth as Judas.",
+        "source": "American Record Guide"
+      }
+    ],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Pax Christi Chorale"
+      },
+      {
+        "name": "Oratorio",
+        "value": "The Apostles"
+      },
+      {
+        "name": "Role",
+        "value": "Judas"
+      },
+      {
+        "name": "Composer",
+        "value": "Edward Elgar"
+      },
+      {
+        "name": "Conductor",
+        "value": "Stephanie Martin"
+      },
+      {
+        "name": "Dates",
+        "value": "April 2017"
+      }
+    ],
+    "link": "http://www.paxchristichorale.org"
+  },
+  {
+    "image": "../images/opera/don-pasquale.png",
+    "alt":
+      "Don Pasquale at its London Premiere, from the Illustrated London News of July 8, 1843.",
+    "title": "Don Pasquale",
+    "category": "Opera",
+    "tags": ["Saskatoon Opera"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Saskatoon Opera"
+      },
+      {
+        "name": "Opera",
+        "value": "Don Pasquale"
+      },
+      {
+        "name": "Role",
+        "value": "Don Pasquale"
+      },
+      {
+        "name": "Composer",
+        "value": "Gaetano Donizetti"
+      },
+      {
+        "name": "Conductor",
+        "value": "Tadeusz Biernacki"
+      },
+      {
+        "name": "Director",
+        "value": "Barbara Montalbetti"
+      },
+      {
+        "name": "Dates",
+        "value": "May - June, 2012"
+      }
+    ],
+    "link": "http://www.saskatoonopera.ca"
+  },
+  {
+    "image": "../images/opera/nightingale-2.jpg",
+    "alt":
+      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+    "title": "The Nightingale",
+    "category": "Opera",
+    "tags": ["Opéra National de Lyon"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Opéra National de Lyon"
+      },
+      {
+        "name": "Opera",
+        "value": "The Nightingale & Other Short Fables"
+      },
+      {
+        "name": "Role",
+        "value": "Bonze"
+      },
+      {
+        "name": "Composer",
+        "value": "Alejo Pérez"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "April - May, 2012"
+      }
+    ],
+    "link": "https://www.opera-lyon.com/"
+  },
+  {
+    "image": "../images/opera/ariadne.jpg",
+    "alt":
+      "Michael Uloth (left) as Truffaldino in Ariadne auf Naxos, with Chris Enns, Peter Barrett and John Easterlin. Image by Michael Cooper.",
+    "title": "Ariadne auf Naxos",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Ariadne auf Naxos"
+      },
+      {
+        "name": "Role",
+        "value": "Truffaldino"
+      },
+      {
+        "name": "Composer",
+        "value": "Richard Strauss"
+      },
+      {
+        "name": "Conductor",
+        "value": "Sir Andrew Davis"
+      },
+      {
+        "name": "Director",
+        "value": "Neil Armfield"
+      },
+      {
+        "name": "Dates",
+        "value": "April - May, 2011"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "image": "../images/opera/nightingale-3.jpg",
+    "alt":
+      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+    "title": "The Nightingale",
+    "category": "Opera",
+    "tags": ["Brooklyn Academy of Music"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Brooklyn Academy of Music"
+      },
+      {
+        "name": "Opera",
+        "value": "The Nightingale & Other Short Fables"
+      },
+      {
+        "name": "Role",
+        "value": "Bonze, Emporer (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Igor Stravinsky"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "2011"
+      }
+    ],
+    "link": "https://www.bam.org"
+  },
+  {
+    "image": "../images/opera/flute.jpg",
+    "alt":
+      "Michael Uloth as Sarastro and Simone Osborne as Pamina in the Canadian Opera Company's production of Die Zauberflöte. Image by Michael Cooper.",
+    "title": "Die Zauberflöte",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Die Zauberflöte"
+      },
+      {
+        "name": "Role",
+        "value": "Sarastro (one show), 2nd Armed Man"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Diane Paulus"
+      },
+      {
+        "name": "Dates",
+        "value": "February - March, 2011"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "image": "../images/opera/death-in-venice.jpg",
+    "alt":
+      "Alan Oke (front) and Michael Uloth (left) in the 2010 Canadian Opera Company production of Death in Venice. Image by Michael Cooper.",
+    "title": "Death in Venice",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Death in Venice"
+      },
+      {
+        "name": "Role",
+        "value": "Priest in St. Mark's"
+      },
+      {
+        "name": "Composer",
+        "value": "Benjamin Britten"
+      },
+      {
+        "name": "Conductor",
+        "value": "Steuart Bedford"
+      },
+      {
+        "name": "Director",
+        "value": "Yoshi Oida"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November, 2010"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "image": "../images/opera/butterfly.jpg",
+    "alt":
+      "Michael Uloth as the Imperial Commissioner in Madama Butterfly. Image by Michael Cooper.",
+    "title": "Madama Butterfly",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Madama Butterfly"
+      },
+      {
+        "name": "Role",
+        "value": "Imperial Commissioner"
+      },
+      {
+        "name": "Composer",
+        "value": "Giacomo Puccini"
+      },
+      {
+        "name": "Conductor",
+        "value": "Carlo Montanaro"
+      },
+      {
+        "name": "Director",
+        "value": "Brian Macdonald"
+      },
+      {
+        "name": "Dates",
+        "value": "September - October, 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "image": "../images/opera/nightingale.jpg",
+    "alt":
+      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+    "title": "The Nightingale",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "The Nightingale & Other Short Fables"
+      },
+      {
+        "name": "Role",
+        "value": "Bonze, Emporer (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Igor Stravinsky"
+      },
+      {
+        "name": "Conductor",
+        "value": "Jonathan Darlington"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November 2011"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "image": "../images/opera/don-pasquale.png",
+    "alt":
+      "Don Pasquale at its London Premiere, from the Illustrated London News of July 8, 1843.",
+    "title": "Don Pasquale",
+    "category": "Opera",
+    "tags": ["Seattle Opera Young Artists Program"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Seattle Opera Young Artists Program"
+      },
+      {
+        "name": "Opera",
+        "value": "Don Pasquale"
+      },
+      {
+        "name": "Role",
+        "value": "Don Pasquale"
+      },
+      {
+        "name": "Composer",
+        "value": "Gaetano Donizetti"
+      },
+      {
+        "name": "Conductor",
+        "value": "Brian Garman"
+      },
+      {
+        "name": "Director",
+        "value": "Peter Kazaras"
+      },
+      {
+        "name": "Dates",
+        "value": "March - April, 2012"
+      }
+    ],
+    "link": "https://seattleopera.org"
+  },
+  {
+    "image": "../images/opera/werther.jpg",
+    "alt":
+      "An illustration by W. Friedrich from \"The Works of J. W. von Goethe, Vol. 6: The Sorrows of Young Werther\", captioned \"I have since sketched her profile\".",
+    "title": "Werther",
+    "category": "Opera",
+    "tags": ["Seattle Opera Young Artists Program"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Seattle Opera Young Artists Program"
+      },
+      {
+        "name": "Opera",
+        "value": "Werther"
+      },
+      {
+        "name": "Role",
+        "value": "Le Bailli"
+      },
+      {
+        "name": "Composer",
+        "value": "Jules Massenet"
+      },
+      {
+        "name": "Conductor",
+        "value": "Stephanie Rhodes"
+      },
+      {
+        "name": "Director",
+        "value": "Peter Kazaras"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November, 2011"
+      }
+    ],
+    "link": "https://seattleopera.org"
+  },
+  {
+    "image": "../images/opera/falstaff.jpg",
+    "alt":
+      "Pistol announcing to Falstaff the death of the King. Painting by John Cawse, circa 1820s.",
+    "title": "Falstaff",
+    "category": "Opera",
+    "tags": ["Highlands Opera Studio"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Highlands Opera Studio"
+      },
+      {
+        "name": "Opera",
+        "value": "Falstaff"
+      },
+      {
+        "name": "Role",
+        "value": "Pistola"
+      },
+      {
+        "name": "Composer",
+        "value": "Giuseppe Verdi"
+      },
+      {
+        "name": "Conductor",
+        "value": "Timothy Vernon"
+      },
+      {
+        "name": "Director",
+        "value": "Valerie Kuinka"
+      },
+      {
+        "name": "Dates",
+        "value": "July - August, 2011"
+      }
+    ],
+    "link": "http://highlandsoperastudio.com"
+  },
+  {
+    "image": "../images/opera/don-giovanni-2.jpg",
+    "alt": "\"Elvira, Leporello and the Don\" from The Victrola Book of the Opera, 1917.",
+    "title": "Don Giovanni",
+    "category": "Opera",
+    "tags": ["Centre for Opera Studies in Italy"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Centre for Opera Studies in Italy"
+      },
+      {
+        "name": "Opera",
+        "value": "Don Giovanni"
+      },
+      {
+        "name": "Role",
+        "value": "Leporello / Il Commendatore (alternating)"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Kevin Mallon"
+      },
+      {
+        "name": "Director",
+        "value": "Tom Diamond"
+      },
+      {
+        "name": "Dates",
+        "value": "June - July, 2011"
+      }
+    ],
+    "link": "http://www.co-si.com"
+  },
+  {
+    "image": "../images/opera/anna-bolena.jpg",
+    "alt": "\"Henry VIII's first interview with Anne Boleyn\" by D. MacLise, 1835.",
+    "title": "Anna Bolena",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Anna Bolena"
+      },
+      {
+        "name": "Role",
+        "value": "Lord Rochefort (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Gaetano Donizetti"
+      },
+      {
+        "name": "Conductor",
+        "value": "Corrado Rovaris"
+      },
+      {
+        "name": "Director",
+        "value": "Stephen Lawless"
+      },
+      {
+        "name": "Dates",
+        "value": "April 28 - May 26, 2018"
+      }
+    ],
+    "link": "https://www.coc.ca/productions/13097"
   }
 ]

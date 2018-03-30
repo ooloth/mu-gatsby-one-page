@@ -18,8 +18,6 @@ const IndexPage = ({ data }) => {
     return project
   })
 
-  console.log('projectsWithKeys', projectsWithKeys)
-
   return (
     <main>
       <Hero />

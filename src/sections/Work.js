@@ -6,21 +6,25 @@ class Work extends React.Component {
   }
 
   handleFilterClick = event => {
+    let filters = {}
+
     switch (event.target.value) {
       case `opera`:
-        if (event.target.checked) this.setState({ operaIsChecked: true })
+        if (event.target.checked) filters = { operaIsChecked: true }
         else if (!this.state.websitesIsChecked)
-          this.setState({ operaIsChecked: true, websitesIsChecked: true })
-        else this.setState({ operaIsChecked: false })
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { operaIsChecked: false }
         break
 
       case `websites`:
-        if (event.target.checked) this.setState({ websitesIsChecked: true })
+        if (event.target.checked) filters = { websitesIsChecked: true }
         else if (!this.state.operaIsChecked)
-          this.setState({ operaIsChecked: true, websitesIsChecked: true })
-        else this.setState({ websitesIsChecked: false })
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { websitesIsChecked: false }
         break
     }
+
+    this.setState({ ...filters, limit: 5 })
   }
 
   handleLoadMore = () => {
@@ -39,8 +43,8 @@ class Work extends React.Component {
   render() {
     const { limit, operaIsChecked, websitesIsChecked } = this.state
     const { projects } = this.props
-    const total = this.props.projects.length
-    const allLoaded = limit < total ? false : true
+    const total = projects.length
+    // const allLoaded = limit < total ? false : true
 
     // Reduce project list to the active category
     const projectsInActiveCategory = projects.filter(project => {
@@ -49,6 +53,8 @@ class Work extends React.Component {
       else if (websitesIsChecked) return project.node.category === `Website`
       else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
     })
+
+    const allLoaded = limit < projectsInActiveCategory.length ? false : true
 
     return (
       <section className="pv6">
@@ -320,7 +326,7 @@ const ProjectDetails = ({ project }) => (
     {project.reviews &&
       project.reviews.map(review => {
         return (
-          <blockquote key={shortid()} className="pv1">
+          <blockquote key={shortid()} className="mt4 pv1">
             <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
               <p className="mb2 f3">{review.quotation}</p>
               {review.link ? (
@@ -330,7 +336,7 @@ const ProjectDetails = ({ project }) => (
                   </HyperLink>
                 </cite>
               ) : (
-                <cite className="">&mdash; {review.source}</cite>
+                <cite className="f4 fw7 fs-normal">{review.source}</cite>
               )}
             </div>
           </blockquote>
