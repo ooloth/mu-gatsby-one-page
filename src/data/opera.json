@@ -1,5 +1,6 @@
 [
   {
+    "images": null,
     "image": "../images/opera/nightingale.jpg",
     "alt":
       "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
@@ -41,6 +42,49 @@
     "link": "https://www.coc.ca/productions/13109"
   },
   {
+    "images": null,
+    "image": "../images/opera/anna-bolena.jpg",
+    "alt":
+      "\"Henry VIII's first interview with Anne Boleyn\", painted by Daniel MacLise in 1835.",
+    "title": "Anna Bolena",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Anna Bolena"
+      },
+      {
+        "name": "Role",
+        "value": "Lord Rochefort (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Gaetano Donizetti"
+      },
+      {
+        "name": "Conductor",
+        "value": "Corrado Rovaris"
+      },
+      {
+        "name": "Director",
+        "value": "Stephen Lawless"
+      },
+      {
+        "name": "Dates",
+        "value": "April 28 - May 26, 2018"
+      }
+    ],
+    "link": "https://www.coc.ca/productions/13097"
+  },
+  {
+    "images": null,
     "image": "../images/opera/bound.jpg",
     "alt":
       "Danika Lorèn in BOUND, Against the Grain Theatre, 2017. Photo by Darryl Block Photography.",
@@ -89,6 +133,7 @@
     "link": "http://againstthegraintheatre.com/bound/"
   },
   {
+    "images": null,
     "image": "../images/opera/claude-vivier.jpg",
     "alt": "Claude Vivier. Photo by Boosey and Hawkes.",
     "title": "Kopernikus",
@@ -137,6 +182,7 @@
     "link": "http://againstthegraintheatre.com/category/kopernikus/"
   },
   {
+    "images": null,
     "image": "../images/opera/apostles.jpg",
     "alt":
       "Michael Uloth, Daniel Lichti and Lawrence Wiliford as Judas, Peter and John in Pax Christi Chorale's 2017 performance of The Apostles. Image by Dahlia Katz.jpg",
@@ -187,9 +233,52 @@
     "link": "http://www.paxchristichorale.org"
   },
   {
-    "image": "../images/opera/don-pasquale.png",
+    "images": null,
+    "image": "../images/opera/die-zauberflote.jpg",
     "alt":
-      "Don Pasquale at its London Premiere, from the Illustrated London News of July 8, 1843.",
+      "Design for The Magic Flute: \"The Hall of Stars in the Palace of the Queen of the Night, Act 1, Scene 6\" by Karl Friedrich Schinkel (1781–1841).",
+    "title": "Die Zauberflöte",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Die Zauberflöte"
+      },
+      {
+        "name": "Role",
+        "value": "2nd Armed Man (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Bernard Labadie"
+      },
+      {
+        "name": "Director",
+        "value": "Diane Paulus"
+      },
+      {
+        "name": "Dates",
+        "value": "January - February, 2017"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/don-pasquale-1.jpg",
+    "alt":
+      "Michael Uloth as Don Pasquale and Lindsay Russell as Norina in Seattle Opera Young Artists Program's production of Don Pasquale. Image by Elise Bakketun.",
     "title": "Don Pasquale",
     "category": "Opera",
     "tags": ["Saskatoon Opera"],
@@ -228,6 +317,7 @@
     "link": "http://www.saskatoonopera.ca"
   },
   {
+    "images": null,
     "image": "../images/opera/nightingale-2.jpg",
     "alt":
       "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
@@ -269,255 +359,10 @@
     "link": "https://www.opera-lyon.com/"
   },
   {
-    "image": "../images/opera/ariadne.jpg",
+    "images": null,
+    "image": "../images/opera/don-pasquale-3.jpg",
     "alt":
-      "Michael Uloth (left) as Truffaldino in Ariadne auf Naxos, with Chris Enns, Peter Barrett and John Easterlin. Image by Michael Cooper.",
-    "title": "Ariadne auf Naxos",
-    "category": "Opera",
-    "tags": ["Canadian Opera Company"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Canadian Opera Company"
-      },
-      {
-        "name": "Opera",
-        "value": "Ariadne auf Naxos"
-      },
-      {
-        "name": "Role",
-        "value": "Truffaldino"
-      },
-      {
-        "name": "Composer",
-        "value": "Richard Strauss"
-      },
-      {
-        "name": "Conductor",
-        "value": "Sir Andrew Davis"
-      },
-      {
-        "name": "Director",
-        "value": "Neil Armfield"
-      },
-      {
-        "name": "Dates",
-        "value": "April - May, 2011"
-      }
-    ],
-    "link": "https://www.coc.ca"
-  },
-  {
-    "image": "../images/opera/nightingale-3.jpg",
-    "alt":
-      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
-    "title": "The Nightingale",
-    "category": "Opera",
-    "tags": ["Brooklyn Academy of Music"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Brooklyn Academy of Music"
-      },
-      {
-        "name": "Opera",
-        "value": "The Nightingale & Other Short Fables"
-      },
-      {
-        "name": "Role",
-        "value": "Bonze, Emporer (cover)"
-      },
-      {
-        "name": "Composer",
-        "value": "Igor Stravinsky"
-      },
-      {
-        "name": "Conductor",
-        "value": "Johannes Debus"
-      },
-      {
-        "name": "Director",
-        "value": "Robert Lepage"
-      },
-      {
-        "name": "Dates",
-        "value": "2011"
-      }
-    ],
-    "link": "https://www.bam.org"
-  },
-  {
-    "image": "../images/opera/flute.jpg",
-    "alt":
-      "Michael Uloth as Sarastro and Simone Osborne as Pamina in the Canadian Opera Company's production of Die Zauberflöte. Image by Michael Cooper.",
-    "title": "Die Zauberflöte",
-    "category": "Opera",
-    "tags": ["Canadian Opera Company"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Canadian Opera Company"
-      },
-      {
-        "name": "Opera",
-        "value": "Die Zauberflöte"
-      },
-      {
-        "name": "Role",
-        "value": "Sarastro (one show), 2nd Armed Man"
-      },
-      {
-        "name": "Composer",
-        "value": "Wolfgang Amadeus Mozart"
-      },
-      {
-        "name": "Conductor",
-        "value": "Johannes Debus"
-      },
-      {
-        "name": "Director",
-        "value": "Diane Paulus"
-      },
-      {
-        "name": "Dates",
-        "value": "February - March, 2011"
-      }
-    ],
-    "link": "https://www.coc.ca"
-  },
-  {
-    "image": "../images/opera/death-in-venice.jpg",
-    "alt":
-      "Alan Oke (front) and Michael Uloth (left) in the 2010 Canadian Opera Company production of Death in Venice. Image by Michael Cooper.",
-    "title": "Death in Venice",
-    "category": "Opera",
-    "tags": ["Canadian Opera Company"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Canadian Opera Company"
-      },
-      {
-        "name": "Opera",
-        "value": "Death in Venice"
-      },
-      {
-        "name": "Role",
-        "value": "Priest in St. Mark's"
-      },
-      {
-        "name": "Composer",
-        "value": "Benjamin Britten"
-      },
-      {
-        "name": "Conductor",
-        "value": "Steuart Bedford"
-      },
-      {
-        "name": "Director",
-        "value": "Yoshi Oida"
-      },
-      {
-        "name": "Dates",
-        "value": "October - November, 2010"
-      }
-    ],
-    "link": "https://www.coc.ca"
-  },
-  {
-    "image": "../images/opera/butterfly.jpg",
-    "alt":
-      "Michael Uloth as the Imperial Commissioner in Madama Butterfly. Image by Michael Cooper.",
-    "title": "Madama Butterfly",
-    "category": "Opera",
-    "tags": ["Canadian Opera Company"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Canadian Opera Company"
-      },
-      {
-        "name": "Opera",
-        "value": "Madama Butterfly"
-      },
-      {
-        "name": "Role",
-        "value": "Imperial Commissioner"
-      },
-      {
-        "name": "Composer",
-        "value": "Giacomo Puccini"
-      },
-      {
-        "name": "Conductor",
-        "value": "Carlo Montanaro"
-      },
-      {
-        "name": "Director",
-        "value": "Brian Macdonald"
-      },
-      {
-        "name": "Dates",
-        "value": "September - October, 2009"
-      }
-    ],
-    "link": "https://www.coc.ca"
-  },
-  {
-    "image": "../images/opera/nightingale.jpg",
-    "alt":
-      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
-    "title": "The Nightingale",
-    "category": "Opera",
-    "tags": ["Canadian Opera Company"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Canadian Opera Company"
-      },
-      {
-        "name": "Opera",
-        "value": "The Nightingale & Other Short Fables"
-      },
-      {
-        "name": "Role",
-        "value": "Bonze, Emporer (cover)"
-      },
-      {
-        "name": "Composer",
-        "value": "Igor Stravinsky"
-      },
-      {
-        "name": "Conductor",
-        "value": "Jonathan Darlington"
-      },
-      {
-        "name": "Director",
-        "value": "Robert Lepage"
-      },
-      {
-        "name": "Dates",
-        "value": "October - November 2011"
-      }
-    ],
-    "link": "https://www.coc.ca"
-  },
-  {
-    "image": "../images/opera/don-pasquale.png",
-    "alt":
-      "Don Pasquale at its London Premiere, from the Illustrated London News of July 8, 1843.",
+      "Michael Uloth as Don Pasquale in Seattle Opera Young Artists Program's production of Don Pasquale. Image by Elise Bakketun.",
     "title": "Don Pasquale",
     "category": "Opera",
     "tags": ["Seattle Opera Young Artists Program"],
@@ -556,6 +401,7 @@
     "link": "https://seattleopera.org"
   },
   {
+    "images": null,
     "image": "../images/opera/werther.jpg",
     "alt":
       "An illustration by W. Friedrich from \"The Works of J. W. von Goethe, Vol. 6: The Sorrows of Young Werther\", captioned \"I have since sketched her profile\".",
@@ -597,6 +443,7 @@
     "link": "https://seattleopera.org"
   },
   {
+    "images": null,
     "image": "../images/opera/falstaff.jpg",
     "alt":
       "Pistol announcing to Falstaff the death of the King. Painting by John Cawse, circa 1820s.",
@@ -638,6 +485,7 @@
     "link": "http://highlandsoperastudio.com"
   },
   {
+    "images": null,
     "image": "../images/opera/don-giovanni-2.jpg",
     "alt": "\"Elvira, Leporello and the Don\" from The Victrola Book of the Opera, 1917.",
     "title": "Don Giovanni",
@@ -678,9 +526,48 @@
     "link": "http://www.co-si.com"
   },
   {
-    "image": "../images/opera/anna-bolena.jpg",
-    "alt": "\"Henry VIII's first interview with Anne Boleyn\" by D. MacLise, 1835.",
-    "title": "Anna Bolena",
+    "images": null,
+    "image": "../images/opera/rossini.jpg",
+    "alt": "1865 photograph of Gioachino Rossini by Étienne Carjat.",
+    "title": "Petite Messe Solennelle",
+    "category": "Opera",
+    "tags": ["Centre for Opera Studies in Italy"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Centre for Opera Studies in Italy"
+      },
+      {
+        "name": "Oratorio",
+        "value": "Petite Messe Solennelle"
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Composer",
+        "value": "Gioachino Rossini"
+      },
+      {
+        "name": "Conductor",
+        "value": "Timothy Vernon"
+      },
+      {
+        "name": "Dates",
+        "value": "June - July, 2011"
+      }
+    ],
+    "link": "http://www.co-si.com"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/ariadne.jpg",
+    "alt":
+      "Michael Uloth (left) as Truffaldino in Ariadne auf Naxos, with Chris Enns, Peter Barrett and John Easterlin. Image by Michael Cooper.",
+    "title": "Ariadne auf Naxos",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -692,11 +579,915 @@
       },
       {
         "name": "Opera",
+        "value": "Ariadne auf Naxos"
+      },
+      {
+        "name": "Role",
+        "value": "Truffaldino"
+      },
+      {
+        "name": "Composer",
+        "value": "Richard Strauss"
+      },
+      {
+        "name": "Conductor",
+        "value": "Sir Andrew Davis"
+      },
+      {
+        "name": "Director",
+        "value": "Neil Armfield"
+      },
+      {
+        "name": "Dates",
+        "value": "April - May, 2011"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/nightingale-3.jpg",
+    "alt":
+      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+    "title": "The Nightingale",
+    "category": "Opera",
+    "tags": ["Brooklyn Academy of Music"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Brooklyn Academy of Music / Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "The Nightingale & Other Short Fables"
+      },
+      {
+        "name": "Role",
+        "value": "Bonze, Emporer (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Igor Stravinsky"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "2011"
+      }
+    ],
+    "link": "https://www.bam.org"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/stravinsky.jpg",
+    "alt": "Igor Stravinsky in 1929. Image by Boris Lipnitzky.",
+    "title": "Renard",
+    "category": "Opera",
+    "tags": ["Brooklyn Academy of Music"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Brooklyn Academy of Music / Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Renard"
+      },
+      {
+        "name": "Role",
+        "value": "Bass (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Igor Stravinsky"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "2011"
+      }
+    ],
+    "link": "https://www.bam.org"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/flute.jpg",
+    "alt":
+      "Michael Uloth as Sarastro and Simone Osborne as Pamina in the Canadian Opera Company's production of Die Zauberflöte. Image by Michael Cooper.",
+    "title": "Die Zauberflöte",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Die Zauberflöte"
+      },
+      {
+        "name": "Role",
+        "value": "Sarastro (one show), 2nd Armed Man"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Diane Paulus"
+      },
+      {
+        "name": "Dates",
+        "value": "February - March, 2011"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/death-in-venice.jpg",
+    "alt":
+      "Alan Oke (front) and Michael Uloth (left) in the 2010 Canadian Opera Company production of Death in Venice. Image by Michael Cooper.",
+    "title": "Death in Venice",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Death in Venice"
+      },
+      {
+        "name": "Role",
+        "value": "Priest in St. Mark's"
+      },
+      {
+        "name": "Composer",
+        "value": "Benjamin Britten"
+      },
+      {
+        "name": "Conductor",
+        "value": "Steuart Bedford"
+      },
+      {
+        "name": "Director",
+        "value": "Yoshi Oida"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November, 2010"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/aida.jpg",
+    "alt": "The Canadian Opera Company's production of Aida. Image by Michael Cooper.",
+    "title": "Aida",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Aida"
+      },
+      {
+        "name": "Role",
+        "value": "Ramfis (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Giuseppe Verdi"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Tim Albery"
+      },
+      {
+        "name": "Dates",
+        "value": "2010"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/idomeneo.jpg",
+    "alt":
+      "A scene from the Canadian Opera Company's production of Idomeneo. Image by Michael Cooper.",
+    "title": "Idomeneo",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Idomeneo"
+      },
+      {
+        "name": "Role",
+        "value": "Voice of Neptune (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Harry Bicket"
+      },
+      {
+        "name": "Director",
+        "value": "François de Carpentries"
+      },
+      {
+        "name": "Dates",
+        "value": "2010"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/bach.jpg",
+    "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
+    "title": "St. Matthew Passion",
+    "category": "Opera",
+    "tags": ["Victoria Philharmonic Choir"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Victoria Philharmonic Choir / Victoria Symphony"
+      },
+      {
+        "name": "Oratorio",
+        "value": "St. Matthew Passion"
+      },
+      {
+        "name": "Role",
+        "value": "Jesus"
+      },
+      {
+        "name": "Composer",
+        "value": "Johann Sebastien Bach"
+      },
+      {
+        "name": "Conductor",
+        "value": "Peter Butterfield"
+      },
+      {
+        "name": "Dates",
+        "value": "April 2010"
+      }
+    ],
+    "link": "http://vpchoir.squarespace.com"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/otello.jpg",
+    "alt": "The Canadian Opera Company's production of Otello. Image by Michael Cooper.",
+    "title": "Otello",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Otello"
+      },
+      {
+        "name": "Role",
+        "value": "Lodovico (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Giuseppe Verdi"
+      },
+      {
+        "name": "Conductor",
+        "value": "Paulo Olmi"
+      },
+      {
+        "name": "Director",
+        "value": "Paul Curran"
+      },
+      {
+        "name": "Dates",
+        "value": "2010"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/zuniga.jpg",
+    "alt":
+      "Alain Coulombe as Zuniga in the Canadian Opera Company's production of Carmen. Image by Michael Cooper.",
+    "title": "Carmen",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Carmen"
+      },
+      {
+        "name": "Role",
+        "value": "Zuniga (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Giuseppe Verdi"
+      },
+      {
+        "name": "Conductor",
+        "value": "Rory Macdonald"
+      },
+      {
+        "name": "Director",
+        "value": "Justin Way"
+      },
+      {
+        "name": "Dates",
+        "value": "2010"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/butterfly.jpg",
+    "alt":
+      "Michael Uloth as the Imperial Commissioner in Madama Butterfly. Image by Michael Cooper.",
+    "title": "Madama Butterfly",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Madama Butterfly"
+      },
+      {
+        "name": "Role",
+        "value": "Imperial Commissioner"
+      },
+      {
+        "name": "Composer",
+        "value": "Giacomo Puccini"
+      },
+      {
+        "name": "Conductor",
+        "value": "Carlo Montanaro"
+      },
+      {
+        "name": "Director",
+        "value": "Brian Macdonald"
+      },
+      {
+        "name": "Dates",
+        "value": "September - October, 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/nightingale.jpg",
+    "alt":
+      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+    "title": "The Nightingale",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "The Nightingale & Other Short Fables"
+      },
+      {
+        "name": "Role",
+        "value": "Bonze, Emporer (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Igor Stravinsky"
+      },
+      {
+        "name": "Conductor",
+        "value": "Jonathan Darlington"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/stravinsky.jpg",
+    "alt": "Igor Stravinsky in 1929. Image by Boris Lipnitzky.",
+    "title": "Renard",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Renard"
+      },
+      {
+        "name": "Role",
+        "value": "Bass (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Igor Stravinsky"
+      },
+      {
+        "name": "Conductor",
+        "value": "Jonathan Darlington"
+      },
+      {
+        "name": "Director",
+        "value": "Robert Lepage"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/lord-nelson-2.jpg",
+    "alt": "1799 painting of Vice Admiral Horatio Lord Nelson by Lemuel Francis Abbott.",
+    "title": "Lord Nelson Mass",
+    "category": "Opera",
+    "tags": ["Elora Festival"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Elora Festival"
+      },
+      {
+        "name": "Oratorio",
+        "value": "Lord Nelson Mass"
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Composer",
+        "value": "Joseph Haydn"
+      },
+      {
+        "name": "Conductor",
+        "value": "Noel Edison"
+      },
+      {
+        "name": "Dates",
+        "value": "July 2009"
+      }
+    ],
+    "link": "http://www.elorafestival.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/cosi.jpg",
+    "alt":
+      "Michael Uloth as Don Alfonso in the Canadian Opera Company Ensemble Studio's production of Così fan tutte. Image by Michael Cooper.",
+    "title": "Così fan tutte",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company", "Ensemble Studio"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company Ensemble Studio"
+      },
+      {
+        "name": "Opera",
+        "value": "Così fan tutte"
+      },
+      {
+        "name": "Role",
+        "value": "Don Alfonso"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Martin Isepp"
+      },
+      {
+        "name": "Director",
+        "value": "Michael Patrick Albano"
+      },
+      {
+        "name": "Dates",
+        "value": "June 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/dream.jpg",
+    "alt":
+      "Michael Uloth as Snug in the Canadian Opera Company's production of A Midsummer Night's Dream. Image by Michael Cooper.",
+    "title": "A Midsummer Night's Dream",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "A Midsummer Night's Dream"
+      },
+      {
+        "name": "Role",
+        "value": "Snug, Theseus (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Benjamin Britten"
+      },
+      {
+        "name": "Conductor",
+        "value": "Anne Manson"
+      },
+      {
+        "name": "Director",
+        "value": "Neil Armfield"
+      },
+      {
+        "name": "Dates",
+        "value": "April - May, 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/boheme.jpg",
+    "alt": "The Canadian Opera Company's production of La Bohème. Image by Michael Cooper.",
+    "title": "La Bohème",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "La Bohème"
+      },
+      {
+        "name": "Role",
+        "value": "Colline (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Giacomo Puccini"
+      },
+      {
+        "name": "Conductor",
+        "value": "Julian Kovatchev"
+      },
+      {
+        "name": "Director",
+        "value": "Maer Gronsdal Powell"
+      },
+      {
+        "name": "Dates",
+        "value": "April - May, 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/simon-boccanegra.jpg",
+    "alt":
+      "The Canadian Opera Company's production of Simon Boccanegra. Image by Michael Cooper.",
+    "title": "Simon Boccanegra",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Simon Boccanegra"
+      },
+      {
+        "name": "Role",
+        "value": "Pietro (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Giuseppe Verdi"
+      },
+      {
+        "name": "Conductor",
+        "value": "Marco Guidarini"
+      },
+      {
+        "name": "Director",
+        "value": "José Luis Gomez"
+      },
+      {
+        "name": "Dates",
+        "value": "January - February, 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/war-and-peace-2.png",
+    "alt":
+      "A scene from the Canadian Opera Company's production of War & Peace. Image by Michael Cooper.",
+    "title": "War and Peace",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "War and Peace"
+      },
+      {
+        "name": "Role",
+        "value": "Gavrila"
+      },
+      {
+        "name": "Composer",
+        "value": "Sergei Prokofiev"
+      },
+      {
+        "name": "Conductor",
+        "value": "Johannes Debus"
+      },
+      {
+        "name": "Director",
+        "value": "Tim Albery"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November, 2008"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/don-giovanni.jpg",
+    "alt": "A 1912 painting of Don Giovanni by Max Slevogt.",
+    "title": "Don Giovanni",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Don Giovanni"
+      },
+      {
+        "name": "Role",
+        "value": "Masetto (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "William Lacey"
+      },
+      {
+        "name": "Director",
+        "value": "Robin Guarino"
+      },
+      {
+        "name": "Dates",
+        "value": "October - November, 2008"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/hamlet.png",
+    "alt":
+      "\"Hamlet, Prince of Denmark, Act I, Scene IV\", painted in 1796 by Henry Fuseli after a 1789 painting by Kaufmann.",
+    "title": "Hamlet",
+    "category": "Opera",
+    "tags": ["Stratford Summer Music"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Stratford Summer Music"
+      },
+      {
+        "name": "Oratorio",
+        "value": "Hamlet"
+      },
+      {
+        "name": "Role",
+        "value": "Polonius / Gravedigger"
+      },
+      {
+        "name": "Composer",
+        "value": "Mark Richards"
+      },
+      {
+        "name": "Conductor",
+        "value": "Wesley Ferreira"
+      },
+      {
+        "name": "Dates",
+        "value": "August 2008"
+      }
+    ],
+    "link": "https://stratfordsummermusic.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/rigoletto.jpg",
+    "alt":
+      "\"Bella figlia dell'amore\" scene, illustrated by Roberto Focosi in an 1852 edition of the vocal score.",
+    "title": "Rigoletto",
+    "category": "Opera",
+    "tags": ["Saskatoon Opera"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Saskatoon Opera"
+      },
+      {
+        "name": "Opera",
+        "value": "Rigoletto"
+      },
+      {
+        "name": "Role",
+        "value": "Sparafucile"
+      },
+      {
+        "name": "Composer",
+        "value": "Giuseppe Verdi"
+      },
+      {
+        "name": "Conductor",
+        "value": "Tadeusz Biernacki"
+      },
+      {
+        "name": "Director",
+        "value": "Barbara Montalbetti"
+      },
+      {
+        "name": "Dates",
+        "value": "May - June, 2008"
+      }
+    ],
+    "link": "http://www.saskatoonopera.ca"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/anna-bolena.jpg",
+    "alt":
+      "\"Henry VIII's first interview with Anne Boleyn\", painted by Daniel MacLise in 1835.",
+    "title": "Anna Bolena",
+    "category": "Opera",
+    "tags": ["Opera in Concert"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Opera in Concert"
+      },
+      {
+        "name": "Opera",
         "value": "Anna Bolena"
       },
       {
         "name": "Role",
-        "value": "Lord Rochefort (cover)"
+        "value": "Enrico VIII"
       },
       {
         "name": "Composer",
@@ -704,17 +1495,136 @@
       },
       {
         "name": "Conductor",
-        "value": "Corrado Rovaris"
+        "value": "Nathalie Doucet"
       },
       {
         "name": "Director",
-        "value": "Stephen Lawless"
+        "value": "Guillermo Silva-Marin"
       },
       {
         "name": "Dates",
-        "value": "April 28 - May 26, 2018"
+        "value": "May - June, 2008"
       }
     ],
-    "link": "https://www.coc.ca/productions/13097"
+    "link": "http://operainconcert.com"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/bach.jpg",
+    "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
+    "title": "St. John Passion",
+    "category": "Opera",
+    "tags": ["Metropolitan Festival Choir"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Metropolitan Festival Choir"
+      },
+      {
+        "name": "Oratorio",
+        "value": "St. John Passion"
+      },
+      {
+        "name": "Role",
+        "value": "Jesus"
+      },
+      {
+        "name": "Composer",
+        "value": "Johann Sebastien Bach"
+      },
+      {
+        "name": "Conductor",
+        "value": "Patricia Wright"
+      },
+      {
+        "name": "Dates",
+        "value": "April 2008"
+      }
+    ],
+    "link": "https://www.metunited.org/jmv4/index.php/programs/music/music-programs/17-choirs"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/glimmerglass-orfeo.jpg",
+    "alt": "A scene from Glimmerglass Opera's production of L'Orfeo.",
+    "title": "L'Orfeo",
+    "category": "Opera",
+    "tags": ["Glimmerglass Festival"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Glimmerglass Festival"
+      },
+      {
+        "name": "Opera",
+        "value": "L'Orfeo"
+      },
+      {
+        "name": "Role",
+        "value": "Caronte (cover), Plutone (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Claudio Monteverdi"
+      },
+      {
+        "name": "Conductor",
+        "value": "Antony Walker"
+      },
+      {
+        "name": "Director",
+        "value": "Christopher Alden"
+      },
+      {
+        "name": "Dates",
+        "value": "July - August, 2007"
+      }
+    ],
+    "link": "https://glimmerglass.org"
+  },
+  {
+    "images": null,
+    "image": "../images/opera/glimmerglass-orphee.jpg",
+    "alt": "A scene from Glimmerglass Opera's production of Orphée.",
+    "title": "Orphée",
+    "category": "Opera",
+    "tags": ["Glimmerglass Festival"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Glimmerglass Festival"
+      },
+      {
+        "name": "Opera",
+        "value": "Orphée"
+      },
+      {
+        "name": "Role",
+        "value": "Poet (cover), Judge (cover)"
+      },
+      {
+        "name": "Composer",
+        "value": "Philip Glass"
+      },
+      {
+        "name": "Conductor",
+        "value": "Anne Manson"
+      },
+      {
+        "name": "Director",
+        "value": "Sam Helfrich"
+      },
+      {
+        "name": "Dates",
+        "value": "July - August, 2007"
+      }
+    ],
+    "link": "https://glimmerglass.org"
   }
 ]

@@ -13,134 +13,134 @@ Adapted from:
 
   /* All */
   .na0 { margin: 0 }
-  .na1 { margin: -var(--spacing-1) }
-  .na2 { margin: -var(--spacing-2) }
-  .na3 { margin: -var(--spacing-3) }
-  .na4 { margin: -var(--spacing-4) }
-  .na5 { margin: -var(--spacing-5) }
-  .na6 { margin: -var(--spacing-6) }
-  .na7 { margin: -var(--spacing-7) }
+  .na1 { margin: calc(var(--spacing-1) * -1) }
+  .na2 { margin: calc(var(--spacing-2) * -1) }
+  .na3 { margin: calc(var(--spacing-3) * -1) }
+  .na4 { margin: calc(var(--spacing-4) * -1) }
+  .na5 { margin: calc(var(--spacing-5) * -1) }
+  .na6 { margin: calc(var(--spacing-6) * -1) }
+  .na7 { margin: calc(var(--spacing-7) * -1) }
 
   /* Top */
   .nt0 { margin-top: 0 }
-  .nt1 { margin-top: -var(--spacing-1) }
-  .nt2 { margin-top: -var(--spacing-2) }
-  .nt3 { margin-top: -var(--spacing-3) }
-  .nt4 { margin-top: -var(--spacing-4) }
-  .nt5 { margin-top: -var(--spacing-5) }
-  .nt6 { margin-top: -var(--spacing-6) }
-  .nt7 { margin-top: -var(--spacing-7) }
+  .nt1 { margin-top: calc(var(--spacing-1) * -1) }
+  .nt2 { margin-top: calc(var(--spacing-2) * -1) }
+  .nt3 { margin-top: calc(var(--spacing-3) * -1) }
+  .nt4 { margin-top: calc(var(--spacing-4) * -1) }
+  .nt5 { margin-top: calc(var(--spacing-5) * -1) }
+  .nt6 { margin-top: calc(var(--spacing-6) * -1) }
+  .nt7 { margin-top: calc(var(--spacing-7) * -1) }
 
   /* Right */
   .nr0 { margin-right: 0 }
-  .nr1 { margin-right: -var(--spacing-1) }
-  .nr2 { margin-right: -var(--spacing-2) }
-  .nr3 { margin-right: -var(--spacing-3) }
-  .nr4 { margin-right: -var(--spacing-4) }
-  .nr5 { margin-right: -var(--spacing-5) }
-  .nr6 { margin-right: -var(--spacing-6) }
-  .nr7 { margin-right: -var(--spacing-7) }
+  .nr1 { margin-right: calc(var(--spacing-1) * -1) }
+  .nr2 { margin-right: calc(var(--spacing-2) * -1) }
+  .nr3 { margin-right: calc(var(--spacing-3) * -1) }
+  .nr4 { margin-right: calc(var(--spacing-4) * -1) }
+  .nr5 { margin-right: calc(var(--spacing-5) * -1) }
+  .nr6 { margin-right: calc(var(--spacing-6) * -1) }
+  .nr7 { margin-right: calc(var(--spacing-7) * -1) }
 
   /* Bottom */
   .nb0 { margin-bottom: 0 }
-  .nb1 { margin-bottom: -var(--spacing-1) }
-  .nb2 { margin-bottom: -var(--spacing-2) }
-  .nb3 { margin-bottom: -var(--spacing-3) }
-  .nb4 { margin-bottom: -var(--spacing-4) }
-  .nb5 { margin-bottom: -var(--spacing-5) }
-  .nb6 { margin-bottom: -var(--spacing-6) }
-  .nb7 { margin-bottom: -var(--spacing-7) }
+  .nb1 { margin-bottom: calc(var(--spacing-1) * -1) }
+  .nb2 { margin-bottom: calc(var(--spacing-2) * -1) }
+  .nb3 { margin-bottom: calc(var(--spacing-3) * -1) }
+  .nb4 { margin-bottom: calc(var(--spacing-4) * -1) }
+  .nb5 { margin-bottom: calc(var(--spacing-5) * -1) }
+  .nb6 { margin-bottom: calc(var(--spacing-6) * -1) }
+  .nb7 { margin-bottom: calc(var(--spacing-7) * -1) }
 
   /* Left */
   .nl0 { margin-left: 0 }
-  .nl1 { margin-left: -var(--spacing-1) }
-  .nl2 { margin-left: -var(--spacing-2) }
-  .nl3 { margin-left: -var(--spacing-3) }
-  .nl4 { margin-left: -var(--spacing-4) }
-  .nl5 { margin-left: -var(--spacing-5) }
-  .nl6 { margin-left: -var(--spacing-6) }
-  .nl7 { margin-left: -var(--spacing-7) }
+  .nl1 { margin-left: calc(var(--spacing-1) * -1) }
+  .nl2 { margin-left: calc(var(--spacing-2) * -1) }
+  .nl3 { margin-left: calc(var(--spacing-3) * -1) }
+  .nl4 { margin-left: calc(var(--spacing-4) * -1) }
+  .nl5 { margin-left: calc(var(--spacing-5) * -1) }
+  .nl6 { margin-left: calc(var(--spacing-6) * -1) }
+  .nl7 { margin-left: calc(var(--spacing-7) * -1) }
 
   /* Vertical (top + bottom) */
-  .nv0   {
+  .nv0 {
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  .nv1  {
-    margin-top: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+  .nv1 {
+    margin-top: calc(var(--spacing-1) * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
-  .nv2   {
-    margin-top: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+  .nv2 {
+    margin-top: calc(var(--spacing-2) * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
-  .nv3   {
-    margin-top: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+  .nv3 {
+    margin-top: calc(var(--spacing-3) * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
-  .nv4   {
-    margin-top: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+  .nv4 {
+    margin-top: calc(var(--spacing-4) * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
-  .nv5   {
-    margin-top: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+  .nv5 {
+    margin-top: calc(var(--spacing-5) * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
-  .nv6  {
-    margin-top: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+  .nv6 {
+    margin-top: calc(var(--spacing-6) * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
-  .nv7  {
-    margin-top: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+  .nv7 {
+    margin-top: calc(var(--spacing-7) * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }
 
   /* Horizontal (left + right) */
-  .nh0   {
+  .nh0 {
     margin-left: 0;
     margin-right: 0;
   }
 
-  .nh1   {
-    margin-left: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+  .nh1 {
+    margin-left: calc(var(--spacing-1) * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
-  .nh2   {
-    margin-left: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+  .nh2 {
+    margin-left: calc(var(--spacing-2) * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
-  .nh3   {
-    margin-left: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+  .nh3 {
+    margin-left: calc(var(--spacing-3) * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
-  .nh4   {
-    margin-left: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+  .nh4 {
+    margin-left: calc(var(--spacing-4) * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
-  .nh5   {
-    margin-left: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+  .nh5 {
+    margin-left: calc(var(--spacing-5) * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
-  .nh6  {
-    margin-left: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+  .nh6 {
+    margin-left: calc(var(--spacing-6) * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
-  .nh7  {
-    margin-left: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+  .nh7 {
+    margin-left: calc(var(--spacing-7) * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }
 
 }

@@ -7685,38 +7685,38 @@ Adapted from:
 }
 
 .na1 {
-  margin: -var(--spacing-1);
-  margin: -var(--spacing-1);
+  margin: calc(.25rem * -1);
+  margin: calc(var(--spacing-1) * -1);
 }
 
 .na2 {
-  margin: -var(--spacing-2);
-  margin: -var(--spacing-2);
+  margin: calc(.5rem * -1);
+  margin: calc(var(--spacing-2) * -1);
 }
 
 .na3 {
-  margin: -var(--spacing-3);
-  margin: -var(--spacing-3);
+  margin: calc(1rem * -1);
+  margin: calc(var(--spacing-3) * -1);
 }
 
 .na4 {
-  margin: -var(--spacing-4);
-  margin: -var(--spacing-4);
+  margin: calc(2rem * -1);
+  margin: calc(var(--spacing-4) * -1);
 }
 
 .na5 {
-  margin: -var(--spacing-5);
-  margin: -var(--spacing-5);
+  margin: calc(4rem * -1);
+  margin: calc(var(--spacing-5) * -1);
 }
 
 .na6 {
-  margin: -var(--spacing-6);
-  margin: -var(--spacing-6);
+  margin: calc(8rem * -1);
+  margin: calc(var(--spacing-6) * -1);
 }
 
 .na7 {
-  margin: -var(--spacing-7);
-  margin: -var(--spacing-7);
+  margin: calc(16rem * -1);
+  margin: calc(var(--spacing-7) * -1);
 }
 
 /* Top */
@@ -7726,38 +7726,38 @@ Adapted from:
 }
 
 .nt1 {
-  margin-top: -var(--spacing-1);
-  margin-top: -var(--spacing-1);
+  margin-top: calc(.25rem * -1);
+  margin-top: calc(var(--spacing-1) * -1);
 }
 
 .nt2 {
-  margin-top: -var(--spacing-2);
-  margin-top: -var(--spacing-2);
+  margin-top: calc(.5rem * -1);
+  margin-top: calc(var(--spacing-2) * -1);
 }
 
 .nt3 {
-  margin-top: -var(--spacing-3);
-  margin-top: -var(--spacing-3);
+  margin-top: calc(1rem * -1);
+  margin-top: calc(var(--spacing-3) * -1);
 }
 
 .nt4 {
-  margin-top: -var(--spacing-4);
-  margin-top: -var(--spacing-4);
+  margin-top: calc(2rem * -1);
+  margin-top: calc(var(--spacing-4) * -1);
 }
 
 .nt5 {
-  margin-top: -var(--spacing-5);
-  margin-top: -var(--spacing-5);
+  margin-top: calc(4rem * -1);
+  margin-top: calc(var(--spacing-5) * -1);
 }
 
 .nt6 {
-  margin-top: -var(--spacing-6);
-  margin-top: -var(--spacing-6);
+  margin-top: calc(8rem * -1);
+  margin-top: calc(var(--spacing-6) * -1);
 }
 
 .nt7 {
-  margin-top: -var(--spacing-7);
-  margin-top: -var(--spacing-7);
+  margin-top: calc(16rem * -1);
+  margin-top: calc(var(--spacing-7) * -1);
 }
 
 /* Right */
@@ -7767,38 +7767,38 @@ Adapted from:
 }
 
 .nr1 {
-  margin-right: -var(--spacing-1);
-  margin-right: -var(--spacing-1);
+  margin-right: calc(.25rem * -1);
+  margin-right: calc(var(--spacing-1) * -1);
 }
 
 .nr2 {
-  margin-right: -var(--spacing-2);
-  margin-right: -var(--spacing-2);
+  margin-right: calc(.5rem * -1);
+  margin-right: calc(var(--spacing-2) * -1);
 }
 
 .nr3 {
-  margin-right: -var(--spacing-3);
-  margin-right: -var(--spacing-3);
+  margin-right: calc(1rem * -1);
+  margin-right: calc(var(--spacing-3) * -1);
 }
 
 .nr4 {
-  margin-right: -var(--spacing-4);
-  margin-right: -var(--spacing-4);
+  margin-right: calc(2rem * -1);
+  margin-right: calc(var(--spacing-4) * -1);
 }
 
 .nr5 {
-  margin-right: -var(--spacing-5);
-  margin-right: -var(--spacing-5);
+  margin-right: calc(4rem * -1);
+  margin-right: calc(var(--spacing-5) * -1);
 }
 
 .nr6 {
-  margin-right: -var(--spacing-6);
-  margin-right: -var(--spacing-6);
+  margin-right: calc(8rem * -1);
+  margin-right: calc(var(--spacing-6) * -1);
 }
 
 .nr7 {
-  margin-right: -var(--spacing-7);
-  margin-right: -var(--spacing-7);
+  margin-right: calc(16rem * -1);
+  margin-right: calc(var(--spacing-7) * -1);
 }
 
 /* Bottom */
@@ -7808,38 +7808,38 @@ Adapted from:
 }
 
 .nb1 {
-  margin-bottom: -var(--spacing-1);
-  margin-bottom: -var(--spacing-1);
+  margin-bottom: calc(.25rem * -1);
+  margin-bottom: calc(var(--spacing-1) * -1);
 }
 
 .nb2 {
-  margin-bottom: -var(--spacing-2);
-  margin-bottom: -var(--spacing-2);
+  margin-bottom: calc(.5rem * -1);
+  margin-bottom: calc(var(--spacing-2) * -1);
 }
 
 .nb3 {
-  margin-bottom: -var(--spacing-3);
-  margin-bottom: -var(--spacing-3);
+  margin-bottom: calc(1rem * -1);
+  margin-bottom: calc(var(--spacing-3) * -1);
 }
 
 .nb4 {
-  margin-bottom: -var(--spacing-4);
-  margin-bottom: -var(--spacing-4);
+  margin-bottom: calc(2rem * -1);
+  margin-bottom: calc(var(--spacing-4) * -1);
 }
 
 .nb5 {
-  margin-bottom: -var(--spacing-5);
-  margin-bottom: -var(--spacing-5);
+  margin-bottom: calc(4rem * -1);
+  margin-bottom: calc(var(--spacing-5) * -1);
 }
 
 .nb6 {
-  margin-bottom: -var(--spacing-6);
-  margin-bottom: -var(--spacing-6);
+  margin-bottom: calc(8rem * -1);
+  margin-bottom: calc(var(--spacing-6) * -1);
 }
 
 .nb7 {
-  margin-bottom: -var(--spacing-7);
-  margin-bottom: -var(--spacing-7);
+  margin-bottom: calc(16rem * -1);
+  margin-bottom: calc(var(--spacing-7) * -1);
 }
 
 /* Left */
@@ -7849,38 +7849,38 @@ Adapted from:
 }
 
 .nl1 {
-  margin-left: -var(--spacing-1);
-  margin-left: -var(--spacing-1);
+  margin-left: calc(.25rem * -1);
+  margin-left: calc(var(--spacing-1) * -1);
 }
 
 .nl2 {
-  margin-left: -var(--spacing-2);
-  margin-left: -var(--spacing-2);
+  margin-left: calc(.5rem * -1);
+  margin-left: calc(var(--spacing-2) * -1);
 }
 
 .nl3 {
-  margin-left: -var(--spacing-3);
-  margin-left: -var(--spacing-3);
+  margin-left: calc(1rem * -1);
+  margin-left: calc(var(--spacing-3) * -1);
 }
 
 .nl4 {
-  margin-left: -var(--spacing-4);
-  margin-left: -var(--spacing-4);
+  margin-left: calc(2rem * -1);
+  margin-left: calc(var(--spacing-4) * -1);
 }
 
 .nl5 {
-  margin-left: -var(--spacing-5);
-  margin-left: -var(--spacing-5);
+  margin-left: calc(4rem * -1);
+  margin-left: calc(var(--spacing-5) * -1);
 }
 
 .nl6 {
-  margin-left: -var(--spacing-6);
-  margin-left: -var(--spacing-6);
+  margin-left: calc(8rem * -1);
+  margin-left: calc(var(--spacing-6) * -1);
 }
 
 .nl7 {
-  margin-left: -var(--spacing-7);
-  margin-left: -var(--spacing-7);
+  margin-left: calc(16rem * -1);
+  margin-left: calc(var(--spacing-7) * -1);
 }
 
 /* Vertical (top + bottom) */
@@ -7891,52 +7891,52 @@ Adapted from:
 }
 
 .nv1 {
-  margin-top: -var(--spacing-1);
-  margin-top: -var(--spacing-1);
-  margin-bottom: -var(--spacing-1);
-  margin-bottom: -var(--spacing-1);
+  margin-top: calc(.25rem * -1);
+  margin-top: calc(var(--spacing-1) * -1);
+  margin-bottom: calc(.25rem * -1);
+  margin-bottom: calc(var(--spacing-1) * -1);
 }
 
 .nv2 {
-  margin-top: -var(--spacing-2);
-  margin-top: -var(--spacing-2);
-  margin-bottom: -var(--spacing-2);
-  margin-bottom: -var(--spacing-2);
+  margin-top: calc(.5rem * -1);
+  margin-top: calc(var(--spacing-2) * -1);
+  margin-bottom: calc(.5rem * -1);
+  margin-bottom: calc(var(--spacing-2) * -1);
 }
 
 .nv3 {
-  margin-top: -var(--spacing-3);
-  margin-top: -var(--spacing-3);
-  margin-bottom: -var(--spacing-3);
-  margin-bottom: -var(--spacing-3);
+  margin-top: calc(1rem * -1);
+  margin-top: calc(var(--spacing-3) * -1);
+  margin-bottom: calc(1rem * -1);
+  margin-bottom: calc(var(--spacing-3) * -1);
 }
 
 .nv4 {
-  margin-top: -var(--spacing-4);
-  margin-top: -var(--spacing-4);
-  margin-bottom: -var(--spacing-4);
-  margin-bottom: -var(--spacing-4);
+  margin-top: calc(2rem * -1);
+  margin-top: calc(var(--spacing-4) * -1);
+  margin-bottom: calc(2rem * -1);
+  margin-bottom: calc(var(--spacing-4) * -1);
 }
 
 .nv5 {
-  margin-top: -var(--spacing-5);
-  margin-top: -var(--spacing-5);
-  margin-bottom: -var(--spacing-5);
-  margin-bottom: -var(--spacing-5);
+  margin-top: calc(4rem * -1);
+  margin-top: calc(var(--spacing-5) * -1);
+  margin-bottom: calc(4rem * -1);
+  margin-bottom: calc(var(--spacing-5) * -1);
 }
 
 .nv6 {
-  margin-top: -var(--spacing-6);
-  margin-top: -var(--spacing-6);
-  margin-bottom: -var(--spacing-6);
-  margin-bottom: -var(--spacing-6);
+  margin-top: calc(8rem * -1);
+  margin-top: calc(var(--spacing-6) * -1);
+  margin-bottom: calc(8rem * -1);
+  margin-bottom: calc(var(--spacing-6) * -1);
 }
 
 .nv7 {
-  margin-top: -var(--spacing-7);
-  margin-top: -var(--spacing-7);
-  margin-bottom: -var(--spacing-7);
-  margin-bottom: -var(--spacing-7);
+  margin-top: calc(16rem * -1);
+  margin-top: calc(var(--spacing-7) * -1);
+  margin-bottom: calc(16rem * -1);
+  margin-bottom: calc(var(--spacing-7) * -1);
 }
 
 /* Horizontal (left + right) */
@@ -7947,52 +7947,52 @@ Adapted from:
 }
 
 .nh1 {
-  margin-left: -var(--spacing-1);
-  margin-left: -var(--spacing-1);
-  margin-right: -var(--spacing-1);
-  margin-right: -var(--spacing-1);
+  margin-left: calc(.25rem * -1);
+  margin-left: calc(var(--spacing-1) * -1);
+  margin-right: calc(.25rem * -1);
+  margin-right: calc(var(--spacing-1) * -1);
 }
 
 .nh2 {
-  margin-left: -var(--spacing-2);
-  margin-left: -var(--spacing-2);
-  margin-right: -var(--spacing-2);
-  margin-right: -var(--spacing-2);
+  margin-left: calc(.5rem * -1);
+  margin-left: calc(var(--spacing-2) * -1);
+  margin-right: calc(.5rem * -1);
+  margin-right: calc(var(--spacing-2) * -1);
 }
 
 .nh3 {
-  margin-left: -var(--spacing-3);
-  margin-left: -var(--spacing-3);
-  margin-right: -var(--spacing-3);
-  margin-right: -var(--spacing-3);
+  margin-left: calc(1rem * -1);
+  margin-left: calc(var(--spacing-3) * -1);
+  margin-right: calc(1rem * -1);
+  margin-right: calc(var(--spacing-3) * -1);
 }
 
 .nh4 {
-  margin-left: -var(--spacing-4);
-  margin-left: -var(--spacing-4);
-  margin-right: -var(--spacing-4);
-  margin-right: -var(--spacing-4);
+  margin-left: calc(2rem * -1);
+  margin-left: calc(var(--spacing-4) * -1);
+  margin-right: calc(2rem * -1);
+  margin-right: calc(var(--spacing-4) * -1);
 }
 
 .nh5 {
-  margin-left: -var(--spacing-5);
-  margin-left: -var(--spacing-5);
-  margin-right: -var(--spacing-5);
-  margin-right: -var(--spacing-5);
+  margin-left: calc(4rem * -1);
+  margin-left: calc(var(--spacing-5) * -1);
+  margin-right: calc(4rem * -1);
+  margin-right: calc(var(--spacing-5) * -1);
 }
 
 .nh6 {
-  margin-left: -var(--spacing-6);
-  margin-left: -var(--spacing-6);
-  margin-right: -var(--spacing-6);
-  margin-right: -var(--spacing-6);
+  margin-left: calc(8rem * -1);
+  margin-left: calc(var(--spacing-6) * -1);
+  margin-right: calc(8rem * -1);
+  margin-right: calc(var(--spacing-6) * -1);
 }
 
 .nh7 {
-  margin-left: -var(--spacing-7);
-  margin-left: -var(--spacing-7);
-  margin-right: -var(--spacing-7);
-  margin-right: -var(--spacing-7);
+  margin-left: calc(16rem * -1);
+  margin-left: calc(var(--spacing-7) * -1);
+  margin-right: calc(16rem * -1);
+  margin-right: calc(var(--spacing-7) * -1);
 }
 
 /*
@@ -16978,38 +16978,38 @@ Adapted from: http://tachyons.io/docs/debug-grid/
   }
 
   .sm\:na1 {
-    margin: -var(--spacing-1);
-    margin: -var(--spacing-1);
+    margin: calc(.25rem * -1);
+    margin: calc(var(--spacing-1) * -1);
   }
 
   .sm\:na2 {
-    margin: -var(--spacing-2);
-    margin: -var(--spacing-2);
+    margin: calc(.5rem * -1);
+    margin: calc(var(--spacing-2) * -1);
   }
 
   .sm\:na3 {
-    margin: -var(--spacing-3);
-    margin: -var(--spacing-3);
+    margin: calc(1rem * -1);
+    margin: calc(var(--spacing-3) * -1);
   }
 
   .sm\:na4 {
-    margin: -var(--spacing-4);
-    margin: -var(--spacing-4);
+    margin: calc(2rem * -1);
+    margin: calc(var(--spacing-4) * -1);
   }
 
   .sm\:na5 {
-    margin: -var(--spacing-5);
-    margin: -var(--spacing-5);
+    margin: calc(4rem * -1);
+    margin: calc(var(--spacing-5) * -1);
   }
 
   .sm\:na6 {
-    margin: -var(--spacing-6);
-    margin: -var(--spacing-6);
+    margin: calc(8rem * -1);
+    margin: calc(var(--spacing-6) * -1);
   }
 
   .sm\:na7 {
-    margin: -var(--spacing-7);
-    margin: -var(--spacing-7);
+    margin: calc(16rem * -1);
+    margin: calc(var(--spacing-7) * -1);
   }/* Top */
 
   .sm\:nt0 {
@@ -17017,38 +17017,38 @@ Adapted from: http://tachyons.io/docs/debug-grid/
   }
 
   .sm\:nt1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
   }
 
   .sm\:nt2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
   }
 
   .sm\:nt3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
   }
 
   .sm\:nt4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
   }
 
   .sm\:nt5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
   }
 
   .sm\:nt6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
   }
 
   .sm\:nt7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
   }/* Right */
 
   .sm\:nr0 {
@@ -17056,38 +17056,38 @@ Adapted from: http://tachyons.io/docs/debug-grid/
   }
 
   .sm\:nr1 {
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .sm\:nr2 {
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .sm\:nr3 {
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .sm\:nr4 {
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .sm\:nr5 {
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .sm\:nr6 {
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .sm\:nr7 {
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* Bottom */
 
   .sm\:nb0 {
@@ -17095,38 +17095,38 @@ Adapted from: http://tachyons.io/docs/debug-grid/
   }
 
   .sm\:nb1 {
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .sm\:nb2 {
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .sm\:nb3 {
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .sm\:nb4 {
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .sm\:nb5 {
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .sm\:nb6 {
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .sm\:nb7 {
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Left */
 
   .sm\:nl0 {
@@ -17134,38 +17134,38 @@ Adapted from: http://tachyons.io/docs/debug-grid/
   }
 
   .sm\:nl1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
   }
 
   .sm\:nl2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
   }
 
   .sm\:nl3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
   }
 
   .sm\:nl4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
   }
 
   .sm\:nl5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
   }
 
   .sm\:nl6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
   }
 
   .sm\:nl7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
   }/* Vertical (top + bottom) */
 
   .sm\:nv0 {
@@ -17174,52 +17174,52 @@ Adapted from: http://tachyons.io/docs/debug-grid/
   }
 
   .sm\:nv1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .sm\:nv2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .sm\:nv3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .sm\:nv4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .sm\:nv5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .sm\:nv6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .sm\:nv7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Horizontal (left + right) */
 
   .sm\:nh0 {
@@ -17228,52 +17228,52 @@ Adapted from: http://tachyons.io/docs/debug-grid/
   }
 
   .sm\:nh1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .sm\:nh2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .sm\:nh3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .sm\:nh4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .sm\:nh5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .sm\:nh6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .sm\:nh7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* All */
 
   .sm\:pa0 {
@@ -25732,38 +25732,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .md\:na1 {
-    margin: -var(--spacing-1);
-    margin: -var(--spacing-1);
+    margin: calc(.25rem * -1);
+    margin: calc(var(--spacing-1) * -1);
   }
 
   .md\:na2 {
-    margin: -var(--spacing-2);
-    margin: -var(--spacing-2);
+    margin: calc(.5rem * -1);
+    margin: calc(var(--spacing-2) * -1);
   }
 
   .md\:na3 {
-    margin: -var(--spacing-3);
-    margin: -var(--spacing-3);
+    margin: calc(1rem * -1);
+    margin: calc(var(--spacing-3) * -1);
   }
 
   .md\:na4 {
-    margin: -var(--spacing-4);
-    margin: -var(--spacing-4);
+    margin: calc(2rem * -1);
+    margin: calc(var(--spacing-4) * -1);
   }
 
   .md\:na5 {
-    margin: -var(--spacing-5);
-    margin: -var(--spacing-5);
+    margin: calc(4rem * -1);
+    margin: calc(var(--spacing-5) * -1);
   }
 
   .md\:na6 {
-    margin: -var(--spacing-6);
-    margin: -var(--spacing-6);
+    margin: calc(8rem * -1);
+    margin: calc(var(--spacing-6) * -1);
   }
 
   .md\:na7 {
-    margin: -var(--spacing-7);
-    margin: -var(--spacing-7);
+    margin: calc(16rem * -1);
+    margin: calc(var(--spacing-7) * -1);
   }/* Top */
 
   .md\:nt0 {
@@ -25771,38 +25771,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .md\:nt1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
   }
 
   .md\:nt2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
   }
 
   .md\:nt3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
   }
 
   .md\:nt4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
   }
 
   .md\:nt5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
   }
 
   .md\:nt6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
   }
 
   .md\:nt7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
   }/* Right */
 
   .md\:nr0 {
@@ -25810,38 +25810,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .md\:nr1 {
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .md\:nr2 {
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .md\:nr3 {
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .md\:nr4 {
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .md\:nr5 {
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .md\:nr6 {
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .md\:nr7 {
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* Bottom */
 
   .md\:nb0 {
@@ -25849,38 +25849,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .md\:nb1 {
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .md\:nb2 {
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .md\:nb3 {
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .md\:nb4 {
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .md\:nb5 {
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .md\:nb6 {
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .md\:nb7 {
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Left */
 
   .md\:nl0 {
@@ -25888,38 +25888,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .md\:nl1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
   }
 
   .md\:nl2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
   }
 
   .md\:nl3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
   }
 
   .md\:nl4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
   }
 
   .md\:nl5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
   }
 
   .md\:nl6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
   }
 
   .md\:nl7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
   }/* Vertical (top + bottom) */
 
   .md\:nv0 {
@@ -25928,52 +25928,52 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .md\:nv1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .md\:nv2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .md\:nv3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .md\:nv4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .md\:nv5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .md\:nv6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .md\:nv7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Horizontal (left + right) */
 
   .md\:nh0 {
@@ -25982,52 +25982,52 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .md\:nh1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .md\:nh2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .md\:nh3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .md\:nh4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .md\:nh5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .md\:nh6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .md\:nh7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* All */
 
   .md\:pa0 {
@@ -34486,38 +34486,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .lg\:na1 {
-    margin: -var(--spacing-1);
-    margin: -var(--spacing-1);
+    margin: calc(.25rem * -1);
+    margin: calc(var(--spacing-1) * -1);
   }
 
   .lg\:na2 {
-    margin: -var(--spacing-2);
-    margin: -var(--spacing-2);
+    margin: calc(.5rem * -1);
+    margin: calc(var(--spacing-2) * -1);
   }
 
   .lg\:na3 {
-    margin: -var(--spacing-3);
-    margin: -var(--spacing-3);
+    margin: calc(1rem * -1);
+    margin: calc(var(--spacing-3) * -1);
   }
 
   .lg\:na4 {
-    margin: -var(--spacing-4);
-    margin: -var(--spacing-4);
+    margin: calc(2rem * -1);
+    margin: calc(var(--spacing-4) * -1);
   }
 
   .lg\:na5 {
-    margin: -var(--spacing-5);
-    margin: -var(--spacing-5);
+    margin: calc(4rem * -1);
+    margin: calc(var(--spacing-5) * -1);
   }
 
   .lg\:na6 {
-    margin: -var(--spacing-6);
-    margin: -var(--spacing-6);
+    margin: calc(8rem * -1);
+    margin: calc(var(--spacing-6) * -1);
   }
 
   .lg\:na7 {
-    margin: -var(--spacing-7);
-    margin: -var(--spacing-7);
+    margin: calc(16rem * -1);
+    margin: calc(var(--spacing-7) * -1);
   }/* Top */
 
   .lg\:nt0 {
@@ -34525,38 +34525,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .lg\:nt1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
   }
 
   .lg\:nt2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
   }
 
   .lg\:nt3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
   }
 
   .lg\:nt4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
   }
 
   .lg\:nt5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
   }
 
   .lg\:nt6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
   }
 
   .lg\:nt7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
   }/* Right */
 
   .lg\:nr0 {
@@ -34564,38 +34564,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .lg\:nr1 {
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .lg\:nr2 {
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .lg\:nr3 {
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .lg\:nr4 {
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .lg\:nr5 {
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .lg\:nr6 {
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .lg\:nr7 {
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* Bottom */
 
   .lg\:nb0 {
@@ -34603,38 +34603,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .lg\:nb1 {
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .lg\:nb2 {
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .lg\:nb3 {
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .lg\:nb4 {
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .lg\:nb5 {
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .lg\:nb6 {
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .lg\:nb7 {
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Left */
 
   .lg\:nl0 {
@@ -34642,38 +34642,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .lg\:nl1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
   }
 
   .lg\:nl2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
   }
 
   .lg\:nl3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
   }
 
   .lg\:nl4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
   }
 
   .lg\:nl5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
   }
 
   .lg\:nl6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
   }
 
   .lg\:nl7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
   }/* Vertical (top + bottom) */
 
   .lg\:nv0 {
@@ -34682,52 +34682,52 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .lg\:nv1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .lg\:nv2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .lg\:nv3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .lg\:nv4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .lg\:nv5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .lg\:nv6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .lg\:nv7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Horizontal (left + right) */
 
   .lg\:nh0 {
@@ -34736,52 +34736,52 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .lg\:nh1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .lg\:nh2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .lg\:nh3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .lg\:nh4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .lg\:nh5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .lg\:nh6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .lg\:nh7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* All */
 
   .lg\:pa0 {
@@ -43240,38 +43240,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .xl\:na1 {
-    margin: -var(--spacing-1);
-    margin: -var(--spacing-1);
+    margin: calc(.25rem * -1);
+    margin: calc(var(--spacing-1) * -1);
   }
 
   .xl\:na2 {
-    margin: -var(--spacing-2);
-    margin: -var(--spacing-2);
+    margin: calc(.5rem * -1);
+    margin: calc(var(--spacing-2) * -1);
   }
 
   .xl\:na3 {
-    margin: -var(--spacing-3);
-    margin: -var(--spacing-3);
+    margin: calc(1rem * -1);
+    margin: calc(var(--spacing-3) * -1);
   }
 
   .xl\:na4 {
-    margin: -var(--spacing-4);
-    margin: -var(--spacing-4);
+    margin: calc(2rem * -1);
+    margin: calc(var(--spacing-4) * -1);
   }
 
   .xl\:na5 {
-    margin: -var(--spacing-5);
-    margin: -var(--spacing-5);
+    margin: calc(4rem * -1);
+    margin: calc(var(--spacing-5) * -1);
   }
 
   .xl\:na6 {
-    margin: -var(--spacing-6);
-    margin: -var(--spacing-6);
+    margin: calc(8rem * -1);
+    margin: calc(var(--spacing-6) * -1);
   }
 
   .xl\:na7 {
-    margin: -var(--spacing-7);
-    margin: -var(--spacing-7);
+    margin: calc(16rem * -1);
+    margin: calc(var(--spacing-7) * -1);
   }/* Top */
 
   .xl\:nt0 {
@@ -43279,38 +43279,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .xl\:nt1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
   }
 
   .xl\:nt2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
   }
 
   .xl\:nt3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
   }
 
   .xl\:nt4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
   }
 
   .xl\:nt5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
   }
 
   .xl\:nt6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
   }
 
   .xl\:nt7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
   }/* Right */
 
   .xl\:nr0 {
@@ -43318,38 +43318,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .xl\:nr1 {
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .xl\:nr2 {
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .xl\:nr3 {
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .xl\:nr4 {
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .xl\:nr5 {
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .xl\:nr6 {
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .xl\:nr7 {
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* Bottom */
 
   .xl\:nb0 {
@@ -43357,38 +43357,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .xl\:nb1 {
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .xl\:nb2 {
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .xl\:nb3 {
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .xl\:nb4 {
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .xl\:nb5 {
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .xl\:nb6 {
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .xl\:nb7 {
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Left */
 
   .xl\:nl0 {
@@ -43396,38 +43396,38 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .xl\:nl1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
   }
 
   .xl\:nl2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
   }
 
   .xl\:nl3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
   }
 
   .xl\:nl4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
   }
 
   .xl\:nl5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
   }
 
   .xl\:nl6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
   }
 
   .xl\:nl7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
   }/* Vertical (top + bottom) */
 
   .xl\:nv0 {
@@ -43436,52 +43436,52 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .xl\:nv1 {
-    margin-top: -var(--spacing-1);
-    margin-top: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
-    margin-bottom: -var(--spacing-1);
+    margin-top: calc(.25rem * -1);
+    margin-top: calc(var(--spacing-1) * -1);
+    margin-bottom: calc(.25rem * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
   }
 
   .xl\:nv2 {
-    margin-top: -var(--spacing-2);
-    margin-top: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
-    margin-bottom: -var(--spacing-2);
+    margin-top: calc(.5rem * -1);
+    margin-top: calc(var(--spacing-2) * -1);
+    margin-bottom: calc(.5rem * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
   }
 
   .xl\:nv3 {
-    margin-top: -var(--spacing-3);
-    margin-top: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
-    margin-bottom: -var(--spacing-3);
+    margin-top: calc(1rem * -1);
+    margin-top: calc(var(--spacing-3) * -1);
+    margin-bottom: calc(1rem * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
   }
 
   .xl\:nv4 {
-    margin-top: -var(--spacing-4);
-    margin-top: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
-    margin-bottom: -var(--spacing-4);
+    margin-top: calc(2rem * -1);
+    margin-top: calc(var(--spacing-4) * -1);
+    margin-bottom: calc(2rem * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
   }
 
   .xl\:nv5 {
-    margin-top: -var(--spacing-5);
-    margin-top: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
-    margin-bottom: -var(--spacing-5);
+    margin-top: calc(4rem * -1);
+    margin-top: calc(var(--spacing-5) * -1);
+    margin-bottom: calc(4rem * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
   }
 
   .xl\:nv6 {
-    margin-top: -var(--spacing-6);
-    margin-top: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
-    margin-bottom: -var(--spacing-6);
+    margin-top: calc(8rem * -1);
+    margin-top: calc(var(--spacing-6) * -1);
+    margin-bottom: calc(8rem * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
   }
 
   .xl\:nv7 {
-    margin-top: -var(--spacing-7);
-    margin-top: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
-    margin-bottom: -var(--spacing-7);
+    margin-top: calc(16rem * -1);
+    margin-top: calc(var(--spacing-7) * -1);
+    margin-bottom: calc(16rem * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
   }/* Horizontal (left + right) */
 
   .xl\:nh0 {
@@ -43490,52 +43490,52 @@ See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-te
   }
 
   .xl\:nh1 {
-    margin-left: -var(--spacing-1);
-    margin-left: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
-    margin-right: -var(--spacing-1);
+    margin-left: calc(.25rem * -1);
+    margin-left: calc(var(--spacing-1) * -1);
+    margin-right: calc(.25rem * -1);
+    margin-right: calc(var(--spacing-1) * -1);
   }
 
   .xl\:nh2 {
-    margin-left: -var(--spacing-2);
-    margin-left: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
-    margin-right: -var(--spacing-2);
+    margin-left: calc(.5rem * -1);
+    margin-left: calc(var(--spacing-2) * -1);
+    margin-right: calc(.5rem * -1);
+    margin-right: calc(var(--spacing-2) * -1);
   }
 
   .xl\:nh3 {
-    margin-left: -var(--spacing-3);
-    margin-left: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
-    margin-right: -var(--spacing-3);
+    margin-left: calc(1rem * -1);
+    margin-left: calc(var(--spacing-3) * -1);
+    margin-right: calc(1rem * -1);
+    margin-right: calc(var(--spacing-3) * -1);
   }
 
   .xl\:nh4 {
-    margin-left: -var(--spacing-4);
-    margin-left: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
-    margin-right: -var(--spacing-4);
+    margin-left: calc(2rem * -1);
+    margin-left: calc(var(--spacing-4) * -1);
+    margin-right: calc(2rem * -1);
+    margin-right: calc(var(--spacing-4) * -1);
   }
 
   .xl\:nh5 {
-    margin-left: -var(--spacing-5);
-    margin-left: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
-    margin-right: -var(--spacing-5);
+    margin-left: calc(4rem * -1);
+    margin-left: calc(var(--spacing-5) * -1);
+    margin-right: calc(4rem * -1);
+    margin-right: calc(var(--spacing-5) * -1);
   }
 
   .xl\:nh6 {
-    margin-left: -var(--spacing-6);
-    margin-left: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
-    margin-right: -var(--spacing-6);
+    margin-left: calc(8rem * -1);
+    margin-left: calc(var(--spacing-6) * -1);
+    margin-right: calc(8rem * -1);
+    margin-right: calc(var(--spacing-6) * -1);
   }
 
   .xl\:nh7 {
-    margin-left: -var(--spacing-7);
-    margin-left: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
-    margin-right: -var(--spacing-7);
+    margin-left: calc(16rem * -1);
+    margin-left: calc(var(--spacing-7) * -1);
+    margin-right: calc(16rem * -1);
+    margin-right: calc(var(--spacing-7) * -1);
   }/* All */
 
   .xl\:pa0 {

@@ -255,10 +255,10 @@ const ProjectHeader = ({ project, expanded }) => (
   <div className="group flex justify-between items-baseline container pv2">
     <div>
       <h3 className="mb2 lh-solid f2 sm:f1 fw9 ttu">{project.title}</h3>
-      <ul>
+      <ul className="nb2">
         {project.tags.map(tag => {
           return (
-            <li key={shortid()} className="dib mr2 bg-green pv1 ph2 md:f4 fw4 ttl">
+            <li key={shortid()} className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl">
               {tag}
             </li>
           )
@@ -289,39 +289,51 @@ import Img from '../components/Img'
 
 const ProjectDetails = ({ project }) => (
   <div className="container pt4 lh-tall">
-    <div
+    {/* <div> */}
+    {/* <div
       className="mb4 "
       style={{
         display: `grid`,
         gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr)`,
         gridGap: `1rem`
       }}
-    >
-      {/* Remove the "images" loop? */}
-      {project.images ? (
-        project.images.map(photo => {
+    > */}
+    {/* Remove the "images" loop? */}
+    {project.images ? (
+      <ul
+        className="mb4 "
+        style={{
+          display: `grid`,
+          gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr)`,
+          gridGap: `1rem`
+        }}
+      >
+        {project.images.map(photo => {
           return (
-            <Img
-              key={shortid()}
-              sizes={photo.image.childImageSharp.sizes}
-              alt={photo.alt}
-              critical={true}
-              className="shadow-lg"
-            />
+            <li>
+              <Img
+                key={shortid()}
+                sizes={photo.image.childImageSharp.sizes}
+                alt={photo.alt}
+                critical={true}
+                className="shadow-lg"
+              />
+            </li>
           )
-        })
-      ) : (
-        <figure role="group">
-          <Img
-            sizes={project.image.childImageSharp.sizes}
-            alt={project.alt}
-            critical={true}
-            className="shadow-lg"
-          />
-          <figcaption className="o-50 pt1 f6">{project.alt}</figcaption>
-        </figure>
-      )}
-    </div>
+        })}
+      </ul>
+    ) : (
+      <figure role="group">
+        <Img
+          sizes={project.image.childImageSharp.sizes}
+          alt={project.alt}
+          critical={true}
+          className="shadow-lg"
+        />
+        <figcaption className="o-50 pt1 f6">{project.alt}</figcaption>
+      </figure>
+    )}
+    {/* </div> */}
 
     {project.reviews &&
       project.reviews.map(review => {

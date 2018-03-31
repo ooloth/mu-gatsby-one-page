@@ -54,6 +54,16 @@ export const query = graphql`
     allOperaJson {
       edges {
         node {
+          images {
+            image {
+              childImageSharp {
+                sizes(maxWidth: 940) {
+                  src
+                }
+              }
+            }
+            alt
+          }
           image {
             childImageSharp {
               sizes(maxWidth: 940) {
