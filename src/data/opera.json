@@ -130,11 +130,12 @@
     "link": "http://againstthegraintheatre.com/bound/"
   },
   {
-    "image": "../images/opera/claude-vivier.jpg",
-    "alt": "Claude Vivier. Photo by Boosey and Hawkes.",
+    "image": "../images/opera/kopernikus.jpg",
+    "alt":
+      "Michael Uloth (back, centre) in the Banff Centre for Arts and Creativity's production of Kopernikus.",
     "title": "Kopernikus",
     "category": "Opera",
-    "tags": ["Banff Centre for the Arts"],
+    "tags": ["Banff Centre for Arts and Creativity"],
     "reviews": [
       {
         "quotation":
@@ -148,7 +149,8 @@
     "details": [
       {
         "name": "Company",
-        "value": "\"Open Space: Opera in the 21st Century\", Banff Centre for the Arts"
+        "value":
+          "\"Open Space: Opera in the 21st Century\", Banff Centre for Arts and Creativity"
       },
       {
         "name": "Opera",
@@ -228,9 +230,9 @@
     "link": "http://www.paxchristichorale.org"
   },
   {
-    "image": "../images/opera/die-zauberflote.jpg",
+    "image": "../images/opera/zauberflote-2.jpg",
     "alt":
-      "Design for The Magic Flute: \"The Hall of Stars in the Palace of the Queen of the Night, Act 1, Scene 6\" by Karl Friedrich Schinkel (1781–1841).",
+      "A scene from the Canadian Opera Company's production of The Magic Flute, 2017. Image by Michael Cooper.",
     "title": "Die Zauberflöte",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -435,7 +437,7 @@
   {
     "image": "../images/opera/falstaff.jpg",
     "alt":
-      "Pistol announcing to Falstaff the death of the King. Painting by John Cawse, circa 1820s.",
+      "\"Pistol announcing to Falstaff the death of the King\". Painting by John Cawse, circa 1820s.",
     "title": "Falstaff",
     "category": "Opera",
     "tags": ["Highlands Opera Studio"],
@@ -633,7 +635,7 @@
   },
   {
     "image": "../images/opera/stravinsky.jpg",
-    "alt": "Igor Stravinsky in 1929. Image by Boris Lipnitzky.",
+    "alt": "1929 photograph of Igor Stravinsky by Boris Lipnitzky.",
     "title": "Renard",
     "category": "Opera",
     "tags": ["Brooklyn Academy of Music"],
@@ -755,7 +757,8 @@
   },
   {
     "image": "../images/opera/aida.jpg",
-    "alt": "The Canadian Opera Company's production of Aida. Image by Michael Cooper.",
+    "alt":
+      "A scene from the Canadian Opera Company's production of Aida. Image by Michael Cooper.",
     "title": "Aida",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -872,7 +875,8 @@
   },
   {
     "image": "../images/opera/otello.jpg",
-    "alt": "The Canadian Opera Company's production of Otello. Image by Michael Cooper.",
+    "alt":
+      "A scene from the Canadian Opera Company's production of Otello. Image by Michael Cooper.",
     "title": "Otello",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1035,7 +1039,7 @@
   },
   {
     "image": "../images/opera/stravinsky.jpg",
-    "alt": "Igor Stravinsky in 1929. Image by Boris Lipnitzky.",
+    "alt": "1929 photograph of Igor Stravinsky by Boris Lipnitzky.",
     "title": "Renard",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1193,7 +1197,8 @@
   },
   {
     "image": "../images/opera/boheme.jpg",
-    "alt": "The Canadian Opera Company's production of La Bohème. Image by Michael Cooper.",
+    "alt":
+      "A scene from the Canadian Opera Company's production of La Bohème. Image by Michael Cooper.",
     "title": "La Bohème",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1234,7 +1239,7 @@
   {
     "image": "../images/opera/simon-boccanegra.jpg",
     "alt":
-      "The Canadian Opera Company's production of Simon Boccanegra. Image by Michael Cooper.",
+      "A scene from the Canadian Opera Company's production of Simon Boccanegra. Image by Michael Cooper.",
     "title": "Simon Boccanegra",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1315,7 +1320,7 @@
   },
   {
     "image": "../images/opera/don-giovanni.jpg",
-    "alt": "A 1912 painting of Don Giovanni by Max Slevogt.",
+    "alt": "1912 painting of Don Giovanni by Max Slevogt.",
     "title": "Don Giovanni",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
