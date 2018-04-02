@@ -1,7 +1,7 @@
 const IndexPage = ({ data }) => {
   // Merge opera and website projects (alternate website, opera, website, etc.)
-  const array1 = data.allWebsitesJson.edges
-  const array2 = data.allOperaJson.edges
+  const array1 = data.allOperaJson.edges
+  const array2 = data.allWebsitesJson.edges
   let combinedArray = []
 
   // General function for merging arrays in an alternating pattern
