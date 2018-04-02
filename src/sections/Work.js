@@ -301,7 +301,7 @@ const ProjectDetails = ({ project }) => (
     {/* Remove the "images" loop? */}
     {project.images ? (
       <ul
-        className="mb4 "
+        className=""
         style={{
           display: `grid`,
           gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr)`,
@@ -338,7 +338,7 @@ const ProjectDetails = ({ project }) => (
     {project.reviews &&
       project.reviews.map(review => {
         return (
-          <blockquote key={shortid()} className="mt4 pv1">
+          <blockquote key={shortid()} className="mt4 pv2">
             <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
               <p className="mb2 f3">{review.quotation}</p>
               {review.link ? (
@@ -355,9 +355,9 @@ const ProjectDetails = ({ project }) => (
         )
       })}
 
-    <p className="mb4 measure">{project.description}</p>
+    <p className="mt4 measure">{project.description}</p>
 
-    <div className="mb4">
+    <div className="mt4">
       {project.details &&
         project.details.map(detail => {
           return (
@@ -371,7 +371,7 @@ const ProjectDetails = ({ project }) => (
         })}
     </div>
 
-    <HyperLink href={project.link} className="link mb4 tc">
+    <HyperLink href={project.link} className="link mv4 tc">
       View site →
     </HyperLink>
   </div>
