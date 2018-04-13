@@ -105,6 +105,7 @@ const SiteMetadata = ({ site }) => (
     <meta property="og:site_name" content={site.title} />
     <meta property="og:locale" content={site.locale} />
 
+    {/* Google Search Console */}
     <meta
       name="google-site-verification"
       content="SwZ5_vDFUMkbYGZyzpeZh49ZTqf_59byEFmTG4eWK_w"
