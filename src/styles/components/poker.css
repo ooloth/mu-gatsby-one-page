@@ -1,0 +1,13 @@
+[data-action="raise"]           { @apply .bg-light-red }
+[data-action="raiseOrCall"]     { @apply .bg-light-pink }
+[data-action="raiseOrFold"]     { @apply .bg-light-red .o-50 }
+[data-action="call"]            { @apply .bg-green }
+[data-action="callOrFold"]      { @apply .bg-green .o-50 }
+[data-action="raiseCallOrFold"] { @apply .bg-light-blue }
+[data-action="fold"]            { @apply .bg-moon-gray .o-20 }
+
+.poker-link {
+  @apply .mb2 .b--black .br4 .bg-black .pv2 .ph3 .lh-solid .ttu .tracked .white;
+
+  &:hover { @apply .bg-green .black .shadow-md }
+}

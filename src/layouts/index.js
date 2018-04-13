@@ -1,10 +1,30 @@
-const BaseLayout = ({ children, data }) => (
-  <div className="avenir">
-    <SiteMetadata site={data.site.siteMetadata} />
-    {children()}
-    <BasicStructuredData />
-  </div>
-)
+class BaseLayout extends Component {
+  componentDidMount = () => {
+    // Load Google Analytics tracking code
+    loadjs('https://www.googletagmanager.com/gtag/js?id=UA-9710963-3', () => {
+      window.dataLayer = window.dataLayer || []
+
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+
+      gtag('js', new Date())
+      gtag('config', 'UA-9710963-3')
+    })
+  }
+
+  render() {
+    const { children, data } = this.props
+
+    return (
+      <div className="avenir">
+        <SiteMetadata site={data.site.siteMetadata} />
+        {children()}
+        <BasicStructuredData />
+      </div>
+    )
+  }
+}
 
 BaseLayout.propTypes = {
   children: PropTypes.func
@@ -18,9 +38,10 @@ export default BaseLayout
  * 
  */
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import loadjs from 'loadjs'
 
 /*
  *

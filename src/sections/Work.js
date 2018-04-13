@@ -258,7 +258,10 @@ const ProjectHeader = ({ project, expanded }) => (
       <ul className="nb2">
         {project.tags.map(tag => {
           return (
-            <li key={shortid()} className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl">
+            <li
+              key={shortid.generate()}
+              className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl"
+            >
               {tag}
             </li>
           )
@@ -312,7 +315,7 @@ const ProjectDetails = ({ project }) => (
           return (
             <li>
               <Img
-                key={shortid()}
+                key={shortid.generate()}
                 sizes={photo.image.childImageSharp.sizes}
                 alt={photo.alt}
                 critical={true}
@@ -338,7 +341,7 @@ const ProjectDetails = ({ project }) => (
     {project.reviews &&
       project.reviews.map(review => {
         return (
-          <blockquote key={shortid()} className="mt4 pv2">
+          <blockquote key={shortid.generate()} className="mt4 pv2">
             <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
               <p className="mb2 f3">{review.quotation}</p>
               {review.link ? (
@@ -362,7 +365,7 @@ const ProjectDetails = ({ project }) => (
         project.details.map(detail => {
           return (
             detail.name !== `Dates` && (
-              <dl key={shortid()}>
+              <dl key={shortid.generate()}>
                 <dt className="dib fw7">{detail.name}:&nbsp;</dt>
                 <dd className="dib">{detail.value}</dd>
               </dl>

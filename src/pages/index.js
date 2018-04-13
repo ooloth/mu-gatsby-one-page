@@ -46,8 +46,6 @@ import Hero from '../sections/Hero'
 import Work from '../sections/Work'
 import Contact from '../sections/Contact'
 
-import { CounterContainer } from '../sections/Work'
-
 // TODO: update starter with this type of full-page query in pages/index.js
 export const query = graphql`
   query IndexPageQuery {
