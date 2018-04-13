@@ -76,3 +76,10 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
 
   return config
 }
+
+// In Gatsby v1, I need to run dependencies that use ES6 through Babel myself.
+// In this case, this is to debug build errors the prange library:
+// exports.modifyBabelrc = ({ babelrc }) => ({
+//   ...babelrc,
+//   plugins: babelrc.plugins.concat(['transform-es2015-modules-amd'])
+// })
