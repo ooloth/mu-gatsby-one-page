@@ -7,7 +7,9 @@
 [data-action="fold"]            { @apply .bg-moon-gray .o-20 }
 
 .poker-link {
-  @apply .mb2 .b--black .br4 .bg-black .pv2 .ph3 .lh-solid .ttu .tracked .white;
+  @apply .mb2 .b--black .br4 .bg-black .pv1 .ph2 .lh-solid .ttu .tracked .white;
 
   &:hover { @apply .bg-green .black .shadow-md }
+
+  @media (--md) { @apply .pv2 .ph3 }
 }

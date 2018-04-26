@@ -13,6 +13,30 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
  *
  */
 
+@responsive {
+
+  .f8 { font-size: .625rem }
+
+}
+
+.xxxs-f8 {
+  @media (max-width: 25em) {
+    @apply .f8
+  }
+}
+
+.xxs-f7 {
+  @media (min-width: 25em) and (max-width: 30em) {
+    @apply .f7
+  }
+}
+
+.xs-f6 {
+  @media (min-width: 30em) and (max-width: 36em) {
+    @apply .f6
+  }
+}
+
 
 
 /*

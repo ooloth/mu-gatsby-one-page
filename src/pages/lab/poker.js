@@ -270,7 +270,9 @@ const Filters = ({
                   className={`poker-link mh1 ${
                     position === `initial`
                       ? ``
-                      : position === heroPosition ? `bg-green black shadow-md` : `dn`
+                      : position === heroPosition
+                        ? `bg-green black shadow-md`
+                        : `dn`
                   }`}
                 >
                   {heroPosition === `lojack`
@@ -283,7 +285,9 @@ const Filters = ({
                           ? `BTN`
                           : heroPosition === `smallBlind`
                             ? `SB`
-                            : heroPosition === `bigBlind` ? `BB` : ``}
+                            : heroPosition === `bigBlind`
+                              ? `BB`
+                              : ``}
                 </Filter>
               )
             })}
@@ -324,7 +328,9 @@ const Filters = ({
                     onClick={() => updateOpponentPosition(position)}
                     className={`poker-link mh1 ${
                       opponent.position
-                        ? opponent.position === position ? `bg-green black shadow-md` : `dn`
+                        ? opponent.position === position
+                          ? `bg-green black shadow-md`
+                          : `dn`
                         : ``
                     }`}
                   >
@@ -338,18 +344,20 @@ const Filters = ({
                             ? `BTN`
                             : position === `smallBlind`
                               ? `SB`
-                              : position === `bigBlind` ? `BB` : ``}
+                              : position === `bigBlind`
+                                ? `BB`
+                                : ``}
                   </Filter>
                 )
               })}
             </Fragment>
           )}
       </div>
-      {position !== `initial` && (
+      {/* {position !== `initial` && (
         <button onClick={resetRange} className="poker-link mh1">
           Reset
         </button>
-      )}
+      )} */}
     </div>
   )
 }
@@ -408,7 +416,7 @@ const Row = ({ row }) => (
           // style={{ margin: `.1rem` }}
         >
           <div className="aspect-ratio aspect-ratio--1x1">
-            <div className="flex justify-center items-center aspect-ratio--object">
+            <div className="flex justify-center items-center aspect-ratio--object xxxs-f8 xxs-f7 xs-f6">
               {hand.value}
             </div>
           </div>
@@ -833,29 +841,33 @@ class ImpliedOdds extends Component {
     const multipleOfBetsNeededToCall = Math.round((1 / equity - 1) * 10) / 10
 
     return (
-      <article className="flex items-baseline pl1 pv2">
+      <article className="sm:flex items-baseline pl1 pv2">
         {/* <p className="fw7 pr1">Implied Odds:</p> */}
-        <p className="pr1">To call with</p>
-        <select
-          onChange={this.changeEquity}
-          defaultValue={0.1}
-          name="equity"
-          className="bg-green shadow"
-        >
-          <option value={0.35}>35%</option>
-          <option value={0.3}>30%</option>
-          <option value={0.25}>25%</option>
-          <option value={0.2}>20%</option>
-          <option value={0.18}>18%</option>
-          <option value={0.16}>16%</option>
-          <option value={0.12}>12%</option>
-          <option value={0.1}>10%</option>
-          <option value={0.06}>6%</option>
-          <option value={0.04}>4%</option>
-        </select>
-        <p className="pl1">
-          equity, I need to win <span className="f4 fw7">{multipleOfBetsNeededToCall}x</span>{' '}
-          the bet by the river.
+
+        <div className="flex items-baseline">
+          <p className="pr1">To call with</p>
+          <select
+            onChange={this.changeEquity}
+            defaultValue={0.1}
+            name="equity"
+            className="bg-green shadow"
+          >
+            <option value={0.35}>35%</option>
+            <option value={0.3}>30%</option>
+            <option value={0.25}>25%</option>
+            <option value={0.2}>20%</option>
+            <option value={0.18}>18%</option>
+            <option value={0.16}>16%</option>
+            <option value={0.12}>12%</option>
+            <option value={0.1}>10%</option>
+            <option value={0.06}>6%</option>
+            <option value={0.04}>4%</option>
+          </select>
+          &nbsp;equity,&nbsp;
+        </div>
+        <p className="pt1 sm:pt0">
+          I need to win <span className="f4 fw7">{multipleOfBetsNeededToCall}x</span> the bet
+          by the river.
         </p>
       </article>
     )
