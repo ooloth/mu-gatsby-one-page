@@ -171,12 +171,6 @@ import loadjs from 'loadjs'
 class Project extends React.Component {
   state = { expanded: false }
 
-  componentDidMount = () => {
-    if (!loadjs.isDefined('gsap')) {
-      loadjs('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js', 'gsap')
-    }
-  }
-
   handleClick = () => (this.state.expanded ? this.collapse() : this.expand())
 
   expand = () => {
