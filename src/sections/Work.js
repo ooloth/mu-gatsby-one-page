@@ -312,7 +312,6 @@ const ProjectDetails = ({ project }) => (
                 key={shortid.generate()}
                 sizes={photo.image.childImageSharp.sizes}
                 alt={photo.alt}
-                critical={true}
                 className="shadow-lg"
               />
             </li>
@@ -324,7 +323,6 @@ const ProjectDetails = ({ project }) => (
         <Img
           sizes={project.image.childImageSharp.sizes}
           alt={project.alt}
-          critical={true}
           className="shadow-lg"
         />
         <figcaption className="o-50 pt1 f6">{project.alt}</figcaption>
