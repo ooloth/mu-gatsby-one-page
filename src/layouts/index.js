@@ -81,26 +81,26 @@ const SiteMetadata = ({ site }) => (
 
     {/* Search engine */}
     <meta name="description" content={site.description} />
-    <meta name="image" content={siteImage} />
+    <meta name="image" content={site.siteUrl + siteImage} />
     <link rel="canonical" href={site.siteUrl} />
 
     {/* Schema.org for Google */}
     <meta itemprop="name" content={site.title} />
     <meta itemprop="description" content={site.description} />
-    <meta itemprop="image" content={siteImage} />
+    <meta itemprop="image" content={site.siteUrl + siteImage} />
 
     {/* Twitter */}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={site.title} />
     <meta name="twitter:description" content={site.description} />
     {site.twitterHandle && <meta name="twitter:site" content={site.twitterHandle} />}
-    <meta name="twitter:image:src" content={siteImage} />
+    <meta name="twitter:image:src" content={site.siteUrl + siteImage} />
 
     {/* Open Graph general (Facebook, Pinterest, Slack & Google+) */}
     <meta property="og:title" content={site.title} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={site.siteUrl} />
-    <meta property="og:image" content={siteImage} />
+    <meta property="og:image" content={site.siteUrl + siteImage} />
     <meta property="og:description" content={site.description} />
     <meta property="og:site_name" content={site.title} />
     <meta property="og:locale" content={site.locale} />

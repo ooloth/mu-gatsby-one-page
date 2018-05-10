@@ -1,6 +1,6 @@
 [
   {
-    "image": "../images/opera/nightingale.jpg",
+    "image": "../images/opera/nightingale-4.jpg",
     "alt":
       "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
     "title": "The Nightingale",
@@ -92,8 +92,21 @@
       {
         "quotation":
           "Bass Michael Uloth brought a rich, melifluous tone and a striking figure to the stage. His singing is rich and low without feeling woofy or manufactured.",
-        "source": "Schmopera",
+        "source": "Greg Finney, Schmopera",
         "link": "https://www.schmopera.com/equal-parts-stressful-and-reverent-atgbound/"
+      },
+      {
+        "quotation":
+          "It requires no small amount of courage on the part of a bass to sing a piece originally written for castrato. To his abiding credit, Uloth enthusastically embraces the challenge, tackling [the] deservedly celebrated \"Ombra mai fu\"...with a fine sense of proportion.",
+        "source": "Ian Ritchie, Opera Going Toronto",
+        "link": "http://operagoto.com/bound-review/"
+      },
+      {
+        "quotation":
+          "Uloth conveys his despair through the well-known “Ombra mai fu” from Serse...he gave a tender interpretation of this challenging aria.",
+        "source": "Matthew Timmermans, Ludwig van Toronto",
+        "link":
+          "https://www.ludwig-van.com/toronto/2017/12/18/scrutiny-bound-started-as-handel-but-ended-as-against-the-grain/"
       }
     ],
     "description": "",
@@ -190,14 +203,22 @@
       {
         "quotation":
           "Michael Uloth carried the drama of the second half of the work, being the main character of Judas in Part IV including the longest piece of exposition in the entire work in “The Betrayal.” Providing a clear interpretation, his voice carried as the changing orchestrations underlay.",
-        "source": "Ludwig Van Toronto",
+        "source": "Brian Chang, Ludwig Van Toronto",
         "link":
           "https://www.ludwig-van.com/toronto/2017/05/01/scrutiny-a-surprising-rendition-with-pax-christi-chorales-the-apostles/"
       },
       {
         "quotation":
           "The two important roles with the most manifest suffering were wonderfully realized by mezzo Krisztina Szabo as Mary Magdalene and bass Michael Uloth as Judas.",
-        "source": "American Record Guide"
+        "source": "American Record Guide",
+        "link": "http://www.americanrecordguide.com"
+      },
+      {
+        "quotation":
+          "She was blessed with six of the finest singers in Canada as her soloists – Meredith Hall, Krisztina Szabo, Lawrence Wiliford, Brett Polegato, Daniel Lichti and Michael Uloth – each of whom were in great voice and distinguished themselves with powerful, communicative performances.",
+        "source": "Larry Beckwith, Masque Ideas",
+        "link":
+          "https://torontomasqueblog.wordpress.com/2017/05/01/two-extraordinary-concerts-and-an-announcement/"
       }
     ],
     "description": "",
@@ -435,130 +456,20 @@
     "link": "https://seattleopera.org"
   },
   {
-    "image": "../images/opera/falstaff.jpg",
-    "alt":
-      "\"Pistol announcing to Falstaff the death of the King\". Painting by John Cawse, circa 1820s.",
-    "title": "Falstaff",
-    "category": "Opera",
-    "tags": ["Highlands Opera Studio"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Highlands Opera Studio"
-      },
-      {
-        "name": "Opera",
-        "value": "Falstaff"
-      },
-      {
-        "name": "Role",
-        "value": "Pistola"
-      },
-      {
-        "name": "Composer",
-        "value": "Giuseppe Verdi"
-      },
-      {
-        "name": "Conductor",
-        "value": "Timothy Vernon"
-      },
-      {
-        "name": "Director",
-        "value": "Valerie Kuinka"
-      },
-      {
-        "name": "Dates",
-        "value": "July - August, 2011"
-      }
-    ],
-    "link": "http://highlandsoperastudio.com"
-  },
-  {
-    "image": "../images/opera/don-giovanni-2.jpg",
-    "alt": "\"Elvira, Leporello and the Don\" from The Victrola Book of the Opera, 1917.",
-    "title": "Don Giovanni",
-    "category": "Opera",
-    "tags": ["Centre for Opera Studies in Italy"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Centre for Opera Studies in Italy"
-      },
-      {
-        "name": "Opera",
-        "value": "Don Giovanni"
-      },
-      {
-        "name": "Role",
-        "value": "Leporello / Il Commendatore (alternating)"
-      },
-      {
-        "name": "Composer",
-        "value": "Wolfgang Amadeus Mozart"
-      },
-      {
-        "name": "Conductor",
-        "value": "Kevin Mallon"
-      },
-      {
-        "name": "Director",
-        "value": "Tom Diamond"
-      },
-      {
-        "name": "Dates",
-        "value": "June - July, 2011"
-      }
-    ],
-    "link": "http://www.co-si.com"
-  },
-  {
-    "image": "../images/opera/rossini.jpg",
-    "alt": "1865 photograph of Gioachino Rossini by Étienne Carjat.",
-    "title": "Petite Messe Solennelle",
-    "category": "Opera",
-    "tags": ["Centre for Opera Studies in Italy"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Centre for Opera Studies in Italy"
-      },
-      {
-        "name": "Oratorio",
-        "value": "Petite Messe Solennelle"
-      },
-      {
-        "name": "Role",
-        "value": "Bass Soloist"
-      },
-      {
-        "name": "Composer",
-        "value": "Gioachino Rossini"
-      },
-      {
-        "name": "Conductor",
-        "value": "Timothy Vernon"
-      },
-      {
-        "name": "Dates",
-        "value": "June - July, 2011"
-      }
-    ],
-    "link": "http://www.co-si.com"
-  },
-  {
     "image": "../images/opera/ariadne.jpg",
     "alt":
       "Michael Uloth (left) as Truffaldino in Ariadne auf Naxos, with Chris Enns, Peter Barrett and John Easterlin. Image by Michael Cooper.",
     "title": "Ariadne auf Naxos",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "The male quartet (John Easterlin, Peter Barrett, Michael Uloth and Christopher Enns) was a gift that kept on giving at every turn. It's difficult to imagine their roles performed better in any way.",
+        "source": "Lydia Perovic, Definitely the Opera",
+        "link": "https://definitelytheopera.wordpress.com/2011/05/04/ariadne-auf-toronto/"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -599,7 +510,14 @@
     "title": "The Nightingale",
     "category": "Opera",
     "tags": ["Brooklyn Academy of Music"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "All the cast members of The Nightingale have become incredible puppeteers in their own right. Lothar Odinius, the Fisherman, and Michael Uloth, the Bonze, in particular, have infused such life into their puppets that you're almost fooled into believing these figures have come alive.",
+        "source": "Jennifer Pugsley, Learn.COC.ca",
+        "link": "https://learn.coc.ca/coc-news?entryid=1733"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -680,7 +598,31 @@
     "title": "Die Zauberflöte",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "Michael Uloth as Sarastro impressed the most. He controlled his remarkable old-man basso with a twinkle in the eye and made the abysmally low notes appear an easy game.",
+        "source": "Lydia Perovic, Definitely the Opera",
+        "link": "https://definitelytheopera.wordpress.com/2011/02/22/about-town/"
+      },
+      {
+        "quotation":
+          "Uloth did a great job, whether in the lovely legato in both his arias, his confident low notes, and particularly in the profundity of his final lines.",
+        "source": "Leslie Barcza, Barzablog",
+        "link": "https://barczablog.com/2011/02/18/opera-made-in-canada/"
+      },
+      {
+        "quotation":
+          "Kitchener-born bass Michael Uloth proved superior as a singer (and vastly superior as an actor) to his counterpart.",
+        "source": "Arthur Kaptainis, National Post",
+        "link": "http://nationalpost.com/entertainment/music/the-coc-ensemble-gets-magical"
+      },
+      {
+        "quotation": "Michael Uloth brought a sense of wisdom as well as warmth to Sarastro.",
+        "source": "Jon Kaplan, NOW Magazine",
+        "link": "https://nowtoronto.com/culture/stage/scenes-2011-02-24/"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -997,7 +939,7 @@
     "link": "https://www.coc.ca"
   },
   {
-    "image": "../images/opera/nightingale.jpg",
+    "image": "../images/opera/nightingale-1.jpg",
     "alt":
       "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
     "title": "The Nightingale",
@@ -1083,7 +1025,14 @@
     "title": "Lord Nelson Mass",
     "category": "Opera",
     "tags": ["Elora Festival"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "Bass Michael Uloth...performed admirably. His voice has an interesting timbre with a slight edge that gives it particular definition and cuts through, particularly in the lower register.",
+        "source": "Stephen Preece, The Record",
+        "link": "https://www.therecord.com"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -1120,7 +1069,21 @@
     "title": "Così fan tutte",
     "category": "Opera",
     "tags": ["Canadian Opera Company", "Ensemble Studio"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "Then there's Michael Uloth, a very impressive young bass...Uloth was note-perfect. He also has the kind of unstrained security and confidence that allows you to just sit back, relax and enjoy the performance.",
+        "source": "Michael Crabb, CBC Radio 1",
+        "link": "http://www.cbc.ca/radio/"
+      },
+      {
+        "quotation":
+          "The cynical Don Alfonso was urbanely and slyly played by bass Michael Uloth...",
+        "source": "Ken Winters, The Globe & Mail",
+        "link":
+          "https://www.theglobeandmail.com/arts/a-stylish-approach-to-mozarts-opera/article4276598/"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -1161,7 +1124,15 @@
     "title": "A Midsummer Night's Dream",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "The Rustics' play (which also featured tenors Michael Barrett, bass-baritone Thomas Goerz, baritone Alexander Hajek and bass Michael Uloth) was very funny to witness, and to hear, thanks to Britten's wicked parodies of French and Italian opera.",
+        "source": "Robert Everett-Green, The Globa & Mail",
+        "link":
+          "https://www.theglobeandmail.com/arts/magical-midsummer-night-a-dream-come-true/article4193525/"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -1443,7 +1414,14 @@
     "title": "Anna Bolena",
     "category": "Opera",
     "tags": ["Opera in Concert"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "Uloth is clearly a talent on the rise...he nailed Enrico's capricious character...",
+        "source": "Paula Citron, Opera Canada",
+        "link": "http://operacanada.ca"
+      }
+    ],
     "description": "",
     "details": [
       {
