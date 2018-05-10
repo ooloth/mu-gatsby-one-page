@@ -35,12 +35,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`
     },
-    // `gatsby-plugin-preact`,
     `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-netlify` // must come last
+    {
+      resolve: `gatsby-plugin-netlify`, // must come last
+      options: {
+        headers: {
+          '/*.html': [`Cache-Control: public, max-age=0, must-revalidate`],
+          '/*.js': [`Cache-Control: public, max-age=0, must-revalidate`],
+          '/static/*': [`Cache-Control: public,max-age=31536000,immutable`],
+          '/favicons/*': [`Cache-Control: public,max-age=31536000,immutable`]
+        }
+      }
+    }
   ]
 }
