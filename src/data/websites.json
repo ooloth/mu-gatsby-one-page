@@ -22,7 +22,7 @@
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
     "description":
-      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego Film Arts.",
+      "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego&nbsp;Film&nbsp;Arts.",
     "details": [
       {
         "name": "Tools",
@@ -135,7 +135,7 @@
     "category": "Website",
     "tags": ["Website", "Code"],
     "description":
-      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create an energetic portfolio site to feature the work of Rachel Krehm, an opera, theatre and comedy performer and the co-founder and General Director of Opera 5.",
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create an energetic portfolio site for Rachel Krehm, an opera, theatre and comedy performer and the co-founder and General Director of Opera&nbsp;5.",
     "details": [
       {
         "name": "Tools",
@@ -143,5 +143,53 @@
       }
     ],
     "link": "https://www.artist.center/"
+  },
+  {
+    "image": "../images/websites/riccardo-iannello-2.jpg",
+    "alt": "Italian-Canadian tenor Riccardo Iannello. Photo by Phil Crozier.",
+    "title": "Riccardo Iannello",
+    "category": "Website",
+    "tags": ["Website", "Code"],
+    "description":
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build an engaging one-page portfolio site for Italian-Canadian tenor Riccardo Iannello.",
+    "details": [
+      {
+        "name": "Tools",
+        "value": "Pug, Sass, jQuery"
+      }
+    ],
+    "link": "http://www.riccardoiannello.com"
+  },
+  {
+    "image": "../images/websites/john-greer-caricature.jpg",
+    "alt": "Caricature of Canadian composer John Greer by Michael Willhoite.",
+    "title": "John Greer",
+    "category": "Website",
+    "tags": ["Website", "Code"],
+    "description":
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build a comprehensive multi-page portfolio site for Canadian composer John&nbsp;Greer.",
+    "details": [
+      {
+        "name": "Tools",
+        "value": "Pug, Sass, jQuery"
+      }
+    ],
+    "link": "https://johngreermusic.com"
+  },
+  {
+    "image": "../images/websites/david-woloviec.jpg",
+    "alt": "David Woloviec, founder of DG Volo & Company.",
+    "title": "DG Volo & Company",
+    "category": "Website",
+    "tags": ["Website", "Code"],
+    "description":
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.",
+    "details": [
+      {
+        "name": "Tools",
+        "value": "Pug, Sass, jQuery"
+      }
+    ],
+    "link": "http://dgvolo.com"
   }
 ]
