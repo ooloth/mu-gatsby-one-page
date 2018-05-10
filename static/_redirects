@@ -1,7 +1,7 @@
 # Redirect old urls to new urls
 # Test new rules here: https://play.netlify.com/redirects
 
-/opera            /   200
-/web-design       /   200
-/tax-preparation  /   200
-/contact          /   200  
+/opera            /   301!
+/web-design       /   301!
+/tax-preparation  /   301!
+/contact          /   301!  
