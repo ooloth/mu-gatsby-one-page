@@ -1,6 +1,6 @@
 [
   {
-    "image": "../images/websites/adrianne-pieczonka-2.jpg",
+    "image": "../images/websites/adrianne-pieczonka.jpg",
     "alt": "Adrianne Pieczonka as Elisabeth in Don Carlos at the Gran Teatre del Liceu.",
     "title": "Adrianne Pieczonka",
     "category": "Website",
@@ -32,7 +32,7 @@
     "link": "http://www.egofilmarts.com/"
   },
   {
-    "image": "../images/adam-luther.jpg",
+    "image": "../images/websites/adam-luther.jpg",
     "alt": "Canadian tenor Adam Luther. Photo by Pierre Gautreau.",
     "title": "Adam Luther",
     "category": "Website",
@@ -48,7 +48,7 @@
     "link": "https://www.adamluthertenor.com/"
   },
   {
-    "image": "../images/laura-albino.jpg",
+    "image": "../images/websites/laura-albino.jpg",
     "alt": "Canadian soprano Laura Albino. Photo by Katie Cross Photography.",
     "title": "Laura Albino",
     "category": "Website",
@@ -64,7 +64,7 @@
     "link": "https://www.lauraalbino.com/"
   },
   {
-    "image": "../images/ileana-montalbetti.jpg",
+    "image": "../images/websites/ileana-montalbetti.jpg",
     "alt": "Canadian soprano Ileana Montalbetti. Photo by Bo Huang.",
     "title": "Ileana Montalbetti",
     "category": "Website",
@@ -96,8 +96,9 @@
     "link": "https://www.ariaumezawa.com/"
   },
   {
-    "image": "../images/websites/Pompeii3.jpg",
-    "alt": "A fresco of Satyr and Maenad that inspired \"Pomegranate Opera\".",
+    "image": "../images/websites/satyr-and-maenad.jpg",
+    "alt":
+      "A fresco of Satyr and Maenad from the Casa di Caecilius Jucundus in Pompeii that inspired \"Pomegranate Opera\".",
     "title": "Pomegranate Opera",
     "category": "Website",
     "tags": ["Website", "Code"],
@@ -119,6 +120,22 @@
     "tags": ["Website", "Code"],
     "description":
       "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create an attractive landing page for the launch of Artist.Center, an app that helps connect operatic artists and companies.",
+    "details": [
+      {
+        "name": "Tools",
+        "value": "React, Gatbsy, PostCSS, GitLab, Netlify"
+      }
+    ],
+    "link": "https://www.artist.center/"
+  },
+  {
+    "image": "../images/websites/rachel-krehm-1.jpg",
+    "alt": "Canadian soprano, director, writer and producer Rachel Krehm.",
+    "title": "Rachel Krehm",
+    "category": "Website",
+    "tags": ["Website", "Code"],
+    "description":
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create an energetic portfolio site to feature the work of Rachel Krehm, an opera, theatre and comedy performer and the co-founder and General Director of Opera 5.",
     "details": [
       {
         "name": "Tools",
