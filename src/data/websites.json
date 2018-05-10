@@ -10,7 +10,7 @@
     "details": [
       {
         "name": "Tools",
-        "value": "Pug, Sass, JavaScript, Gulp, Git"
+        "value": "Pug, Sass, JavaScript, Gulp, GitLab, Netlify"
       }
     ],
     "link": "https://www.adriannepieczonka.com"
@@ -26,14 +26,14 @@
     "details": [
       {
         "name": "Tools",
-        "value": "HTML, CSS, jQuery"
+        "value": "HTML, CSS, jQuery, GitLab, Netlify"
       }
     ],
     "link": "http://www.egofilmarts.com/"
   },
   {
     "image": "../images/adam-luther.jpg",
-    "alt": "Canadian tenor Adam Luther. Image by Pierre Gautreau.",
+    "alt": "Canadian tenor Adam Luther. Photo by Pierre Gautreau.",
     "title": "Adam Luther",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
@@ -42,14 +42,14 @@
     "details": [
       {
         "name": "Tools",
-        "value": "Pug, Sass, JavaScript"
+        "value": "Pug, Sass, JavaScript, GitLab, Netlify"
       }
     ],
-    "link": "https://adamluthertenor.com/"
+    "link": "https://www.adamluthertenor.com/"
   },
   {
     "image": "../images/laura-albino.jpg",
-    "alt": "Canadian soprano Laura Albino. Image by Katie Cross Photography.",
+    "alt": "Canadian soprano Laura Albino. Photo by Katie Cross Photography.",
     "title": "Laura Albino",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
@@ -58,14 +58,14 @@
     "details": [
       {
         "name": "Tools",
-        "value": "Pug, Sass, JavaScript"
+        "value": "Pug, Sass, JavaScript, GitLab, Netlify"
       }
     ],
-    "link": "https://lauraalbino.com/"
+    "link": "https://www.lauraalbino.com/"
   },
   {
     "image": "../images/ileana-montalbetti.jpg",
-    "alt": "Canadian soprano Ileana Montalbetti. Image by Bo Huang.",
+    "alt": "Canadian soprano Ileana Montalbetti. Photo by Bo Huang.",
     "title": "Ileana Montalbetti",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
@@ -74,9 +74,57 @@
     "details": [
       {
         "name": "Tools",
-        "value": "Pug, Sass, JavaScript"
+        "value": "Pug, Sass, JavaScript, GitLab, Netlify"
       }
     ],
-    "link": "http://www.ileanamontalbetti.com/"
+    "link": "https://www.ileanamontalbetti.com/"
+  },
+  {
+    "image": "../images/websites/aria-umezawa.jpg",
+    "alt": "Canadian director Aria Umezawa.",
+    "title": "Aria Umezawa",
+    "category": "Website",
+    "tags": ["Website", "Code"],
+    "description":
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create a fast-loading, eye-catching portfolio for Canadian director Aria Umezawa.",
+    "details": [
+      {
+        "name": "Tools",
+        "value": "React, Gatbsy, PostCSS, GitLab, Netlify"
+      }
+    ],
+    "link": "https://www.ariaumezawa.com/"
+  },
+  {
+    "image": "../images/websites/Pompeii3.jpg",
+    "alt": "A fresco of Satyr and Maenad that inspired \"Pomegranate Opera\".",
+    "title": "Pomegranate Opera",
+    "category": "Website",
+    "tags": ["Website", "Code"],
+    "description":
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build a whimsical showcase for the upcoming production of \"Pomegranate Opera\", a lesbian opera by Amanda Hale and Kye Marshall.",
+    "details": [
+      {
+        "name": "Tools",
+        "value": "React, Gatbsy, PostCSS, GitLab, Netlify"
+      }
+    ],
+    "link": "https://www.pomegranateopera.com"
+  },
+  {
+    "image": "../images/websites/artist-center.png",
+    "alt": "Artist Center graphic, designed by Stephen Bell.",
+    "title": "Artist Center",
+    "category": "Website",
+    "tags": ["Website", "Code"],
+    "description":
+      "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create an attractive landing page for the launch of Artist.Center, an app that helps connect operatic artists and companies.",
+    "details": [
+      {
+        "name": "Tools",
+        "value": "React, Gatbsy, PostCSS, GitLab, Netlify"
+      }
+    ],
+    "link": "https://www.artist.center/"
   }
 ]

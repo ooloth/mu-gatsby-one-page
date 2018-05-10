@@ -350,7 +350,7 @@ const ProjectDetails = ({ project }) => (
         )
       })}
 
-    <p className="mt4 measure">{project.description}</p>
+    <p className="mt4 measure" dangerouslySetInnerHTML={{ __html: project.description }} />
 
     <div className="mt4">
       {project.details &&
@@ -371,3 +371,15 @@ const ProjectDetails = ({ project }) => (
     </HyperLink>
   </div>
 )
+
+/* 
+ *
+ * Details
+ * 
+ */
+
+/* 
+ *
+ * Imports & Exports
+ * 
+ */
