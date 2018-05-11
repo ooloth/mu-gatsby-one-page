@@ -1,12 +1,54 @@
 class Hero extends Component {
+  state = { expanded: false }
+  details = React.createRef()
+
+  expand = () => {
+    const gsapTarget = this.details.current
+
+    if (!this.state.expanded) {
+      loadjs.ready(`gsap`, () => {
+        // When expanding, set this immediately
+        this.setState({ expanded: true })
+
+        // Invalidate the temporary inline styles (which match the starting state for the animation and are added to prevent a flash of content in the ending position)
+        gsapTarget.removeAttribute(`style`)
+
+        // Expand the section to its natural height
+        TweenMax.fromTo(
+          gsapTarget,
+          1,
+          {
+            height: 0,
+            autoAlpha: 0
+          },
+          {
+            height: gsapTarget.offsetHeight,
+            autoAlpha: 1,
+            ease: Power3.easeInOut
+          }
+        )
+      })
+    }
+  }
+
   render() {
+    const { expanded } = this.state
+
     return (
       <section className="bg-near-white pv6">
         <div className="container">
           <Greeting />
-          <OperaBio />
-          <WebDevBio />
-          <Invitation />
+
+          <div
+            ref={this.details}
+            className="relative z-2 overflow-hidden"
+            style={{ height: 0 }}
+          >
+            <OperaBio />
+            <WebDevBio />
+          </div>
+
+          <Invitation handleClick={this.expand} />
         </div>
       </section>
     )
@@ -56,10 +98,12 @@ const WebDevBio = () => (
   </Fragment>
 )
 
-const Invitation = () => (
+const Invitation = ({ handleClick }) => (
   <div className="mt4 flex items-center">
     <p className="flex items-baseline lh-copy f4">
-      <button className="link-inline dib f4">Read more</button>
+      <button onClick={handleClick} className="link-inline dib f4">
+        Read more
+      </button>
       &nbsp;or see my recent work below.
     </p>
 
@@ -81,5 +125,6 @@ const Invitation = () => (
  */
 
 import React, { Component, Fragment } from 'react'
+import loadjs from 'loadjs'
 
 export default Hero
