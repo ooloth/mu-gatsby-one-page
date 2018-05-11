@@ -1,12 +1,3 @@
-/*
- *  Usage: <HyperLink href="..." className="...">
- * 
- *  Props: 
- *    "href" = url, mandatory
- *    "srText" = string, optional (use if link has no visible text, like an icon)
- *    
- */
-
 const HyperLink = ({ href, srText, className, children }) => {
   // If link is external, add target and rel attributes
   const isExternal = href.indexOf(`http`) === -1 ? false : true
@@ -14,8 +5,8 @@ const HyperLink = ({ href, srText, className, children }) => {
   return (
     <a
       href={href}
-      target={isExternal ? '_blank' : null}
-      rel={isExternal ? 'noopener nofollow' : null}
+      target={isExternal ? `_blank` : null}
+      rel={isExternal ? `noopener nofollow` : null}
       className={className}
     >
       {srText && <span className="sr-only">{srText}</span>}
@@ -24,12 +15,21 @@ const HyperLink = ({ href, srText, className, children }) => {
   )
 }
 
-export default HyperLink
-
 /*
  *
- * Imports
+ * Imports & Exports
  * 
  */
 
 import React from 'react'
+
+export default HyperLink
+
+/*
+ *  Usage: <HyperLink href="..." className="...">
+ * 
+ *  Props: 
+ *    "href" = url, mandatory
+ *    "srText" = string, optional (use if link has no visible text, like an icon)
+ *    
+ */
