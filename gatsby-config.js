@@ -9,22 +9,14 @@ module.exports = {
     // image: update siteImage variable in layouts/index.js
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-accessibilityjs`,
-      options: {
-        injectStyles: false,
-        errorClassName: false,
-        onError: error => console.log(error)
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-      options: {
-        defaultSizes: `gzip`,
-        disable: true,
-        production: true
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+    //   options: {
+    //     defaultSizes: `gzip`,
+    //     disable: true,
+    //     production: true
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

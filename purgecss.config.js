@@ -12,6 +12,6 @@ module.exports = {
       extensions: ['html', 'js']
     }
   ],
-  // Whitelist plugin styles
+  whitelist: [`link-inline`],
   whitelistPatterns: [/body/, /slick/]
 }

@@ -6,20 +6,20 @@ class Work extends React.Component {
   }
 
   handleFilterClick = event => {
+    const { operaIsChecked, websitesIsChecked } = this.state
     let filters = {}
 
     switch (event.target.value) {
       case `opera`:
         if (event.target.checked) filters = { operaIsChecked: true }
-        else if (!this.state.websitesIsChecked)
+        else if (!websitesIsChecked)
           filters = { operaIsChecked: true, websitesIsChecked: true }
         else filters = { operaIsChecked: false }
         break
 
       case `websites`:
         if (event.target.checked) filters = { websitesIsChecked: true }
-        else if (!this.state.operaIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else if (!operaIsChecked) filters = { operaIsChecked: true, websitesIsChecked: true }
         else filters = { websitesIsChecked: false }
         break
     }
@@ -28,23 +28,20 @@ class Work extends React.Component {
   }
 
   handleLoadMore = () => {
-    const total = this.props.projects.length
+    const { projects } = this.props
+    const { limit } = this.state
+    const total = projects.length
 
     // Increment the number of projects shown (up to the total number of projects)
-    if (this.state.limit < total) {
-      if (this.state.limit + 5 > total) {
-        this.setState({ limit: total })
-      } else {
-        this.setState({ limit: this.state.limit + 5 })
-      }
+    if (limit < total) {
+      if (limit + 5 > total) this.setState({ limit: total })
+      else this.setState({ limit: limit + 5 })
     }
   }
 
   render() {
     const { limit, operaIsChecked, websitesIsChecked } = this.state
     const { projects } = this.props
-    const total = projects.length
-    // const allLoaded = limit < total ? false : true
 
     // Reduce project list to the active category
     const projectsInActiveCategory = projects.filter(project => {
@@ -54,7 +51,7 @@ class Work extends React.Component {
       else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
     })
 
-    const allLoaded = limit < projectsInActiveCategory.length ? false : true
+    const allLoaded = limit >= projectsInActiveCategory.length
 
     return (
       <section className="pv6">
@@ -67,34 +64,16 @@ class Work extends React.Component {
         />
 
         <Projects
-          // Reduce number of projects shown to the current limit
-          projects={projectsInActiveCategory.slice(0, limit)}
+          projects={projectsInActiveCategory.slice(0, limit)} // limit visible projects
           operaIsChecked={operaIsChecked}
           websitesIsChecked={websitesIsChecked}
         />
 
-        {!allLoaded && (
-          <div className="container pt5">
-            <button onClick={this.handleLoadMore} className="link">
-              Load more projects
-            </button>
-          </div>
-        )}
+        {!allLoaded && <LoadMoreProjects handleLoadMore={this.handleLoadMore} />}
       </section>
     )
   }
 }
-
-export default Work
-
-/* 
- *
- * General
- * 
- */
-
-import React, { Fragment } from 'react'
-import shortid from 'shortid'
 
 /*
  *
@@ -104,14 +83,16 @@ import shortid from 'shortid'
 
 const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
   <fieldset className="container mb4 lh-solid f3 fw4 ttl">
-    <legend className="sr-only">Choose which project types to show</legend>
+    <legend className="sr-only">
+      Select whether to view opera projects, website projects, or both
+    </legend>
 
     <label htmlFor="opera" className="custom-checkbox mr4 animate cursor-pointer">
       <input
         id="opera"
         type="checkbox"
         value="opera"
-        onChange={event => handleChange(event)}
+        onChange={handleChange}
         checked={operaIsChecked}
         className="ba bw2 b--green cursor-pointer"
         style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
@@ -128,7 +109,7 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
         id="websites"
         type="checkbox"
         value="websites"
-        onChange={event => handleChange(event)}
+        onChange={handleChange}
         checked={websitesIsChecked}
         className="ba bw2 b--green cursor-pointer"
         style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
@@ -158,6 +139,20 @@ const Projects = ({ projects, operaIsChecked, websitesIsChecked }) => (
 
 /* 
  *
+ * Load More Projects
+ * 
+ */
+
+const LoadMoreProjects = ({ handleLoadMore }) => (
+  <div className="container pt5">
+    <button onClick={handleLoadMore} className="link">
+      Load more projects
+    </button>
+  </div>
+)
+
+/* 
+ *
  * Project
  * 
  */
@@ -165,8 +160,6 @@ const Projects = ({ projects, operaIsChecked, websitesIsChecked }) => (
 // DOCS: https://github.com/muicss/loadjs#documentation
 // DOCS: https://greensock.com/docs/TweenMax
 // Forum: https://greensock.com/forums/topic/15749-gsap-with-create-react-app/
-
-import loadjs from 'loadjs'
 
 class Project extends React.Component {
   state = { expanded: false }
@@ -250,12 +243,9 @@ const ProjectHeader = ({ project, expanded }) => (
     <div>
       <h3 className="mb2 lh-solid f2 sm:f1 fw9 ttu">{project.title}</h3>
       <ul className="nb2">
-        {project.tags.map(tag => {
+        {project.tags.map((tag, index) => {
           return (
-            <li
-              key={shortid.generate()}
-              className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl"
-            >
+            <li key={`tag-${index}`} className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl">
               {tag}
             </li>
           )
@@ -281,9 +271,6 @@ const ProjectHeader = ({ project, expanded }) => (
  * 
  */
 
-import HyperLink from '../components/HyperLink'
-import Img from '../components/Img'
-
 const ProjectDetails = ({ project }) => (
   <div className="container pt4 lh-tall">
     {/* <div> */}
@@ -305,11 +292,10 @@ const ProjectDetails = ({ project }) => (
           gridGap: `1rem`
         }}
       >
-        {project.images.map(photo => {
+        {project.images.map((photo, index) => {
           return (
-            <li>
+            <li key={`photo-${index}`}>
               <Img
-                key={shortid.generate()}
                 sizes={photo.image.childImageSharp.sizes}
                 alt={photo.alt}
                 className="shadow-lg"
@@ -331,9 +317,9 @@ const ProjectDetails = ({ project }) => (
     {/* </div> */}
 
     {project.reviews &&
-      project.reviews.map(review => {
+      project.reviews.map((review, index) => {
         return (
-          <blockquote key={shortid.generate()} className="mt4 pv2">
+          <blockquote key={`review-${index}`} className="mt4 pv2">
             <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
               <p className="mb2 f3">{review.quotation}</p>
               {review.link ? (
@@ -354,10 +340,10 @@ const ProjectDetails = ({ project }) => (
 
     <div className="mt4">
       {project.details &&
-        project.details.map(detail => {
+        project.details.map((detail, index) => {
           return (
             detail.name !== `Dates` && (
-              <dl key={shortid.generate()}>
+              <dl key={`detail-${index}`}>
                 <dt className="dib fw7">{detail.name}:&nbsp;</dt>
                 <dd className="dib">{detail.value}</dd>
               </dl>
@@ -383,3 +369,11 @@ const ProjectDetails = ({ project }) => (
  * Imports & Exports
  * 
  */
+
+import React, { Fragment } from 'react'
+import loadjs from 'loadjs'
+
+import HyperLink from '../components/HyperLink'
+import Img from '../components/Img'
+
+export default Work
