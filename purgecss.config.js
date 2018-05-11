@@ -9,9 +9,9 @@ module.exports = {
           return content.match(/[A-z0-9-:\/]+/g) || []
         }
       },
-      extensions: ['html', 'js']
+      extensions: [`html`, `js`]
     }
   ],
-  whitelist: [`link-inline`],
-  whitelistPatterns: [/body/, /slick/]
+  whitelist: [`checkbox-label`, `custom-checkbox`, `link-inline`],
+  whitelistPatterns: [/body/]
 }
