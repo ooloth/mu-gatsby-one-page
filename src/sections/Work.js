@@ -331,9 +331,7 @@ const Reviews = ({ reviews }) =>
           <p className="mb2 f3">{review.quotation}</p>
           {review.link ? (
             <cite className="f4 fw7 fs-normal">
-              <HyperLink href={review.link} className="">
-                {review.source}
-              </HyperLink>
+              <HyperLink href={review.link}>{review.source}</HyperLink>
             </cite>
           ) : (
             <cite className="f4 fw7 fs-normal">{review.source}</cite>
