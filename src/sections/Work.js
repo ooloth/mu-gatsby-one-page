@@ -5,20 +5,20 @@ class Work extends React.Component {
     websitesIsChecked: true
   }
 
-  handleFilterClick = event => {
+  handleFilterClick = e => {
     const { operaIsChecked, websitesIsChecked } = this.state
     let filters = {}
 
-    switch (event.target.value) {
+    switch (e.target.value) {
       case `opera`:
-        if (event.target.checked) filters = { operaIsChecked: true }
+        if (e.target.checked) filters = { operaIsChecked: true }
         else if (!websitesIsChecked)
           filters = { operaIsChecked: true, websitesIsChecked: true }
         else filters = { operaIsChecked: false }
         break
 
       case `websites`:
-        if (event.target.checked) filters = { websitesIsChecked: true }
+        if (e.target.checked) filters = { websitesIsChecked: true }
         else if (!operaIsChecked) filters = { operaIsChecked: true, websitesIsChecked: true }
         else filters = { websitesIsChecked: false }
         break
@@ -51,6 +51,7 @@ class Work extends React.Component {
       else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
     })
 
+    const visibleProjects = projectsInActiveCategory.slice(0, limit)
     const allLoaded = limit >= projectsInActiveCategory.length
 
     return (
@@ -64,7 +65,7 @@ class Work extends React.Component {
         />
 
         <Projects
-          projects={projectsInActiveCategory.slice(0, limit)} // limit visible projects
+          projects={visibleProjects}
           operaIsChecked={operaIsChecked}
           websitesIsChecked={websitesIsChecked}
         />
@@ -74,6 +75,20 @@ class Work extends React.Component {
     )
   }
 }
+
+/* 
+ *
+ * Load More Projects
+ * 
+ */
+
+const LoadMoreProjects = ({ handleLoadMore }) => (
+  <div className="container pt5">
+    <button onClick={handleLoadMore} className="link">
+      Load more projects
+    </button>
+  </div>
+)
 
 /*
  *
@@ -87,41 +102,58 @@ const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
       Select whether to view opera projects, website projects, or both
     </legend>
 
-    <label htmlFor="opera" className="custom-checkbox mr4 animate cursor-pointer">
-      <input
-        id="opera"
-        type="checkbox"
-        value="opera"
-        onChange={handleChange}
-        checked={operaIsChecked}
-        className="ba bw2 b--green cursor-pointer"
-        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
-      />
-      <span
-        className="checkmark ba bw2 b--green cursor-pointer"
-        style={{ marginBottom: `-8px`, width: `1.4rem`, height: `1.4rem` }}
-      />
-      <span className="checkbox-label">&nbsp;Opera</span>
-    </label>
+    <Filter
+      category="opera"
+      handleChange={handleChange}
+      operaIsChecked={operaIsChecked}
+      websitesIsChecked={websitesIsChecked}
+    />
 
-    <label htmlFor="websites" className="custom-checkbox animate cursor-pointer">
-      <input
-        id="websites"
-        type="checkbox"
-        value="websites"
-        onChange={handleChange}
-        checked={websitesIsChecked}
-        className="ba bw2 b--green cursor-pointer"
-        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
-      />
-      <span
-        className="checkmark ba bw2 b--green cursor-pointer"
-        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
-      />
-      <span className="checkbox-label">&nbsp;Websites</span>
-    </label>
+    <Filter
+      category="websites"
+      handleChange={handleChange}
+      operaIsChecked={operaIsChecked}
+      websitesIsChecked={websitesIsChecked}
+    />
   </fieldset>
 )
+
+const Filter = ({ category, handleChange, operaIsChecked, websitesIsChecked }) => {
+  let isChecked = false
+  if (
+    (category === `websites` && websitesIsChecked) ||
+    (category === `opera` && operaIsChecked)
+  ) {
+    isChecked = true
+  }
+
+  return (
+    <label
+      htmlFor={category}
+      className={`custom-checkbox animate cursor-pointer${category === `opera` ? ` mr4` : ``}`}
+    >
+      {/* Actual (but visually-hidden) checkbox */}
+      <input
+        id={category}
+        type="checkbox"
+        value={category}
+        onChange={handleChange}
+        checked={isChecked}
+        className="ba bw2 b--green cursor-pointer"
+        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
+      />
+
+      {/* Styled "checkbox" */}
+      <span
+        className="checkmark ba bw2 b--green cursor-pointer"
+        style={{ marginBottom: `-3px`, width: `1.4rem`, height: `1.4rem` }}
+      />
+
+      {/* Visible text label */}
+      <span className="checkbox-label">&nbsp;{category}</span>
+    </label>
+  )
+}
 
 /* 
  *
@@ -139,20 +171,6 @@ const Projects = ({ projects, operaIsChecked, websitesIsChecked }) => (
 
 /* 
  *
- * Load More Projects
- * 
- */
-
-const LoadMoreProjects = ({ handleLoadMore }) => (
-  <div className="container pt5">
-    <button onClick={handleLoadMore} className="link">
-      Load more projects
-    </button>
-  </div>
-)
-
-/* 
- *
  * Project
  * 
  */
@@ -163,27 +181,31 @@ const LoadMoreProjects = ({ handleLoadMore }) => (
 
 class Project extends React.Component {
   state = { expanded: false }
+  details = React.createRef()
 
   handleClick = () => (this.state.expanded ? this.collapse() : this.expand())
+  handleKeyUp = e => e.key === 'Enter' && this.handleClick()
 
   expand = () => {
+    const gsapTarget = this.details.current
+
     loadjs.ready('gsap', () => {
       // When expanding, set this immediately
       this.setState({ expanded: true })
 
       // Invalidate the temporary inline styles (which match the starting state for the animation and are added to prevent a flash of content in the ending position)
-      this.item.removeAttribute('style')
+      gsapTarget.removeAttribute('style')
 
       // Expand the section to its natural height
       TweenMax.fromTo(
-        this.item,
+        gsapTarget,
         1,
         {
           height: 0,
           autoAlpha: 0
         },
         {
-          height: this.item.offsetHeight,
+          height: gsapTarget.offsetHeight,
           autoAlpha: 1,
           ease: Power3.easeInOut
         }
@@ -192,9 +214,11 @@ class Project extends React.Component {
   }
 
   collapse = () => {
+    const gsapTarget = this.details.current
+
     loadjs.ready('gsap', () => {
       // Collapse the section to 0
-      TweenMax.to(this.item, 1, {
+      TweenMax.to(gsapTarget, 1, {
         height: 0,
         autoAlpha: 0,
         ease: Power3.easeInOut,
@@ -213,14 +237,17 @@ class Project extends React.Component {
         role="button"
         tabIndex="0"
         onClick={this.handleClick}
-        onKeyUp={e => e.key === 'Enter' && this.handleClick()}
+        onKeyUp={this.handleKeyUp}
         className="relative cursor-pointer"
       >
-        <span className="sr-only">Click to see project details</span>
+        <span className="sr-only">
+          Click or press enter to expand/collapse project details
+        </span>
+
         <div className="pv4 hover:bg-near-white animate">
-          <ProjectHeader project={project} expanded={expanded} />
+          <ProjectHeader title={project.title} tags={project.tags} expanded={expanded} />
           <div
-            ref={el => (this.item = el)}
+            ref={this.details}
             className="relative z-2 overflow-hidden"
             style={{ height: 0 }}
           >
@@ -238,30 +265,34 @@ class Project extends React.Component {
  * 
  */
 
-const ProjectHeader = ({ project, expanded }) => (
+const ProjectHeader = ({ title, tags, expanded }) => (
   <div className="group flex justify-between items-baseline container pv2">
-    <div>
-      <h3 className="mb2 lh-solid f2 sm:f1 fw9 ttu">{project.title}</h3>
-      <ul className="nb2">
-        {project.tags.map((tag, index) => {
-          return (
-            <li key={`tag-${index}`} className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl">
-              {tag}
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <HeaderInfo title={title} tags={tags} />
+    <HeaderIcon expanded={expanded} />
+  </div>
+)
 
-    {expanded ? (
-      <div aria-hidden="true" className="dn md:db f1 fw9 animate">
-        -
-      </div>
-    ) : (
-      <div aria-hidden="true" className="dn md:db o-0 group-hover:o-100 f1 fw9 animate">
-        +
-      </div>
-    )}
+const HeaderInfo = ({ title, tags }) => (
+  <div>
+    <h3 className="mb2 lh-solid f2 sm:f1 fw9 ttu">{title}</h3>
+    <ul className="nb2">
+      {tags.map((tag, index) => {
+        return (
+          <li key={`tag-${index}`} className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl">
+            {tag}
+          </li>
+        )
+      })}
+    </ul>
+  </div>
+)
+
+const HeaderIcon = ({ expanded }) => (
+  <div
+    aria-hidden="true"
+    className={`dn md:db f1 fw9 animate${!expanded && ` o-0 group-hover:o-100`}`}
+  >
+    {expanded ? `-` : `+`}
   </div>
 )
 
@@ -273,84 +304,11 @@ const ProjectHeader = ({ project, expanded }) => (
 
 const ProjectDetails = ({ project }) => (
   <div className="container pt4 lh-tall">
-    {/* <div> */}
-    {/* <div
-      className="mb4 "
-      style={{
-        display: `grid`,
-        gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr)`,
-        gridGap: `1rem`
-      }}
-    > */}
-    {/* Remove the "images" loop? */}
-    {project.images ? (
-      <ul
-        className=""
-        style={{
-          display: `grid`,
-          gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr)`,
-          gridGap: `1rem`
-        }}
-      >
-        {project.images.map((photo, index) => {
-          return (
-            <li key={`photo-${index}`}>
-              <Img
-                sizes={photo.image.childImageSharp.sizes}
-                alt={photo.alt}
-                className="shadow-lg"
-              />
-            </li>
-          )
-        })}
-      </ul>
-    ) : (
-      <figure role="group">
-        <Img
-          sizes={project.image.childImageSharp.sizes}
-          alt={project.alt}
-          className="shadow-lg"
-        />
-        <figcaption className="o-50 pt1 f6">{project.alt}</figcaption>
-      </figure>
-    )}
-    {/* </div> */}
+    <FeaturedImage image={project.image.childImageSharp.sizes} alt={project.alt} />
 
-    {project.reviews &&
-      project.reviews.map((review, index) => {
-        return (
-          <blockquote key={`review-${index}`} className="mt4 pv2">
-            <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
-              <p className="mb2 f3">{review.quotation}</p>
-              {review.link ? (
-                <cite className="f4 fw7 fs-normal">
-                  <HyperLink href={review.link} className="">
-                    {review.source}
-                  </HyperLink>
-                </cite>
-              ) : (
-                <cite className="f4 fw7 fs-normal">{review.source}</cite>
-              )}
-            </div>
-          </blockquote>
-        )
-      })}
-
-    <p className="mt4 measure" dangerouslySetInnerHTML={{ __html: project.description }} />
-
-    <div className="mt4">
-      {project.details &&
-        project.details.map((detail, index) => {
-          return (
-            detail.name !== `Dates` && (
-              <dl key={`detail-${index}`}>
-                <dt className="dib fw7">{detail.name}:&nbsp;</dt>
-                <dd className="dib">{detail.value}</dd>
-              </dl>
-            )
-          )
-        })}
-    </div>
+    {project.reviews && <Reviews reviews={project.reviews} />}
+    {project.description && <Description description={project.description} />}
+    {project.details && <Details details={project.details} />}
 
     <HyperLink href={project.link} className="link mv4 tc">
       View site →
@@ -358,11 +316,51 @@ const ProjectDetails = ({ project }) => (
   </div>
 )
 
-/* 
- *
- * Details
- * 
- */
+const FeaturedImage = ({ image, alt }) => (
+  <figure>
+    <Img sizes={image} alt={alt} className="shadow-lg" />
+    <figcaption className="o-50 pt1 f6">{alt}</figcaption>
+  </figure>
+)
+
+const Reviews = ({ reviews }) =>
+  reviews.map((review, index) => {
+    return (
+      <blockquote key={`review-${index}`} className="mt4 pv2">
+        <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
+          <p className="mb2 f3">{review.quotation}</p>
+          {review.link ? (
+            <cite className="f4 fw7 fs-normal">
+              <HyperLink href={review.link} className="">
+                {review.source}
+              </HyperLink>
+            </cite>
+          ) : (
+            <cite className="f4 fw7 fs-normal">{review.source}</cite>
+          )}
+        </div>
+      </blockquote>
+    )
+  })
+
+const Description = ({ description }) => (
+  <p className="mt4 measure" dangerouslySetInnerHTML={{ __html: description }} />
+)
+
+const Details = ({ details }) => (
+  <div className="mt4">
+    {details.map((detail, index) => {
+      return (
+        detail.name !== `Dates` && (
+          <dl key={`detail-${index}`}>
+            <dt className="dib fw7">{detail.name}:&nbsp;</dt>
+            <dd className="dib">{detail.value}</dd>
+          </dl>
+        )
+      )
+    })}
+  </div>
+)
 
 /* 
  *
