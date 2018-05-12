@@ -93,7 +93,8 @@
         "quotation":
           "Bass Michael Uloth brought a rich, melifluous tone and a striking figure to the stage. His singing is rich and low without feeling woofy or manufactured.",
         "source": "Greg Finney, Schmopera",
-        "link": "https://www.schmopera.com/equal-parts-stressful-and-reverent-atgbound/"
+        "link":
+          "https://www.schmopera.com/equal-parts-stressful-and-reverent-atgbound/"
       },
       {
         "quotation":
@@ -210,7 +211,7 @@
       {
         "quotation":
           "The two important roles with the most manifest suffering were wonderfully realized by mezzo Krisztina Szabo as Mary Magdalene and bass Michael Uloth as Judas.",
-        "source": "American Record Guide",
+        "source": "Jeff Dunn, American Record Guide",
         "link": "http://www.americanrecordguide.com"
       },
       {
@@ -467,7 +468,8 @@
         "quotation":
           "The male quartet (John Easterlin, Peter Barrett, Michael Uloth and Christopher Enns) was a gift that kept on giving at every turn. It's difficult to imagine their roles performed better in any way.",
         "source": "Lydia Perovic, Definitely the Opera",
-        "link": "https://definitelytheopera.wordpress.com/2011/05/04/ariadne-auf-toronto/"
+        "link":
+          "https://definitelytheopera.wordpress.com/2011/05/04/ariadne-auf-toronto/"
       }
     ],
     "description": "",
@@ -615,10 +617,12 @@
         "quotation":
           "Kitchener-born bass Michael Uloth proved superior as a singer (and vastly superior as an actor) to his counterpart.",
         "source": "Arthur Kaptainis, National Post",
-        "link": "http://nationalpost.com/entertainment/music/the-coc-ensemble-gets-magical"
+        "link":
+          "http://nationalpost.com/entertainment/music/the-coc-ensemble-gets-magical"
       },
       {
-        "quotation": "Michael Uloth brought a sense of wisdom as well as warmth to Sarastro.",
+        "quotation":
+          "Michael Uloth brought a sense of wisdom as well as warmth to Sarastro.",
         "source": "Jon Kaplan, NOW Magazine",
         "link": "https://nowtoronto.com/culture/stage/scenes-2011-02-24/"
       }
@@ -1021,7 +1025,8 @@
   },
   {
     "image": "../images/opera/lord-nelson-2.jpg",
-    "alt": "1799 painting of Vice Admiral Horatio Lord Nelson by Lemuel Francis Abbott.",
+    "alt":
+      "1799 painting of Vice Admiral Horatio Lord Nelson by Lemuel Francis Abbott.",
     "title": "Lord Nelson Mass",
     "category": "Opera",
     "tags": ["Elora Festival"],
@@ -1489,7 +1494,8 @@
         "value": "April 2008"
       }
     ],
-    "link": "https://www.metunited.org/jmv4/index.php/programs/music/music-programs/17-choirs"
+    "link":
+      "https://www.metunited.org/jmv4/index.php/programs/music/music-programs/17-choirs"
   },
   {
     "image": "../images/opera/glimmerglass-orfeo.jpg",
