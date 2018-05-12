@@ -102,11 +102,14 @@ const OperaBio = () => (
 const WebDevBio = () => (
   <Fragment>
     <p className="mt4 lh-tall measure">
-      Since building my own first "I'm an opera singer" website, I've built dozens of
-      sites for singers, freelancers and small businesses looking to expand their
-      online profiles. I love creating sites that look modern and load quickly on any
-      device. When I'm not working on my own projects, I'm also the lead front-end
-      developer for Coffeeshop Creative, a web design agency based in Toronto.
+      Since building my first "I'm an opera singer" website, I've built dozens of
+      sites for singers, freelancers and businesses looking to expand their online
+      profiles. I love creating sexy, modern sites and making sure they load as
+      quickly as possible. In addition to building my own projects, I'm also the lead
+      front-end developer at{` `}
+      <HyperLink href="http://coffeeshopcreative.ca/" className="link-inline">
+        Coffeeshop Creative
+      </HyperLink>, a web design agency based in Toronto.
     </p>
   </Fragment>
 )
