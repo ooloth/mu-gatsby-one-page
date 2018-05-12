@@ -98,7 +98,7 @@
       },
       {
         "quotation":
-          "It requires no small amount of courage on the part of a bass to sing a piece originally written for castrato. To his abiding credit, Uloth enthusastically embraces the challenge, tackling [the] deservedly celebrated \"Ombra mai fu\"...with a fine sense of proportion.",
+          "It requires no small amount of courage on the part of a bass to sing a piece originally written for castrato. To his abiding credit, Uloth enthusastically embraces the challenge, tackling [the] deservedly-celebrated \"Ombra mai fu\"...with a fine sense of proportion.",
         "source": "Ian Ritchie, Opera Going Toronto",
         "link": "http://operagoto.com/bound-review/"
       },
@@ -287,7 +287,7 @@
       },
       {
         "name": "Dates",
-        "value": "January - February, 2017"
+        "value": "January - February 2017"
       }
     ],
     "link": "https://www.coc.ca"
@@ -299,7 +299,14 @@
     "title": "Don Pasquale",
     "category": "Opera",
     "tags": ["Saskatoon Opera"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "...a hapless-looking Pasquale [was] played with comic buffoonery by Michael Uloth...",
+        "source": "Opera Canada",
+        "link": "https://www.thefreelibrary.com/SASKATOON.-a0307790286"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -328,7 +335,7 @@
       },
       {
         "name": "Dates",
-        "value": "May - June, 2012"
+        "value": "June 2012"
       }
     ],
     "link": "http://www.saskatoonopera.ca"
@@ -369,7 +376,7 @@
       },
       {
         "name": "Dates",
-        "value": "April - May, 2012"
+        "value": "April 2012"
       }
     ],
     "link": "https://www.opera-lyon.com/"
@@ -381,7 +388,29 @@
     "title": "Don Pasquale",
     "category": "Opera",
     "tags": ["Seattle Opera", "Young Artists Program"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "The opera story...needs plenty of help from the acting and visuals to keep it alive and here the young singers excelled, particularly Uloth and Opuszynski, who have the lion’s share of the funny side of things.",
+        "source": "Philippa Kiraly, The Sun Break",
+        "link":
+          "http://thesunbreak.com/2012/04/03/young-artists-don-pasquale-is-a-walk-on-the-funny-side-of-the-street/"
+      },
+      {
+        "quotation":
+          "The youthful Uloth portrays a creaky-jointed septuagenarian with a little pot belly and a long skinny face... His mannerisms fit the picture, especially his efforts to sit down and get up again.",
+        "source": "Philippa Kiraly, The Sun Break",
+        "link":
+          "http://thesunbreak.com/2012/04/03/young-artists-don-pasquale-is-a-walk-on-the-funny-side-of-the-street/"
+      },
+      {
+        "quotation":
+          "Canadian bass Michael Uloth was a certifiably clueless Don Pasquale.",
+        "source": "Hedonista, Heed the Hedonist",
+        "link":
+          "http://www.heedthehedonist.com/two-shows-left-this-weekend-don-pasquale"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -410,7 +439,7 @@
       },
       {
         "name": "Dates",
-        "value": "March - April, 2012"
+        "value": "April 2012"
       }
     ],
     "link": "https://seattleopera.org"
@@ -422,7 +451,15 @@
     "title": "Werther",
     "category": "Opera",
     "tags": ["Seattle Opera", "Young Artists Program"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "Bass Michael Uloth has only a cameo role but it’s enough to make one want to hear more of him.",
+        "source": "Philippa Kiraly, The Sun Break",
+        "link":
+          "http://thesunbreak.com/2011/11/21/a-riveting-werther-from-seattle-operas-young-artists/"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -451,7 +488,7 @@
       },
       {
         "name": "Dates",
-        "value": "October - November, 2011"
+        "value": "November 2011"
       }
     ],
     "link": "https://seattleopera.org"
@@ -500,7 +537,7 @@
       },
       {
         "name": "Dates",
-        "value": "April - May, 2011"
+        "value": "May 2011"
       }
     ],
     "link": "https://www.coc.ca"
@@ -548,7 +585,7 @@
       },
       {
         "name": "Dates",
-        "value": "2011"
+        "value": "March 2011"
       }
     ],
     "link": "https://www.bam.org"
@@ -588,7 +625,7 @@
       },
       {
         "name": "Dates",
-        "value": "2011"
+        "value": "March 2011"
       }
     ],
     "link": "https://www.bam.org"
@@ -615,16 +652,16 @@
       },
       {
         "quotation":
-          "Kitchener-born bass Michael Uloth proved superior as a singer (and vastly superior as an actor) to his counterpart.",
-        "source": "Arthur Kaptainis, National Post",
-        "link":
-          "http://nationalpost.com/entertainment/music/the-coc-ensemble-gets-magical"
-      },
-      {
-        "quotation":
           "Michael Uloth brought a sense of wisdom as well as warmth to Sarastro.",
         "source": "Jon Kaplan, NOW Magazine",
         "link": "https://nowtoronto.com/culture/stage/scenes-2011-02-24/"
+      },
+      {
+        "quotation":
+          "Michael Uloth proved superior as a singer (and vastly superior as an actor) to his counterpart.",
+        "source": "Arthur Kaptainis, National Post",
+        "link":
+          "http://nationalpost.com/entertainment/music/the-coc-ensemble-gets-magical"
       }
     ],
     "description": "",
@@ -655,7 +692,7 @@
       },
       {
         "name": "Dates",
-        "value": "February - March, 2011"
+        "value": "February 2011"
       }
     ],
     "link": "https://www.coc.ca"
@@ -814,7 +851,7 @@
       },
       {
         "name": "Dates",
-        "value": "April 2010"
+        "value": "March 2010"
       }
     ],
     "link": "http://vpchoir.squarespace.com"
@@ -1062,7 +1099,7 @@
       },
       {
         "name": "Dates",
-        "value": "July 2009"
+        "value": "August 2009"
       }
     ],
     "link": "http://www.elorafestival.ca"
@@ -1378,7 +1415,15 @@
     "title": "Rigoletto",
     "category": "Opera",
     "tags": ["Saskatoon Opera"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "My favorite was Michael Uloth the bass who played Sparafucile the assassin...that long low note at the end of the Rigoletto-Sparafucile duet was pretty impressive.",
+        "source": "Cara, Chickens in Saskatoon",
+        "link":
+          "http://chickensinsaskatoon.blogspot.ca/2008/08/chickens-cultural-moment-rigoletto.html"
+      }
+    ],
     "description": "",
     "details": [
       {
@@ -1407,10 +1452,94 @@
       },
       {
         "name": "Dates",
-        "value": "May - June, 2008"
+        "value": "May - June 2008"
       }
     ],
     "link": "http://www.saskatoonopera.ca"
+  },
+  {
+    "image": "../images/opera/purcell.jpg",
+    "alt": "Drawing of Henry Purcell.",
+    "title": "The Indian Queen",
+    "category": "Opera",
+    "tags": ["Toronto Masque Theatre"],
+    "reviews": [
+      {
+        "quotation":
+          "Two to watch are bass Michael Uloth and baritone Andrew Mahon. They both have rich, warm, hearty voices.",
+        "source": "Paula Citron, Classical 102.9 FM",
+        "link": "http://stg.classical1029fm.com/arts-reviews/indian-queen/"
+      }
+    ],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Toronto Masque Theatre"
+      },
+      {
+        "name": "Opera",
+        "value": "The Indian Queen"
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Composer",
+        "value": "Henry Purcell"
+      },
+      {
+        "name": "Conductor",
+        "value": "Larry Beckwith"
+      },
+      {
+        "name": "Director",
+        "value": "Derek Boyes"
+      },
+      {
+        "name": "Dates",
+        "value": "April 2008"
+      }
+    ],
+    "link": "http://www.torontomasquetheatre.com"
+  },
+  {
+    "image": "../images/opera/bach.jpg",
+    "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
+    "title": "St. John Passion",
+    "category": "Opera",
+    "tags": ["Metropolitan Festival Choir"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Metropolitan Festival Choir"
+      },
+      {
+        "name": "Oratorio",
+        "value": "St. John Passion"
+      },
+      {
+        "name": "Role",
+        "value": "Jesus"
+      },
+      {
+        "name": "Composer",
+        "value": "Johann Sebastien Bach"
+      },
+      {
+        "name": "Conductor",
+        "value": "Patricia Wright"
+      },
+      {
+        "name": "Dates",
+        "value": "April 2008"
+      }
+    ],
+    "link":
+      "https://www.metunited.org/jmv4/index.php/programs/music/music-programs/17-choirs"
   },
   {
     "image": "../images/opera/anna-bolena.jpg",
@@ -1455,47 +1584,10 @@
       },
       {
         "name": "Dates",
-        "value": "May - June, 2008"
+        "value": "October 2007"
       }
     ],
     "link": "http://operainconcert.com"
-  },
-  {
-    "image": "../images/opera/bach.jpg",
-    "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
-    "title": "St. John Passion",
-    "category": "Opera",
-    "tags": ["Metropolitan Festival Choir"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Metropolitan Festival Choir"
-      },
-      {
-        "name": "Oratorio",
-        "value": "St. John Passion"
-      },
-      {
-        "name": "Role",
-        "value": "Jesus"
-      },
-      {
-        "name": "Composer",
-        "value": "Johann Sebastien Bach"
-      },
-      {
-        "name": "Conductor",
-        "value": "Patricia Wright"
-      },
-      {
-        "name": "Dates",
-        "value": "April 2008"
-      }
-    ],
-    "link":
-      "https://www.metunited.org/jmv4/index.php/programs/music/music-programs/17-choirs"
   },
   {
     "image": "../images/opera/glimmerglass-orfeo.jpg",

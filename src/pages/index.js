@@ -62,12 +62,12 @@ export const query = graphql`
           title
           category
           tags
-          description
           reviews {
             quotation
             source
             link
           }
+          description
           details {
             name
             value
@@ -90,6 +90,11 @@ export const query = graphql`
           title
           category
           tags
+          reviews {
+            quotation
+            source
+            link
+          }
           description
           details {
             name

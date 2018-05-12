@@ -19,7 +19,8 @@ class Work extends React.Component {
 
       case `websites`:
         if (e.target.checked) filters = { websitesIsChecked: true }
-        else if (!operaIsChecked) filters = { operaIsChecked: true, websitesIsChecked: true }
+        else if (!operaIsChecked)
+          filters = { operaIsChecked: true, websitesIsChecked: true }
         else filters = { websitesIsChecked: false }
         break
     }
@@ -66,8 +67,8 @@ class Work extends React.Component {
 
         <Projects
           projects={visibleProjects}
-          operaIsChecked={operaIsChecked}
-          websitesIsChecked={websitesIsChecked}
+          // operaIsChecked={operaIsChecked}
+          // websitesIsChecked={websitesIsChecked}
         />
 
         {!allLoaded && <LoadMoreProjects handleLoadMore={this.handleLoadMore} />}
@@ -99,7 +100,7 @@ const LoadMoreProjects = ({ handleLoadMore }) => (
 const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
   <fieldset className="container mb4 lh-solid f3 fw4 ttl">
     <legend className="sr-only">
-      Select whether to view opera projects, website projects, or both
+      Select whether to view opera projects, website projects, or both:
     </legend>
 
     <Filter
@@ -130,7 +131,9 @@ const Filter = ({ category, handleChange, operaIsChecked, websitesIsChecked }) =
   return (
     <label
       htmlFor={category}
-      className={`custom-checkbox animate cursor-pointer${category === `opera` ? ` mr4` : ``}`}
+      className={`custom-checkbox animate cursor-pointer${
+        category === `opera` ? ` mr4` : ``
+      }`}
     >
       {/* Actual (but visually-hidden) checkbox */}
       <input
@@ -161,7 +164,7 @@ const Filter = ({ category, handleChange, operaIsChecked, websitesIsChecked }) =
  * 
  */
 
-const Projects = ({ projects, operaIsChecked, websitesIsChecked }) => (
+const Projects = ({ projects }) => (
   <ul>
     {projects.map(project => {
       return <Project key={project.key} project={project.node} />
@@ -184,17 +187,17 @@ class Project extends React.Component {
   details = React.createRef()
 
   handleClick = () => (this.state.expanded ? this.collapse() : this.expand())
-  handleKeyUp = e => e.key === 'Enter' && this.handleClick()
+  handleKeyUp = e => e.key === `Enter` && this.handleClick()
 
   expand = () => {
     const gsapTarget = this.details.current
 
-    loadjs.ready('gsap', () => {
+    loadjs.ready(`gsap`, () => {
       // When expanding, set this immediately
       this.setState({ expanded: true })
 
       // Invalidate the temporary inline styles (which match the starting state for the animation and are added to prevent a flash of content in the ending position)
-      gsapTarget.removeAttribute('style')
+      gsapTarget.removeAttribute(`style`)
 
       // Expand the section to its natural height
       TweenMax.fromTo(
@@ -207,7 +210,7 @@ class Project extends React.Component {
         {
           height: gsapTarget.offsetHeight,
           autoAlpha: 1,
-          ease: Power3.easeInOut
+          ease: `Power3.easeInOut`
         }
       )
     })
@@ -216,12 +219,12 @@ class Project extends React.Component {
   collapse = () => {
     const gsapTarget = this.details.current
 
-    loadjs.ready('gsap', () => {
+    loadjs.ready(`gsap`, () => {
       // Collapse the section to 0
       TweenMax.to(gsapTarget, 1, {
         height: 0,
         autoAlpha: 0,
-        ease: Power3.easeInOut,
+        ease: `Power3.easeInOut`,
         // When collapsing, set this after animation completes
         onComplete: () => this.setState({ expanded: false })
       })
@@ -238,6 +241,7 @@ class Project extends React.Component {
         tabIndex="0"
         onClick={this.handleClick}
         onKeyUp={this.handleKeyUp}
+        aria-expanded={expanded}
         className="relative cursor-pointer"
       >
         <span className="sr-only">
@@ -245,7 +249,11 @@ class Project extends React.Component {
         </span>
 
         <div className="pv4 hover:bg-near-white animate">
-          <ProjectHeader title={project.title} tags={project.tags} expanded={expanded} />
+          <ProjectHeader
+            title={project.title}
+            tags={project.tags}
+            expanded={expanded}
+          />
           <div
             ref={this.details}
             className="relative z-2 overflow-hidden"
@@ -278,7 +286,10 @@ const HeaderInfo = ({ title, tags }) => (
     <ul className="nb2">
       {tags.map((tag, index) => {
         return (
-          <li key={`tag-${index}`} className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl">
+          <li
+            key={`tag-${index}`}
+            className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl"
+          >
             {tag}
           </li>
         )
@@ -328,7 +339,10 @@ const Reviews = ({ reviews }) =>
     return (
       <blockquote key={`review-${index}`} className="mt4 pv2">
         <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
-          <p className="mb2 f3">{review.quotation}</p>
+          <p
+            className="mb2 f3"
+            dangerouslySetInnerHTML={{ __html: review.quotation }}
+          />
           {review.link ? (
             <cite className="f4 fw7 fs-normal">
               <HyperLink href={review.link}>{review.source}</HyperLink>
@@ -366,7 +380,7 @@ const Details = ({ details }) => (
  * 
  */
 
-import React, { Fragment } from 'react'
+import React from 'react'
 import loadjs from 'loadjs'
 
 import HyperLink from '../components/HyperLink'

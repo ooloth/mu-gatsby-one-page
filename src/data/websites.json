@@ -1,10 +1,12 @@
 [
   {
     "image": "../images/websites/adrianne-pieczonka.jpg",
-    "alt": "Adrianne Pieczonka as Elisabeth in Don Carlos at the Gran Teatre del Liceu.",
+    "alt":
+      "Adrianne Pieczonka as Elisabeth in Don Carlos at the Gran Teatre del Liceu.",
     "title": "Adrianne Pieczonka",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
+    "reviews": [],
     "description":
       "I worked with internationally-celebrated soprano Adrianne Pieczonka to create a bold new design to showcase her work.",
     "details": [
@@ -17,10 +19,12 @@
   },
   {
     "image": "../images/websites/atom-egoyan.jpg",
-    "alt": "Atom Egoyan during a press conference in Stepanakert. Photo by Nagorno Karabakh.",
+    "alt":
+      "Atom Egoyan during a press conference in Stepanakert. Photo by Nagorno Karabakh.",
     "title": "Ego Film Arts",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
+    "reviews": [],
     "description":
       "It was time for a new look. I worked together with Canadian film and stage director Atom Egoyan to create a minimal, clean website design for Ego&nbsp;Film&nbsp;Arts.",
     "details": [
@@ -37,6 +41,7 @@
     "title": "Adam Luther",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
+    "reviews": [],
     "description":
       "Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.",
     "details": [
@@ -53,6 +58,7 @@
     "title": "Laura Albino",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
+    "reviews": [],
     "description":
       "Laura is an opera singer who wanted a new website to accompany her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
     "details": [
@@ -69,6 +75,7 @@
     "title": "Ileana Montalbetti",
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
+    "reviews": [],
     "description":
       "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of this artist’s work.",
     "details": [
@@ -85,6 +92,7 @@
     "title": "Aria Umezawa",
     "category": "Website",
     "tags": ["Website", "Code"],
+    "reviews": [],
     "description":
       "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create a fast-loading, eye-catching portfolio for Canadian director Aria Umezawa.",
     "details": [
@@ -102,6 +110,7 @@
     "title": "Pomegranate Opera",
     "category": "Website",
     "tags": ["Website", "Code"],
+    "reviews": [],
     "description":
       "I worked with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build a whimsical showcase for the upcoming production of \"Pomegranate Opera\", a lesbian opera by Amanda Hale and Kye Marshall.",
     "details": [
@@ -118,6 +127,7 @@
     "title": "Artist Center",
     "category": "Website",
     "tags": ["Website", "Code"],
+    "reviews": [],
     "description":
       "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create an attractive landing page for the launch of Artist.Center, an app that helps connect operatic artists and companies.",
     "details": [
@@ -134,12 +144,20 @@
     "title": "Rachel Krehm",
     "category": "Website",
     "tags": ["Website", "Code"],
+    "reviews": [
+      {
+        "quotation":
+          "So excited to show the world my new website! Thank you to <a href=\"https://twitter.com/coffeescreative\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">@coffeescreative</a> for the beautiful job!",
+        "source": "Rachel Krehm",
+        "link": "https://twitter.com/RachelKrehm/status/931216429294280706"
+      }
+    ],
     "description":
       "I worked with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create an energetic portfolio site for Rachel Krehm, an opera, theatre and comedy performer and the co-founder and General Director of Opera&nbsp;5.",
     "details": [
       {
         "name": "Tools",
-        "value": "React, Gatbsy, PostCSS, GitLab, Netlify"
+        "value": "React, Gatbsy, Styled Components, GitLab, Netlify"
       }
     ],
     "link": "https://www.artist.center/"
@@ -150,6 +168,7 @@
     "title": "Riccardo Iannello",
     "category": "Website",
     "tags": ["Website", "Code"],
+    "reviews": [],
     "description":
       "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build an engaging one-page portfolio site for Italian-Canadian tenor Riccardo Iannello.",
     "details": [
@@ -166,6 +185,7 @@
     "title": "John Greer",
     "category": "Website",
     "tags": ["Website", "Code"],
+    "reviews": [],
     "description":
       "I worked with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build a comprehensive multi-page portfolio site for Canadian composer John&nbsp;Greer.",
     "details": [
@@ -182,6 +202,7 @@
     "title": "DG Volo & Company",
     "category": "Website",
     "tags": ["Website", "Code"],
+    "reviews": [],
     "description":
       "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.",
     "details": [

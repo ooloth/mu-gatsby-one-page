@@ -109,7 +109,7 @@ const WebDevBio = () => (
       front-end developer at{` `}
       <HyperLink href="http://coffeeshopcreative.ca/" className="link-inline">
         Coffeeshop Creative
-      </HyperLink>, a web design agency based in Toronto.
+      </HyperLink>, a digital design agency based in Toronto.
     </p>
   </Fragment>
 )
