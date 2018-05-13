@@ -67,6 +67,7 @@ export const query = graphql`
             source
             link
           }
+          features
           description
           details {
             name

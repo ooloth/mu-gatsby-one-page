@@ -1365,17 +1365,18 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
 }
 
 .link-inline {
+  display: inline-block;
   transition: all .2s ease-in-out;
-  border-bottom: .05em solid #2eec96;
-  border-bottom: .05em solid var(--green);
-  box-shadow: inset 0 -.1em 0 0 #2eec96;
-  box-shadow: inset 0 -.1em 0 0 var(--green);
-  /* box-shadow: inset 0 -2px 0px 0px var(--green); */
+  border-bottom: 1px solid #2eec96;
+  border-bottom: 1px solid var(--green);
+  box-shadow: inset 0 -2px 0 0 #2eec96;
+  box-shadow: inset 0 -2px 0 0 var(--green);
+  line-height: 1.2;
 }
 
 .link-inline:hover {
-  box-shadow: inset 0 -.6em 0 0 #2eec96;
-  box-shadow: inset 0 -.6em 0 0 var(--green);
+  box-shadow: inset 0 -10px 0 0 #2eec96;
+  box-shadow: inset 0 -10px 0 0 var(--green);
 }
 
 [data-action="raise"] {

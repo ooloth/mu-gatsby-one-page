@@ -104,9 +104,8 @@ const WebDevBio = () => (
     <p className="mt4 lh-tall measure">
       Since building my first "I'm an opera singer" website, I've built dozens of
       sites for singers, freelancers and businesses looking to expand their online
-      profiles. I love creating sexy, modern sites and making sure they load as
-      quickly as possible. In addition to building my own projects, I'm also the lead
-      front-end developer at{` `}
+      profiles. I love building sexy, modern sites that load as quickly as possible.
+      In addition to my own projects, I'm also the lead front-end developer at{` `}
       <HyperLink href="http://coffeeshopcreative.ca/" className="link-inline">
         Coffeeshop Creative
       </HyperLink>, a digital design agency based in Toronto.
@@ -126,7 +125,11 @@ const SeeWork = () => <p className="mt4 lh-copy f4">See my recent work below.</p
 
 const ReadMoreOrSeeWork = ({ handleClick }) => (
   <p className="dib mt4 lh-copy f4">
-    <button onClick={handleClick} className="link-inline dib f4">
+    <button
+      onClick={handleClick}
+      className="link-inline f4"
+      style={{ lineHeight: 1.1 }}
+    >
       Read more
     </button>
     &nbsp;or see my recent work below.

@@ -10,19 +10,19 @@ class Work extends React.Component {
     let filters = {}
 
     switch (e.target.value) {
-      case `opera`:
-        if (e.target.checked) filters = { operaIsChecked: true }
-        else if (!websitesIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { operaIsChecked: false }
-        break
+    case `opera`:
+      if (e.target.checked) filters = { operaIsChecked: true }
+      else if (!websitesIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { operaIsChecked: false }
+      break
 
-      case `websites`:
-        if (e.target.checked) filters = { websitesIsChecked: true }
-        else if (!operaIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { websitesIsChecked: false }
-        break
+    case `websites`:
+      if (e.target.checked) filters = { websitesIsChecked: true }
+      else if (!operaIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { websitesIsChecked: false }
+      break
     }
 
     this.setState({ ...filters, limit: 5 })
@@ -318,6 +318,7 @@ const ProjectDetails = ({ project }) => (
     <FeaturedImage image={project.image.childImageSharp.sizes} alt={project.alt} />
 
     {project.reviews && <Reviews reviews={project.reviews} />}
+    {project.features && <Features features={project.features} />}
     {project.description && <Description description={project.description} />}
     {project.details && <Details details={project.details} />}
 
@@ -354,6 +355,16 @@ const Reviews = ({ reviews }) =>
       </blockquote>
     )
   })
+
+const Features = ({ features }) => (
+  <ul className="mt4">
+    {features.map((feature, index) => {
+      return (
+        <li key={`feature-${index}`} dangerouslySetInnerHTML={{ __html: feature }} />
+      )
+    })}
+  </ul>
+)
 
 const Description = ({ description }) => (
   <p className="mt4 measure" dangerouslySetInnerHTML={{ __html: description }} />

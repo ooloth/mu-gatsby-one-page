@@ -101,11 +101,11 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
 }
 
 .link-inline { 
-  @apply .animate;
+  @apply .dib .animate;
 
-  border-bottom: .05em solid var(--green);
-  box-shadow: inset 0 -.1em 0px 0px var(--green);
-  /* box-shadow: inset 0 -2px 0px 0px var(--green); */
+  border-bottom: 1px solid var(--green);
+  box-shadow: inset 0 -2px 0px 0px var(--green);
+  line-height: 1.2;
 
-  &:hover { box-shadow: inset 0 -.6em 0px 0px var(--green) }
+  &:hover { box-shadow: inset 0 -10px 0px 0px var(--green) }
 }
