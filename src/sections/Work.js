@@ -210,7 +210,9 @@ class Project extends React.Component {
         {
           height: gsapTarget.offsetHeight,
           autoAlpha: 1,
-          ease: `Power3.easeInOut`
+          ease: `Power3.easeInOut`,
+          // after expanding, allow height to adapt naturally when window is resized:
+          onComplete: () => gsapTarget.removeAttribute(`style`)
         }
       )
     })
@@ -357,13 +359,22 @@ const Reviews = ({ reviews }) =>
   })
 
 const Features = ({ features }) => (
-  <ul className="mt4">
+  <ul className="mt4 nb1">
     {features.map((feature, index) => {
       return (
-        <li key={`feature-${index}`} dangerouslySetInnerHTML={{ __html: feature }} />
+        <li key={`feature-${index}`} className="flex pb1">
+          <Emoji />
+          <p dangerouslySetInnerHTML={{ __html: feature }} />
+        </li>
       )
     })}
   </ul>
+)
+
+const Emoji = () => (
+  <span role="img" aria-label="Emoji of a video camera" className="pr1">
+    🎥
+  </span>
 )
 
 const Description = ({ description }) => (
@@ -371,18 +382,18 @@ const Description = ({ description }) => (
 )
 
 const Details = ({ details }) => (
-  <div className="mt4">
+  <dl className="mt4">
     {details.map((detail, index) => {
       return (
         detail.name !== `Dates` && (
-          <dl key={`detail-${index}`}>
-            <dt className="dib fw7">{detail.name}:&nbsp;</dt>
-            <dd className="dib">{detail.value}</dd>
-          </dl>
+          <Fragment key={`detail-${index}`}>
+            <dt className="fl fw7">{detail.name}:&nbsp;</dt>
+            <dd>{detail.value}</dd>
+          </Fragment>
         )
       )
     })}
-  </div>
+  </dl>
 )
 
 /* 
@@ -391,7 +402,7 @@ const Details = ({ details }) => (
  * 
  */
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import loadjs from 'loadjs'
 
 import HyperLink from '../components/HyperLink'

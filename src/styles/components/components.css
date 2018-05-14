@@ -101,7 +101,7 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
 }
 
 .link-inline { 
-  @apply .dib .animate;
+  @apply .dib .animate; /* can add .dib to control line-height, but then it won't line-break */
 
   border-bottom: 1px solid var(--green);
   box-shadow: inset 0 -2px 0px 0px var(--green);

@@ -87,13 +87,16 @@ const OperaBio = () => (
       >
         SoundCloud
       </HyperLink>
-      {` `}
-      and{` `}
+      ,{` `}
       <HyperLink
         href="https://youtu.be/pAketmvRsUU?t=1h21m08s"
         className="link-inline"
       >
         YouTube
+      </HyperLink>
+      {` `}and{` `}
+      <HyperLink href="https://vimeo.com/24283716" className="link-inline">
+        Vimeo
       </HyperLink>.
     </p>
   </Fragment>
