@@ -361,15 +361,31 @@ const Reviews = ({ reviews }) =>
 const Features = ({ features }) => (
   <ul className="mt4 nb1">
     {features.map((feature, index) => {
-      return (
-        <li key={`feature-${index}`} className="flex pb1">
-          <Emoji />
-          <p dangerouslySetInnerHTML={{ __html: feature }} />
-        </li>
-      )
+      return <Feature key={`feature-${index}`} feature={feature} />
     })}
   </ul>
 )
+
+class Feature extends Component {
+  // Prevent link clicks from triggering click event handlers on parent components
+  // See: https://stackoverflow.com/questions/1369035/how-do-i-prevent-a-parents-onclick-event-from-firing-when-a-child-anchor-is-cli
+  // See: https://stackoverflow.com/questions/37568550/react-prevent-event-trigger-on-parent-from-child
+  handleClick = e => e.stopPropagation()
+
+  render() {
+    const { feature } = this.props
+
+    return (
+      <li className="flex pb1">
+        <Emoji />
+        <p
+          onClick={this.handleClick}
+          dangerouslySetInnerHTML={{ __html: feature }}
+        />
+      </li>
+    )
+  }
+}
 
 const Emoji = () => (
   <span role="img" aria-label="Emoji of a video camera" className="pr1">
@@ -402,7 +418,7 @@ const Details = ({ details }) => (
  * 
  */
 
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
 
 import HyperLink from '../components/HyperLink'

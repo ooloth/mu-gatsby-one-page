@@ -48,9 +48,9 @@
     "link": "https://www.coc.ca/productions/13109"
   },
   {
-    "image": "../images/opera/anna-bolena.jpg",
+    "image": "../images/opera/anna-bolena-1.jpg",
     "alt":
-      "\"Henry VIII's first interview with Anne Boleyn\", painted by Daniel MacLise in 1835.",
+      "Bruce Sledge, Christian Van Horn, Thomas Goerz and Sondra Radvanovsky in the Canadian Opera Company's production of Anna Bolena. Photo by Michael Cooper.",
     "title": "Anna Bolena",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -236,6 +236,9 @@
           "https://torontomasqueblog.wordpress.com/2017/05/01/two-extraordinary-concerts-and-an-announcement/"
       }
     ],
+    "features": [
+      "Watch a <a href=\"https://www.youtube.com/watch?v=pAketmvRsUU\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">full performance</a>"
+    ],
     "description": "",
     "details": [
       {
@@ -361,7 +364,7 @@
   {
     "image": "../images/opera/nightingale-2.jpg",
     "alt":
-      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+      "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
     "title": "The Nightingale",
     "category": "Opera",
     "tags": ["Opéra National de Lyon"],
@@ -521,7 +524,7 @@
   {
     "image": "../images/opera/ariadne.jpg",
     "alt":
-      "Michael Uloth (left) as Truffaldino in Ariadne auf Naxos, with Chris Enns, Peter Barrett and John Easterlin. Image by Michael Cooper.",
+      "Michael Uloth (left), Chris Enns, Peter Barrett and John Easterlin in the Canadian Opera Company's production of Ariadne auf Naxos. Image by Michael Cooper.",
     "title": "Ariadne auf Naxos",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -570,7 +573,7 @@
   {
     "image": "../images/opera/nightingale-3.jpg",
     "alt":
-      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+      "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
     "title": "The Nightingale",
     "category": "Opera",
     "tags": ["Brooklyn Academy of Music"],
@@ -1025,7 +1028,7 @@
   {
     "image": "../images/opera/nightingale-1.jpg",
     "alt":
-      "Michael Uloth (left) as the Bonze in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+      "Michael Uloth (left), Robert Pomakov, Laura Albino and Olga Peretyatko in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
     "title": "The Nightingale",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
