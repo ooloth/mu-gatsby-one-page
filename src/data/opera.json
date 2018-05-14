@@ -95,7 +95,7 @@
   {
     "image": "../images/opera/bound.jpg",
     "alt":
-      "Danika Lorèn in BOUND, Against the Grain Theatre, 2017. Photo by Darryl Block Photography.",
+      "Danika Lorèn in BOUND, Against the Grain Theatre 2017. Photo by Darryl Block Photography.",
     "title": "BOUND",
     "category": "Opera",
     "tags": ["Against the Grain Theatre"],
@@ -137,7 +137,7 @@
       },
       {
         "name": "Composer",
-        "value": "George Frideric Handel"
+        "value": "Georg Friedrich Händel"
       },
       {
         "name": "Conductor",
@@ -265,7 +265,7 @@
   {
     "image": "../images/opera/zauberflote-2.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of The Magic Flute, 2017. Image by Michael Cooper.",
+      "A scene from the Canadian Opera Company's production of The Magic Flute 2017. Image by Michael Cooper.",
     "title": "Die Zauberflöte",
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -454,7 +454,7 @@
       },
       {
         "name": "Dates",
-        "value": "April 2012"
+        "value": "March 31 - April 7, 2012"
       }
     ],
     "link": "https://seattleopera.org"
@@ -552,7 +552,7 @@
       },
       {
         "name": "Dates",
-        "value": "May 2011"
+        "value": "April 30 - May 29, 2011"
       }
     ],
     "link": "https://www.coc.ca"
@@ -587,7 +587,7 @@
       },
       {
         "name": "Role",
-        "value": "Bonze, Emporer (cover)"
+        "value": "Emporer (cover), Bonze"
       },
       {
         "name": "Composer",
@@ -603,7 +603,7 @@
       },
       {
         "name": "Dates",
-        "value": "March 2011"
+        "value": "March 1-6, 2011"
       }
     ],
     "link": "https://www.bam.org"
@@ -643,7 +643,7 @@
       },
       {
         "name": "Dates",
-        "value": "March 2011"
+        "value": "March 1-6, 2011"
       }
     ],
     "link": "https://www.bam.org"
@@ -697,7 +697,7 @@
       },
       {
         "name": "Role",
-        "value": "Sarastro (one show), 2nd Armed Man"
+        "value": "Sarastro (one performance), 2nd Armed Man"
       },
       {
         "name": "Composer",
@@ -713,7 +713,7 @@
       },
       {
         "name": "Dates",
-        "value": "February 2011"
+        "value": "January 29 - February 25, 2011"
       }
     ],
     "link": "https://www.coc.ca"
@@ -742,7 +742,7 @@
       },
       {
         "name": "Role",
-        "value": "Priest in St. Mark's"
+        "value": "Priest in St. Mark's, Youth"
       },
       {
         "name": "Composer",
@@ -758,7 +758,7 @@
       },
       {
         "name": "Dates",
-        "value": "October - November, 2010"
+        "value": "October 16 - November 6, 2010"
       }
     ],
     "link": "https://www.coc.ca"
@@ -804,7 +804,7 @@
       },
       {
         "name": "Dates",
-        "value": "2010"
+        "value": "October 2 - November 5, 2010"
       }
     ],
     "link": "https://www.coc.ca"
@@ -829,7 +829,7 @@
       },
       {
         "name": "Role",
-        "value": "Voice of Neptune (cover)"
+        "value": "Voice of Neptune (cover, one performance)"
       },
       {
         "name": "Composer",
@@ -845,7 +845,48 @@
       },
       {
         "name": "Dates",
-        "value": "2010"
+        "value": "May 19, 2010"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "image": "../images/opera/pergolesi.jpg",
+    "alt":
+      "Purported portrait of Pergolesi presented by his biographer Florimo to the Naples Conservatory.",
+    "title": "La Serva Padrona",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company", "Ensemble Studio"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company Ensemble Studio"
+      },
+      {
+        "name": "Opera",
+        "value": "La Serva Padrona"
+      },
+      {
+        "name": "Role",
+        "value": "Uberto"
+      },
+      {
+        "name": "Composer",
+        "value": "Giovanni Battista Pergolesi"
+      },
+      {
+        "name": "Pianist",
+        "value": "Anne Larlee"
+      },
+      {
+        "name": "Director",
+        "value": "Alistair Netwon"
+      },
+      {
+        "name": "Dates",
+        "value": "April 15, 2010"
       }
     ],
     "link": "https://www.coc.ca"
@@ -881,7 +922,7 @@
       },
       {
         "name": "Dates",
-        "value": "March 2010"
+        "value": "March 27, 2010"
       }
     ],
     "link": "http://vpchoir.squarespace.com"
@@ -925,7 +966,7 @@
       },
       {
         "name": "Dates",
-        "value": "2010"
+        "value": "February 3-28, 2010"
       }
     ],
     "link": "https://www.coc.ca"
@@ -966,48 +1007,7 @@
       },
       {
         "name": "Dates",
-        "value": "2010"
-      }
-    ],
-    "link": "https://www.coc.ca"
-  },
-  {
-    "image": "../images/opera/butterfly.jpg",
-    "alt":
-      "Michael Uloth as the Imperial Commissioner in Madama Butterfly. Image by Michael Cooper.",
-    "title": "Madama Butterfly",
-    "category": "Opera",
-    "tags": ["Canadian Opera Company"],
-    "reviews": [],
-    "description": "",
-    "details": [
-      {
-        "name": "Company",
-        "value": "Canadian Opera Company"
-      },
-      {
-        "name": "Opera",
-        "value": "Madama Butterfly"
-      },
-      {
-        "name": "Role",
-        "value": "Imperial Commissioner"
-      },
-      {
-        "name": "Composer",
-        "value": "Giacomo Puccini"
-      },
-      {
-        "name": "Conductor",
-        "value": "Carlo Montanaro"
-      },
-      {
-        "name": "Director",
-        "value": "Brian Macdonald"
-      },
-      {
-        "name": "Dates",
-        "value": "September - October, 2009"
+        "value": "January 27 - February 27, 2010"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1055,7 +1055,7 @@
       },
       {
         "name": "Role",
-        "value": "Bonze, Emporer (cover)"
+        "value": "Emporer (cover), Bonze"
       },
       {
         "name": "Composer",
@@ -1071,7 +1071,7 @@
       },
       {
         "name": "Dates",
-        "value": "October - November 2009"
+        "value": "October 17 - November 5, 2009"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1111,7 +1111,48 @@
       },
       {
         "name": "Dates",
-        "value": "October - November 2009"
+        "value": "October 17 - November 5, 2009"
+      }
+    ],
+    "link": "https://www.coc.ca"
+  },
+  {
+    "image": "../images/opera/butterfly.jpg",
+    "alt":
+      "Michael Uloth as the Imperial Commissioner in Madama Butterfly. Image by Michael Cooper.",
+    "title": "Madama Butterfly",
+    "category": "Opera",
+    "tags": ["Canadian Opera Company"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Canadian Opera Company"
+      },
+      {
+        "name": "Opera",
+        "value": "Madama Butterfly"
+      },
+      {
+        "name": "Role",
+        "value": "Imperial Commissioner"
+      },
+      {
+        "name": "Composer",
+        "value": "Giacomo Puccini"
+      },
+      {
+        "name": "Conductor",
+        "value": "Carlo Montanaro"
+      },
+      {
+        "name": "Director",
+        "value": "Brian Macdonald"
+      },
+      {
+        "name": "Dates",
+        "value": "September 26 - November 3, 2009"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1155,7 +1196,7 @@
       },
       {
         "name": "Dates",
-        "value": "August 2009"
+        "value": "August 2, 2009"
       }
     ],
     "link": "http://www.elorafestival.ca"
@@ -1210,7 +1251,7 @@
       },
       {
         "name": "Dates",
-        "value": "June 2009"
+        "value": "June 15-21, 2009"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1243,7 +1284,7 @@
       },
       {
         "name": "Role",
-        "value": "Snug, Theseus (cover)"
+        "value": "Theseus (cover), Snug"
       },
       {
         "name": "Composer",
@@ -1259,7 +1300,7 @@
       },
       {
         "name": "Dates",
-        "value": "April - May, 2009"
+        "value": "May 5-23, 2009"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1300,7 +1341,7 @@
       },
       {
         "name": "Dates",
-        "value": "April - May, 2009"
+        "value": "April 17 - May 24, 2009"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1337,11 +1378,11 @@
       },
       {
         "name": "Director",
-        "value": "José Luis Gomez"
+        "value": "Ian Judge"
       },
       {
         "name": "Dates",
-        "value": "January - February, 2009"
+        "value": "April 11 - May 7, 2009"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1382,7 +1423,7 @@
       },
       {
         "name": "Dates",
-        "value": "October - November, 2008"
+        "value": "October 10 - November 1, 2008"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1422,7 +1463,7 @@
       },
       {
         "name": "Dates",
-        "value": "October - November, 2008"
+        "value": "October 5-31, 2008"
       }
     ],
     "link": "https://www.coc.ca"
@@ -1447,7 +1488,7 @@
       },
       {
         "name": "Role",
-        "value": "Polonius / Gravedigger"
+        "value": "Polonius, Gravedigger"
       },
       {
         "name": "Composer",
@@ -1459,7 +1500,7 @@
       },
       {
         "name": "Dates",
-        "value": "August 2008"
+        "value": "August 16, 2008"
       }
     ],
     "link": "https://stratfordsummermusic.ca"
@@ -1508,7 +1549,7 @@
       },
       {
         "name": "Dates",
-        "value": "May - June 2008"
+        "value": "July 26 - August 1, 2008"
       }
     ],
     "link": "http://www.saskatoonopera.ca"
@@ -1539,7 +1580,7 @@
       },
       {
         "name": "Role",
-        "value": "Bass Soloist"
+        "value": "High Priest, Hymen"
       },
       {
         "name": "Composer",
@@ -1555,7 +1596,7 @@
       },
       {
         "name": "Dates",
-        "value": "April 2008"
+        "value": "April 24-26, 2008"
       }
     ],
     "link": "http://www.torontomasquetheatre.com"
@@ -1591,7 +1632,7 @@
       },
       {
         "name": "Dates",
-        "value": "April 2008"
+        "value": "March 21, 2008"
       }
     ],
     "link":
@@ -1640,7 +1681,7 @@
       },
       {
         "name": "Dates",
-        "value": "October 2007"
+        "value": "October 28, 2007"
       }
     ],
     "link": "http://operainconcert.com"
@@ -1680,7 +1721,7 @@
       },
       {
         "name": "Dates",
-        "value": "July - August, 2007"
+        "value": "July 28 - August 25, 2007"
       }
     ],
     "link": "https://glimmerglass.org"
@@ -1720,9 +1761,263 @@
       },
       {
         "name": "Dates",
-        "value": "July - August, 2007"
+        "value": "July 21 - August 27, 2007"
       }
     ],
     "link": "https://glimmerglass.org"
+  },
+  {
+    "image": "../images/opera/zauberflote-1.jpg",
+    "alt":
+      "An 1815 painting of a stage design for Die Zauberflöte by Karl Friedrich Schinkel.",
+    "title": "Die Zauberflöte",
+    "category": "Opera",
+    "tags": ["Guelph Symphony Orchestra"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Guelph Symphony Orchestra"
+      },
+      {
+        "name": "Opera",
+        "value": "Die Zauberflöte"
+      },
+      {
+        "name": "Role",
+        "value": "Sarastro"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Simon Irving"
+      },
+      {
+        "name": "Director",
+        "value": "Sarah Jane Burton"
+      },
+      {
+        "name": "Dates",
+        "value": "October 28, 2006"
+      }
+    ],
+    "link": "http://www.guelphsymphony.com"
+  },
+  {
+    "image": "../images/opera/kw-symphony.jpg",
+    "alt":
+      "The Kitchener-Waterloo Symphony in performance at The Centre in the Square. Photo by Roydon Tse.",
+    "title": "Opera Without Words",
+    "category": "Opera",
+    "tags": ["Kitchener-Waterloo Symphony"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Kitchener-Waterloo Symphony"
+      },
+      {
+        "name": "Concert",
+        "value": "\"Opera Without Words\""
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Conductor",
+        "value": "Christopher Wilkins"
+      },
+      {
+        "name": "Dates",
+        "value": "February 12, 2006"
+      }
+    ],
+    "link": "https://kwsymphony.ca"
+  },
+  {
+    "image": "../images/opera/menotti.jpg",
+    "alt": "Italian-American composer Gian Carlo Menotti.",
+    "title": "Amahl and the Night Visitors",
+    "category": "Opera",
+    "tags": ["Elora Festival Singers"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Elora Festival Singers"
+      },
+      {
+        "name": "Opera",
+        "value": "Amahl and the Night Visitors"
+      },
+      {
+        "name": "Role",
+        "value": "King Balthasar"
+      },
+      {
+        "name": "Composer",
+        "value": "Gian Carlo Menotti"
+      },
+      {
+        "name": "Conductor",
+        "value": "Noel Edison"
+      },
+      {
+        "name": "Dates",
+        "value": "December 2005"
+      }
+    ],
+    "link": "http://www.elorafestival.ca"
+  },
+  {
+    "image": "../images/opera/peter-hatch.jpg",
+    "alt":
+      "Peter Hatch, Canadian composer and founding director of the Open Ears Festival of Music and Sound.",
+    "title": "Cell Life",
+    "category": "Opera",
+    "tags": ["Open Ears Festival"],
+    "reviews": [],
+    "features": [
+      "🎥 Watch a 2010 performance of \"Cell Life\" at <a href=\"https://www.youtube.com/watch?v=3D4J468U2sU\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Stratford Summer Music</a>."
+    ],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Open Ears Festival of Music and Sound"
+      },
+      {
+        "name": "Guerilla Sound Event",
+        "value": "\"Cell Life\""
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Composer",
+        "value": "Peter Hatch"
+      },
+      {
+        "name": "Conductor",
+        "value": "Evan Mitchell"
+      },
+      {
+        "name": "Dates",
+        "value": "May 2005"
+      }
+    ],
+    "link": "http://openears.ca"
+  },
+  {
+    "image": "../images/opera/grand-river-chorus.jpg",
+    "alt": "The members of the Grand River Chorus.",
+    "title": "Mozart's Requiem",
+    "category": "Opera",
+    "tags": ["Grand River Chorus"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Grand River Chorus"
+      },
+      {
+        "name": "Oratorio",
+        "value": "Requiem"
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Composer",
+        "value": "Wolfgang Amadeus Mozart"
+      },
+      {
+        "name": "Conductor",
+        "value": "Robert Phillips"
+      },
+      {
+        "name": "Dates",
+        "value": "April 2004"
+      }
+    ],
+    "link": "http://www.grandriverchorus.com"
+  },
+  {
+    "image": "../images/opera/bach.jpg",
+    "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
+    "title": "A German Christmas",
+    "category": "Opera",
+    "tags": ["KW Chamber Orchestra"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Kitchener-Waterloo Chamber Orchestra"
+      },
+      {
+        "name": "Concert",
+        "value": "\"A German Christmas\""
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Conductor",
+        "value": "Graham Coles"
+      },
+      {
+        "name": "Dates",
+        "value": "December 2003"
+      }
+    ],
+    "link": "http://kwchamberorchestra.ca"
+  },
+  {
+    "image": "../images/opera/handel.jpg",
+    "alt": "1727 portrait of Georg Friedrich Händel by Balthasar Denner.",
+    "title": "Messiah (Part 1)",
+    "category": "Opera",
+    "tags": ["Milton Choristers"],
+    "reviews": [],
+    "description": "",
+    "details": [
+      {
+        "name": "Company",
+        "value": "Milton Choristers"
+      },
+      {
+        "name": "Oratorio",
+        "value": "Messiah (Part 1)"
+      },
+      {
+        "name": "Role",
+        "value": "Bass Soloist"
+      },
+      {
+        "name": "Composer",
+        "value": "Georg Friedrich Händel"
+      },
+      {
+        "name": "Conductor",
+        "value": "Sonja van de Hoef"
+      },
+      {
+        "name": "Dates",
+        "value": "December 2002"
+      }
+    ],
+    "link": "http://www.miltonchoristers.com/index.php"
   }
 ]

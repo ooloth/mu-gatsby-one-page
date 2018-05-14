@@ -60,7 +60,7 @@
     "tags": ["Website", "Design", "Code"],
     "reviews": [],
     "description":
-      "Laura is an opera singer who wanted a new website to accompany her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
+      "Laura is an opera singer who wanted a new website for her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.",
     "details": [
       {
         "name": "Tools",
@@ -77,7 +77,7 @@
     "tags": ["Website", "Design", "Code"],
     "reviews": [],
     "description":
-      "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of this artist’s work.",
+      "Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of her work.",
     "details": [
       {
         "name": "Tools",
@@ -92,7 +92,21 @@
     "title": "Aria Umezawa",
     "category": "Website",
     "tags": ["Website", "Code"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "Today’s the day we launch my new website, thanks to the amazing <a href=\"https://twitter.com/coffeescreative\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a>. The whole team was an absolute dream to work with, and came with such creative ideas. I couldn’t be more pleased.",
+        "source": "Aria Umezawa",
+        "link": "https://twitter.com/umezawaria/status/994947044522389504"
+      },
+      {
+        "quotation":
+          "Finally time to unveil my new website designed by <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">@coffeescreative</a>. They created this amazing minimalist design with bright colours and geometric shapes. Thrilled with the end result, and had a blast working with them.",
+        "source": "Aria Umezawa",
+        "link":
+          "https://www.facebook.com/umezawaria/photos/a.352185358613567.1073741828.341103669721736/375590169606419/?type=3&theater"
+      }
+    ],
     "description":
       "I partnered with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to create a fast-loading, eye-catching portfolio for Canadian director Aria Umezawa.",
     "details": [
@@ -185,7 +199,14 @@
     "title": "John Greer",
     "category": "Website",
     "tags": ["Website", "Code"],
-    "reviews": [],
+    "reviews": [
+      {
+        "quotation":
+          "It's been launched AT LAST! My new personal website! Warmest thanks to Stephen Bell and the talented crew at <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> for making this longtime dream come true! Check it out!",
+        "source": "John Greer",
+        "link": "https://www.facebook.com/john.l.greer.1/posts/10155831888508169"
+      }
+    ],
     "description":
       "I worked with designer Stephen Bell of <a href=\"http://coffeeshopcreative.ca\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">Coffeeshop Creative</a> to build a comprehensive multi-page portfolio site for Canadian composer John&nbsp;Greer.",
     "details": [
