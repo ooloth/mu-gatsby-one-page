@@ -59,7 +59,10 @@ export const query = graphql`
             }
           }
           alt
-          title
+          title {
+            text
+            lang
+          }
           category
           tags
           reviews {
@@ -72,6 +75,7 @@ export const query = graphql`
           details {
             name
             value
+            lang
           }
           link
         }
@@ -88,7 +92,9 @@ export const query = graphql`
             }
           }
           alt
-          title
+          title {
+            text
+          }
           category
           tags
           reviews {

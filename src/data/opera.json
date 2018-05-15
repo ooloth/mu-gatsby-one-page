@@ -3,7 +3,7 @@
     "image": "../images/opera/nightingale-4.jpg",
     "alt":
       "Michael Uloth (left), Anatoli Sivko, Lauren Eberwein and Jane Archibald in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
-    "title": "The Nightingale",
+    "title": { "text": "The Nightingale" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -51,7 +51,7 @@
     "image": "../images/opera/anna-bolena-1.jpg",
     "alt":
       "Bruce Sledge, Christian Van Horn, Thomas Goerz and Sondra Radvanovsky in the Canadian Opera Company's production of Anna Bolena. Photo by Michael Cooper.",
-    "title": "Anna Bolena",
+    "title": { "text": "Anna Bolena", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -67,7 +67,8 @@
       },
       {
         "name": "Opera",
-        "value": "Anna Bolena"
+        "value": "Anna Bolena",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -96,7 +97,7 @@
     "image": "../images/opera/bound.jpg",
     "alt":
       "Danika Lorèn in BOUND, Against the Grain Theatre 2017. Photo by Darryl Block Photography.",
-    "title": "BOUND",
+    "title": { "text": "BOUND" },
     "category": "Opera",
     "tags": ["Against the Grain Theatre"],
     "reviews": [
@@ -158,7 +159,7 @@
     "image": "../images/opera/kopernikus.jpg",
     "alt":
       "Michael Uloth (back, centre) in the Banff Centre for Arts and Creativity's production of Kopernikus.",
-    "title": "Kopernikus",
+    "title": { "text": "Kopernikus" },
     "category": "Opera",
     "tags": ["Banff Centre for Arts and Creativity"],
     "reviews": [
@@ -210,7 +211,7 @@
     "image": "../images/opera/apostles.jpg",
     "alt":
       "Michael Uloth, Daniel Lichti and Lawrence Wiliford as Judas, Peter and John in Pax Christi Chorale's 2017 production of The Apostles. Image by Dahlia Katz.",
-    "title": "The Apostles",
+    "title": { "text": "The Apostles" },
     "category": "Opera",
     "tags": ["Pax Christi Chorale"],
     "reviews": [
@@ -271,7 +272,7 @@
     "image": "../images/opera/zauberflote-2.jpg",
     "alt":
       "A scene from the Canadian Opera Company's production of The Magic Flute 2017. Image by Michael Cooper.",
-    "title": "Die Zauberflöte",
+    "title": { "text": "Die Zauberflöte", "lang": "de" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -287,7 +288,8 @@
       },
       {
         "name": "Opera",
-        "value": "Die Zauberflöte"
+        "value": "Die Zauberflöte",
+        "lang": "de"
       },
       {
         "name": "Role",
@@ -316,7 +318,7 @@
     "image": "../images/opera/don-pasquale-6.jpg",
     "alt":
       "Michael Uloth as Don Pasquale and Amanda Opuszynski as Norina in the Seattle Opera Young Artists Program's production of Don Pasquale. Image by Elise Bakketun.",
-    "title": "Don Pasquale",
+    "title": { "text": "Don Pasquale", "lang": "it" },
     "category": "Opera",
     "tags": ["Saskatoon Opera"],
     "reviews": [
@@ -335,11 +337,13 @@
       },
       {
         "name": "Opera",
-        "value": "Don Pasquale"
+        "value": "Don Pasquale",
+        "lang": "it"
       },
       {
         "name": "Role",
-        "value": "Don Pasquale"
+        "value": "Don Pasquale",
+        "lang": "it"
       },
       {
         "name": "Composer",
@@ -364,7 +368,7 @@
     "image": "../images/opera/nightingale-2.jpg",
     "alt":
       "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
-    "title": "The Nightingale",
+    "title": { "text": "The Nightingale" },
     "category": "Opera",
     "tags": ["Opéra National de Lyon"],
     "reviews": [],
@@ -376,7 +380,8 @@
     "details": [
       {
         "name": "Company",
-        "value": "Opéra National de Lyon"
+        "value": "Opéra National de Lyon",
+        "lang": "fr"
       },
       {
         "name": "Opera",
@@ -388,11 +393,11 @@
       },
       {
         "name": "Composer",
-        "value": "Alejo Pérez"
+        "value": "Igor Stravinsky"
       },
       {
         "name": "Conductor",
-        "value": "Johannes Debus"
+        "value": "Alejo Pérez"
       },
       {
         "name": "Director",
@@ -409,7 +414,7 @@
     "image": "../images/opera/don-pasquale-1.jpg",
     "alt":
       "Michael Uloth as Don Pasquale and Lindsay Russell as Norina in the Seattle Opera Young Artists Program's production of Don Pasquale. Image by Elise Bakketun.",
-    "title": "Don Pasquale",
+    "title": { "text": "Don Pasquale", "lang": "it" },
     "category": "Opera",
     "tags": ["Seattle Opera", "Young Artists Program"],
     "reviews": [
@@ -447,11 +452,13 @@
       },
       {
         "name": "Opera",
-        "value": "Don Pasquale"
+        "value": "Don Pasquale",
+        "lang": "it"
       },
       {
         "name": "Role",
-        "value": "Don Pasquale"
+        "value": "Don Pasquale",
+        "lang": "it"
       },
       {
         "name": "Composer",
@@ -476,7 +483,7 @@
     "image": "../images/opera/seattle-yap-artists.jpg",
     "alt":
       "Members of the Seattle Opera Young Artists Program (left to right): Artistic Director Peter Kazaras, Artistic Administrator Aren Der Hacopian, Joseph Lattanzi, Lindsay Russell, Christopher Lade (pianist/coach), Sarah Larsen, Michael Uloth, Amanda Opuszynski, Music Director Brian Garman and Andrew Stenson. Photo by Alan Alabastro.",
-    "title": "Werther",
+    "title": { "text": "Werther", "lang": "de" },
     "category": "Opera",
     "tags": ["Seattle Opera", "Young Artists Program"],
     "reviews": [
@@ -499,11 +506,13 @@
       },
       {
         "name": "Opera",
-        "value": "Werther"
+        "value": "Werther",
+        "lang": "de"
       },
       {
         "name": "Role",
-        "value": "Le Bailli"
+        "value": "Le Bailli",
+        "lang": "fr"
       },
       {
         "name": "Composer",
@@ -528,7 +537,7 @@
     "image": "../images/opera/ariadne-auf-naxos-1.jpg",
     "alt":
       "Peter Barrett, Chris Enns, Jane Archibald, Michael Uloth and John Easterlin in the Canadian Opera Company's production of Ariadne auf Naxos. Image by Michael Cooper.",
-    "title": "Ariadne auf Naxos",
+    "title": { "text": "Ariadne auf Naxos", "lang": "de" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [
@@ -552,7 +561,8 @@
       },
       {
         "name": "Opera",
-        "value": "Ariadne auf Naxos"
+        "value": "Ariadne auf Naxos",
+        "lang": "de"
       },
       {
         "name": "Role",
@@ -581,7 +591,7 @@
     "image": "../images/opera/nightingale-3.jpg",
     "alt":
       "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
-    "title": "The Nightingale",
+    "title": { "text": "The Nightingale" },
     "category": "Opera",
     "tags": ["Brooklyn Academy of Music"],
     "reviews": [
@@ -631,7 +641,7 @@
   {
     "image": "../images/opera/stravinsky.jpg",
     "alt": "1929 photograph of Igor Stravinsky by Boris Lipnitzky.",
-    "title": "Renard",
+    "title": { "text": "Renard", "lang": "fr" },
     "category": "Opera",
     "tags": ["Brooklyn Academy of Music"],
     "reviews": [],
@@ -643,7 +653,8 @@
       },
       {
         "name": "Opera",
-        "value": "Renard"
+        "value": "Renard",
+        "lang": "fr"
       },
       {
         "name": "Role",
@@ -672,7 +683,7 @@
     "image": "../images/opera/zauberflote-3.jpg",
     "alt":
       "Michael Uloth as Sarastro and Simone Osborne as Pamina in the Canadian Opera Company's production of Die Zauberflöte. Image by Michael Cooper.",
-    "title": "Die Zauberflöte",
+    "title": { "text": "Die Zauberflöte", "lang": "de" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [
@@ -713,7 +724,8 @@
       },
       {
         "name": "Opera",
-        "value": "Die Zauberflöte"
+        "value": "Die Zauberflöte",
+        "lang": "de"
       },
       {
         "name": "Role",
@@ -742,7 +754,7 @@
     "image": "../images/opera/death-in-venice.jpg",
     "alt":
       "Alan Oke (front) and Michael Uloth (left) in the 2010 Canadian Opera Company production of Death in Venice. Image by Michael Cooper.",
-    "title": "Death in Venice",
+    "title": { "text": "Death in Venice" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -787,7 +799,7 @@
     "image": "../images/opera/aida.jpg",
     "alt":
       "A scene from the Canadian Opera Company's production of Aida. Image by Michael Cooper.",
-    "title": "Aida",
+    "title": { "text": "Aida", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -804,7 +816,8 @@
       },
       {
         "name": "Opera",
-        "value": "Aida"
+        "value": "Aida",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -833,7 +846,7 @@
     "image": "../images/opera/idomeneo.jpg",
     "alt":
       "A scene from the Canadian Opera Company's production of Idomeneo. Image by Michael Cooper.",
-    "title": "Idomeneo",
+    "title": { "text": "Idomeneo", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -845,7 +858,8 @@
       },
       {
         "name": "Opera",
-        "value": "Idomeneo"
+        "value": "Idomeneo",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -874,7 +888,7 @@
     "image": "../images/opera/pergolesi.jpg",
     "alt":
       "Purported portrait of Pergolesi presented by his biographer Florimo to the Naples Conservatory.",
-    "title": "La Serva Padrona",
+    "title": { "text": "La Serva Padrona", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company", "Ensemble Studio"],
     "reviews": [],
@@ -886,7 +900,8 @@
       },
       {
         "name": "Opera",
-        "value": "La Serva Padrona"
+        "value": "La Serva Padrona",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -914,7 +929,7 @@
   {
     "image": "../images/opera/bach.jpg",
     "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
-    "title": "St. Matthew Passion",
+    "title": { "title": "St. Matthew Passion" },
     "category": "Opera",
     "tags": ["Victoria Philharmonic Choir"],
     "reviews": [],
@@ -951,7 +966,7 @@
     "image": "../images/opera/otello.jpg",
     "alt":
       "A scene from the Canadian Opera Company's production of Otello. Image by Michael Cooper.",
-    "title": "Otello",
+    "title": { "text": "Otello", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -966,7 +981,8 @@
       },
       {
         "name": "Opera",
-        "value": "Otello"
+        "value": "Otello",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -995,7 +1011,7 @@
     "image": "../images/opera/zuniga.jpg",
     "alt":
       "Alain Coulombe as Zuniga in the Canadian Opera Company's production of Carmen. Image by Michael Cooper.",
-    "title": "Carmen",
+    "title": { "text": "Carmen", "lang": "fr" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -1007,7 +1023,8 @@
       },
       {
         "name": "Opera",
-        "value": "Carmen"
+        "value": "Carmen",
+        "lang": "fr"
       },
       {
         "name": "Role",
@@ -1036,7 +1053,7 @@
     "image": "../images/opera/nightingale-1.jpg",
     "alt":
       "Michael Uloth (left), Robert Pomakov, Laura Albino and Olga Peretyatko in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
-    "title": "The Nightingale",
+    "title": { "title": "The Nightingale" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [
@@ -1094,7 +1111,7 @@
   {
     "image": "../images/opera/stravinsky.jpg",
     "alt": "1929 photograph of Igor Stravinsky by Boris Lipnitzky.",
-    "title": "Renard",
+    "title": { "text": "Renard", "lang": "fr" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -1106,7 +1123,8 @@
       },
       {
         "name": "Opera",
-        "value": "Renard"
+        "value": "Renard",
+        "lang": "fr"
       },
       {
         "name": "Role",
@@ -1135,7 +1153,7 @@
     "image": "../images/opera/butterfly.jpg",
     "alt":
       "Michael Uloth as the Imperial Commissioner in Madama Butterfly. Image by Michael Cooper.",
-    "title": "Madama Butterfly",
+    "title": { "text": "Madama Butterfly", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -1147,7 +1165,8 @@
       },
       {
         "name": "Opera",
-        "value": "Madama Butterfly"
+        "value": "Madama Butterfly",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -1176,7 +1195,7 @@
     "image": "../images/opera/lord-nelson-2.jpg",
     "alt":
       "1799 painting of Vice Admiral Horatio Lord Nelson by Lemuel Francis Abbott.",
-    "title": "Lord Nelson Mass",
+    "title": { "text": "Lord Nelson Mass" },
     "category": "Opera",
     "tags": ["Elora Festival"],
     "reviews": [
@@ -1220,7 +1239,7 @@
     "image": "../images/opera/cosi.jpg",
     "alt":
       "Michael Uloth as Don Alfonso in the Canadian Opera Company Ensemble Studio's production of Così fan tutte. Image by Michael Cooper.",
-    "title": "Così fan tutte",
+    "title": { "text": "Così fan tutte", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company", "Ensemble Studio"],
     "reviews": [
@@ -1246,11 +1265,13 @@
       },
       {
         "name": "Opera",
-        "value": "Così fan tutte"
+        "value": "Così fan tutte",
+        "lang": "it"
       },
       {
         "name": "Role",
-        "value": "Don Alfonso"
+        "value": "Don Alfonso",
+        "lang": "it"
       },
       {
         "name": "Composer",
@@ -1275,7 +1296,7 @@
     "image": "../images/opera/dream.jpg",
     "alt":
       "Michael Uloth as Snug in the Canadian Opera Company's production of A Midsummer Night's Dream. Image by Michael Cooper.",
-    "title": "A Midsummer Night's Dream",
+    "title": { "text": "A Midsummer Night's Dream" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [
@@ -1324,7 +1345,7 @@
     "image": "../images/opera/boheme.jpg",
     "alt":
       "A scene from the Canadian Opera Company's production of La Bohème. Image by Michael Cooper.",
-    "title": "La Bohème",
+    "title": { "text": "La Bohème", "lang": "fr" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -1336,7 +1357,8 @@
       },
       {
         "name": "Opera",
-        "value": "La Bohème"
+        "value": "La Bohème",
+        "lang": "fr"
       },
       {
         "name": "Role",
@@ -1365,7 +1387,7 @@
     "image": "../images/opera/simon-boccanegra.jpg",
     "alt":
       "A scene from the Canadian Opera Company's production of Simon Boccanegra. Image by Michael Cooper.",
-    "title": "Simon Boccanegra",
+    "title": { "text": "Simon Boccanegra", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -1377,7 +1399,8 @@
       },
       {
         "name": "Opera",
-        "value": "Simon Boccanegra"
+        "value": "Simon Boccanegra",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -1406,7 +1429,7 @@
     "image": "../images/opera/war-and-peace-2.png",
     "alt":
       "A scene from the Canadian Opera Company's production of War & Peace. Image by Michael Cooper.",
-    "title": "War and Peace",
+    "title": { "text": "War and Peace" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -1446,7 +1469,7 @@
   {
     "image": "../images/opera/don-giovanni.jpg",
     "alt": "1912 painting of Don Giovanni by Max Slevogt.",
-    "title": "Don Giovanni",
+    "title": { "text": "Don Giovanni", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
@@ -1458,7 +1481,8 @@
       },
       {
         "name": "Opera",
-        "value": "Don Giovanni"
+        "value": "Don Giovanni",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -1487,7 +1511,7 @@
     "image": "../images/opera/hamlet.png",
     "alt":
       "\"Hamlet, Prince of Denmark, Act I, Scene IV\", painted in 1796 by Henry Fuseli after a 1789 painting by Kaufmann.",
-    "title": "Hamlet",
+    "title": { "text": "Hamlet" },
     "category": "Opera",
     "tags": ["Stratford Summer Music"],
     "reviews": [],
@@ -1524,7 +1548,7 @@
     "image": "../images/opera/rigoletto.jpg",
     "alt":
       "\"Bella figlia dell'amore\" scene, illustrated by Roberto Focosi in an 1852 edition of the vocal score.",
-    "title": "Rigoletto",
+    "title": { "text": "Rigoletto", "lang": "it" },
     "category": "Opera",
     "tags": ["Saskatoon Opera"],
     "reviews": [
@@ -1544,11 +1568,13 @@
       },
       {
         "name": "Opera",
-        "value": "Rigoletto"
+        "value": "Rigoletto",
+        "lang": "it"
       },
       {
         "name": "Role",
-        "value": "Sparafucile"
+        "value": "Sparafucile",
+        "lang": "it"
       },
       {
         "name": "Composer",
@@ -1572,7 +1598,7 @@
   {
     "image": "../images/opera/purcell.jpg",
     "alt": "Drawing of Henry Purcell.",
-    "title": "The Indian Queen",
+    "title": { "text": "The Indian Queen" },
     "category": "Opera",
     "tags": ["Toronto Masque Theatre"],
     "reviews": [
@@ -1619,7 +1645,7 @@
   {
     "image": "../images/opera/bach.jpg",
     "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
-    "title": "St. John Passion",
+    "title": { "text": "St. John Passion" },
     "category": "Opera",
     "tags": ["Metropolitan Festival Choir"],
     "reviews": [],
@@ -1657,7 +1683,7 @@
     "image": "../images/opera/anna-bolena.jpg",
     "alt":
       "\"Henry VIII's first interview with Anne Boleyn\", painted by Daniel MacLise in 1835.",
-    "title": "Anna Bolena",
+    "title": { "text": "Anna Bolena", "lang": "it" },
     "category": "Opera",
     "tags": ["Opera in Concert"],
     "reviews": [
@@ -1676,11 +1702,13 @@
       },
       {
         "name": "Opera",
-        "value": "Anna Bolena"
+        "value": "Anna Bolena",
+        "lang": "it"
       },
       {
         "name": "Role",
-        "value": "Enrico VIII"
+        "value": "Enrico VIII",
+        "lang": "it"
       },
       {
         "name": "Composer",
@@ -1704,7 +1732,7 @@
   {
     "image": "../images/opera/glimmerglass-orfeo.jpg",
     "alt": "A scene from Glimmerglass Opera's production of L'Orfeo.",
-    "title": "L'Orfeo",
+    "title": { "text": "L'Orfeo", "lang": "it" },
     "category": "Opera",
     "tags": ["Glimmerglass Festival"],
     "reviews": [],
@@ -1716,7 +1744,8 @@
       },
       {
         "name": "Opera",
-        "value": "L'Orfeo"
+        "value": "L'Orfeo",
+        "lang": "it"
       },
       {
         "name": "Role",
@@ -1744,7 +1773,7 @@
   {
     "image": "../images/opera/glimmerglass-orphee.jpg",
     "alt": "A scene from Glimmerglass Opera's production of Orphée.",
-    "title": "Orphée",
+    "title": { "text": "Orphée", "lang": "fr" },
     "category": "Opera",
     "tags": ["Glimmerglass Festival"],
     "reviews": [],
@@ -1756,7 +1785,8 @@
       },
       {
         "name": "Opera",
-        "value": "Orphée"
+        "value": "Orphée",
+        "lang": "fr"
       },
       {
         "name": "Role",
@@ -1785,7 +1815,7 @@
     "image": "../images/opera/zauberflote-1.jpg",
     "alt":
       "An 1815 painting of a stage design for Die Zauberflöte by Karl Friedrich Schinkel.",
-    "title": "Die Zauberflöte",
+    "title": { "text": "Die Zauberflöte", "lang": "de" },
     "category": "Opera",
     "tags": ["Guelph Symphony Orchestra"],
     "reviews": [],
@@ -1797,7 +1827,8 @@
       },
       {
         "name": "Opera",
-        "value": "Die Zauberflöte"
+        "value": "Die Zauberflöte",
+        "lang": "de"
       },
       {
         "name": "Role",
@@ -1826,7 +1857,7 @@
     "image": "../images/opera/kw-symphony.jpg",
     "alt":
       "The Kitchener-Waterloo Symphony in performance at The Centre in the Square. Photo by Roydon Tse.",
-    "title": "Opera Without Words",
+    "title": { "text": "Opera Without Words" },
     "category": "Opera",
     "tags": ["Kitchener-Waterloo Symphony"],
     "reviews": [],
@@ -1858,7 +1889,7 @@
   {
     "image": "../images/opera/menotti.jpg",
     "alt": "Italian-American composer Gian Carlo Menotti.",
-    "title": "Amahl and the Night Visitors",
+    "title": { "text": "Amahl and the Night Visitors" },
     "category": "Opera",
     "tags": ["Elora Festival Singers"],
     "reviews": [],
@@ -1895,7 +1926,7 @@
     "image": "../images/opera/peter-hatch.jpg",
     "alt":
       "Peter Hatch, Canadian composer and founding director of the Open Ears Festival of Music and Sound.",
-    "title": "Cell Life",
+    "title": { "text": "Cell Life" },
     "category": "Opera",
     "tags": ["Open Ears Festival"],
     "reviews": [],
@@ -1934,7 +1965,7 @@
   {
     "image": "../images/opera/grand-river-chorus.jpg",
     "alt": "The members of the Grand River Chorus.",
-    "title": "Mozart's Requiem",
+    "title": { "text": "Mozart's Requiem" },
     "category": "Opera",
     "tags": ["Grand River Chorus"],
     "reviews": [],
@@ -1970,7 +2001,7 @@
   {
     "image": "../images/opera/bach.jpg",
     "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
-    "title": "A German Christmas",
+    "title": { "text": "A German Christmas" },
     "category": "Opera",
     "tags": ["KW Chamber Orchestra"],
     "reviews": [],
@@ -2002,7 +2033,7 @@
   {
     "image": "../images/opera/handel.jpg",
     "alt": "1727 portrait of Georg Friedrich Händel by Balthasar Denner.",
-    "title": "Messiah (Part 1)",
+    "title": { "text": "Messiah (Part 1)" },
     "category": "Opera",
     "tags": ["Milton Choristers"],
     "reviews": [],

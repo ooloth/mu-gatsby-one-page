@@ -9,6 +9,7 @@ class Work extends React.Component {
     const { operaIsChecked, websitesIsChecked } = this.state
     let filters = {}
 
+    // TODO: turn this into a state machine (states = showOpera, showWebsites, showAll)?
     switch (e.target.value) {
       case `opera`:
         if (e.target.checked) filters = { operaIsChecked: true }
@@ -44,7 +45,7 @@ class Work extends React.Component {
     const { limit, operaIsChecked, websitesIsChecked } = this.state
     const { projects } = this.props
 
-    // Reduce project list to the active category
+    // Which projects are in the active category? (Keep separate to calculate allLoaded.)
     const projectsInActiveCategory = projects.filter(project => {
       if (operaIsChecked && websitesIsChecked) return project
       else if (operaIsChecked) return project.node.category === `Opera`
@@ -52,7 +53,10 @@ class Work extends React.Component {
       else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
     })
 
-    const visibleProjects = projectsInActiveCategory.slice(0, limit)
+    // Which projects in the active category should be visible?
+    const visibleProjects = [...projectsInActiveCategory].slice(0, limit)
+
+    // Are all projects in the active category visible? (If yes, hide "See More" button.)
     const allLoaded = limit >= projectsInActiveCategory.length
 
     return (
@@ -65,13 +69,9 @@ class Work extends React.Component {
           handleChange={this.handleFilterClick}
         />
 
-        <Projects
-          projects={visibleProjects}
-          // operaIsChecked={operaIsChecked}
-          // websitesIsChecked={websitesIsChecked}
-        />
+        <Projects projects={visibleProjects} />
 
-        {!allLoaded && <LoadMoreProjects handleLoadMore={this.handleLoadMore} />}
+        {!allLoaded && <SeeMoreProjects handleLoadMore={this.handleLoadMore} />}
       </section>
     )
   }
@@ -83,10 +83,10 @@ class Work extends React.Component {
  * 
  */
 
-const LoadMoreProjects = ({ handleLoadMore }) => (
+const SeeMoreProjects = ({ handleLoadMore }) => (
   <div className="container pt5">
     <button onClick={handleLoadMore} className="link">
-      Load more projects
+      See more projects
     </button>
   </div>
 )
@@ -284,7 +284,9 @@ const ProjectHeader = ({ title, tags, expanded }) => (
 
 const HeaderInfo = ({ title, tags }) => (
   <div>
-    <h3 className="mb2 lh-solid f2 sm:f1 fw9 ttu">{title}</h3>
+    <h3 lang={title.lang && title.lang} className="mb2 lh-solid f2 sm:f1 fw9 ttu">
+      {title.text}
+    </h3>
     <ul className="nb2">
       {tags.map((tag, index) => {
         return (
@@ -301,12 +303,12 @@ const HeaderInfo = ({ title, tags }) => (
 )
 
 const HeaderIcon = ({ expanded }) => (
-  <div
+  <span
     aria-hidden="true"
     className={`dn md:db f1 fw9 animate${!expanded && ` o-0 group-hover:o-100`}`}
   >
     {expanded ? `-` : `+`}
-  </div>
+  </span>
 )
 
 /* 
@@ -404,7 +406,7 @@ const Details = ({ details }) => (
         detail.name !== `Dates` && (
           <Fragment key={`detail-${index}`}>
             <dt className="fl fw7">{detail.name}:&nbsp;</dt>
-            <dd>{detail.value}</dd>
+            <dd lang={detail.lang && detail.lang}>{detail.value}</dd>
           </Fragment>
         )
       )

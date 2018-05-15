@@ -3,7 +3,7 @@
     "image": "../images/websites/adrianne-pieczonka.jpg",
     "alt":
       "Adrianne Pieczonka as Elisabeth in Don Carlos at the Gran Teatre del Liceu.",
-    "title": "Adrianne Pieczonka",
+    "title": { "text": "Adrianne Pieczonka" },
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
     "reviews": [],
@@ -21,7 +21,7 @@
     "image": "../images/websites/atom-egoyan.jpg",
     "alt":
       "Atom Egoyan during a press conference in Stepanakert. Photo by Nagorno Karabakh.",
-    "title": "Ego Film Arts",
+    "title": { "text": "Ego Film Arts" },
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
     "reviews": [],
@@ -38,7 +38,7 @@
   {
     "image": "../images/websites/adam-luther.jpg",
     "alt": "Canadian tenor Adam Luther. Photo by Pierre Gautreau.",
-    "title": "Adam Luther",
+    "title": { "text": "Adam Luther" },
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
     "reviews": [],
@@ -55,7 +55,7 @@
   {
     "image": "../images/websites/laura-albino.jpg",
     "alt": "Canadian soprano Laura Albino. Photo by Katie Cross Photography.",
-    "title": "Laura Albino",
+    "title": { "text": "Laura Albino" },
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
     "reviews": [],
@@ -72,7 +72,7 @@
   {
     "image": "../images/websites/ileana-montalbetti.jpg",
     "alt": "Canadian soprano Ileana Montalbetti. Photo by Bo Huang.",
-    "title": "Ileana Montalbetti",
+    "title": { "text": "Ileana Montalbetti" },
     "category": "Website",
     "tags": ["Website", "Design", "Code"],
     "reviews": [],
@@ -89,7 +89,7 @@
   {
     "image": "../images/websites/aria-umezawa.jpg",
     "alt": "Canadian director Aria Umezawa.",
-    "title": "Aria Umezawa",
+    "title": { "text": "Aria Umezawa" },
     "category": "Website",
     "tags": ["Website", "Code"],
     "reviews": [
@@ -121,7 +121,7 @@
     "image": "../images/websites/satyr-and-maenad.jpg",
     "alt":
       "A fresco of Satyr and Maenad from the Casa di Caecilius Jucundus in Pompeii that inspired \"Pomegranate Opera\".",
-    "title": "Pomegranate Opera",
+    "title": { "text": "Pomegranate Opera" },
     "category": "Website",
     "tags": ["Website", "Code"],
     "reviews": [],
@@ -138,7 +138,7 @@
   {
     "image": "../images/websites/artist-center.png",
     "alt": "Artist Center graphic, designed by Stephen Bell.",
-    "title": "Artist Center",
+    "title": { "text": "Artist Center" },
     "category": "Website",
     "tags": ["Website", "Code"],
     "reviews": [],
@@ -155,7 +155,7 @@
   {
     "image": "../images/websites/rachel-krehm-1.jpg",
     "alt": "Canadian soprano, director, writer and producer Rachel Krehm.",
-    "title": "Rachel Krehm",
+    "title": { "text": "Rachel Krehm" },
     "category": "Website",
     "tags": ["Website", "Code"],
     "reviews": [
@@ -179,7 +179,7 @@
   {
     "image": "../images/websites/riccardo-iannello-2.jpg",
     "alt": "Italian-Canadian tenor Riccardo Iannello. Photo by Phil Crozier.",
-    "title": "Riccardo Iannello",
+    "title": { "text": "Riccardo Iannello" },
     "category": "Website",
     "tags": ["Website", "Code"],
     "reviews": [],
@@ -196,7 +196,7 @@
   {
     "image": "../images/websites/john-greer-caricature.jpg",
     "alt": "Caricature of Canadian composer John Greer by Michael Willhoite.",
-    "title": "John Greer",
+    "title": { "text": "John Greer" },
     "category": "Website",
     "tags": ["Website", "Code"],
     "reviews": [
@@ -220,7 +220,7 @@
   {
     "image": "../images/websites/david-woloviec.jpg",
     "alt": "David Woloviec, founder of DG Volo & Company.",
-    "title": "DG Volo & Company",
+    "title": { "text": "DG Volo & Company" },
     "category": "Website",
     "tags": ["Website", "Code"],
     "reviews": [],
