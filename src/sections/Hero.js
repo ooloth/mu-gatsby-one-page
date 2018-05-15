@@ -55,6 +55,12 @@ class Hero extends Component {
   }
 }
 
+/* 
+ *
+ * Greeting
+ * 
+ */
+
 const Greeting = () => (
   <Fragment>
     <h2
@@ -72,6 +78,12 @@ const Greeting = () => (
     </h1>
   </Fragment>
 )
+
+/* 
+ *
+ * Opera Bio
+ * 
+ */
 
 const OperaBio = () => (
   <Fragment>
@@ -102,6 +114,12 @@ const OperaBio = () => (
   </Fragment>
 )
 
+/* 
+ *
+ * Web Dev Bio
+ * 
+ */
+
 const WebDevBio = () => (
   <Fragment>
     <p className="mt4 lh-tall measure">
@@ -116,6 +134,12 @@ const WebDevBio = () => (
   </Fragment>
 )
 
+/* 
+ *
+ * Invitation
+ * 
+ */
+
 const Invitation = ({ expanded, handleClick }) => (
   <div className="flex items-center flex-wrap">
     {expanded ? <SeeWork /> : <ReadMoreOrSeeWork handleClick={handleClick} />}
@@ -124,7 +148,19 @@ const Invitation = ({ expanded, handleClick }) => (
   </div>
 )
 
+/* 
+ *
+ * See Work
+ * 
+ */
+
 const SeeWork = () => <p className="mt4 lh-copy f4">See my recent work below.</p>
+
+/* 
+ *
+ * Read More or See Work
+ * 
+ */
 
 const ReadMoreOrSeeWork = ({ handleClick }) => (
   <p className="dib mt4 lh-copy f4">
@@ -138,6 +174,12 @@ const ReadMoreOrSeeWork = ({ handleClick }) => (
     &nbsp;or see my recent work below.
   </p>
 )
+
+/* 
+ *
+ * Pointing Down Emoji
+ * 
+ */
 
 const PointingDownEmoji = () => (
   <span
