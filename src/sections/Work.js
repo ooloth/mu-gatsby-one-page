@@ -317,20 +317,34 @@ const HeaderIcon = ({ expanded }) => (
  *
  *****************/
 
-const ProjectDetails = ({ project }) => (
-  <div className="container pt4 lh-tall">
-    <FeaturedImage image={project.image.childImageSharp.sizes} alt={project.alt} />
+class ProjectDetails extends Component {
+  // Prevent link clicks from triggering click event handlers on parent components
+  handleClick = e => e.target.nodeName === `A` && e.stopPropagation()
 
-    {project.reviews && <Reviews reviews={project.reviews} />}
-    {project.features && <Features features={project.features} />}
-    {project.description && <Description description={project.description} />}
-    {project.details && <Details details={project.details} />}
+  render() {
+    const { project } = this.props
+    return (
+      <div className="container pt4 lh-tall">
+        <FeaturedImage
+          image={project.image.childImageSharp.sizes}
+          alt={project.alt}
+        />
 
-    <HyperLink href={project.link} className="link mv4 tc">
-      View site →
-    </HyperLink>
-  </div>
-)
+        {/* Don't collapse the project when links in the following sections are clicked */}
+        <div onClick={this.handleClick}>
+          {project.reviews && <Reviews reviews={project.reviews} />}
+          {project.features && <Features features={project.features} />}
+          {project.description && <Description description={project.description} />}
+          {project.details && <Details details={project.details} />}
+
+          <HyperLink href={project.link} className="link mv4 tc">
+            View site →
+          </HyperLink>
+        </div>
+      </div>
+    )
+  }
+}
 
 /* 
  *
@@ -383,7 +397,7 @@ const Features = ({ features }) => (
   <ul className="mt4 nb1">
     {features.map((feature, index) => {
       return (
-        <li key={`feature-${index}`} feature={feature} className="flex pb1">
+        <li key={`feature-${index}`} feature={feature} className="flex pb1 measure">
           <FeatureEmoji />
           <FeatureText feature={feature} />
         </li>
@@ -412,20 +426,9 @@ const FeatureEmoji = () => (
  * 
  */
 
-class FeatureText extends Component {
-  // Prevent link clicks from triggering click event handlers on parent components
-  // See: https://stackoverflow.com/questions/1369035/how-do-i-prevent-a-parents-onclick-event-from-firing-when-a-child-anchor-is-cli
-  // See: https://stackoverflow.com/questions/37568550/react-prevent-event-trigger-on-parent-from-child
-  handleClick = e => e.target.nodeName === `A` && e.stopPropagation()
-
-  render() {
-    const { feature } = this.props
-
-    return (
-      <p onClick={this.handleClick} dangerouslySetInnerHTML={{ __html: feature }} />
-    )
-  }
-}
+const FeatureText = ({ feature }) => (
+  <p dangerouslySetInnerHTML={{ __html: feature }} />
+)
 
 /* 
  *
@@ -433,26 +436,9 @@ class FeatureText extends Component {
  * 
  */
 
-// TODO: extract the logic of these two components into a reusable wrapper component (maybe that adds the click handler it's child node via React.cloneElement? Just use it once in the ProjectDetails component?)
-
-class Description extends Component {
-  // Prevent link clicks from triggering click event handlers on parent components
-  // See: https://stackoverflow.com/questions/1369035/how-do-i-prevent-a-parents-onclick-event-from-firing-when-a-child-anchor-is-cli
-  // See: https://stackoverflow.com/questions/37568550/react-prevent-event-trigger-on-parent-from-child
-  handleClick = e => e.target.nodeName === `A` && e.stopPropagation()
-
-  render() {
-    const { description } = this.props
-
-    return (
-      <p
-        onClick={this.handleClick}
-        dangerouslySetInnerHTML={{ __html: description }}
-        className="mt4 measure"
-      />
-    )
-  }
-}
+const Description = ({ description }) => (
+  <p dangerouslySetInnerHTML={{ __html: description }} className="mt4 measure" />
+)
 
 /* 
  *
