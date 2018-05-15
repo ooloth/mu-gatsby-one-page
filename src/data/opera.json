@@ -2,14 +2,14 @@
   {
     "image": "../images/opera/nightingale-4.jpg",
     "alt":
-      "Michael Uloth (left), Anatoli Sivko, Lauren Eberwein and Jane Archibald in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+      "Michael Uloth (left), Anatoli Sivko, Lauren Eberwein and Jane Archibald in the Canadian Opera Company production of The Nightingale & Other Short Fables. Image by Michael Cooper.",
     "title": { "text": "The Nightingale" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
     "features": [
       "Watch a quick <a href=\"https://www.youtube.com/watch?v=4EnnRWLdy8Q\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">preview</a>.",
-      "See <a href=\"https://www.youtube.com/watch?v=t6cPgqBfomA\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">audience reactions</a>.",
+      "See <a href=\"https://www.youtube.com/watch?v=svmQ-DsDZQM\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">audience reactions</a>.",
       "Watch the pit transform into a <a href=\"https://www.youtube.com/watch?v=t6cPgqBfomA\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">67,000-litre pool</a>.",
       "Watch acrobats use light to create <a href=\"https://www.youtube.com/watch?v=jYqGZ0oH_JE\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">shadow puppets</a>.",
       "See the show's <a href=\"https://www.youtube.com/watch?v=-Ae8ureLNKw\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">75 unique puppets</a>."
@@ -50,13 +50,13 @@
   {
     "image": "../images/opera/anna-bolena-1.jpg",
     "alt":
-      "Bruce Sledge, Christian Van Horn, Thomas Goerz and Sondra Radvanovsky in the Canadian Opera Company's production of Anna Bolena. Photo by Michael Cooper.",
+      "Bruce Sledge, Christian Van Horn, Thomas Goerz and Sondra Radvanovsky in the Canadian Opera Company production of Anna Bolena. Photo by Michael Cooper.",
     "title": { "text": "Anna Bolena", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [],
     "features": [
-      "Watch a quick <a href=\"https://www.youtube.com/watch?v=2x4Ce1mFkD4\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">preview</a>.",
+      "Watch a quick <a href=\"https://www.youtube.com/watch?v=W6kBk35uU-s\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">preview</a>.",
       "Take a <a href=\"https://www.youtube.com/watch?v=2x4Ce1mFkD4\" target=\"_blank\" rel=\"noopener nofollow\" class=\"link-inline\">backstage tour</a>."
     ],
     "description": "",
@@ -96,7 +96,7 @@
   {
     "image": "../images/opera/bound.jpg",
     "alt":
-      "Danika Lorèn in BOUND, Against the Grain Theatre 2017. Photo by Darryl Block Photography.",
+      "Danika Lorèn in the Against the Grain Theatre production of BOUND. Photo by Darryl Block Photography.",
     "title": { "text": "BOUND" },
     "category": "Opera",
     "tags": ["Against the Grain Theatre"],
@@ -158,7 +158,7 @@
   {
     "image": "../images/opera/kopernikus.jpg",
     "alt":
-      "Michael Uloth (back, centre) in the Banff Centre for Arts and Creativity's production of Kopernikus.",
+      "Michael Uloth (back, centre) in the Banff Centre for Arts and Creativity production of Kopernikus.",
     "title": { "text": "Kopernikus" },
     "category": "Opera",
     "tags": ["Banff Centre for Arts and Creativity"],
@@ -166,9 +166,15 @@
       {
         "quotation":
           "Bass Michael Uloth’s Merlin was beckoning, intense, and often played the voice of cosmic joy (wow — can he ever laugh at top volume, too).",
-        "source": "National Post",
+        "source": "Stephan Bonfield, National Post",
         "link":
           "http://nationalpost.com/entertainment/music/review-viviers-kopernikus-at-banff-centre-the-ideal-opera-of-the-future/wcm/88611ef6-616b-4692-a789-52de62554fae"
+      },
+      {
+        "quotation":
+          "Micah Schroeder, Adam Harris and bass Michael Uloth provide a depth of countervailing robustness and resonance...",
+        "source": "Ian Ritchie, Opera Going Toronto",
+        "link": "http://operagoto.com/kopernikus-review/"
       }
     ],
     "features": [
@@ -210,7 +216,7 @@
   {
     "image": "../images/opera/apostles.jpg",
     "alt":
-      "Michael Uloth, Daniel Lichti and Lawrence Wiliford as Judas, Peter and John in Pax Christi Chorale's 2017 production of The Apostles. Image by Dahlia Katz.",
+      "Michael Uloth, Daniel Lichti and Lawrence Wiliford as Judas, Peter and John in the Pax Christi Chorale production of The Apostles. Image by Dahlia Katz.",
     "title": { "text": "The Apostles" },
     "category": "Opera",
     "tags": ["Pax Christi Chorale"],
@@ -271,7 +277,7 @@
   {
     "image": "../images/opera/zauberflote-2.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of The Magic Flute 2017. Image by Michael Cooper.",
+      "A scene from the Canadian Opera Company production of The Magic Flute. Image by Michael Cooper.",
     "title": { "text": "Die Zauberflöte", "lang": "de" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -317,7 +323,7 @@
   {
     "image": "../images/opera/don-pasquale-6.jpg",
     "alt":
-      "Michael Uloth as Don Pasquale and Amanda Opuszynski as Norina in the Seattle Opera Young Artists Program's production of Don Pasquale. Image by Elise Bakketun.",
+      "Michael Uloth as Don Pasquale and Amanda Opuszynski as Norina in the Seattle Opera Young Artists Program production of Don Pasquale. Image by Elise Bakketun.",
     "title": { "text": "Don Pasquale", "lang": "it" },
     "category": "Opera",
     "tags": ["Saskatoon Opera"],
@@ -367,7 +373,7 @@
   {
     "image": "../images/opera/nightingale-2.jpg",
     "alt":
-      "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+      "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company production of The Nightingale & Other Short Fables. Image by Michael Cooper.",
     "title": { "text": "The Nightingale" },
     "category": "Opera",
     "tags": ["Opéra National de Lyon"],
@@ -413,7 +419,7 @@
   {
     "image": "../images/opera/don-pasquale-1.jpg",
     "alt":
-      "Michael Uloth as Don Pasquale and Lindsay Russell as Norina in the Seattle Opera Young Artists Program's production of Don Pasquale. Image by Elise Bakketun.",
+      "Michael Uloth as Don Pasquale and Lindsay Russell as Norina in the Seattle Opera Young Artists Program production of Don Pasquale. Image by Elise Bakketun.",
     "title": { "text": "Don Pasquale", "lang": "it" },
     "category": "Opera",
     "tags": ["Seattle Opera", "Young Artists Program"],
@@ -536,7 +542,7 @@
   {
     "image": "../images/opera/ariadne-auf-naxos-1.jpg",
     "alt":
-      "Peter Barrett, Chris Enns, Jane Archibald, Michael Uloth and John Easterlin in the Canadian Opera Company's production of Ariadne auf Naxos. Image by Michael Cooper.",
+      "Peter Barrett, Chris Enns, Jane Archibald, Michael Uloth (2nd from right) and John Easterlin in the Canadian Opera Company production of Ariadne auf Naxos. Image by Michael Cooper.",
     "title": { "text": "Ariadne auf Naxos", "lang": "de" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -590,7 +596,7 @@
   {
     "image": "../images/opera/nightingale-3.jpg",
     "alt":
-      "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
+      "Michael Uloth (left), Robert Pomakov and Laura Albino in the Canadian Opera Company production of The Nightingale & Other Short Fables. Image by Michael Cooper.",
     "title": { "text": "The Nightingale" },
     "category": "Opera",
     "tags": ["Brooklyn Academy of Music"],
@@ -682,7 +688,7 @@
   {
     "image": "../images/opera/zauberflote-3.jpg",
     "alt":
-      "Michael Uloth as Sarastro and Simone Osborne as Pamina in the Canadian Opera Company's production of Die Zauberflöte. Image by Michael Cooper.",
+      "Michael Uloth as Sarastro and Simone Osborne as Pamina in the Canadian Opera Company production of Die Zauberflöte. Image by Michael Cooper.",
     "title": { "text": "Die Zauberflöte", "lang": "de" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -753,7 +759,7 @@
   {
     "image": "../images/opera/death-in-venice.jpg",
     "alt":
-      "Alan Oke (front) and Michael Uloth (left) in the 2010 Canadian Opera Company production of Death in Venice. Image by Michael Cooper.",
+      "Alan Oke (front) and Michael Uloth (left) in the Canadian Opera Company production of Death in Venice. Image by Michael Cooper.",
     "title": { "text": "Death in Venice" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -798,7 +804,7 @@
   {
     "image": "../images/opera/aida.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of Aida. Image by Michael Cooper.",
+      "A scene from the Canadian Opera Company production of Aida. Image by Michael Cooper.",
     "title": { "text": "Aida", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -845,7 +851,7 @@
   {
     "image": "../images/opera/idomeneo.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of Idomeneo. Image by Michael Cooper.",
+      "Erin Fischer and Laura Albino in a scene from the Canadian Opera Company production of Idomeneo. Image by Michael Cooper.",
     "title": { "text": "Idomeneo", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -887,7 +893,7 @@
   {
     "image": "../images/opera/pergolesi.jpg",
     "alt":
-      "Purported portrait of Pergolesi presented by his biographer Florimo to the Naples Conservatory.",
+      "Portrait of Pergolesi presented by his biographer, Florimo, to the Naples Conservatory.",
     "title": { "text": "La Serva Padrona", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company", "Ensemble Studio"],
@@ -929,7 +935,7 @@
   {
     "image": "../images/opera/bach.jpg",
     "alt": "1746 painting of Johann Sebastien Bach by Elias Gottlob Haussmann.",
-    "title": { "title": "St. Matthew Passion" },
+    "title": { "text": "St. Matthew Passion" },
     "category": "Opera",
     "tags": ["Victoria Philharmonic Choir"],
     "reviews": [],
@@ -965,7 +971,7 @@
   {
     "image": "../images/opera/otello.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of Otello. Image by Michael Cooper.",
+      "Emanuele Da Aguanno, Tiziana Caruso, Clifton Forbis, Scott Hendricks and Adam Luther in the Canadian Opera Company production of Otello. Image by Michael Cooper.",
     "title": { "text": "Otello", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1010,7 +1016,7 @@
   {
     "image": "../images/opera/zuniga.jpg",
     "alt":
-      "Alain Coulombe as Zuniga in the Canadian Opera Company's production of Carmen. Image by Michael Cooper.",
+      "Rinat Shaham as Carmen and Alain Coulombe as Zuniga in the Canadian Opera Company production of Carmen. Image by Michael Cooper.",
     "title": { "text": "Carmen", "lang": "fr" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1052,8 +1058,8 @@
   {
     "image": "../images/opera/nightingale-1.jpg",
     "alt":
-      "Michael Uloth (left), Robert Pomakov, Laura Albino and Olga Peretyatko in the Canadian Opera Company's production of \"The Nightingale & Other Short Fables\". Image by Michael Cooper.",
-    "title": { "title": "The Nightingale" },
+      "Michael Uloth (left), Robert Pomakov, Laura Albino and Olga Peretyatko in the Canadian Opera Company production of The Nightingale & Other Short Fables. Image by Michael Cooper.",
+    "title": { "text": "The Nightingale" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
     "reviews": [
@@ -1152,7 +1158,7 @@
   {
     "image": "../images/opera/butterfly.jpg",
     "alt":
-      "Michael Uloth as the Imperial Commissioner in Madama Butterfly. Image by Michael Cooper.",
+      "Yannick-Muriel Noah, Michael Uloth (2nd from left), Neil Craighead, Bryan Hymel and Brett Polegato in the Canadian Opera Company production of Madama Butterfly. Image by Michael Cooper.",
     "title": { "text": "Madama Butterfly", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1238,7 +1244,7 @@
   {
     "image": "../images/opera/cosi.jpg",
     "alt":
-      "Michael Uloth as Don Alfonso in the Canadian Opera Company Ensemble Studio's production of Così fan tutte. Image by Michael Cooper.",
+      "Betty Allison, Michael Uloth and Erin Fischer in the Canadian Opera Company Ensemble Studio production of Così fan tutte. Image by Michael Cooper.",
     "title": { "text": "Così fan tutte", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company", "Ensemble Studio"],
@@ -1295,7 +1301,7 @@
   {
     "image": "../images/opera/dream.jpg",
     "alt":
-      "Michael Uloth as Snug in the Canadian Opera Company's production of A Midsummer Night's Dream. Image by Michael Cooper.",
+      "Michael Uloth as Snug in the Canadian Opera Company production of A Midsummer Night's Dream. Image by Michael Cooper.",
     "title": { "text": "A Midsummer Night's Dream" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1344,7 +1350,7 @@
   {
     "image": "../images/opera/boheme.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of La Bohème. Image by Michael Cooper.",
+      "Gabriele Viviani, Bulent Kulekci, Cornelis Opthof, Peter McGillivray and Robert Gleadow in the Canadian Opera Company production of La Bohème. Image by Michael Cooper.",
     "title": { "text": "La Bohème", "lang": "fr" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1386,7 +1392,7 @@
   {
     "image": "../images/opera/simon-boccanegra.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of Simon Boccanegra. Image by Michael Cooper.",
+      "Paolo Gavanelli as Simon Boccanegra in a scene from the Canadian Opera Company production of Simon Boccanegra. Image by Michael Cooper.",
     "title": { "text": "Simon Boccanegra", "lang": "it" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1426,9 +1432,9 @@
     "link": "https://www.coc.ca"
   },
   {
-    "image": "../images/opera/war-and-peace-2.png",
+    "image": "../images/opera/war-and-peace-3.jpg",
     "alt":
-      "A scene from the Canadian Opera Company's production of War & Peace. Image by Michael Cooper.",
+      "A scene from the Canadian Opera Company production of War and Peace. Image by Michael Cooper.",
     "title": { "text": "War and Peace" },
     "category": "Opera",
     "tags": ["Canadian Opera Company"],
@@ -1508,9 +1514,9 @@
     "link": "https://www.coc.ca"
   },
   {
-    "image": "../images/opera/hamlet.png",
+    "image": "../images/opera/john-miller.jpg",
     "alt":
-      "\"Hamlet, Prince of Denmark, Act I, Scene IV\", painted in 1796 by Henry Fuseli after a 1789 painting by Kaufmann.",
+      "John A. Miller, Founder and Artistic Producer of Stratford Summer Music. Photo by V. Tony Hauser.",
     "title": { "text": "Hamlet" },
     "category": "Opera",
     "tags": ["Stratford Summer Music"],
@@ -1547,7 +1553,7 @@
   {
     "image": "../images/opera/rigoletto.jpg",
     "alt":
-      "\"Bella figlia dell'amore\" scene, illustrated by Roberto Focosi in an 1852 edition of the vocal score.",
+      "An illustration of the \"Bella figlia dell'amore\" scene by Roberto Focosi for an 1852 edition of the vocal score.",
     "title": { "text": "Rigoletto", "lang": "it" },
     "category": "Opera",
     "tags": ["Saskatoon Opera"],
@@ -1597,7 +1603,7 @@
   },
   {
     "image": "../images/opera/purcell.jpg",
-    "alt": "Drawing of Henry Purcell.",
+    "alt": "An artist's impression of composer Henry Purcell.",
     "title": { "text": "The Indian Queen" },
     "category": "Opera",
     "tags": ["Toronto Masque Theatre"],
@@ -1682,7 +1688,7 @@
   {
     "image": "../images/opera/anna-bolena.jpg",
     "alt":
-      "\"Henry VIII's first interview with Anne Boleyn\", painted by Daniel MacLise in 1835.",
+      "1835 painting of \"Henry VIII's first interview with Anne Boleyn\" by Daniel MacLise.",
     "title": { "text": "Anna Bolena", "lang": "it" },
     "category": "Opera",
     "tags": ["Opera in Concert"],
@@ -1731,7 +1737,7 @@
   },
   {
     "image": "../images/opera/glimmerglass-orfeo.jpg",
-    "alt": "A scene from Glimmerglass Opera's production of L'Orfeo.",
+    "alt": "A scene from the Glimmerglass Festival production of L'Orfeo.",
     "title": { "text": "L'Orfeo", "lang": "it" },
     "category": "Opera",
     "tags": ["Glimmerglass Festival"],
@@ -1772,7 +1778,7 @@
   },
   {
     "image": "../images/opera/glimmerglass-orphee.jpg",
-    "alt": "A scene from Glimmerglass Opera's production of Orphée.",
+    "alt": "A scene from the Glimmerglass Festival production of Orphée.",
     "title": { "text": "Orphée", "lang": "fr" },
     "category": "Opera",
     "tags": ["Glimmerglass Festival"],
@@ -1814,7 +1820,7 @@
   {
     "image": "../images/opera/zauberflote-1.jpg",
     "alt":
-      "An 1815 painting of a stage design for Die Zauberflöte by Karl Friedrich Schinkel.",
+      "1815 painting by Karl Friedrich Schinkel of a stage design for Die Zauberflöte.",
     "title": { "text": "Die Zauberflöte", "lang": "de" },
     "category": "Opera",
     "tags": ["Guelph Symphony Orchestra"],
@@ -1925,7 +1931,7 @@
   {
     "image": "../images/opera/peter-hatch.jpg",
     "alt":
-      "Peter Hatch, Canadian composer and founding director of the Open Ears Festival of Music and Sound.",
+      "Peter Hatch, Canadian composer and Founding Director of the Open Ears Festival of Music and Sound.",
     "title": { "text": "Cell Life" },
     "category": "Opera",
     "tags": ["Open Ears Festival"],
@@ -2053,7 +2059,8 @@
       },
       {
         "name": "Composer",
-        "value": "Georg Friedrich Händel"
+        "value": "Georg Friedrich Händel",
+        "lang": "de"
       },
       {
         "name": "Conductor",

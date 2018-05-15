@@ -11,19 +11,19 @@ class Work extends React.Component {
 
     // TODO: turn this into a state machine (states = showOpera, showWebsites, showAll)?
     switch (e.target.value) {
-      case `opera`:
-        if (e.target.checked) filters = { operaIsChecked: true }
-        else if (!websitesIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { operaIsChecked: false }
-        break
+    case `opera`:
+      if (e.target.checked) filters = { operaIsChecked: true }
+      else if (!websitesIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { operaIsChecked: false }
+      break
 
-      case `websites`:
-        if (e.target.checked) filters = { websitesIsChecked: true }
-        else if (!operaIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { websitesIsChecked: false }
-        break
+    case `websites`:
+      if (e.target.checked) filters = { websitesIsChecked: true }
+      else if (!operaIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { websitesIsChecked: false }
+      break
     }
 
     this.setState({ ...filters, limit: 5 })
@@ -311,11 +311,11 @@ const HeaderIcon = ({ expanded }) => (
   </span>
 )
 
-/* 
+/*****************
  *
  * Project Details
- * 
- */
+ *
+ *****************/
 
 const ProjectDetails = ({ project }) => (
   <div className="container pt4 lh-tall">
@@ -332,12 +332,24 @@ const ProjectDetails = ({ project }) => (
   </div>
 )
 
+/* 
+ *
+ * Featured Image
+ * 
+ */
+
 const FeaturedImage = ({ image, alt }) => (
   <figure>
     <Img sizes={image} alt={alt} className="shadow-lg" />
     <figcaption className="o-50 pt1 f6">{alt}</figcaption>
   </figure>
 )
+
+/* 
+ *
+ * Reviews
+ * 
+ */
 
 const Reviews = ({ reviews }) =>
   reviews.map((review, index) => {
@@ -348,6 +360,7 @@ const Reviews = ({ reviews }) =>
             className="mb2 f3"
             dangerouslySetInnerHTML={{ __html: review.quotation }}
           />
+
           {review.link ? (
             <cite className="f4 fw7 fs-normal">
               <HyperLink href={review.link}>{review.source}</HyperLink>
@@ -360,44 +373,92 @@ const Reviews = ({ reviews }) =>
     )
   })
 
+/**********
+ *
+ * Features
+ *
+ **********/
+
 const Features = ({ features }) => (
   <ul className="mt4 nb1">
     {features.map((feature, index) => {
-      return <Feature key={`feature-${index}`} feature={feature} />
+      return (
+        <li key={`feature-${index}`} feature={feature} className="flex pb1">
+          <FeatureEmoji />
+          <FeatureText feature={feature} />
+        </li>
+      )
     })}
   </ul>
 )
 
-class Feature extends Component {
-  // Prevent link clicks from triggering click event handlers on parent components
-  // See: https://stackoverflow.com/questions/1369035/how-do-i-prevent-a-parents-onclick-event-from-firing-when-a-child-anchor-is-cli
-  // See: https://stackoverflow.com/questions/37568550/react-prevent-event-trigger-on-parent-from-child
-  handleClick = e => e.stopPropagation()
+/* 
+ *
+ * Feature Emoji
+ * 
+ */
 
-  render() {
-    const { feature } = this.props
+// TODO: use a ternary to switch between emoji once I have more link types than just video
 
-    return (
-      <li className="flex pb1">
-        <Emoji />
-        <p
-          onClick={this.handleClick}
-          dangerouslySetInnerHTML={{ __html: feature }}
-        />
-      </li>
-    )
-  }
-}
-
-const Emoji = () => (
+const FeatureEmoji = () => (
   <span role="img" aria-label="Emoji of a video camera" className="pr1">
     🎥
   </span>
 )
 
-const Description = ({ description }) => (
-  <p className="mt4 measure" dangerouslySetInnerHTML={{ __html: description }} />
-)
+/* 
+ *
+ * Feature Text
+ * 
+ */
+
+class FeatureText extends Component {
+  // Prevent link clicks from triggering click event handlers on parent components
+  // See: https://stackoverflow.com/questions/1369035/how-do-i-prevent-a-parents-onclick-event-from-firing-when-a-child-anchor-is-cli
+  // See: https://stackoverflow.com/questions/37568550/react-prevent-event-trigger-on-parent-from-child
+  handleClick = e => e.target.nodeName === `A` && e.stopPropagation()
+
+  render() {
+    const { feature } = this.props
+
+    return (
+      <p onClick={this.handleClick} dangerouslySetInnerHTML={{ __html: feature }} />
+    )
+  }
+}
+
+/* 
+ *
+ * Description
+ * 
+ */
+
+// TODO: extract the logic of these two components into a reusable wrapper component (maybe that adds the click handler it's child node via React.cloneElement? Just use it once in the ProjectDetails component?)
+
+class Description extends Component {
+  // Prevent link clicks from triggering click event handlers on parent components
+  // See: https://stackoverflow.com/questions/1369035/how-do-i-prevent-a-parents-onclick-event-from-firing-when-a-child-anchor-is-cli
+  // See: https://stackoverflow.com/questions/37568550/react-prevent-event-trigger-on-parent-from-child
+  handleClick = e => e.target.nodeName === `A` && e.stopPropagation()
+
+  render() {
+    const { description } = this.props
+
+    return (
+      <p
+        onClick={this.handleClick}
+        dangerouslySetInnerHTML={{ __html: description }}
+        className="mt4 measure"
+      />
+    )
+  }
+}
+
+/* 
+ *
+ * Details
+ * 
+ */
 
 const Details = ({ details }) => (
   <dl className="mt4">
