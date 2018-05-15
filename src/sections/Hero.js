@@ -24,7 +24,9 @@ class Hero extends Component {
           {
             height: gsapTarget.offsetHeight,
             autoAlpha: 1,
-            ease: `Power3.easeInOut`
+            ease: `Power3.easeInOut`,
+            // after expanding, allow height to adapt naturally when window is resized:
+            onComplete: () => gsapTarget.removeAttribute(`style`)
           }
         )
       })
