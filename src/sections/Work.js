@@ -10,19 +10,19 @@ class Work extends React.Component {
     let filters = {}
 
     switch (e.target.value) {
-    case `opera`:
-      if (e.target.checked) filters = { operaIsChecked: true }
-      else if (!websitesIsChecked)
-        filters = { operaIsChecked: true, websitesIsChecked: true }
-      else filters = { operaIsChecked: false }
-      break
+      case `opera`:
+        if (e.target.checked) filters = { operaIsChecked: true }
+        else if (!websitesIsChecked)
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { operaIsChecked: false }
+        break
 
-    case `websites`:
-      if (e.target.checked) filters = { websitesIsChecked: true }
-      else if (!operaIsChecked)
-        filters = { operaIsChecked: true, websitesIsChecked: true }
-      else filters = { websitesIsChecked: false }
-      break
+      case `websites`:
+        if (e.target.checked) filters = { websitesIsChecked: true }
+        else if (!operaIsChecked)
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { websitesIsChecked: false }
+        break
     }
 
     this.setState({ ...filters, limit: 5 })
