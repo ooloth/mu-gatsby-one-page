@@ -96,13 +96,13 @@ const structuredData = `{
   "@type": "Person",
   "address": {
     "@type": "PostalAddress",
-    addressLocality: "Toronto",
-    addressRegion: "ON",
-    postalCode: "M4M 1Y5",
-    streetAddress: "1133-70 Cambridge Avenue"
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "postalCode": "M4M 1Y5",
+    "streetAddress": "1133-70 Cambridge Avenue"
   },
   "email": "mailto:hello@michaeluloth.com",
-  "image": ${siteUrl + siteImage},
+  "image": "${siteUrl + siteImage}",
   "jobTitle": "Opera singer and web developer",
   "name": "Michael Uloth",
   "alumniOf": "Wilfrid Laurier University, University of Toronto",
