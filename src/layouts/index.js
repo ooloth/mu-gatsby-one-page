@@ -94,21 +94,21 @@ const siteUrl = `https://www.michaeluloth.com`
 const structuredData = `{
   "@context": "http://schema.org",
   "@type": "Person",
-  address: {
+  "address": {
     "@type": "PostalAddress",
     addressLocality: "Toronto",
     addressRegion: "ON",
     postalCode: "M4M 1Y5",
     streetAddress: "1133-70 Cambridge Avenue"
   },
-  email: "mailto:hello@michaeluloth.com",
-  image: ${siteUrl + siteImage},
-  jobTitle: "Opera singer and web developer",
-  name: "Michael Uloth",
-  alumniOf: "Wilfrid Laurier University, University of Toronto",
-  telephone: "(416) 799-7753",
-  url: "https://www.michaeluloth.com",
-  sameAs: [
+  "email": "mailto:hello@michaeluloth.com",
+  "image": ${siteUrl + siteImage},
+  "jobTitle": "Opera singer and web developer",
+  "name": "Michael Uloth",
+  "alumniOf": "Wilfrid Laurier University, University of Toronto",
+  "telephone": "(416) 799-7753",
+  "url": "https://www.michaeluloth.com",
+  "sameAs": [
     "https://www.facebook.com/michaeluloth",
     "https://www.linkedin.com/in/michael-uloth-848a1b98/",
     "http://twitter.com/ooloth",
