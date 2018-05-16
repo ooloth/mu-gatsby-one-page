@@ -19,32 +19,26 @@ const IndexPage = ({ data }) => {
   })
 
   return (
-    <main>
-      <Hero />
-      <Work
-        projects={projectsWithKeys}
-        operas={data.allOperaJson.edges}
-        websites={data.allWebsitesJson.edges}
-      />
-      <Contact />
-    </main>
+    <Fragment>
+      <main>
+        <Hero />
+        <Work
+          projects={projectsWithKeys}
+          operas={data.allOperaJson.edges}
+          websites={data.allWebsitesJson.edges}
+        />
+        <Contact />
+      </main>
+      <Footer />
+    </Fragment>
   )
 }
 
-export default IndexPage
-
 /* 
  *
- * General
+ * Queries
  * 
  */
-
-import React from 'react'
-import shortid from 'shortid'
-
-import Hero from '../sections/Hero'
-import Work from '../sections/Work'
-import Contact from '../sections/Contact'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -113,3 +107,19 @@ export const query = graphql`
     }
   }
 `
+
+/* 
+ *
+ * Imports & Exports
+ * 
+ */
+
+import React, { Fragment } from 'react'
+import shortid from 'shortid'
+
+import Hero from '../sections/Hero'
+import Work from '../sections/Work'
+import Contact from '../sections/Contact'
+import Footer from '../sections/Footer'
+
+export default IndexPage

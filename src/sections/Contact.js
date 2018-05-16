@@ -1,5 +1,5 @@
 const Contact = () => (
-  <section className="bg-near-white pt6 pb3 avenir">
+  <section className="bg-near-white pv6 avenir">
     <div className="container">
       <h2
         className="mb4 lh-solid f-3p5 sm:f-5 md:f-6 fw9 ttu"
@@ -17,7 +17,7 @@ const Contact = () => (
         Want to work together? Tell me about your project! 👋
       </p>
 
-      <div className="sm:flex sm:mb6">
+      <div className="sm:flex">
         <HyperLink
           href="mailto:hello@michaeluloth.com"
           className="link dib mr3 mb4 sm:mb0"
@@ -25,10 +25,10 @@ const Contact = () => (
           Email me
         </HyperLink>
         <nav aria-label="Social media links">
-          <ul className="mb6 sm:mb0">
+          <ul className="">
             {links.map(link => {
               return (
-                <li key={shortid.generate()} className="dib mr3 f3">
+                <li key={link.name} className="dib mr3 f3">
                   <HyperLink
                     href={link.url}
                     className="icon"
@@ -42,7 +42,6 @@ const Contact = () => (
           </ul>
         </nav>
       </div>
-      <Copyright />
     </div>
   </section>
 )
@@ -76,29 +75,17 @@ const links = [
 
 /* 
  *
- * Copyright
- * 
- */
-
-const Copyright = () => (
-  <p className="f6 sm:f5">&copy; {new Date().getFullYear()} Michael Uloth</p>
-)
-
-export default Contact
-
-/* 
- *
- * Imports
+ * Imports & Exports
  * 
  */
 
 import React from 'react'
-import shortid from 'shortid'
 
 import FaTwitter from 'react-icons/lib/fa/twitter'
 import FaGithub from 'react-icons/lib/fa/github'
 import FaLinkedin from 'react-icons/lib/fa/linkedin'
 import FaFacebook from 'react-icons/lib/fa/facebook'
-import FaEnvelopeO from 'react-icons/lib/fa/envelope-o'
 
 import HyperLink from '../components/HyperLink'
+
+export default Contact
