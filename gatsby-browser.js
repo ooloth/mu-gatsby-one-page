@@ -6,7 +6,7 @@
 
 /*
  *
- * Urgent polyfills (before first render)
+ * Urgent polyfills (before first render) + priority scripts for user interaction
  * 
  */
 
@@ -40,8 +40,6 @@ exports.onClientEntry = () => {
  * 
  */
 
-import loadjs from 'loadjs'
-
 exports.onInitialClientRender = () => {
   // A11Y: Detect keyboard vs. mouse vs. touch input (for focus styling)
   loadjs(`https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`)
@@ -57,3 +55,11 @@ exports.onInitialClientRender = () => {
     gtag(`config`, `UA-9710963-3`)
   })
 }
+
+/*
+ *
+ * Imports
+ * 
+ */
+
+import loadjs from 'loadjs'
