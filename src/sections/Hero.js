@@ -37,7 +37,7 @@ class Hero extends Component {
     const { expanded } = this.state
 
     return (
-      <section className="bg-near-white pv6">
+      <section className="bg-near-white pv6 avenir">
         <div className="container">
           <Greeting />
 

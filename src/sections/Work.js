@@ -11,19 +11,19 @@ class Work extends React.Component {
 
     // TODO: turn this into a state machine (states = showOpera, showWebsites, showAll)?
     switch (e.target.value) {
-      case `opera`:
-        if (e.target.checked) filters = { operaIsChecked: true }
-        else if (!websitesIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { operaIsChecked: false }
-        break
+    case `opera`:
+      if (e.target.checked) filters = { operaIsChecked: true }
+      else if (!websitesIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { operaIsChecked: false }
+      break
 
-      case `websites`:
-        if (e.target.checked) filters = { websitesIsChecked: true }
-        else if (!operaIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { websitesIsChecked: false }
-        break
+    case `websites`:
+      if (e.target.checked) filters = { websitesIsChecked: true }
+      else if (!operaIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { websitesIsChecked: false }
+      break
     }
 
     this.setState({ ...filters, limit: 5 })
@@ -60,7 +60,7 @@ class Work extends React.Component {
     const allLoaded = limit >= projectsInActiveCategory.length
 
     return (
-      <section className="pv6">
+      <section className="pv6 avenir">
         <h2 className="sr-only">Opera and Website Projects</h2>
 
         <Filters

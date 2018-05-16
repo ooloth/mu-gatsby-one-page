@@ -1,9 +1,9 @@
 const BaseLayout = ({ children, data }) => (
-  <div className="avenir">
+  <Fragment>
     <SiteMetadata site={data.site.siteMetadata} />
     {children()}
     <BasicStructuredData />
-  </div>
+  </Fragment>
 )
 
 /*
@@ -14,12 +14,12 @@ const BaseLayout = ({ children, data }) => (
 
 // Use PostCSS stylesheet in development and PostCSS/PurgeCSS stylesheet in production:
 switch (process.env.NODE_ENV) {
-case `development`:
-  require(`../styles/builds/after-postcss/output.css`)
-  break
-case `production`:
-  require(`../styles/builds/after-purgecss/output.css`)
-  break
+  case `development`:
+    require(`../styles/builds/after-postcss/output.css`)
+    break
+  case `production`:
+    require(`../styles/builds/after-purgecss/output.css`)
+    break
 }
 
 /*
@@ -91,8 +91,6 @@ const BasicStructuredData = () => (
 
 const siteUrl = `https://www.michaeluloth.com`
 
-console.log(`siteUrl + siteImage`, siteUrl + siteImage)
-
 const structuredData = `{
   "@context": "http://schema.org",
   "@type": "Person",
@@ -145,7 +143,7 @@ export const query = graphql`
  * 
  */
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 
 export default BaseLayout
