@@ -397,7 +397,7 @@ const Features = ({ features }) => (
   <ul className="mt4 nb1">
     {features.map((feature, index) => {
       return (
-        <li key={`feature-${index}`} feature={feature} className="flex pb1">
+        <li key={`feature-${index}`} className="flex pb1">
           <FeatureEmoji />
           <FeatureText feature={feature} />
         </li>

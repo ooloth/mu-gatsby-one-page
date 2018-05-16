@@ -97,9 +97,7 @@ const structuredData = `{
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Toronto",
-    "addressRegion": "ON",
-    "postalCode": "M4M 1Y5",
-    "streetAddress": "1133-70 Cambridge Avenue"
+    "addressRegion": "ON"
   },
   "alumniOf": "Wilfrid Laurier University, University of Toronto",
   "sameAs": [
