@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Michael Uloth`,
-    description: `Michael Uloth is a Toronto-based opera singer and web developer.`,
+    description: `I'm an opera singer and web developer based in Toronto. Check out my recent work and get in touch if you'd like to collaborate on your next project.`,
     siteUrl: `https://www.michaeluloth.com`,
     language: `en`,
     locale: `en_CA`,
@@ -9,14 +9,6 @@ module.exports = {
     // image: update siteImage variable in layouts/index.js
   },
   plugins: [
-    // {
-    //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-    //   options: {
-    //     defaultSizes: `gzip`,
-    //     disable: true,
-    //     production: true
-    //   }
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

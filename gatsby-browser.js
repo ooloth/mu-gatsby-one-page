@@ -38,8 +38,22 @@ import loadjs from 'loadjs'
 
 exports.onInitialClientRender = () => {
   // GSAP for site-wide animations
-  loadjs(`https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js`, `gsap`)
+  loadjs(
+    `https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js`,
+    `gsap`
+  )
 
   // A11Y: Detect keyboard vs. mouse vs. touch input (for focus styling)
   loadjs(`https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`)
+
+  // Google Analytics
+  loadjs(`https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`, () => {
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+
+    gtag(`js`, new Date())
+    gtag(`config`, `UA-9710963-3`)
+  })
 }

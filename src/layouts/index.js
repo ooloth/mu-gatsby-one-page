@@ -1,47 +1,10 @@
-class BaseLayout extends Component {
-  componentDidMount = () => {
-    // Load Google Analytics tracking code
-    loadjs('https://www.googletagmanager.com/gtag/js?id=UA-9710963-3', () => {
-      window.dataLayer = window.dataLayer || []
-
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-
-      gtag('js', new Date())
-      gtag('config', 'UA-9710963-3')
-    })
-  }
-
-  render() {
-    const { children, data } = this.props
-
-    return (
-      <div className="avenir">
-        <SiteMetadata site={data.site.siteMetadata} />
-        {children()}
-        <BasicStructuredData />
-      </div>
-    )
-  }
-}
-
-BaseLayout.propTypes = {
-  children: PropTypes.func
-}
-
-export default BaseLayout
-
-/*
- *
- * Imports
- * 
- */
-
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import loadjs from 'loadjs'
+const BaseLayout = ({ children, data }) => (
+  <div className="avenir">
+    <SiteMetadata site={data.site.siteMetadata} />
+    {children()}
+    <BasicStructuredData />
+  </div>
+)
 
 /*
  *
@@ -51,12 +14,12 @@ import loadjs from 'loadjs'
 
 // Use PostCSS stylesheet in development and PostCSS/PurgeCSS stylesheet in production:
 switch (process.env.NODE_ENV) {
-  case `development`:
-    require('../styles/builds/after-postcss/output.css')
-    break
-  case `production`:
-    require('../styles/builds/after-purgecss/output.css')
-    break
+case `development`:
+  require(`../styles/builds/after-postcss/output.css`)
+  break
+case `production`:
+  require(`../styles/builds/after-purgecss/output.css`)
+  break
 }
 
 /*
@@ -72,7 +35,7 @@ import siteImage from '../images/michael-uloth.jpg'
 const SiteMetadata = ({ site }) => (
   <Helmet>
     {/* HTML language */}
-    <html itemscope itemtype="http://schema.org/WebPage" lang={site.language} />
+    <html itemScope itemType="http://schema.org/WebPage" lang={site.language} />
 
     {/* Title comes first (meta charset and viewport are automatically included) */}
     <title itemProp="name" lang={site.language}>
@@ -85,9 +48,9 @@ const SiteMetadata = ({ site }) => (
     <link rel="canonical" href={site.siteUrl} />
 
     {/* Schema.org for Google */}
-    <meta itemprop="name" content={site.title} />
-    <meta itemprop="description" content={site.description} />
-    <meta itemprop="image" content={site.siteUrl + siteImage} />
+    <meta itemProp="name" content={site.title} />
+    <meta itemProp="description" content={site.description} />
+    <meta itemProp="image" content={site.siteUrl + siteImage} />
 
     {/* Twitter */}
     <meta name="twitter:card" content="summary" />
@@ -120,8 +83,15 @@ const SiteMetadata = ({ site }) => (
  */
 
 const BasicStructuredData = () => (
-  <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: structuredData }}
+  />
 )
+
+const siteUrl = `https://www.michaeluloth.com`
+
+console.log(`siteUrl + siteImage`, siteUrl + siteImage)
 
 const structuredData = `{
   "@context": "http://schema.org",
@@ -134,7 +104,7 @@ const structuredData = `{
     streetAddress: "1133-70 Cambridge Avenue"
   },
   email: "mailto:hello@michaeluloth.com",
-  image: ${siteImage},
+  image: ${siteUrl + siteImage},
   jobTitle: "Opera singer and web developer",
   name: "Michael Uloth",
   alumniOf: "Wilfrid Laurier University, University of Toronto",
@@ -168,3 +138,14 @@ export const query = graphql`
     }
   }
 `
+
+/*
+ *
+ * Imports & Exports
+ * 
+ */
+
+import React from 'react'
+import Helmet from 'react-helmet'
+
+export default BaseLayout
