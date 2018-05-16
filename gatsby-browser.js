@@ -47,16 +47,13 @@ exports.onInitialClientRender = () => {
   loadjs(`https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`)
 
   // Google Analytics
-  loadjs(`https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`, () => {
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
+  // loadjs(`https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`, () => {
+  //   window.dataLayer = window.dataLayer || []
+  //   function gtag() {
+  //     dataLayer.push(arguments)
+  //   }
 
-    gtag(`js`, new Date())
-    gtag(`config`, `UA-9710963-3`)
-  })
-
-  // Hotjar Analytics
-  // loadjs(`https://static.hotjar.com/c/hotjar-883410.js?sv=6`)
+  //   gtag(`js`, new Date())
+  //   gtag(`config`, `UA-9710963-3`)
+  // })
 }

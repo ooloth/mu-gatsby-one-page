@@ -25,6 +25,16 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-9710963-3`,
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: []
+      }
+    },
+    {
       resolve: `gatsby-plugin-hotjar`,
       options: {
         id: 883410,
