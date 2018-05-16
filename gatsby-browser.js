@@ -56,4 +56,7 @@ exports.onInitialClientRender = () => {
     gtag(`js`, new Date())
     gtag(`config`, `UA-9710963-3`)
   })
+
+  // Hotjar Analytics
+  loadjs(`https://static.hotjar.com/c/hotjar-883410.js?sv=6`)
 }
