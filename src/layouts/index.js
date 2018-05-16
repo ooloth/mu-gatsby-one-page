@@ -67,12 +67,6 @@ const SiteMetadata = ({ site }) => (
     <meta property="og:description" content={site.description} />
     <meta property="og:site_name" content={site.title} />
     <meta property="og:locale" content={site.locale} />
-
-    {/* Google Search Console */}
-    {/* <meta
-      name="google-site-verification"
-      content="SwZ5_vDFUMkbYGZyzpeZh49ZTqf_59byEFmTG4eWK_w"
-    /> */}
   </Helmet>
 )
 
@@ -94,6 +88,12 @@ const siteUrl = `https://www.michaeluloth.com`
 const structuredData = `{
   "@context": "http://schema.org",
   "@type": "Person",
+  "name": "Michael Uloth",
+  "jobTitle": "Opera singer and web developer",
+  "image": "${siteUrl + siteImage}",
+  "url": "https://www.michaeluloth.com",
+  "email": "mailto:hello@michaeluloth.com",
+  "telephone": "(416) 799-7753",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Toronto",
@@ -101,13 +101,7 @@ const structuredData = `{
     "postalCode": "M4M 1Y5",
     "streetAddress": "1133-70 Cambridge Avenue"
   },
-  "email": "mailto:hello@michaeluloth.com",
-  "image": "${siteUrl + siteImage}",
-  "jobTitle": "Opera singer and web developer",
-  "name": "Michael Uloth",
   "alumniOf": "Wilfrid Laurier University, University of Toronto",
-  "telephone": "(416) 799-7753",
-  "url": "https://www.michaeluloth.com",
   "sameAs": [
     "https://www.facebook.com/michaeluloth",
     "https://www.linkedin.com/in/michael-uloth-848a1b98/",
