@@ -26,6 +26,12 @@ exports.onClientEntry = () => {
   ) {
     require(`object-fit-images`)()
   }
+
+  // GSAP for site-wide animations
+  loadjs(
+    `https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js`,
+    `gsap`
+  )
 }
 
 /*
@@ -37,12 +43,6 @@ exports.onClientEntry = () => {
 import loadjs from 'loadjs'
 
 exports.onInitialClientRender = () => {
-  // GSAP for site-wide animations
-  loadjs(
-    `https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js`,
-    `gsap`
-  )
-
   // A11Y: Detect keyboard vs. mouse vs. touch input (for focus styling)
   loadjs(`https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`)
 
