@@ -23,7 +23,6 @@
     "intersection-observer": "^0.5.0",
     "loadjs": "^3.5.4",
     "object-fit-images": "^3.2.3",
-    "prange": "^0.2.3",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-transition-group": "^2.3.1",
@@ -53,6 +52,6 @@
     "build:postcss": "postcss src/styles/index.css -o src/styles/builds/after-postcss/output.css",
     "build:purgecss": "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
     "dev": "gatsby develop & npm run watch:postcss",
-    "build": "npm run build:postcss && npm run build:purgecss && gatsby build --noUglify"
+    "build": "npm run build:postcss && npm run build:purgecss && gatsby build"
   }
 }
