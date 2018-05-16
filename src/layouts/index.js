@@ -14,12 +14,12 @@ const BaseLayout = ({ children, data }) => (
 
 // Use PostCSS stylesheet in development and PostCSS/PurgeCSS stylesheet in production:
 switch (process.env.NODE_ENV) {
-  case `development`:
-    require(`../styles/builds/after-postcss/output.css`)
-    break
-  case `production`:
-    require(`../styles/builds/after-purgecss/output.css`)
-    break
+case `development`:
+  require(`../styles/builds/after-postcss/output.css`)
+  break
+case `production`:
+  require(`../styles/builds/after-purgecss/output.css`)
+  break
 }
 
 /*
@@ -69,10 +69,10 @@ const SiteMetadata = ({ site }) => (
     <meta property="og:locale" content={site.locale} />
 
     {/* Google Search Console */}
-    <meta
+    {/* <meta
       name="google-site-verification"
       content="SwZ5_vDFUMkbYGZyzpeZh49ZTqf_59byEFmTG4eWK_w"
-    />
+    /> */}
   </Helmet>
 )
 
