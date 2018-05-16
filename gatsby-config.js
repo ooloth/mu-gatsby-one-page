@@ -25,6 +25,13 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 883410,
+        sv: 6
+      }
+    },
+    {
       resolve: `gatsby-plugin-netlify`, // must come last
       options: {
         headers: {

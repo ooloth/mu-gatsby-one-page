@@ -1,15 +1,19 @@
 {
   "name": "michael-uloth-website",
-  "description":
-    "Official website of Toronto-based opera singer and web developer Michael Uloth.",
+  "description": "Official website of Toronto-based opera singer and web developer Michael Uloth.",
   "version": "1.0.0",
   "author": "Michael Uloth <hello@michaeluloth.com>",
-  "browserslist": [">0.25%", "not ie < 11", "not op_mini all"],
+  "browserslist": [
+    ">0.25%",
+    "not ie < 11",
+    "not op_mini all"
+  ],
   "dependencies": {
     "gatsby": "^1.9.255",
     "gatsby-cli": "^1.1.51",
     "gatsby-image": "^1.0.47",
     "gatsby-link": "^1.6.41",
+    "gatsby-plugin-hotjar": "^1.0.1",
     "gatsby-plugin-netlify": "^1.0.19",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
@@ -43,12 +47,9 @@
     "stylelint-no-unsupported-browser-features": "^3.0.0"
   },
   "scripts": {
-    "watch:postcss":
-      "postcss src/styles/index.css -o src/styles/builds/after-postcss/output.css -w",
-    "build:postcss":
-      "postcss src/styles/index.css -o src/styles/builds/after-postcss/output.css",
-    "build:purgecss":
-      "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
+    "watch:postcss": "postcss src/styles/index.css -o src/styles/builds/after-postcss/output.css -w",
+    "build:postcss": "postcss src/styles/index.css -o src/styles/builds/after-postcss/output.css",
+    "build:purgecss": "purgecss -c ./purgecss.config.js -o src/styles/builds/after-purgecss",
     "dev": "gatsby develop & npm run watch:postcss",
     "build": "npm run build:postcss && npm run build:purgecss && gatsby build"
   }

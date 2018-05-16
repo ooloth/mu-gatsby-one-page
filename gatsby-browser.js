@@ -58,5 +58,5 @@ exports.onInitialClientRender = () => {
   })
 
   // Hotjar Analytics
-  loadjs(`https://static.hotjar.com/c/hotjar-883410.js?sv=6`)
+  // loadjs(`https://static.hotjar.com/c/hotjar-883410.js?sv=6`)
 }
