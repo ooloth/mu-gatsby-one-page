@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Michael Uloth`,
-    description: `I'm an opera singer and web developer based in Toronto. Check out my recent work and get in touch if you'd like to collaborate on your next project.`,
+    description: `I'm an opera singer and web developer based in Toronto. Check out my recent work and get in touch to collaborate on your next project.`,
     siteUrl: `https://www.michaeluloth.com`,
     language: `en`,
     locale: `en_CA`,
