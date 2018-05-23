@@ -1,10 +1,7 @@
 const IndexPage = ({ data }) => {
   // Merge opera and website projects (alternate website, opera, website, etc.)
-  // console.log(`opera yaml`, data.allOperaYaml.edges)
-  console.log(`opera2 yaml`, data.allOpera2Yaml.edges)
-  const array1 = data.allOpera2Yaml.edges
-  // const array1 = data.allOperaJson.edges
-  const array2 = data.allWebsitesJson.edges
+  const array1 = data.allOperaYaml.edges
+  const array2 = data.allWebsitesYaml.edges
   let combinedArray = []
 
   // General function for merging arrays in an alternating pattern
@@ -27,8 +24,8 @@ const IndexPage = ({ data }) => {
         <Hero />
         <Work
           projects={projectsWithKeys}
-          operas={data.allOperaJson.edges}
-          websites={data.allWebsitesJson.edges}
+          operas={data.allOperaYaml.edges}
+          websites={data.allWebsitesYaml.edges}
         />
         <Contact />
       </main>
@@ -45,9 +42,15 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query IndexPageQuery {
-    allOperaJson {
+    allOperaYaml {
       edges {
         node {
+          title {
+            text
+            lang
+          }
+          category
+          tags
           image {
             childImageSharp {
               sizes(maxWidth: 940) {
@@ -56,56 +59,47 @@ export const query = graphql`
             }
           }
           alt
-          title {
-            text
-            lang
-          }
-          category
-          tags
+          link
           reviews {
             quotation
             source
             link
           }
           features
+          details {
+            name
+            value
+            lang
+          }
+        }
+      }
+    }
+    allWebsitesYaml {
+      edges {
+        node {
+          title {
+            text
+          }
+          category
+          tags
+          image {
+            childImageSharp {
+              sizes(maxWidth: 940) {
+                ...GatsbyImageSharpSizes_withWebp
+              }
+            }
+          }
+          alt
+          link
+          reviews {
+            quotation
+            source
+            link
+          }
           description
           details {
             name
             value
-            lang
-          }
-          link
-        }
-      }
-    }
-    allOpera2Yaml {
-      edges {
-        node {
-          title {
-            text
-            lang
-          }
-          category
-          tags
-          image {
-            childImageSharp {
-              sizes(maxWidth: 940) {
-                ...GatsbyImageSharpSizes_withWebp
-              }
-            }
-          }
-          alt
-          link
-          reviews {
-            quotation
-            source
-            link
-          }
-          features
-          details {
-            name
-            value
-            lang
           }
         }
       }

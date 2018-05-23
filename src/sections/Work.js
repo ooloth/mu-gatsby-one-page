@@ -43,15 +43,22 @@ class Work extends React.Component {
 
   render() {
     const { limit, operaIsChecked, websitesIsChecked } = this.state
-    const { projects } = this.props
+    const { projects, operas, websites } = this.props
 
     // Which projects are in the active category? (Keep separate to calculate allLoaded.)
-    const projectsInActiveCategory = projects.filter(project => {
-      if (operaIsChecked && websitesIsChecked) return project
-      else if (operaIsChecked) return project.node.category === `Opera`
-      else if (websitesIsChecked) return project.node.category === `Website`
-      else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
-    })
+    // const projectsInActiveCategory = projects.filter(project => {
+    //   if (operaIsChecked && websitesIsChecked) return project
+    //   else if (operaIsChecked) return project.node.category === `Opera`
+    //   else if (websitesIsChecked) return project.node.category === `Website`
+    //   else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
+    // })
+
+    let projectsInActiveCategory = []
+    if (operaIsChecked && websitesIsChecked) projectsInActiveCategory = projects
+    else if (operaIsChecked) projectsInActiveCategory = operas
+    else if (websitesIsChecked) projectsInActiveCategory = websites
+
+    console.log(`projectsInActiveCategory`, projectsInActiveCategory)
 
     // Which projects in the active category should be visible?
     const visibleProjects = [...projectsInActiveCategory].slice(0, limit)
