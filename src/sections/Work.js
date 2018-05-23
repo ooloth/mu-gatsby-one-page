@@ -11,19 +11,19 @@ class Work extends React.Component {
 
     // TODO: turn this into a state machine (states = showOpera, showWebsites, showAll)?
     switch (e.target.value) {
-      case `opera`:
-        if (e.target.checked) filters = { operaIsChecked: true }
-        else if (!websitesIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { operaIsChecked: false }
-        break
+    case `opera`:
+      if (e.target.checked) filters = { operaIsChecked: true }
+      else if (!websitesIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { operaIsChecked: false }
+      break
 
-      case `websites`:
-        if (e.target.checked) filters = { websitesIsChecked: true }
-        else if (!operaIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { websitesIsChecked: false }
-        break
+    case `websites`:
+      if (e.target.checked) filters = { websitesIsChecked: true }
+      else if (!operaIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { websitesIsChecked: false }
+      break
     }
 
     this.setState({ ...filters, limit: 5 })
@@ -43,22 +43,15 @@ class Work extends React.Component {
 
   render() {
     const { limit, operaIsChecked, websitesIsChecked } = this.state
-    const { projects, operas, websites } = this.props
+    const { projects } = this.props
 
     // Which projects are in the active category? (Keep separate to calculate allLoaded.)
-    // const projectsInActiveCategory = projects.filter(project => {
-    //   if (operaIsChecked && websitesIsChecked) return project
-    //   else if (operaIsChecked) return project.node.category === `Opera`
-    //   else if (websitesIsChecked) return project.node.category === `Website`
-    //   else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
-    // })
-
-    let projectsInActiveCategory = []
-    if (operaIsChecked && websitesIsChecked) projectsInActiveCategory = projects
-    else if (operaIsChecked) projectsInActiveCategory = operas
-    else if (websitesIsChecked) projectsInActiveCategory = websites
-
-    console.log(`projectsInActiveCategory`, projectsInActiveCategory)
+    const projectsInActiveCategory = projects.filter(project => {
+      if (operaIsChecked && websitesIsChecked) return project
+      else if (operaIsChecked) return project.node.category === `Opera`
+      else if (websitesIsChecked) return project.node.category === `Website`
+      else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
+    })
 
     // Which projects in the active category should be visible?
     const visibleProjects = [...projectsInActiveCategory].slice(0, limit)
@@ -361,7 +354,6 @@ class ProjectDetails extends Component {
 
 const FeaturedImage = ({ image, alt }) => (
   <figure>
-    {console.log(`image`, image)}
     <Img sizes={image} alt={alt} className="shadow-lg" />
     <figcaption className="o-50 pt1 f6">{alt}</figcaption>
   </figure>

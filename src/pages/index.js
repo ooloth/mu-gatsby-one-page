@@ -22,11 +22,7 @@ const IndexPage = ({ data }) => {
     <Fragment>
       <main>
         <Hero />
-        <Work
-          projects={projectsWithKeys}
-          operas={data.allOperaYaml.edges}
-          websites={data.allWebsitesYaml.edges}
-        />
+        <Work projects={projectsWithKeys} />
         <Contact />
       </main>
       <Footer />
@@ -101,36 +97,6 @@ export const query = graphql`
             name
             value
           }
-        }
-      }
-    }
-    allWebsitesJson {
-      edges {
-        node {
-          image {
-            childImageSharp {
-              sizes(maxWidth: 940) {
-                ...GatsbyImageSharpSizes_withWebp
-              }
-            }
-          }
-          alt
-          title {
-            text
-          }
-          category
-          tags
-          reviews {
-            quotation
-            source
-            link
-          }
-          description
-          details {
-            name
-            value
-          }
-          link
         }
       }
     }
