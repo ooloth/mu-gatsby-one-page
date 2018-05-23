@@ -24,6 +24,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-plugin-netlify`, // must come last
       options: {

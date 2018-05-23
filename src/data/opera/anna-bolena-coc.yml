@@ -1,0 +1,39 @@
+title:
+  text: Anna Bolena
+  lang: it
+
+category: Opera
+
+tags:
+- Canadian Opera Company
+
+image: ../../images/opera/anna-bolena-1.jpg
+
+alt: Bruce Sledge, Christian Van Horn, Thomas Goerz and Sondra Radvanovsky in the Canadian Opera Company production of Anna Bolena. Photo by Michael Cooper.
+
+link: https://www.coc.ca/productions/13097
+
+features:
+- Watch a quick <a href="https://www.youtube.com/watch?v=W6kBk35uU-s" target="_blank" rel="noopener nofollow" class="link-inline">preview</a>.
+- Take a <a href="https://www.youtube.com/watch?v=2x4Ce1mFkD4" target="_blank" rel="noopener nofollow" class="link-inline">backstage tour</a>.
+
+details:
+- name: Company
+  value: Canadian Opera Company
+- name: Opera
+  value: Anna Bolena
+  lang: it
+- name: Role
+  value: Lord Rochefort (cover)
+- name: Composer
+  value: Gaetano Donizetti
+  lang: it
+- name: Conductor
+  value: Corrado Rovaris
+  lang: it
+- name: Director
+  value: Stephen Lawless
+- name: Dates
+  value: April 28 - May 26, 2018
+
+lastDate: '2018-05-26'

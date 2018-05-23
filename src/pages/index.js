@@ -1,6 +1,9 @@
 const IndexPage = ({ data }) => {
   // Merge opera and website projects (alternate website, opera, website, etc.)
-  const array1 = data.allOperaJson.edges
+  // console.log(`opera yaml`, data.allOperaYaml.edges)
+  console.log(`opera2 yaml`, data.allOpera2Yaml.edges)
+  const array1 = data.allOpera2Yaml.edges
+  // const array1 = data.allOperaJson.edges
   const array2 = data.allWebsitesJson.edges
   let combinedArray = []
 
@@ -72,6 +75,38 @@ export const query = graphql`
             lang
           }
           link
+        }
+      }
+    }
+    allOpera2Yaml {
+      edges {
+        node {
+          title {
+            text
+            lang
+          }
+          category
+          tags
+          image {
+            childImageSharp {
+              sizes(maxWidth: 940) {
+                ...GatsbyImageSharpSizes_withWebp
+              }
+            }
+          }
+          alt
+          link
+          reviews {
+            quotation
+            source
+            link
+          }
+          features
+          details {
+            name
+            value
+            lang
+          }
         }
       }
     }

@@ -1,0 +1,41 @@
+title:
+  text: The Nightingale
+  # lang: it
+
+category: Opera
+
+tags:
+- Canadian Opera Company
+
+image: ../../images/opera/nightingale-4.jpg
+
+alt: Michael Uloth (left), Anatoli Sivko, Lauren Eberwein and Jane Archibald in the Canadian Opera Company production of The Nightingale & Other Short Fables. Image by Michael Cooper.
+
+link: https://www.coc.ca/productions/13109
+
+features:
+- Watch a quick <a href="https://www.youtube.com/watch?v=4EnnRWLdy8Q" target="_blank" rel="noopener nofollow" class="link-inline">preview</a>.
+- See <a href="https://www.youtube.com/watch?v=svmQ-DsDZQM" target="_blank" rel="noopener nofollow" class="link-inline">audience reactions</a>.
+- Hear soprano Jane Archibald <a href="https://www.youtube.com/watch?v=0brQMYk4nEQ" target="_blank" rel="noopener nofollow" class="link-inline">describe the production</a>.
+- Watch the pit transform into a <a href="https://www.youtube.com/watch?v=t6cPgqBfomA" target="_blank" rel="noopener nofollow" class="link-inline">67,000-litre pool</a>.
+- Watch acrobats use light to create <a href="https://www.youtube.com/watch?v=jYqGZ0oH_JE" target="_blank" rel="noopener nofollow" class="link-inline">shadow puppets</a>.
+- See the show's <a href="https://www.youtube.com/watch?v=-Ae8ureLNKw" target="_blank" rel="noopener nofollow" class="link-inline">75 unique puppets</a>.
+
+details:
+- name: Company
+  value: Canadian Opera Company
+- name: Opera
+  value: The Nightingale & Other Short Fables
+  # lang: it
+- name: Role
+  value: Bonze
+- name: Composer
+  value: Igor Stravinsky
+- name: Conductor
+  value: Johannes Debus
+- name: Director
+  value: Robert Lepage
+- name: Dates
+  value: April 13 - May 19, 2018
+
+lastDate: '2018-05-19'

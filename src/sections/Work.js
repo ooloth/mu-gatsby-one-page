@@ -11,19 +11,19 @@ class Work extends React.Component {
 
     // TODO: turn this into a state machine (states = showOpera, showWebsites, showAll)?
     switch (e.target.value) {
-    case `opera`:
-      if (e.target.checked) filters = { operaIsChecked: true }
-      else if (!websitesIsChecked)
-        filters = { operaIsChecked: true, websitesIsChecked: true }
-      else filters = { operaIsChecked: false }
-      break
+      case `opera`:
+        if (e.target.checked) filters = { operaIsChecked: true }
+        else if (!websitesIsChecked)
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { operaIsChecked: false }
+        break
 
-    case `websites`:
-      if (e.target.checked) filters = { websitesIsChecked: true }
-      else if (!operaIsChecked)
-        filters = { operaIsChecked: true, websitesIsChecked: true }
-      else filters = { websitesIsChecked: false }
-      break
+      case `websites`:
+        if (e.target.checked) filters = { websitesIsChecked: true }
+        else if (!operaIsChecked)
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { websitesIsChecked: false }
+        break
     }
 
     this.setState({ ...filters, limit: 5 })
@@ -354,6 +354,7 @@ class ProjectDetails extends Component {
 
 const FeaturedImage = ({ image, alt }) => (
   <figure>
+    {console.log(`image`, image)}
     <Img sizes={image} alt={alt} className="shadow-lg" />
     <figcaption className="o-50 pt1 f6">{alt}</figcaption>
   </figure>
