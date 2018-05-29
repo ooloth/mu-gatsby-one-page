@@ -5,7 +5,7 @@ class HyperLink extends Component {
   handleClick = e => e.stopPropagation()
 
   render() {
-    const { href, srText, className, children } = this.props
+    const { href, srText, className, style, children } = this.props
     const isExternal = href.indexOf(`http`) === -1 ? false : true
 
     return (
@@ -15,6 +15,7 @@ class HyperLink extends Component {
         target={isExternal ? `_blank` : null}
         rel={isExternal ? `noopener nofollow` : null}
         className={className}
+        style={style}
       >
         {srText && <span className="sr-only">{srText}</span>}
         {children}

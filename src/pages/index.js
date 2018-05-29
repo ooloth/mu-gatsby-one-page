@@ -4,7 +4,7 @@ const IndexPage = ({ data }) => {
   const array2 = data.allWebsitesYaml.edges
   let combinedArray = []
 
-  // General function for merging arrays in an alternating pattern
+  // Merge arrays in an alternating pattern
   for (let i = 0; i < 10000; i++) {
     if (array1[i] && array2[i]) combinedArray.push(array1[i], array2[i])
     else if (array1[i]) combinedArray.push(array1[i])

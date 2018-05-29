@@ -38,6 +38,8 @@ class Hero extends Component {
 
     return (
       <section className="bg-near-white pv6 avenir">
+        <OplAwardRibbon />
+
         <div className="container">
           <Greeting />
 
@@ -56,6 +58,24 @@ class Hero extends Component {
     )
   }
 }
+
+/*
+ *
+ * OPL Award Ribbon
+ *
+ */
+
+import ribbon from '../svg/opl-award-ribbon-right.svg'
+
+const OplAwardRibbon = () => (
+  <HyperLink
+    href="https://onepagelove.com/michael-uloth"
+    className="absolute top-0 right-0 mt4 pt2"
+    style={{ width: `4.5rem` }}
+  >
+    <SVG src={ribbon} />
+  </HyperLink>
+)
 
 /* 
  *
@@ -202,6 +222,7 @@ const PointingDownEmoji = () => (
 
 import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
+import SVG from 'react-inlinesvg'
 
 import HyperLink from '../components/HyperLink'
 
