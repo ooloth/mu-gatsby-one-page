@@ -48,6 +48,36 @@
   - name: Tools
     value: HTML, CSS, jQuery
 
+####################
+# J. PATRICK RAFTERY
+####################
+
+- title:
+    text: J. Patrick Raftery
+
+  category: Website
+
+  tags:
+  - Website
+  - Design
+  - Code
+
+  image: ../images/websites/patrick-raftery-with-pavarotti.jpg
+  alt: J. Patrick Raftery (centre) as Schaunard in La Bohème with Luciana Pavarotti and Robert Hale.
+
+  link: https://www.jpatrickraftery.com/
+
+  reviews:
+  - quotation: Ok...this has happened. After a few months of finding some time where no extra time exists my new website is up and running. Thanks so much to Michael Uloth for his fantastic design and advice. Please check out Michael's award winning web design site and check out his great work. Or check out his work on my own new site!
+    source: J. Patrick Raftery, Facebook
+    link: https://www.facebook.com/jpatrick.raftery/posts/10156736359656800
+
+  description: I collaborated with American opera singer and voice teacher J. Patrick Raftery to tell the story of his impressive career through a design that is clear and easy to digest.
+
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
+
 #############
 # ADAM LUTHER
 #############
@@ -142,14 +172,14 @@
   link: https://www.ariaumezawa.com/
   
   reviews:
-  - quotation: Today’s the day we launch my new website, thanks to the amazing <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener nofollow" class="link-inline">@coffeescreative</a>. The whole team was an absolute dream to work with, and came with such creative ideas. I couldn’t be more pleased.
+  - quotation: Today’s the day we launch my new website, thanks to the amazing <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener" class="link-inline">@coffeescreative</a>. The whole team was an absolute dream to work with, and came with such creative ideas. I couldn’t be more pleased.
     source: Aria Umezawa, Twitter
     link: https://twitter.com/umezawaria/status/994947044522389504
-  - quotation: Finally time to unveil my new website designed by <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a>. They created this amazing minimalist design with bright colours and geometric shapes. Thrilled with the end result, and had a blast working with them.
+  - quotation: Finally time to unveil my new website designed by <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a>. They created this amazing minimalist design with bright colours and geometric shapes. Thrilled with the end result, and had a blast working with them.
     source: Aria Umezawa, Facebook
     link: https://www.facebook.com/umezawaria/photos/a.352185358613567.1073741828.341103669721736/375590169606419/
   
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to create a fast-loading, eye-catching portfolio for Canadian director Aria Umezawa.
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create a fast-loading, eye-catching portfolio for Canadian director Aria Umezawa.
   
   details:
   - name: Tools
@@ -173,18 +203,18 @@
 
   link: https://www.pomegranateopera.com
 
-  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to build a whimsical showcase for the upcoming production of "Pomegranate Opera", a lesbian opera by Amanda Hale and Kye Marshall.
+  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a whimsical showcase for the upcoming production of "Pomegranate Opera", a lesbian opera by Amanda Hale and Kye Marshall.
   
   details:
   - name: Tools
     value: React, Gatbsy, PostCSS, GitLab, Netlify
 
 ###############
-# ARTIST CENTER
+# DANIEL CABENA
 ###############
 
 - title:
-    text: Artist Center
+    text: Daniel Cabena
 
   category: Website
 
@@ -192,12 +222,17 @@
   - Website
   - Code
 
-  image: ../images/websites/artist-center.png
-  alt: Artist Center graphic, designed by Stephen Bell.
+  image: ../images/websites/daniel-cabena.jpg
+  alt: Portrait of Daniel Cabena by Trina Koster Photography.
 
-  link: https://www.artist.center/
+  link: https://www.danielcabena.com/
 
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to create an attractive landing page for the launch of Artist.Center, an app that helps connect operatic artists and companies.
+  reviews:
+  - quotation: I’m thrilled to announce the launch today of my new website... Thanks to the brilliant team at Coffeeshop Creative for their careful attention and beautiful design.
+    source: Daniel Cabena, Facebook
+    link: https://www.facebook.com/danielcabenacountertenor/posts/2123903447862938
+
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to biuld a clean, fast-loading portfolio site for Canadian countertenor Daniel Cabena.
   
   details:
   - name: Tools
@@ -222,10 +257,10 @@
   link: https://www.rachelkrehm.com/
 
   reviews:
-  - quotation: So excited to show the world my new website! Thank you to <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener nofollow" class="link-inline">@coffeescreative</a> for the beautiful job!
+  - quotation: So excited to show the world my new website! Thank you to <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener" class="link-inline">@coffeescreative</a> for the beautiful job!
     source: Rachel Krehm, Twitter
     link: https://twitter.com/RachelKrehm/status/931216429294280706
-  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to create an energetic portfolio site for Rachel Krehm, an opera, theatre and comedy performer and the co-founder and General Director of Opera&nbsp;5.
+  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create an energetic portfolio site for Rachel Krehm, an opera, theatre and comedy performer and the co-founder and General Director of Opera&nbsp;5.
   
   details:
   - name: Tools
@@ -249,7 +284,7 @@
 
   link: http://www.riccardoiannello.com
 
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to build an engaging one-page portfolio site for Italian-Canadian tenor Riccardo Iannello.
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build an engaging one-page portfolio site for Italian-Canadian tenor Riccardo Iannello.
   
   details:
   - name: Tools
@@ -274,11 +309,11 @@
   link: https://johngreermusic.com
 
   reviews:
-  - quotation: It's been launched AT LAST! My new personal website! Warmest thanks to Stephen Bell and the talented crew at <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> for making this longtime dream come true! Check it out!
+  - quotation: It's been launched AT LAST! My new personal website! Warmest thanks to Stephen Bell and the talented crew at <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> for making this longtime dream come true! Check it out!
     source: John Greer, Facebook
     link: https://www.facebook.com/john.l.greer.1/posts/10155831888508169
 
-  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to build a comprehensive multi-page portfolio site for Canadian composer John&nbsp;Greer.
+  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a comprehensive multi-page portfolio site for Canadian composer John&nbsp;Greer.
 
   details:
   - name: Tools
@@ -302,10 +337,10 @@
 
   link: http://dgvolo.com
 
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.
 
   details:
   - name: Tools
-    value: Pug, Sass, jQuery
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
 
 

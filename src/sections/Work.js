@@ -292,7 +292,7 @@ const HeaderInfo = ({ title, tags }) => (
         return (
           <li
             key={`tag-${index}`}
-            className="dib mr2 mb2 bg-green pv1 ph2 md:f4 fw4 ttl"
+            className="dib mr2 mb2 bg-green pv1 ph2 sm:f4 fw4 ttl"
           >
             {tag}
           </li>

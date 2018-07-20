@@ -660,13 +660,27 @@ html,
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  /* Font-size */
+  /* Font-size *//* @media (--sm) { font-size: 1.05rem } *//* Font-size */
 }
 
 @media (min-width: 36em) {
   html,
   body {
-    font-size: 1.05rem;
+    font-size: calc(16.5 / 16 * 1rem);
+  }
+}
+
+@media (min-width: 48em) {
+  html,
+  body {
+    font-size: calc(17 / 16 * 1rem);
+  }
+}
+
+@media (min-width: 62em) {
+  html,
+  body {
+    font-size: calc(17.5 / 16 * 1rem);
   }
 }
 
@@ -9752,20 +9766,22 @@ Adapted from:
 
 */
 
+/* See: http://markdotto.com/2018/02/07/github-system-fonts/ */
+
 .sans-serif {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .serif {
-  font-family: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
+  font-family: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .system-sans-serif {
-  font-family: sans-serif;
+  font-family: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .system-serif {
-  font-family: serif;
+  font-family: serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 /*
@@ -9776,11 +9792,11 @@ Adapted from:
 
 code,
 .mono {
-  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .courier {
-  font-family: 'Courier New', courier, monospace;
+  font-family: 'Courier New', courier, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 /*
@@ -9789,16 +9805,24 @@ code,
  *
  */
 
+.abeezee {
+  font-family: ABeeZee, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
 .avenir {
-  font-family: 'avenir next', avenir, sans-serif;
+  font-family: 'avenir next', avenir, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .helvetica {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: 'helvetica neue', helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.josefin-sans {
+  font-family: 'Josefin Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .raleway {
-  font-family: Raleway, sans-serif;
+  font-family: Raleway, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 /*
@@ -9808,31 +9832,41 @@ code,
  */
 
 .athelas {
-  font-family: athelas, georgia, serif;
+  font-family: athelas, georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .baskerville {
-  font-family: baskerville, serif;
+  font-family: baskerville, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .bodoni {
-  font-family: 'Bodoni MT', serif;
+  font-family: 'Bodoni MT', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .calisto {
-  font-family: 'Calisto MT', serif;
+  font-family: 'Calisto MT', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .garamond {
-  font-family: garamond, serif;
+  font-family: garamond, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .georgia {
-  font-family: georgia, serif;
+  font-family: georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .times {
-  font-family: times, serif;
+  font-family: times, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/*
+ *
+ * Cursive
+ *
+ */
+
+.lobster {
+  font-family: 'Lobster', cursive, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 /*

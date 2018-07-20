@@ -13,7 +13,7 @@ class HyperLink extends Component {
         href={href}
         onClick={this.handleClick}
         target={isExternal ? `_blank` : null}
-        rel={isExternal ? `noopener nofollow` : null}
+        rel={isExternal ? `noopener` : null}
         className={className}
         style={style}
       >

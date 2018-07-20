@@ -25,7 +25,12 @@ body {
   overflow-x: hidden;
 
   /* Font-size */
-  @media (--sm) { font-size: 1.05rem }
+  /* @media (--sm) { font-size: 1.05rem } */
+
+  /* Font-size */
+  @media (--sm) { font-size: calc(16.5 / 16 * 1rem) }
+  @media (--md) { font-size: calc(17 / 16 * 1rem) }
+  @media (--lg) { font-size: calc(17.5 / 16 * 1rem) }
     
   /* Font-smoothing */
   -webkit-font-smoothing: antialiased;
