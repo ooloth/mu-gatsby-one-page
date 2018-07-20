@@ -9,8 +9,10 @@
     "__dirname": false,
     "graphql": false,
     "process": false,
+    "TimelineLite": false,
     "TimelineMax": false,
-    "TweenMax": false
+    "TweenLite": false
+    "TweenLite": false
   },
   "parser": "babel-eslint",
   "parserOptions": {

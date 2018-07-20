@@ -11,19 +11,19 @@ class Work extends React.Component {
 
     // TODO: turn this into a state machine (states = showOpera, showWebsites, showAll)?
     switch (e.target.value) {
-    case `opera`:
-      if (e.target.checked) filters = { operaIsChecked: true }
-      else if (!websitesIsChecked)
-        filters = { operaIsChecked: true, websitesIsChecked: true }
-      else filters = { operaIsChecked: false }
-      break
+      case `opera`:
+        if (e.target.checked) filters = { operaIsChecked: true }
+        else if (!websitesIsChecked)
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { operaIsChecked: false }
+        break
 
-    case `websites`:
-      if (e.target.checked) filters = { websitesIsChecked: true }
-      else if (!operaIsChecked)
-        filters = { operaIsChecked: true, websitesIsChecked: true }
-      else filters = { websitesIsChecked: false }
-      break
+      case `websites`:
+        if (e.target.checked) filters = { websitesIsChecked: true }
+        else if (!operaIsChecked)
+          filters = { operaIsChecked: true, websitesIsChecked: true }
+        else filters = { websitesIsChecked: false }
+        break
     }
 
     this.setState({ ...filters, limit: 5 })
@@ -179,7 +179,7 @@ const Projects = ({ projects }) => (
  */
 
 // DOCS: https://github.com/muicss/loadjs#documentation
-// DOCS: https://greensock.com/docs/TweenMax
+// DOCS: https://greensock.com/docs/TweenLite
 // Forum: https://greensock.com/forums/topic/15749-gsap-with-create-react-app/
 
 class Project extends React.Component {
@@ -200,7 +200,7 @@ class Project extends React.Component {
       gsapTarget.removeAttribute(`style`)
 
       // Expand the section to its natural height
-      TweenMax.fromTo(
+      TweenLite.fromTo(
         gsapTarget,
         1,
         {
@@ -223,7 +223,7 @@ class Project extends React.Component {
 
     loadjs.ready(`gsap`, () => {
       // Collapse the section to 0
-      TweenMax.to(gsapTarget, 1, {
+      TweenLite.to(gsapTarget, 1, {
         height: 0,
         autoAlpha: 0,
         ease: `Power3.easeInOut`,

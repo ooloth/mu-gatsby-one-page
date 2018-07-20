@@ -29,7 +29,10 @@ exports.onClientEntry = () => {
 
   // GSAP for site-wide animations
   loadjs(
-    `https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js`,
+    [
+      `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js`,
+      `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js`
+    ],
     `gsap`
   )
 }

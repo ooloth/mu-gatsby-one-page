@@ -14,7 +14,7 @@ class Hero extends Component {
         gsapTarget.removeAttribute(`style`)
 
         // Expand the section to its natural height
-        TweenMax.fromTo(
+        TweenLite.fromTo(
           gsapTarget,
           1,
           {
