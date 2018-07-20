@@ -71,9 +71,9 @@ const OplAwardRibbon = () => (
   <HyperLink
     href="https://onepagelove.com/michael-uloth"
     className="absolute top-0 right-0 mt4 pt2"
-    style={{ width: `4.5rem` }}
+    style={{ width: `4.75rem` }}
   >
-    <SVG src={ribbon} />
+    <SVG src={ribbon} className="db ml-auto w-90 sm:w-100" />
   </HyperLink>
 )
 

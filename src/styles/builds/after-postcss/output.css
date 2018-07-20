@@ -660,7 +660,7 @@ html,
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  /* Font-size *//* @media (--sm) { font-size: 1.05rem } *//* Font-size */
+  /* Font-size */
 }
 
 @media (min-width: 36em) {
