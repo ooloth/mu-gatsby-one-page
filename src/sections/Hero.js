@@ -74,6 +74,7 @@ const OplAwardRibbon = () => (
     style={{ width: `4.75rem` }}
   >
     <SVG src={ribbon} className="db ml-auto w-90 sm:w-100" />
+    <span className="sr-only">See this site's design award on One Page Love</span>
   </HyperLink>
 )
 
