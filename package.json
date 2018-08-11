@@ -9,6 +9,7 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "chessboardjs": "0.0.1",
     "gatsby": "^1.9.255",
     "gatsby-cli": "^1.1.51",
     "gatsby-image": "^1.0.47",

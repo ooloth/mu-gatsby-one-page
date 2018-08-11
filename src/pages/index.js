@@ -25,7 +25,8 @@ const IndexPage = ({ data }) => {
         <Work projects={projectsWithKeys} />
         <Contact />
       </main>
-      <Footer />
+
+      <Footer className="bg-near-white" />
     </Fragment>
   )
 }

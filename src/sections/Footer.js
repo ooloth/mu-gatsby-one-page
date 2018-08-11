@@ -1,5 +1,5 @@
-const Footer = () => (
-  <footer className="bg-near-white pb3">
+const Footer = ({ className = `` }) => (
+  <footer className={`pb3 ${className}`}>
     <Copyright />
   </footer>
 )
