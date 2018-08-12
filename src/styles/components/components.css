@@ -18,6 +18,14 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   @media (--sm) { @apply .f4 }
  }
 
+.btn-green {
+  @apply .bw1 .b--black-20 .bg-green .pv2 .ph3 .lh-solid .ttu .tracked .animate;
+
+  &:hover { @apply .b--black .shadow-lg }
+
+  @media (--sm) { @apply .f4 }
+}
+
 /* 
  *
  * Containers
