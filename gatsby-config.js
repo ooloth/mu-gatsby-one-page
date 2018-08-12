@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/lab/*`]
+        exclude: [`/lab`, `/lab/*`]
       }
     },
     `gatsby-plugin-react-next`,
