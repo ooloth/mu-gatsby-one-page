@@ -1,26 +1,137 @@
-const CardsPage = () => (
-  <Fragment>
-    <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
-      <LabHero
-        title="Cards"
-        description="Learn anything using flashcards and spaced repetition."
-      />
+class CardsPage extends Component {
+  state = { currentScreen: `home`, activeDeck: null }
 
-      <CardsApp />
-    </main>
+  viewDeckDetails = deckId => {
+    this.setState({
+      currentScreen: `deck`,
+      activeDeck: decks.find(deck => deck.id === deckId)
+    })
+  }
 
-    <Footer />
-  </Fragment>
+  backToHome = () => this.setState({ currentScreen: `home` })
+
+  render() {
+    const { currentScreen, activeDeck } = this.state
+
+    console.log({ currentScreen })
+    console.table(activeDeck)
+
+    return (
+      <Fragment>
+        <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
+          <LabHero
+            title="Cards"
+            description="Learn anything using flashcards and spaced repetition."
+          />
+
+          {currentScreen === `home` ? (
+            <HomeScreen viewDeckDetails={this.viewDeckDetails} />
+          ) : currentScreen === `deck` ? (
+            <DeckScreen deck={activeDeck} backToHome={this.backToHome} />
+          ) : null}
+        </main>
+
+        <Footer />
+      </Fragment>
+    )
+  }
+}
+
+/*
+ *
+ * Home Screen
+ *
+ */
+
+class HomeScreen extends Component {
+  render() {
+    const { viewDeckDetails } = this.props
+
+    return (
+      <section className="container pv5">
+        <h2 className="pb3 tc f4">Decks</h2>
+        <DeckList viewDeckDetails={viewDeckDetails} />
+        <BackToLab />
+      </section>
+    )
+  }
+}
+
+/*
+ *
+ * Home > Deck List
+ *
+ */
+
+class DeckList extends Component {
+  render() {
+    const { viewDeckDetails } = this.props
+
+    return (
+      <ul className="pb5">
+        {decks.map((deck, i) => (
+          <DeckInDeckList key={i} deck={deck} viewDeckDetails={viewDeckDetails} />
+        ))}
+      </ul>
+    )
+  }
+}
+
+const decks = [
+  {
+    id: `deck1`,
+    title: `Deck 1`,
+    author: `ooloth`,
+    cards: [
+      { id: `card1`, question: `1 + 1`, answer: `2` },
+      { id: `card2`, question: `2 + 2`, answer: `4` }
+    ]
+  },
+  {
+    id: `deck2`,
+    title: `Deck 2`,
+    author: `ooloth`,
+    cards: [
+      { id: `card1`, question: `1 + 1`, answer: `2` },
+      { id: `card2`, question: `2 + 2`, answer: `4` }
+    ]
+  }
+]
+
+/*
+ *
+ * Home > Deck List > DeckInDeckList
+ *
+ */
+
+const DeckInDeckList = ({ deck, viewDeckDetails }) => (
+  <li className="relative mt4 bg-green shadow-lg pv2 ph3">
+    {/* Click handler */}
+    <button
+      onClick={() => viewDeckDetails(deck.id)}
+      className="absolute top-0 left-0 z-2 w-100 h-100"
+    />
+
+    <div className="flex f6 fw6 black-70">
+      <p>{deck.cards.length} cards&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+      <p>{deck.author}</p>
+    </div>
+    <p className="mt1 f3 fw9">{deck.title}</p>
+  </li>
 )
 
 /*
  *
- * Cards App
+ * Deck Screen
  *
  */
 
-class CardsApp extends Component {
-  state = { listMode: true, editMode: false, studyMode: false }
+class DeckScreen extends Component {
+  state = {
+    listMode: true,
+    editMode: false,
+    studyMode: false
+  }
 
   startStudySession = () =>
     this.setState({ listMode: false, editMode: false, studyMode: true })
@@ -30,16 +141,21 @@ class CardsApp extends Component {
 
   cancelDeckEdits = () => {
     console.log(`Edits cancelled`)
+    // TODO: save a snapshot of the deck when entering edit mode and restore that version?
     this.setState({ listMode: true, editMode: false, studyMode: false })
   }
 
   saveDeckEdits = () => {
     console.log(`Edits saved`)
+    // TODO: save updates to Firestore (already autosaved while typing?)
     this.setState({ listMode: true, editMode: false, studyMode: false })
   }
 
   render() {
+    const { deck, backToHome } = this.props
     const { listMode, editMode, studyMode } = this.state
+
+    console.log(`backToHome`, backToHome)
 
     return (
       <Fragment>
@@ -51,10 +167,11 @@ class CardsApp extends Component {
               <p className="pb3 tc">studyMode: {studyMode ? `true` : `false`}</p>
 
               <DeckInListMode
+                deck={deck}
                 startStudySession={this.startStudySession}
                 editDeck={this.editDeck}
+                backToHome={backToHome}
               />
-              <BackToLab />
             </Fragment>
           ) : editMode ? (
             <Fragment>
@@ -63,12 +180,13 @@ class CardsApp extends Component {
               <p className="pb3 tc">studyMode: {studyMode ? `true` : `false`}</p>
 
               <DeckInEditMode
+                deck={deck}
                 cancelEdits={this.cancelDeckEdits}
                 saveEdits={this.saveDeckEdits}
               />
             </Fragment>
           ) : studyMode ? (
-            <DeckInStudyMode />
+            <DeckInStudyMode deck={deck} />
           ) : null}
         </section>
       </Fragment>
@@ -83,13 +201,16 @@ class CardsApp extends Component {
  */
 
 class DeckInListMode extends Component {
-  state = {
-    deck: [{ question: `1 + 1`, answer: `2` }, { question: `2 + 2`, answer: `4` }]
-  }
+  // state = {
+  //   deck: [
+  //     { id: `card1`, question: `1 + 1`, answer: `2` },
+  //     { id: `card2`, question: `2 + 2`, answer: `4` }
+  //   ]
+  // }
 
   render() {
-    const { startStudySession, editDeck } = this.props
-    const { deck } = this.state
+    const { startStudySession, editDeck, backToHome } = this.props
+    const { deck } = this.props
 
     return (
       <Fragment>
@@ -114,10 +235,14 @@ class DeckInListMode extends Component {
         </div>
 
         <ul className="nt4 pb5">
-          {deck.map((card, i) => (
+          {deck.cards.map((card, i) => (
             <CardInListMode key={i} card={card} />
           ))}
         </ul>
+
+        <button onClick={backToHome} className="link">
+          Back to Home
+        </button>
       </Fragment>
     )
   }
@@ -151,14 +276,38 @@ const CardInListMode = ({ card }) => (
 
 class DeckInEditMode extends Component {
   state = {
-    deck: [{ question: `1 + 1`, answer: `2` }, { question: `2 + 2`, answer: `4` }]
+    deck: this.props.deck
   }
 
-  updateCard = () => console.log(`editing`)
+  // TODO: Update the top-level version instead of the local version? Easier when just going straight to/from Firestore? Need to global state solution like Context or Unstated?
+  updateQuestion = (card, e) => {
+    const { deck } = this.state
+    const currentCardId = card.id
+
+    // console.log(`find the card`, [...deck.cards])
+
+    const updatedDeck = ([...deck.cards].find(
+      card => card.id === currentCardId
+    ).question = e.target.value)
+
+    this.setState({ ...updatedDeck })
+  }
+
+  updateAnswer = (card, e) => {
+    const { deck } = this.state
+    const currentCardId = card.id
+
+    const updatedDeck = ([...deck].find(card => card.id === currentCardId).answer =
+      e.target.value)
+
+    this.setState({ ...updatedDeck })
+  }
 
   render() {
     const { cancelEdits, saveEdits } = this.props
     const { deck } = this.state
+
+    console.table(deck.cards)
 
     return (
       <Fragment>
@@ -183,8 +332,13 @@ class DeckInEditMode extends Component {
         </div>
 
         <ul className="nt4 pb5">
-          {deck.map((card, i) => (
-            <CardInEditMode key={i} card={card} updateCard={this.updateCard} />
+          {deck.cards.map((card, i) => (
+            <CardInEditMode
+              key={i}
+              card={card}
+              updateQuestion={this.updateQuestion}
+              updateAnswer={this.updateAnswer}
+            />
           ))}
         </ul>
       </Fragment>
@@ -198,12 +352,13 @@ class DeckInEditMode extends Component {
  *
  */
 
-const CardInEditMode = ({ card, updateCard }) => (
+const CardInEditMode = ({ card, updateQuestion, updateAnswer }) => (
   <li className="mt4 flex flex-wrap shadow-lg pv2 ph3">
     <div className="w-100">
       <h3 className="mb2 f5">Question</h3>
       <input
-        onChange={updateCard}
+        onChange={e => updateQuestion(card, e)}
+        id={card.id}
         value={card.question}
         className="bg-near-white pa2 w-100"
       />
@@ -212,7 +367,7 @@ const CardInEditMode = ({ card, updateCard }) => (
     <div className="mt3 w-100">
       <h3 className="mb2 f5">Answer</h3>
       <input
-        onChange={updateCard}
+        onChange={updateAnswer}
         value={card.answer}
         className="bg-near-white pa2 w-100"
       />
@@ -228,10 +383,7 @@ const CardInEditMode = ({ card, updateCard }) => (
 
 class DeckInStudyMode extends Component {
   state = {
-    studyDeck: [
-      { question: `1 + 1`, answer: `2` },
-      { question: `2 + 2`, answer: `4` }
-    ],
+    studyDeck: this.props.deck,
     cardIndex: 0,
     sideShown: `question`,
     answerSeen: false,
@@ -249,20 +401,20 @@ class DeckInStudyMode extends Component {
 
   markCardCorrect = () => {
     const { cardIndex } = this.state
-    console.log(`studyDeck[${cardIndex}] was answered correctly`)
+    console.log(`studyDeck.cards[${cardIndex}] was answered correctly`)
     this.checkSessionStatus()
   }
 
   markCardIncorrect = () => {
     const { cardIndex } = this.state
-    console.log(`studyDeck[${cardIndex}] was answered incorrectly`)
+    console.log(`studyDeck.cards[${cardIndex}] was answered incorrectly`)
     this.checkSessionStatus()
   }
 
   checkSessionStatus = () => {
     const { studyDeck, cardIndex } = this.state
     // If that was the last card, show the session results
-    if (cardIndex === studyDeck.length - 1) this.showResults()
+    if (cardIndex === studyDeck.cards.length - 1) this.showResults()
     // Otherwise, move to the next card
     else this.moveToNextCard()
   }
@@ -305,7 +457,7 @@ class DeckInStudyMode extends Component {
         ) : (
           <Fragment>
             <p className="tc">
-              Card {cardIndex + 1} / {studyDeck.length}
+              Card {cardIndex + 1} / {studyDeck.cards.length}
             </p>
             <p className="tc">cardIndex: {cardIndex}</p>
             <p className="pb3 tc">sideShown: {sideShown}</p>
@@ -313,7 +465,7 @@ class DeckInStudyMode extends Component {
             {/* Note: The perspective gets more subtle as the number gets higher */}
             <div className="pb4" style={{ perspective: `1000px` }}>
               <CardInStudyMode
-                card={studyDeck[cardIndex]}
+                card={studyDeck.cards[cardIndex]}
                 sideShown={sideShown}
                 flipCard={this.flipCard}
                 answerSeen={answerSeen}
