@@ -1,6 +1,45 @@
 class CardsPage extends Component {
   state = { currentScreen: `home`, activeDeck: null }
 
+  componentDidMount = () => {
+    const db = firebase.firestore()
+    const cardsRef = db.collection('cards')
+    const decksRef = db.collection('decks')
+    const collectionsRef = db.collection('collections')
+    const usersRef = db.collection('users')
+
+    // console.log(`db`, db)
+    // console.log(`cardsRef`, cardsRef)
+    // console.log(`decksRef`, decksRef)
+    // console.log(`collectionsRef`, collectionsRef)
+    // console.log(`usersRef`, usersRef)
+
+    // How to read data
+    cardsRef.get().then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        console.log(`${doc.id} => ${doc.data()}`)
+      })
+    })
+  }
+
+  addNewCard = () => {
+    const db = firebase.firestore()
+    const cardsRef = db.collection('cards')
+
+    // How to write data
+    cardsRef
+      .add({
+        question: '1 + 1',
+        answer: '2'
+      })
+      .then(docRef => {
+        console.log('Document written with ID: ', docRef.id)
+      })
+      .catch(error => {
+        console.error('Error adding document: ', error)
+      })
+  }
+
   viewDeckDetails = deckId => {
     this.setState({
       currentScreen: `deck`,
@@ -13,8 +52,8 @@ class CardsPage extends Component {
   render() {
     const { currentScreen, activeDeck } = this.state
 
-    console.log({ currentScreen })
-    console.table(activeDeck)
+    // console.log({ currentScreen })
+    // console.table(activeDeck)
 
     return (
       <Fragment>
@@ -23,6 +62,8 @@ class CardsPage extends Component {
             title="Cards"
             description="Learn anything using flashcards and spaced repetition."
           />
+
+          <SignInScreen />
 
           {currentScreen === `home` ? (
             <HomeScreen viewDeckDetails={this.viewDeckDetails} />
@@ -154,8 +195,6 @@ class DeckScreen extends Component {
   render() {
     const { deck, backToHome } = this.props
     const { listMode, editMode, studyMode } = this.state
-
-    console.log(`backToHome`, backToHome)
 
     return (
       <Fragment>
@@ -534,7 +573,10 @@ const CardInStudyMode = ({ card, sideShown, flipCard, answerSeen }) => (
 
 import React, { Component, Fragment } from 'react'
 
+import firebase from '../../components/cards/firebase/firebase'
+
 import LabHero from '../../components/lab/LabHero'
+import SignInScreen from '../../components/cards/SignIn'
 import BackToLab from '../../components/lab/BackToLab'
 import Footer from '../../sections/Footer'
 
