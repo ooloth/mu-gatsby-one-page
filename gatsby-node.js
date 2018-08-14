@@ -73,7 +73,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       })
 
       // For Netlify's environment variables
-      config.externals = [`aws-sdk`]
+      config.externals = `aws-sdk`
 
       break
   }
