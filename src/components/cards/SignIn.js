@@ -1,3 +1,5 @@
+// TODO: Update the appearance...
+
 // See https://github.com/firebase/firebaseui-web-react
 
 class SignInScreen extends Component {

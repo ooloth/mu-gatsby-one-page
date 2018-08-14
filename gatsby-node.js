@@ -6,6 +6,11 @@
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+// For accessing Firebase environment variables in development (they're retrieved from Netlify in production)
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 exports.modifyWebpackConfig = ({ config, stage }) => {
   switch (stage) {
     case 'develop':

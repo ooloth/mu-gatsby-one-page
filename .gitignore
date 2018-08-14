@@ -8,4 +8,6 @@ public/
 yarn-error.log
 
 # Firebase config
-src/components/cards/firebase/firebase-config.js
+.env.development
+.env.production
+# src/components/cards/firebase/firebase-config.js
