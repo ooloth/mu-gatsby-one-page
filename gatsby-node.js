@@ -72,6 +72,9 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
         loader: `null-loader`
       })
 
+      // For Netlify's environment variables
+      config.externals = [`aws-sdk`]
+
       break
   }
 
