@@ -17,7 +17,7 @@ class CardsPage extends Component {
   initFirebase = () => {
     const { data } = this.props
 
-    // Init Firebase app
+    // Init Firebase app using config stored in environment variables
     firebase.initializeApp(data.site.siteMetadata.firebaseConfig)
     firebase.firestore().settings({ timestampsInSnapshots: true })
 
@@ -37,7 +37,10 @@ class CardsPage extends Component {
     })
   }
 
-  updateAuthState = isSignedIn => this.setState({ isSignedIn })
+  updateAuthState = isSignedIn => {
+    this.setState({ isSignedIn })
+    this.currentUser = firebase.auth().currentUser
+  }
 
   addNewCard = () => {
     // How to write data
@@ -65,10 +68,6 @@ class CardsPage extends Component {
 
   render() {
     const { firebaseReady, isSignedIn, currentScreen, activeDeck } = this.state
-
-    firebaseReady && isSignedIn && console.log(firebase.auth().currentUser.uid)
-    // console.log({ currentScreen })
-    // console.table(activeDeck)
 
     return (
       <Base>
