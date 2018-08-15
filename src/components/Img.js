@@ -8,7 +8,7 @@ A wrapper around gatsby-image that includes:
 Use like this:
 
 <Img
-  sizes={sizes}
+  fluid={fluid}
   alt={alt}
   critical={true} (optional; default: false; set to true if in hero or wrapped by Reveal)
   objFit="cover" (optional; default: cover)
@@ -42,7 +42,7 @@ const Img = props => {
 
   return (
     <Image
-      sizes={props.sizes}
+      fluid={props.fluid}
       alt={props.alt}
       className={props.className}
       style={props.style}

@@ -1,5 +1,7 @@
 const NinesPage = () => (
-  <Fragment>
+  <Base>
+    {/* <PageMetadata page={data.metadata.siteMetadata.ninesPage} /> */}
+
     <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
       <LabHero title="Nines" description="Sexy Sudoku." />
 
@@ -7,7 +9,7 @@ const NinesPage = () => (
     </main>
 
     <Footer />
-  </Fragment>
+  </Base>
 )
 
 const NinesApp = () => (
@@ -17,6 +19,9 @@ const NinesApp = () => (
 )
 
 import React, { Fragment } from 'react'
+
+import Base from '../../components/Base'
+// import PageMetadata from '../../components/PageMetadata'
 
 import LabHero from '../../components/lab/LabHero'
 import BackToLab from '../../components/lab/BackToLab'

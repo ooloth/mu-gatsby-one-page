@@ -7,9 +7,9 @@
 @responsive {
 
   /* Column count */
-  columns-2 { column-count: 2 }
-  columns-3 { column-count: 3 }
-  columns-4 { column-count: 4 }
+  .columns-2 { column-count: 2 }
+  .columns-3 { column-count: 3 }
+  .columns-4 { column-count: 4 }
 
   /* Column width */
   .column-w1 { width: var(--sizing-1) }

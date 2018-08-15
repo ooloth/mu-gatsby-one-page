@@ -1,6 +1,5 @@
-// TODO: Update the appearance...
-
-// See https://github.com/firebase/firebaseui-web-react
+// TODO: Update the appearance (refer to link below for instructions)
+// TODO: See https://github.com/firebase/firebaseui-web-react
 
 class SignInScreen extends Component {
   // The component's Local state.

@@ -1,5 +1,7 @@
 const OddsPage = () => (
-  <Fragment>
+  <Base>
+    {/* <PageMetadata page={data.metadata.siteMetadata.oddsPage} /> */}
+
     <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
       <LabHero title="Odds" description="Poker math drills." />
 
@@ -7,7 +9,7 @@ const OddsPage = () => (
     </main>
 
     <Footer />
-  </Fragment>
+  </Base>
 )
 
 const OddsApp = () => (
@@ -17,6 +19,9 @@ const OddsApp = () => (
 )
 
 import React, { Fragment } from 'react'
+
+import Base from '../../components/Base'
+// import PageMetadata from '../../components/PageMetadata'
 
 import LabHero from '../../components/lab/LabHero'
 import BackToLab from '../../components/lab/BackToLab'

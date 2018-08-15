@@ -1,5 +1,7 @@
 const MovesPage = () => (
-  <Fragment>
+  <Base>
+    {/* <PageMetadata page={data.metadata.siteMetadata.movesPage} /> */}
+
     <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
       <LabHero title="Moves" description="Memorize your chess opening repertoire." />
 
@@ -7,7 +9,7 @@ const MovesPage = () => (
     </main>
 
     <Footer />
-  </Fragment>
+  </Base>
 )
 
 class MovesApp extends Component {
@@ -91,6 +93,9 @@ import React, { Component, Fragment } from 'react'
 import ChessBoard from 'chessboardjs'
 import '../../components/moves/chessboardjs-0.3.0/css/chessboard-0.3.0.css'
 import loadjs from 'loadjs'
+
+import Base from '../../components/Base'
+// import PageMetadata from '../../components/PageMetadata'
 
 import LabHero from '../../components/lab/LabHero'
 import BackToLab from '../../components/lab/BackToLab'

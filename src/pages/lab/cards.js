@@ -56,7 +56,9 @@ class CardsPage extends Component {
     // console.table(activeDeck)
 
     return (
-      <Fragment>
+      <Base>
+        {/* <PageMetadata page={data.metadata.siteMetadata.cardsPage} /> */}
+
         <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
           <LabHero
             title="Cards"
@@ -73,7 +75,7 @@ class CardsPage extends Component {
         </main>
 
         <Footer />
-      </Fragment>
+      </Base>
     )
   }
 }
@@ -574,6 +576,9 @@ const CardInStudyMode = ({ card, sideShown, flipCard, answerSeen }) => (
 import React, { Component, Fragment } from 'react'
 
 import firebase from '../../components/cards/firebase/firebase'
+
+import Base from '../../components/Base'
+import PageMetadata from '../../components/PageMetadata'
 
 import LabHero from '../../components/lab/LabHero'
 import SignInScreen from '../../components/cards/SignIn'

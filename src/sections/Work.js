@@ -153,7 +153,10 @@ const Filter = ({ category, handleChange, operaIsChecked, websitesIsChecked }) =
       />
 
       {/* Visible text label */}
-      <span className="checkbox-label">&nbsp;{category}</span>
+      <span className="checkbox-label">
+        &nbsp;
+        {category}
+      </span>
     </label>
   )
 }
@@ -326,7 +329,7 @@ class ProjectDetails extends Component {
     return (
       <div className="container pt4 lh-tall">
         <FeaturedImage
-          image={project.image.childImageSharp.sizes}
+          image={project.image.childImageSharp.fluid}
           alt={project.alt}
         />
 
@@ -354,7 +357,7 @@ class ProjectDetails extends Component {
 
 const FeaturedImage = ({ image, alt }) => (
   <figure>
-    <Img sizes={image} alt={alt} className="shadow-lg" />
+    <Img fluid={image} alt={alt} className="shadow-lg" />
     <figcaption className="o-50 pt1 f6">{alt}</figcaption>
   </figure>
 )
@@ -452,7 +455,10 @@ const Details = ({ details }) => (
       return (
         detail.name !== `Dates` && (
           <Fragment key={`detail-${index}`}>
-            <dt className="fl fw7">{detail.name}:&nbsp;</dt>
+            <dt className="fl fw7">
+              {detail.name}
+              :&nbsp;
+            </dt>
             <dd lang={detail.lang && detail.lang}>{detail.value}</dd>
           </Fragment>
         )

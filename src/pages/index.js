@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
   })
 
   return (
-    <Fragment>
+    <Base>
       <main>
         <Hero />
         <Work projects={projectsWithKeys} />
@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       </main>
 
       <Footer className="bg-near-white" />
-    </Fragment>
+    </Base>
   )
 }
 
@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => {
  */
 
 export const query = graphql`
-  query IndexPageQuery {
+  query {
     allOperaYaml {
       edges {
         node {
@@ -50,8 +50,8 @@ export const query = graphql`
           tags
           image {
             childImageSharp {
-              sizes(maxWidth: 940) {
-                ...GatsbyImageSharpSizes_withWebp
+              fluid(maxWidth: 940) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -81,8 +81,8 @@ export const query = graphql`
           tags
           image {
             childImageSharp {
-              sizes(maxWidth: 940) {
-                ...GatsbyImageSharpSizes_withWebp
+              fluid(maxWidth: 940) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -110,9 +110,11 @@ export const query = graphql`
  * 
  */
 
-import React, { Fragment } from 'react'
+import React from 'react'
+import { graphql } from 'gatsby'
 import shortid from 'shortid'
 
+import Base from '../components/Base'
 import Hero from '../sections/Hero'
 import Work from '../sections/Work'
 import Contact from '../sections/Contact'

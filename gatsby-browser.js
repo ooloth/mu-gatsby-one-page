@@ -10,9 +10,7 @@
  * 
  */
 
-exports.onClientEntry = () => {
-  // NOTE: Don't polyfill Promise here (Gatsby already includes a Promise polyfill)
-
+export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-image (Safari, IE)
   if (typeof window.IntersectionObserver === `undefined`) {
     require(`intersection-observer`)
@@ -26,15 +24,6 @@ exports.onClientEntry = () => {
   ) {
     require(`object-fit-images`)()
   }
-
-  // GSAP for site-wide animations
-  loadjs(
-    [
-      `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js`,
-      `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js`
-    ],
-    `gsap`
-  )
 }
 
 /*
@@ -43,9 +32,25 @@ exports.onClientEntry = () => {
  * 
  */
 
-exports.onInitialClientRender = () => {
+export const onInitialClientRender = () => {
   // A11Y: Detect keyboard vs. mouse vs. touch input (for focus styling)
-  loadjs(`https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`)
+  if (!loadjs.isDefined(`what-input`)) {
+    loadjs(
+      `https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`,
+      `what-input`
+    )
+  }
+
+  // GSAP for site-wide animations
+  if (!loadjs.isDefined(`gsap`)) {
+    loadjs(
+      [
+        `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js`,
+        `https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js`
+      ],
+      `gsap`
+    )
+  }
 
   // Google Analytics
   loadjs(`https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`, () => {

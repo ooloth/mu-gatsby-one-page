@@ -4,86 +4,82 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+/*
+ *
+ * Environment variables (for Firebase)
+ *
+ */
 
-// For accessing Firebase environment variables in development (they're retrieved from Netlify in production)
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 })
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  switch (stage) {
-    case 'develop':
-      // Remove default loaders
-      config.removeLoader(`css`)
-      config.removeLoader(`less`)
-      config.removeLoader(`sass`)
-      config.removeLoader(`cssModules`)
-      config.removeLoader(`lessModules`)
-      config.removeLoader(`sassModules`)
+/*
+ *
+ * PurgeCSS variables
+ *
+ */
 
-      // Remove postcss from Gatsby's dev process and ignore partials
-      config.loader(`css`, {
-        test: /\.css$/,
-        exclude: [
-          /src\/styles\/builds\/after-purgecss/,
-          /src\/styles\/components/,
-          /src\/styles\/fonts/,
-          /src\/styles\/plugins/,
-          /src\/styles\/reset/,
-          /src\/styles\/supports/,
-          /src\/styles\/utilities/
-        ],
-        loaders: [`style`, `css`]
-      })
+const PurgeCssPlugin = require(`purgecss-webpack-plugin`)
+const path = require(`path`)
+const glob = require(`glob`)
 
-      break
-
-    case 'build-css':
-      // Remove default loaders
-      config.removeLoader(`css`)
-      config.removeLoader(`less`)
-      config.removeLoader(`sass`)
-      config.removeLoader(`cssModules`)
-      config.removeLoader(`lessModules`)
-      config.removeLoader(`sassModules`)
-
-      // Remove postcss from Gatsby's build process and ignore partials
-      config.loader(`css`, {
-        test: /\.css$/,
-        exclude: [
-          /src\/styles\/base/,
-          /src\/styles\/builds\/after-postcss/,
-          /src\/styles\/components/,
-          /src\/styles\/plugins/,
-          /src\/styles\/reset/,
-          /src\/styles\/supports/,
-          /src\/styles\/utilities/
-        ],
-        loader: ExtractTextPlugin.extract([`css?minimize`])
-      })
-
-      break
-
-    case 'build-html':
-      // Ignore packages that causes errors during build because they refer to the document/window (make test an array if > 1):
-      config.loader(`null`, {
-        test: /intersection-observer/,
-        loader: `null-loader`
-      })
-
-      // For Netlify's environment variables
-      config.externals = `aws-sdk`
-
-      break
-  }
-
-  return config
+const PATHS = {
+  src: path.join(__dirname, `src`)
 }
 
-// In Gatsby v1, I need to run dependencies that use ES6 through Babel myself.
-// In this case, this is to debug build errors the prange library:
-// exports.modifyBabelrc = ({ babelrc }) => ({
-//   ...babelrc,
-//   plugins: babelrc.plugins.concat(['transform-es2015-modules-amd'])
-// })
+const purgeCssConfig = {
+  paths: glob.sync(`${PATHS.src}/**/*.js`, { nodir: true }),
+  extractors: [
+    {
+      // Custom extractor to allow special characters (like ":") in class names
+      // See: https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css-with-purgecss
+      extractor: class {
+        static extract(content) {
+          return content.match(/[A-Za-z0-9-_:/]+/g) || []
+        }
+      },
+      extensions: [`js`]
+    }
+  ],
+  whitelist: [
+    `checkbox-label`,
+    `custom-checkbox`,
+    `link-inline`,
+    `mr4`,
+    `o-0`,
+    `group-hover:o-100`
+  ],
+  whitelistPatterns: [/body/]
+}
+
+/*
+ *
+ * Webpack updates
+ *
+ */
+
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  if (stage.includes(`develop`)) return
+
+  // Add PurgeCSS in production
+  // See: https://github.com/gatsbyjs/gatsby/issues/5778#issuecomment-402481270
+  if (stage.includes(`build`)) {
+    actions.setWebpackConfig({
+      plugins: [new PurgeCssPlugin(purgeCssConfig)]
+    })
+  }
+
+  if (stage === `build-html`) {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: [/intersection-observer/],
+            loader: `null-loader`
+          }
+        ]
+      }
+    })
+  }
+}

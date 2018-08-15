@@ -1,9 +1,27 @@
-const BaseLayout = ({ children, data }) => (
-  <Fragment>
-    <SiteMetadata site={data.site.siteMetadata} />
-    {children()}
-    <BasicStructuredData />
-  </Fragment>
+const Base = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query BaseQuery {
+        site {
+          siteMetadata {
+            description
+            language
+            locale
+            title
+            twitterHandle
+            siteUrl
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <SiteMetadata site={data.site.siteMetadata} />
+        {children}
+        <BasicStructuredData site={data.site.siteMetadata} />
+      </>
+    )}
+  />
 )
 
 /*
@@ -12,15 +30,7 @@ const BaseLayout = ({ children, data }) => (
  * 
  */
 
-// Use PostCSS stylesheet in development and PostCSS/PurgeCSS stylesheet in production:
-switch (process.env.NODE_ENV) {
-case `development`:
-  require(`../styles/builds/after-postcss/output.css`)
-  break
-case `production`:
-  require(`../styles/builds/after-purgecss/output.css`)
-  break
-}
+import '../styles/index.css'
 
 /*
  *
@@ -47,6 +57,9 @@ const SiteMetadata = ({ site }) => (
     <meta name="image" content={site.siteUrl + siteImage} />
     <link rel="canonical" href={site.siteUrl} />
 
+    {/* Preconnect to CloudFlare CDN (for GSAP) */}
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
     {/* Schema.org for Google */}
     <meta itemProp="name" content={site.title} />
     <meta itemProp="description" content={site.description} />
@@ -56,7 +69,6 @@ const SiteMetadata = ({ site }) => (
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={site.title} />
     <meta name="twitter:description" content={site.description} />
-    {site.twitterHandle && <meta name="twitter:site" content={site.twitterHandle} />}
     <meta name="twitter:image:src" content={site.siteUrl + siteImage} />
 
     {/* Open Graph general (Facebook, Pinterest, Slack & Google+) */}
@@ -67,6 +79,12 @@ const SiteMetadata = ({ site }) => (
     <meta property="og:description" content={site.description} />
     <meta property="og:site_name" content={site.title} />
     <meta property="og:locale" content={site.locale} />
+
+    {/* Non-essential, but required for analytics */}
+    {site.facebookAppId && (
+      <meta property="fb:app_id" content={site.facebookAppId} />
+    )}
+    {site.twitterHandle && <meta name="twitter:site" content={site.twitterHandle} />}
   </Helmet>
 )
 
@@ -76,58 +94,30 @@ const SiteMetadata = ({ site }) => (
  * 
  */
 
-const BasicStructuredData = () => (
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: structuredData }}
-  />
-)
+const BasicStructuredData = ({ site }) => {
+  const structuredData = `{
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Michael Uloth",
+    "email": "mailto:hello@michaeluloth.com",
+    "jobTitle": "Opera singer and web developer",
+    "image": "${site.siteUrl + siteImage.replace(`js/../`, ``)}",
+    "url": "${site.siteUrl}",
+    "sameAs": [
+      "https://www.facebook.com/michaeluloth",
+      "https://www.linkedin.com/in/michael-uloth-848a1b98/",
+      "http://twitter.com/ooloth",
+      "http://instagram.com/ooloth"
+    ]
+  }`
 
-const siteUrl = `https://www.michaeluloth.com`
-
-const structuredData = `{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "name": "Michael Uloth",
-  "jobTitle": "Opera singer and web developer",
-  "image": "${siteUrl + siteImage}",
-  "url": "https://www.michaeluloth.com",
-  "email": "mailto:hello@michaeluloth.com",
-  "telephone": "(416) 799-7753",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Toronto",
-    "addressRegion": "ON"
-  },
-  "alumniOf": "Wilfrid Laurier University, University of Toronto",
-  "sameAs": [
-    "https://www.facebook.com/michaeluloth",
-    "https://www.linkedin.com/in/michael-uloth-848a1b98/",
-    "http://twitter.com/ooloth",
-    "http://instagram.com/ooloth"
-  ]
-}`
-
-/*
- *
- * Queries
- * 
- */
-
-export const query = graphql`
-  query BaseQuery {
-    site {
-      siteMetadata {
-        description
-        language
-        locale
-        title
-        twitterHandle
-        siteUrl
-      }
-    }
-  }
-`
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: structuredData }}
+    />
+  )
+}
 
 /*
  *
@@ -135,7 +125,8 @@ export const query = graphql`
  * 
  */
 
-import React, { Fragment } from 'react'
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
-export default BaseLayout
+export default Base

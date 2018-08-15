@@ -1,5 +1,7 @@
 const LabPage = () => (
-  <Fragment>
+  <Base>
+    {/* <PageMetadata page={data.metadata.siteMetadata.labPage} /> */}
+
     <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
       <LabHero title="Lab" description="Experiments with app-building." />
 
@@ -7,7 +9,7 @@ const LabPage = () => (
     </main>
 
     <Footer />
-  </Fragment>
+  </Base>
 )
 
 // TODO: add some kind of image/icon to go with each link (turn links into squares with an image/icon, title, and maybe a one-line description)
@@ -37,7 +39,10 @@ const labLinks = [`cards`, `mines`, `moves`, `news`, `nines`, `odds`]
  */
 
 import React, { Fragment } from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
+
+import Base from '../../components/Base'
+// import PageMetadata from '../../components/PageMetadata'
 
 import LabHero from '../../components/lab/LabHero'
 import Footer from '../../sections/Footer'

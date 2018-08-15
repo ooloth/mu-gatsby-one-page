@@ -65,15 +65,13 @@ class Hero extends Component {
  *
  */
 
-import ribbon from '../svg/opl-award-ribbon-right.svg'
-
 const OplAwardRibbon = () => (
   <HyperLink
     href="https://onepagelove.com/michael-uloth"
     className="absolute top-0 right-0 mt4 pt2"
     style={{ width: `4.75rem` }}
   >
-    <SVG src={ribbon} className="db ml-auto w-90 sm:w-100" />
+    <Ribbon className="db ml-auto w-90 sm:w-100" />
     <span className="sr-only">See this site's design award on One Page Love</span>
   </HyperLink>
 )
@@ -90,7 +88,8 @@ const Greeting = () => (
       className="mb0 lh-solid f-5 sm:f-7 md:f-10 fw9 ttu"
       style={{ marginLeft: `-.051em` }}
     >
-      Hello<span className="green">.</span>
+      Hello
+      <span className="green">.</span>
     </h2>
 
     <h1
@@ -115,7 +114,8 @@ const OperaBio = () => (
       companies and orchestras across Canada, the United States and Europe, including
       the Canadian Opera Company, Seattle Opera, the Glimmerglass Festival and Opéra
       de Lyon. You can see a selection of my past projects below and hear examples of
-      my singing on{` `}
+      my singing on
+      {` `}
       <HyperLink
         href="https://soundcloud.com/michael-uloth/tracks"
         className="link-inline"
@@ -129,10 +129,13 @@ const OperaBio = () => (
       >
         YouTube
       </HyperLink>
-      {` `}and{` `}
+      {` `}
+      and
+      {` `}
       <HyperLink href="https://vimeo.com/24283716" className="link-inline">
         Vimeo
-      </HyperLink>.
+      </HyperLink>
+      .
     </p>
   </Fragment>
 )
@@ -149,10 +152,12 @@ const WebDevBio = () => (
       Since building my first "I'm an opera singer" website, I've built dozens of
       sites for singers, freelancers and businesses looking to expand their online
       profiles. I love building sexy, modern sites that load as quickly as possible.
-      In addition to my own projects, I'm also the lead front-end developer at{` `}
+      In addition to my own projects, I'm also the lead front-end developer at
+      {` `}
       <HyperLink href="http://coffeeshopcreative.ca/" className="link-inline">
         Coffeeshop Creative
-      </HyperLink>, a digital design agency based in Toronto.
+      </HyperLink>
+      , a digital design agency based in Toronto.
     </p>
   </Fragment>
 )
@@ -224,6 +229,7 @@ const PointingDownEmoji = () => (
 import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
 import SVG from 'react-inlinesvg'
+import { ReactComponent as Ribbon } from '../svg/opl-award-ribbon-right.svg'
 
 import HyperLink from '../components/HyperLink'
 

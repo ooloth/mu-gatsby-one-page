@@ -1,5 +1,7 @@
 const MinesPage = () => (
-  <Fragment>
+  <Base>
+    {/* <PageMetadata page={data.metadata.siteMetadata.minesPage} /> */}
+
     <main className="avenir" style={{ minHeight: `calc(100vh - 36px)` }}>
       <LabHero title="Mines" description="Sexy Minesweeper." />
 
@@ -7,7 +9,7 @@ const MinesPage = () => (
     </main>
 
     <Footer />
-  </Fragment>
+  </Base>
 )
 
 const MinesApp = () => (
@@ -17,6 +19,9 @@ const MinesApp = () => (
 )
 
 import React, { Fragment } from 'react'
+
+import Base from '../../components/Base'
+// import PageMetadata from '../../components/PageMetadata'
 
 import LabHero from '../../components/lab/LabHero'
 import BackToLab from '../../components/lab/BackToLab'
