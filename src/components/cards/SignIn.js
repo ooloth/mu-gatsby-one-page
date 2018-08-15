@@ -44,7 +44,7 @@ class SignInScreen extends Component {
     }
     return (
       <div className="container pt4 tr">
-        <p>Welcome {firebase.auth().currentUser.displayName}!</p>
+        <p>Welcome, {firebase.auth().currentUser.displayName}!</p>
         <button onClick={() => firebase.auth().signOut()} className="red b">
           Sign-out
         </button>
