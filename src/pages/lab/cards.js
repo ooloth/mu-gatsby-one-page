@@ -2,11 +2,20 @@ class CardsPage extends Component {
   state = { currentScreen: `home`, activeDeck: null }
 
   componentDidMount = () => {
-    const db = firebase.firestore()
-    const cardsRef = db.collection('cards')
-    const decksRef = db.collection('decks')
-    const collectionsRef = db.collection('collections')
-    const usersRef = db.collection('users')
+    this.firebase = new Firebase()
+    console.log(`this.firebase`, this.firebase)
+    // this.db = this.firebase.db
+    this.cardsRef = this.firebase.db.collection('cards')
+    this.decksRef = this.firebase.db.collection('decks')
+    this.collectionsRef = this.firebase.db.collection('collections')
+    this.usersRef = this.firebase.db.collection('users')
+
+    // if (firebase) {
+    // const db = firebase.firestore()
+    // const cardsRef = db.collection('cards')
+    // const decksRef = db.collection('decks')
+    // const collectionsRef = db.collection('collections')
+    // const usersRef = db.collection('users')
 
     // console.log(`db`, db)
     // console.log(`cardsRef`, cardsRef)
@@ -15,19 +24,20 @@ class CardsPage extends Component {
     // console.log(`usersRef`, usersRef)
 
     // How to read data
-    cardsRef.get().then(querySnapshot => {
+    this.cardsRef.get().then(querySnapshot => {
       querySnapshot.forEach(doc => {
         console.log(`${doc.id} => ${doc.data()}`)
       })
     })
+    // }
   }
 
   addNewCard = () => {
-    const db = firebase.firestore()
-    const cardsRef = db.collection('cards')
+    // const db = firebase.firestore()
+    // const cardsRef = db.collection('cards')
 
     // How to write data
-    cardsRef
+    this.cardsRef
       .add({
         question: '1 + 1',
         answer: '2'
@@ -65,7 +75,7 @@ class CardsPage extends Component {
             description="Learn anything using flashcards and spaced repetition."
           />
 
-          <SignInScreen />
+          {/* <SignInScreen /> */}
 
           {currentScreen === `home` ? (
             <HomeScreen viewDeckDetails={this.viewDeckDetails} />
@@ -575,7 +585,8 @@ const CardInStudyMode = ({ card, sideShown, flipCard, answerSeen }) => (
 
 import React, { Component, Fragment } from 'react'
 
-import firebase from '../../components/cards/firebase/firebase'
+import Firebase from '../../components/cards/firebase/firebase'
+// import firebase from '../../components/cards/firebase/firebase'
 
 import Base from '../../components/Base'
 import PageMetadata from '../../components/PageMetadata'

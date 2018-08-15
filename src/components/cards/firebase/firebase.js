@@ -1,14 +1,31 @@
-// Initialize app with the correct config
-firebase.initializeApp(firebaseConfig)
+class Firebase {
+  // static instance
 
+  constructor() {
+    // if (instance) {
+    //   return instance
+    // }
+
+    firebase.initializeApp(firebaseConfig)
+    this.auth = firebase.auth()
+    firebase.firestore().settings({ timestampsInSnapshots: true })
+    this.db = firebase.firestore()
+    // this.instance = this
+  }
+}
+
+// Initialize app with the correct config (only once the browser is present)
+// if (typeof window !== 'undefined') {
+// firebase.initializeApp(firebaseConfig)
 // Update Firestore settings
-firebase.firestore().settings({ timestampsInSnapshots: true })
+// firebase.firestore().settings({ timestampsInSnapshots: true })
+// }
 
 /*
- *
- * Imports & Exports
- *
- */
+  *
+  * Imports & Exports
+  *
+  */
 
 import firebase from 'firebase/app'
 import 'firebase/firestore'
@@ -18,7 +35,8 @@ import 'firebase/auth'
 
 import { firebaseConfig } from './firebase-config'
 
-export default firebase
+export default Firebase
+// export default firebase
 
 // class Firebase {
 //   constructor() {
