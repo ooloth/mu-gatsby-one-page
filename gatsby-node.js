@@ -6,17 +6,6 @@
 
 /*
  *
- * Environment variables (for Firebase)
- *
- */
-
-//MOVED TO GATSBY-CONFIG
-// require('dotenv').config({
-//   path: `.env.${process.env.NODE_ENV}`
-// })
-
-/*
- *
  * PurgeCSS variables
  *
  */

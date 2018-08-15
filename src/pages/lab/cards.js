@@ -2,36 +2,19 @@ class CardsPage extends Component {
   state = { currentScreen: `home`, activeDeck: null }
 
   componentDidMount = () => {
-    this.initFirebase()
-
-    // this.auth = firebase.auth()
-    // this.db = firebase.firestore()
-
-    // this.firebase = new Firebase()
-    // console.log(`this.firebase`, this.firebase)
-
-    // this.cardsRef = this.firebase.db.collection('cards')
-    // this.decksRef = this.firebase.db.collection('decks')
-    // this.collectionsRef = this.firebase.db.collection('collections')
-    // this.usersRef = this.firebase.db.collection('users')
-
-    // How to read data
-    // this.cardsRef.get().then(querySnapshot => {
-    //   querySnapshot.forEach(doc => {
-    //     console.log(`${doc.id} => ${doc.data()}`)
-    //   })
-    // })
+    if (!firebase.apps.length) {
+      this.initFirebase()
+    }
   }
 
   initFirebase = () => {
     const { data } = this.props
-    // console.log('data', data.site.siteMetadata.firebaseConfig)
 
+    // Init Firebase app
     firebase.initializeApp(data.site.siteMetadata.firebaseConfig)
     firebase.firestore().settings({ timestampsInSnapshots: true })
 
-    console.log(`firebase`, firebase)
-
+    // Save database references
     this.cardsRef = firebase.firestore().collection('cards')
     this.decksRef = firebase.firestore().collection('decks')
     this.collectionsRef = firebase.firestore().collection('collections')
@@ -617,7 +600,7 @@ export const query = graphql`
 `
 
 import React, { Component, Fragment } from 'react'
-
+import { graphql } from 'gatsby'
 // import Firebase from '../../components/cards/firebase/firebase'
 // import firebase from '../../components/cards/firebase/firebase'
 
