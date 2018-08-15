@@ -35,12 +35,13 @@ const purgeCssConfig = {
   whitelist: [
     `checkbox-label`,
     `custom-checkbox`,
+
     `link-inline`,
     `mr4`,
     `o-0`,
     `group-hover:o-100`
   ],
-  whitelistPatterns: [/body/]
+  whitelistPatterns: [/body/, /firebaseui/]
 }
 
 /*

@@ -2,25 +2,21 @@
 // TODO: See https://github.com/firebase/firebaseui-web-react
 
 class SignInScreen extends Component {
-  // The component's Local state.
   state = {
     isSignedIn: false // Local signed-in state.
   }
 
-  // Configure FirebaseUI.
-  uiConfig = {
-    // Popup signin flow rather than redirect flow.
-    signInFlow: 'popup',
-    // We will display Google as auth provider.
+  firebaseuiConfig = {
+    signInFlow: 'popup', // Popup signin flow rather than redirect flow.
     signInOptions: [this.props.firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
-      // Avoid redirects after sign-in.
-      signInSuccessWithAuthResult: () => false
+      signInSuccessWithAuthResult: () => false // Avoid redirects after sign-in
     }
   }
 
-  // Listen to the Firebase Auth state and set the local state.
-  componentDidMount = () => {
+  componentDidMount = () => this.registerAuthObserver()
+
+  registerAuthObserver = () => {
     const { firebase } = this.props
 
     this.unregisterAuthObserver = firebase
@@ -30,7 +26,7 @@ class SignInScreen extends Component {
 
   signOut = () => this.props.firebase.auth().signOut()
 
-  // Make sure we un-register Firebase observers when the component unmounts.
+  // Unregister Firebase observers when the component unmounts
   componentWillUnmount = () => this.unregisterAuthObserver()
 
   render() {
@@ -40,7 +36,10 @@ class SignInScreen extends Component {
       if (!this.state.isSignedIn) {
         return (
           <div>
-            <FirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
+            <FirebaseAuth
+              uiConfig={this.firebaseuiConfig}
+              firebaseAuth={firebase.auth()}
+            />
           </div>
         )
       }
@@ -64,7 +63,6 @@ class SignInScreen extends Component {
 
 import React, { Component } from 'react'
 import FirebaseAuth from 'react-firebaseui/FirebaseAuth'
-// import Firebase from './firebase/firebase'
-// import firebase from './firebase/firebase'
+// import '../../../node_modules/firebaseui/dist/firebaseui.css'
 
 export default SignInScreen
