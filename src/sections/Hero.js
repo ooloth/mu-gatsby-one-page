@@ -228,7 +228,6 @@ const PointingDownEmoji = () => (
 
 import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
-import SVG from 'react-inlinesvg'
 import { ReactComponent as Ribbon } from '../svg/opl-award-ribbon-right.svg'
 
 import HyperLink from '../components/HyperLink'
