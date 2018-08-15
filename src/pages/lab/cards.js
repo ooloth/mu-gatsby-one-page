@@ -4,24 +4,11 @@ class CardsPage extends Component {
   componentDidMount = () => {
     this.firebase = new Firebase()
     console.log(`this.firebase`, this.firebase)
-    // this.db = this.firebase.db
+
     this.cardsRef = this.firebase.db.collection('cards')
     this.decksRef = this.firebase.db.collection('decks')
     this.collectionsRef = this.firebase.db.collection('collections')
     this.usersRef = this.firebase.db.collection('users')
-
-    // if (firebase) {
-    // const db = firebase.firestore()
-    // const cardsRef = db.collection('cards')
-    // const decksRef = db.collection('decks')
-    // const collectionsRef = db.collection('collections')
-    // const usersRef = db.collection('users')
-
-    // console.log(`db`, db)
-    // console.log(`cardsRef`, cardsRef)
-    // console.log(`decksRef`, decksRef)
-    // console.log(`collectionsRef`, collectionsRef)
-    // console.log(`usersRef`, usersRef)
 
     // How to read data
     this.cardsRef.get().then(querySnapshot => {
@@ -29,13 +16,9 @@ class CardsPage extends Component {
         console.log(`${doc.id} => ${doc.data()}`)
       })
     })
-    // }
   }
 
   addNewCard = () => {
-    // const db = firebase.firestore()
-    // const cardsRef = db.collection('cards')
-
     // How to write data
     this.cardsRef
       .add({

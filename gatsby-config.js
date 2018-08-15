@@ -88,7 +88,7 @@ module.exports = {
     //   }
     // },
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cache`,
+    // `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-plugin-netlify`, // must come last
       options: {

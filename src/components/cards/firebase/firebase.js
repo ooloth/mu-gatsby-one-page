@@ -1,16 +1,19 @@
 class Firebase {
-  // static instance
+  static instance
 
   constructor() {
-    // if (instance) {
-    //   return instance
-    // }
+    if (this.instance) {
+      return this.instance
+    }
+
+    console.table(firebaseConfig)
 
     firebase.initializeApp(firebaseConfig)
-    this.auth = firebase.auth()
     firebase.firestore().settings({ timestampsInSnapshots: true })
+
+    this.auth = firebase.auth()
     this.db = firebase.firestore()
-    // this.instance = this
+    this.instance = this
   }
 }
 
