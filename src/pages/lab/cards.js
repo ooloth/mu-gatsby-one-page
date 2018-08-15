@@ -1,9 +1,11 @@
 class CardsPage extends Component {
-  state = { currentScreen: `home`, activeDeck: null }
+  state = { firebaseReady: false, currentScreen: `home`, activeDeck: null }
 
   componentDidMount = () => {
     if (!firebase.apps.length) {
       this.initFirebase()
+    } else {
+      this.setState({ firebaseReady: true })
     }
   }
 
@@ -19,6 +21,8 @@ class CardsPage extends Component {
     this.decksRef = firebase.firestore().collection('decks')
     this.collectionsRef = firebase.firestore().collection('collections')
     this.usersRef = firebase.firestore().collection('users')
+
+    this.setState({ firebaseReady: true })
 
     // How to read data
     this.cardsRef.get().then(querySnapshot => {
@@ -53,7 +57,7 @@ class CardsPage extends Component {
   backToHome = () => this.setState({ currentScreen: `home` })
 
   render() {
-    const { currentScreen, activeDeck } = this.state
+    const { firebaseReady, currentScreen, activeDeck } = this.state
 
     // console.log({ currentScreen })
     // console.table(activeDeck)
@@ -68,13 +72,17 @@ class CardsPage extends Component {
             description="Learn anything using flashcards and spaced repetition."
           />
 
-          {/* <SignInScreen /> */}
+          {firebaseReady && (
+            <>
+              <SignInScreen firebase={firebase} />
 
-          {currentScreen === `home` ? (
-            <HomeScreen viewDeckDetails={this.viewDeckDetails} />
-          ) : currentScreen === `deck` ? (
-            <DeckScreen deck={activeDeck} backToHome={this.backToHome} />
-          ) : null}
+              {currentScreen === `home` ? (
+                <HomeScreen viewDeckDetails={this.viewDeckDetails} />
+              ) : currentScreen === `deck` ? (
+                <DeckScreen deck={activeDeck} backToHome={this.backToHome} />
+              ) : null}
+            </>
+          )}
         </main>
 
         <Footer />
@@ -601,8 +609,6 @@ export const query = graphql`
 
 import React, { Component, Fragment } from 'react'
 import { graphql } from 'gatsby'
-// import Firebase from '../../components/cards/firebase/firebase'
-// import firebase from '../../components/cards/firebase/firebase'
 
 import firebase from 'firebase/app'
 import 'firebase/firestore'

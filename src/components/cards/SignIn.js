@@ -4,8 +4,7 @@
 class SignInScreen extends Component {
   // The component's Local state.
   state = {
-    isSignedIn: false, // Local signed-in state.
-    user: null
+    isSignedIn: false // Local signed-in state.
   }
 
   // Configure FirebaseUI.
@@ -13,7 +12,7 @@ class SignInScreen extends Component {
     // Popup signin flow rather than redirect flow.
     signInFlow: 'popup',
     // We will display Google as auth provider.
-    signInOptions: [this.firebase.auth.GoogleAuthProvider.PROVIDER_ID],
+    signInOptions: [this.props.firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
       // Avoid redirects after sign-in.
       signInSuccessWithAuthResult: () => false
@@ -21,39 +20,33 @@ class SignInScreen extends Component {
   }
 
   // Listen to the Firebase Auth state and set the local state.
-  componentDidMount() {
-    this.firebase = new Firebase()
-    this.displayName = this.firebase.auth().currentUser.displayName
+  componentDidMount = () => {
+    const { firebase } = this.props
 
-    this.unregisterAuthObserver = this.firebase
+    this.unregisterAuthObserver = firebase
       .auth()
-      .onAuthStateChanged(user => this.setState({ isSignedIn: !!user, user: user }))
+      .onAuthStateChanged(user => this.setState({ isSignedIn: !!user }))
   }
 
-  signOut = () => this.firebase.auth().signOut()
+  signOut = () => this.props.firebase.auth().signOut()
 
   // Make sure we un-register Firebase observers when the component unmounts.
-  componentWillUnmount() {
-    this.unregisterAuthObserver()
-  }
+  componentWillUnmount = () => this.unregisterAuthObserver()
 
   render() {
-    console.log(`user`, this.state.user)
+    const { firebase } = this.props
 
-    if (this.firebase) {
+    if (firebase) {
       if (!this.state.isSignedIn) {
         return (
           <div>
-            <FirebaseAuth
-              uiConfig={this.uiConfig}
-              firebaseAuth={this.firebase.auth()}
-            />
+            <FirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
           </div>
         )
       }
       return (
         <div className="container pt4 tr">
-          <p>Welcome, {this.displayName}!</p>
+          <p>Welcome, {firebase.auth().currentUser.displayName}!</p>
           <button onClick={this.signOut} className="red b">
             Sign-out
           </button>
@@ -71,7 +64,7 @@ class SignInScreen extends Component {
 
 import React, { Component } from 'react'
 import FirebaseAuth from 'react-firebaseui/FirebaseAuth'
-import Firebase from './firebase/firebase'
+// import Firebase from './firebase/firebase'
 // import firebase from './firebase/firebase'
 
 export default SignInScreen
