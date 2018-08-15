@@ -1,12 +1,14 @@
-class Firebase {
+class Firebase extends React.Component {
   static instance
 
   constructor() {
+    super()
     if (this.instance) {
       return this.instance
     }
 
-    console.table(firebaseConfig)
+    // FIXME: Remove this!
+    console.log(firebaseConfig)
 
     firebase.initializeApp(firebaseConfig)
     firebase.firestore().settings({ timestampsInSnapshots: true })
@@ -15,7 +17,51 @@ class Firebase {
     this.db = firebase.firestore()
     this.instance = this
   }
+
+  render() {
+    return (
+      <StaticQuery
+        query={graphql`
+          query {
+            site {
+              siteMetadata {
+                firebaseConfig {
+                  apiKey
+                  authDomain
+                  databaseURL
+                  projectId
+                  storageBucket
+                  messagingSenderId
+                }
+              }
+            }
+          }
+        `}
+        render={null}
+      />
+    )
+  }
 }
+
+// class Firebase {
+//   static instance
+
+//   constructor() {
+//     if (this.instance) {
+//       return this.instance
+//     }
+
+//     // FIXME: Remove this!
+//     console.log(firebaseConfig)
+
+//     firebase.initializeApp(firebaseConfig)
+//     firebase.firestore().settings({ timestampsInSnapshots: true })
+
+//     this.auth = firebase.auth()
+//     this.db = firebase.firestore()
+//     this.instance = this
+//   }
+// }
 
 // Initialize app with the correct config (only once the browser is present)
 // if (typeof window !== 'undefined') {
@@ -30,6 +76,8 @@ class Firebase {
   *
   */
 
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'

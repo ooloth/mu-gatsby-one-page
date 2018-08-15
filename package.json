@@ -9,6 +9,8 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0-rc.1",
+    "autoprefixer": "^8.3.0",
     "chessboardjs": "0.0.1",
     "firebase": "^5.3.1",
     "gatsby": "^2.0.0-beta.100",
@@ -18,6 +20,7 @@
     "gatsby-plugin-netlify": "^2.0.0-beta.6",
     "gatsby-plugin-netlify-cache": "^0.1.0",
     "gatsby-plugin-offline": "^2.0.0-beta.9",
+    "gatsby-plugin-postcss": "^2.0.0-beta.3",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.4",
     "gatsby-plugin-robots-txt": "^1.3.0",
     "gatsby-plugin-sharp": "^2.0.0-beta.7",
@@ -29,6 +32,8 @@
     "intersection-observer": "^0.5.0",
     "loadjs": "^3.5.4",
     "object-fit-images": "^3.2.3",
+    "precss": "^3.1.2",
+    "purgecss-webpack-plugin": "^1.2.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-firebaseui": "^3.0.6",
@@ -41,8 +46,6 @@
     "what-input": "^5.0.5"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-constant-elements": "^7.0.0-rc.1",
-    "autoprefixer": "^8.3.0",
     "babel-eslint": "^8.2.3",
     "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
@@ -51,9 +54,6 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "gatsby-plugin-postcss": "^2.0.0-beta.3",
-    "precss": "^3.1.2",
-    "purgecss-webpack-plugin": "^1.2.1",
     "stylelint": "^9.2.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-no-unsupported-browser-features": "^3.0.0"

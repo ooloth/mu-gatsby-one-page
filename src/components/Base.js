@@ -1,7 +1,7 @@
 const Base = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query BaseQuery {
+      query {
         site {
           siteMetadata {
             description

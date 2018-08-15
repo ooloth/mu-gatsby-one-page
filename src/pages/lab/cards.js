@@ -2,13 +2,40 @@ class CardsPage extends Component {
   state = { currentScreen: `home`, activeDeck: null }
 
   componentDidMount = () => {
-    this.firebase = new Firebase()
-    console.log(`this.firebase`, this.firebase)
+    this.initFirebase()
 
-    this.cardsRef = this.firebase.db.collection('cards')
-    this.decksRef = this.firebase.db.collection('decks')
-    this.collectionsRef = this.firebase.db.collection('collections')
-    this.usersRef = this.firebase.db.collection('users')
+    // this.auth = firebase.auth()
+    // this.db = firebase.firestore()
+
+    // this.firebase = new Firebase()
+    // console.log(`this.firebase`, this.firebase)
+
+    // this.cardsRef = this.firebase.db.collection('cards')
+    // this.decksRef = this.firebase.db.collection('decks')
+    // this.collectionsRef = this.firebase.db.collection('collections')
+    // this.usersRef = this.firebase.db.collection('users')
+
+    // How to read data
+    // this.cardsRef.get().then(querySnapshot => {
+    //   querySnapshot.forEach(doc => {
+    //     console.log(`${doc.id} => ${doc.data()}`)
+    //   })
+    // })
+  }
+
+  initFirebase = () => {
+    const { data } = this.props
+    // console.log('data', data.site.siteMetadata.firebaseConfig)
+
+    firebase.initializeApp(data.site.siteMetadata.firebaseConfig)
+    firebase.firestore().settings({ timestampsInSnapshots: true })
+
+    console.log(`firebase`, firebase)
+
+    this.cardsRef = firebase.firestore().collection('cards')
+    this.decksRef = firebase.firestore().collection('decks')
+    this.collectionsRef = firebase.firestore().collection('collections')
+    this.usersRef = firebase.firestore().collection('users')
 
     // How to read data
     this.cardsRef.get().then(querySnapshot => {
@@ -566,13 +593,40 @@ const CardInStudyMode = ({ card, sideShown, flipCard, answerSeen }) => (
   </div>
 )
 
+/* 
+ *
+ * Queries
+ * 
+ */
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        firebaseConfig {
+          apiKey
+          authDomain
+          databaseURL
+          projectId
+          storageBucket
+          messagingSenderId
+        }
+      }
+    }
+  }
+`
+
 import React, { Component, Fragment } from 'react'
 
-import Firebase from '../../components/cards/firebase/firebase'
+// import Firebase from '../../components/cards/firebase/firebase'
 // import firebase from '../../components/cards/firebase/firebase'
 
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import 'firebase/auth'
+
 import Base from '../../components/Base'
-import PageMetadata from '../../components/PageMetadata'
+// import PageMetadata from '../../components/PageMetadata'
 
 import LabHero from '../../components/lab/LabHero'
 import SignInScreen from '../../components/cards/SignIn'

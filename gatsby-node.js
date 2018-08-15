@@ -10,9 +10,10 @@
  *
  */
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-})
+//MOVED TO GATSBY-CONFIG
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV}`
+// })
 
 /*
  *
