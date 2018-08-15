@@ -17,11 +17,12 @@ class SignInScreen extends Component {
   componentDidMount = () => this.registerAuthObserver()
 
   registerAuthObserver = () => {
-    const { firebase } = this.props
+    const { firebase, updateAuthState } = this.props
 
-    this.unregisterAuthObserver = firebase
-      .auth()
-      .onAuthStateChanged(user => this.setState({ isSignedIn: !!user }))
+    this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(user => {
+      this.setState({ isSignedIn: !!user })
+      updateAuthState(!!user)
+    })
   }
 
   signOut = () => this.props.firebase.auth().signOut()
@@ -35,7 +36,9 @@ class SignInScreen extends Component {
     if (firebase) {
       if (!this.state.isSignedIn) {
         return (
-          <div>
+          <div className="container pt5">
+            <h2 className="pb3 tc f4">Sign In</h2>
+
             <FirebaseAuth
               uiConfig={this.firebaseuiConfig}
               firebaseAuth={firebase.auth()}

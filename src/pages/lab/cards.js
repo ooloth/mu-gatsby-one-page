@@ -1,5 +1,10 @@
 class CardsPage extends Component {
-  state = { firebaseReady: false, currentScreen: `home`, activeDeck: null }
+  state = {
+    firebaseReady: false,
+    isSignedIn: false,
+    currentScreen: `home`,
+    activeDeck: null
+  }
 
   componentDidMount = () => {
     if (!firebase.apps.length) {
@@ -32,6 +37,8 @@ class CardsPage extends Component {
     })
   }
 
+  updateAuthState = isSignedIn => this.setState({ isSignedIn })
+
   addNewCard = () => {
     // How to write data
     this.cardsRef
@@ -57,8 +64,9 @@ class CardsPage extends Component {
   backToHome = () => this.setState({ currentScreen: `home` })
 
   render() {
-    const { firebaseReady, currentScreen, activeDeck } = this.state
+    const { firebaseReady, isSignedIn, currentScreen, activeDeck } = this.state
 
+    firebaseReady && isSignedIn && console.log(firebase.auth().currentUser.uid)
     // console.log({ currentScreen })
     // console.table(activeDeck)
 
@@ -74,13 +82,20 @@ class CardsPage extends Component {
 
           {firebaseReady && (
             <>
-              <SignInScreen firebase={firebase} />
+              <SignInScreen
+                firebase={firebase}
+                updateAuthState={this.updateAuthState}
+              />
 
-              {currentScreen === `home` ? (
-                <HomeScreen viewDeckDetails={this.viewDeckDetails} />
-              ) : currentScreen === `deck` ? (
-                <DeckScreen deck={activeDeck} backToHome={this.backToHome} />
-              ) : null}
+              {isSignedIn && (
+                <>
+                  {currentScreen === `home` ? (
+                    <HomeScreen viewDeckDetails={this.viewDeckDetails} />
+                  ) : currentScreen === `deck` ? (
+                    <DeckScreen deck={activeDeck} backToHome={this.backToHome} />
+                  ) : null}
+                </>
+              )}
             </>
           )}
         </main>
