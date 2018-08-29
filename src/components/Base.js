@@ -80,6 +80,12 @@ const SiteMetadata = ({ site }) => (
     <meta property="og:site_name" content={site.title} />
     <meta property="og:locale" content={site.locale} />
 
+    {/* Google Search Console verification */}
+    <meta
+      name="google-site-verification"
+      content="SwZ5_vDFUMkbYGZyzpeZh49ZTqf_59byEFmTG4eWK_w"
+    />
+
     {/* Non-essential, but required for analytics */}
     {site.facebookAppId && (
       <meta property="fb:app_id" content={site.facebookAppId} />
