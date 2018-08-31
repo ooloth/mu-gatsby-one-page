@@ -238,6 +238,83 @@
   - name: Tools
     value: React, Gatbsy, PostCSS, GitLab, Netlify
 
+###############
+# Artist Center
+###############
+
+- title:
+    text: Artist Center
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/artist-center.png
+  alt: Artist Center graphic, designed by Stephen Bell.
+
+  link: https://artistcenter.netlify.com
+
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to create an attractive landing page for the launch of Artist.Center, an app that helps connect operatic artists to opera companies.
+  
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
+
+#########
+# DG VOLO
+#########
+
+- title:
+    text: DG Volo & Company
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/david-woloviec.jpg
+  alt: David Woloviec, founder of DG Volo & Company.
+
+  link: http://dgvolo.com
+
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.
+
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
+
+##############
+# Shawna Lucey
+##############
+
+- title:
+    text: Shawna Lucey
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/shawna-lucey.jpg
+  alt: Shawna Lucey, American opera and stage director.
+
+  link: https://www.shawnalucey.com
+
+  reviews:
+  - quotation: My new website has LANDED!!! So excited! Thanks <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener" class="link-inline">@coffeescreative</a> for being so boss!!!!
+    source: Shawna Lucey, Twitter
+    link: https://twitter.com/shawna_lucey/status/1031638131764813825?s=12
+
+  description: I collaborated with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create a colourful, circus-themed portfolio for American opera and stage director Shawna Lucey.
+
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
+
 ##############
 # RACHEL KREHM
 ##############
@@ -318,29 +395,5 @@
   details:
   - name: Tools
     value: Pug, Sass, jQuery
-
-#########
-# DG VOLO
-#########
-
-- title:
-    text: DG Volo & Company
-
-  category: Website
-
-  tags:
-  - Website
-  - Code
-
-  image: ../images/websites/david-woloviec.jpg
-  alt: David Woloviec, founder of DG Volo & Company.
-
-  link: http://dgvolo.com
-
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.
-
-  details:
-  - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
 
 

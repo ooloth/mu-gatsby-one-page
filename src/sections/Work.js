@@ -419,7 +419,7 @@ const Features = ({ features }) => (
 
 const FeatureEmoji = () => (
   <span role="img" aria-label="Emoji of a video camera" className="pr1">
-    🎥
+    📺
   </span>
 )
 

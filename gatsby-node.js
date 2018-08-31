@@ -35,7 +35,6 @@ const purgeCssConfig = {
   whitelist: [
     `checkbox-label`,
     `custom-checkbox`,
-
     `link-inline`,
     `mr4`,
     `o-0`,
@@ -61,6 +60,7 @@ exports.onCreateWebpackConfig = ({ actions, stage }) => {
     })
   }
 
+  // During build, ignore packages that refer to document or window
   if (stage === `build-html`) {
     actions.setWebpackConfig({
       module: {
