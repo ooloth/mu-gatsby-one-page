@@ -60,7 +60,7 @@ const SiteMetadata = ({ site }) => (
     <meta name="image" content={site.siteUrl + siteImage} />
     <link rel="canonical" href={site.siteUrl} />
 
-    {/* Preload above-the-fold fonts */}
+    {/* Preload above-the-fold static resources */}
     {/* See: https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content#Cross-origin_fetches#Cross-origin_fetches */}
     <link
       rel="preload"
