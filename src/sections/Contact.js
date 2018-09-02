@@ -22,7 +22,9 @@ const Invitation = () => (
       }}
     >
       Contact
-      <span className="green">.</span>
+      <span aria-hidden="true" className="green">
+        .
+      </span>
     </h2>
 
     <p

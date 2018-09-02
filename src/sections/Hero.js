@@ -89,7 +89,9 @@ const Greeting = () => (
       style={{ marginLeft: `-.051em` }}
     >
       Hello
-      <span className="green">.</span>
+      <span aria-hidden="true" className="green">
+        .
+      </span>
     </h2>
 
     <h1
