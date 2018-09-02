@@ -26,11 +26,14 @@ const Base = ({ children }) => (
 
 /*
  *
- * Global styles
+ * Global styles & preloaded font files (above-the-fold webfonts not handled by subfont)
  * 
  */
 
 import '../styles/index.css'
+
+import avenirRegular from '../fonts/AvenirNextLTPro-Regular.woff2'
+import avenirHeavy from '../fonts/AvenirNextLTPro-Heavy.woff2'
 
 /*
  *
@@ -56,6 +59,23 @@ const SiteMetadata = ({ site }) => (
     <meta name="description" content={site.description} />
     <meta name="image" content={site.siteUrl + siteImage} />
     <link rel="canonical" href={site.siteUrl} />
+
+    {/* Preload above-the-fold fonts */}
+    {/* See: https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content#Cross-origin_fetches#Cross-origin_fetches */}
+    <link
+      rel="preload"
+      href={avenirHeavy}
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href={avenirRegular}
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />
 
     {/* Preconnect to CloudFlare CDN (for GSAP) */}
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />

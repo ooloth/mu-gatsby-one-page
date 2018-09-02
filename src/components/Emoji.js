@@ -1,5 +1,10 @@
 const Emoji = ({ emoji, ariaLabel, className, style }) => (
-  <span role="img" aria-label={ariaLabel} className={className} style={style}>
+  <span
+    role="img"
+    aria-label={ariaLabel}
+    className={`emoji ${className}`}
+    style={style}
+  >
     {emoji}
   </span>
 )

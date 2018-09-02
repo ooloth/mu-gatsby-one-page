@@ -99,25 +99,25 @@ module.exports = {
         }
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Michael Uloth`,
-    //     short_name: `M. Uloth`,
-    //     start_url: `/`,
-    //     // For splash screen when app launches:
-    //     background_color: `#2eec96`,
-    //     // For tool bar and task switcher:
-    //     theme_color: `#2eec96`,
-    //     display: `minimal_ui`,
-    //     // Multiple icons will be generated for various devices.
-    //     // Multiple favicons will be generated and added to each HTML page.
-    //     // This path is relative to the root of the site.
-    //     icon: `src/images/favicon.png`
-    //   }
-    // },
-    // `gatsby-plugin-offline`,
-    // `gatsby-plugin-netlify-cache`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Michael Uloth`,
+        short_name: `M. Uloth`,
+        start_url: `/`,
+        // For splash screen when app launches:
+        background_color: `#2eec96`,
+        // For tool bar and task switcher:
+        theme_color: `#2eec96`,
+        display: `minimal_ui`,
+        // Multiple icons will be generated for various devices.
+        // Multiple favicons will be generated and added to each HTML page.
+        // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`
+      }
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-plugin-netlify`, // must come last
       options: {

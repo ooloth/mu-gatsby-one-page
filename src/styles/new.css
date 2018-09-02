@@ -37,6 +37,7 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
   }
 }
 
+.emoji { font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' }
 
 /*
  *
