@@ -206,7 +206,9 @@ const ReadMoreOrSeeWork = ({ handleClick }) => (
     >
       Read more
     </button>
-    &nbsp;or see my recent work below.
+    {` `}
+    or see my recent work below.
+    {` `}
   </p>
 )
 

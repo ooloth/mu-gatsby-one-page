@@ -77,8 +77,9 @@ const SiteMetadata = ({ site }) => (
       crossOrigin="anonymous"
     />
 
-    {/* Preconnect to CloudFlare CDN (for GSAP) */}
+    {/* Preconnect to CloudFlare CDN (for GSAP) and Google Tag Manager */}
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
 
     {/* Schema.org for Google */}
     <meta itemProp="name" content={site.title} />

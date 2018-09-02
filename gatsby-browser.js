@@ -6,7 +6,7 @@
 
 /*
  *
- * Urgent polyfills (before first render) + priority scripts for user interaction
+ * Urgent polyfills (before first render)
  * 
  */
 
@@ -28,7 +28,7 @@ export const onClientEntry = () => {
 
 /*
  *
- * Non-urgent polyfills and global scripts (after first render)
+ * Non-urgent scripts (after first render)
  * 
  */
 
@@ -53,15 +53,21 @@ export const onInitialClientRender = () => {
   }
 
   // Google Analytics
-  loadjs(`https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`, () => {
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
+  if (!loadjs.isDefined(`google-analytics`)) {
+    loadjs(
+      `https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`,
+      `google-analytics`,
+      () => {
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+          dataLayer.push(arguments)
+        }
 
-    gtag(`js`, new Date())
-    gtag(`config`, `UA-9710963-3`)
-  })
+        gtag(`js`, new Date())
+        gtag(`config`, `UA-9710963-3`)
+      }
+    )
+  }
 }
 
 /*
