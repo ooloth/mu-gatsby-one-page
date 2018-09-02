@@ -52,36 +52,26 @@ export const onInitialClientRender = () => {
     )
   }
 
-  // Google Analytics on live site only (using ga-lite to allow caching)
+  // Google Analytics (using ga-lite to allow caching)
   // See: https://github.com/jehna/ga-lite
-  if (!loadjs.isDefined(`ga-lite`)) {
-    loadjs(
-      `https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js`,
-      `ga-lite`,
-      () => {
-        galite('create', 'UA-9710963-3', 'auto') // auto prevents tracking on localhost
-        galite('send', 'pageview')
+  // Don't waste any time on this on localhost
+  if (window.location.hostname !== 'localhost') {
+    if (!loadjs.isDefined(`ga-lite`)) {
+      loadjs(
+        `https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js`,
+        `ga-lite`,
+        () => {
+          // See: https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#automatic_cookie_domain_configuration
+          galite('create', 'UA-9710963-3', 'auto') // auto prevents tracking on localhost
+          galite('send', 'pageview')
 
-        // See: https://github.com/jehna/ga-lite#onunload-tracking
-        window.addEventListener('unload', () => {
-          galite('send', 'timing', 'JS Dependencies', 'unload')
-        })
-      }
-    )
-
-    // loadjs(
-    //   `https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`,
-    //   `google-analytics`,
-    //   () => {
-    //     window.dataLayer = window.dataLayer || []
-    //     function gtag() {
-    //       dataLayer.push(arguments)
-    //     }
-
-    //     gtag(`js`, new Date())
-    //     gtag(`config`, `UA-9710963-3`)
-    //   }
-    // )
+          // See: https://github.com/jehna/ga-lite#onunload-tracking
+          window.addEventListener('unload', () => {
+            galite('send', 'timing', 'JS Dependencies', 'unload')
+          })
+        }
+      )
+    }
   }
 }
 
