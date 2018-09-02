@@ -112,11 +112,10 @@ const Greeting = () => (
 const OperaBio = () => (
   <Fragment>
     <p className="mt4 lh-tall measure">
-      As an opera singer, I've been lucky enough to perform with many wonderful opera
-      companies and orchestras across Canada, the United States and Europe, including
-      the Canadian Opera Company, Seattle Opera, the Glimmerglass Festival and Opéra
-      de Lyon. You can see a selection of my past projects below and hear examples of
-      my singing on
+      As an opera singer, I've been lucky enough to perform with wonderful companies
+      and orchestras across Canada, the United States and Europe, including the
+      Canadian Opera Company, Seattle Opera, the Glimmerglass Festival, and Opéra de
+      Lyon. You can hear examples of my singing on
       {` `}
       <HyperLink
         href="https://soundcloud.com/michael-uloth/tracks"
@@ -137,6 +136,31 @@ const OperaBio = () => (
       <HyperLink href="https://vimeo.com/24283716" className="link-inline">
         Vimeo
       </HyperLink>
+      {` `}
+      and read about my journey
+      {` `}
+      <HyperLink
+        href="https://www.schmopera.com/spotlight-on-michael-uloth/"
+        className="link-inline"
+      >
+        here
+      </HyperLink>
+      ,{` `}
+      <HyperLink
+        href="http://www.seattleoperablog.com/2012/03/meet-our-singers-michael-uloth-don.html"
+        className="link-inline"
+      >
+        here
+      </HyperLink>
+      {` `}
+      and
+      {` `}
+      <HyperLink
+        href="https://www.kitchenerpost.ca/whatson-story/5905471-the-voice/"
+        className="link-inline"
+      >
+        here
+      </HyperLink>
       .
     </p>
   </Fragment>
@@ -151,15 +175,15 @@ const OperaBio = () => (
 const WebDevBio = () => (
   <Fragment>
     <p className="mt4 lh-tall measure">
-      Since building my first "I'm an opera singer" website, I've built dozens of
-      sites for singers, freelancers and businesses looking to expand their online
-      profiles. I love building sexy, modern sites that load as quickly as possible.
-      In addition to my own projects, I'm also the lead front-end developer at
+      Since building my first "I'm an opera singer" website, I've built dozens more
+      sites for singers, freelancers and businesses looking to improve their online
+      presence. I focus on building sexy, modern sites that load instantly. In
+      addition to my own projects, I'm also the lead developer at
       {` `}
       <HyperLink href="http://coffeeshopcreative.ca/" className="link-inline">
         Coffeeshop Creative
       </HyperLink>
-      , a digital design agency based in Toronto.
+      , a Toronto digital design agency.
     </p>
   </Fragment>
 )
