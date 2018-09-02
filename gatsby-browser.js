@@ -52,36 +52,39 @@ export const onInitialClientRender = () => {
     )
   }
 
-  // Google Analytics (using ga-lite to solve caching issues with normal script)
+  // Google Analytics on live site (via ga-lite to solve caching issues)
+  // See: https://medium.com/@trydelight/does-google-analytics-track-localhost-activity-63f0990e9967
   // See: https://github.com/jehna/ga-lite
-  if (!loadjs.isDefined(`ga-lite`)) {
-    loadjs(
-      `https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js`,
-      `ga-lite`,
-      () => {
-        galite('create', 'UA-9710963-3', 'auto')
-        galite('send', 'pageview')
+  if (window.location.hostname !== 'localhost') {
+    if (!loadjs.isDefined(`ga-lite`)) {
+      loadjs(
+        `https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js`,
+        `ga-lite`,
+        () => {
+          galite('create', 'UA-9710963-3', 'auto')
+          galite('send', 'pageview')
 
-        // See: https://github.com/jehna/ga-lite#onunload-tracking
-        window.addEventListener('unload', () => {
-          galite('send', 'timing', 'JS Dependencies', 'unload')
-        })
-      }
-    )
+          // See: https://github.com/jehna/ga-lite#onunload-tracking
+          window.addEventListener('unload', () => {
+            galite('send', 'timing', 'JS Dependencies', 'unload')
+          })
+        }
+      )
 
-    // loadjs(
-    //   `https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`,
-    //   `google-analytics`,
-    //   () => {
-    //     window.dataLayer = window.dataLayer || []
-    //     function gtag() {
-    //       dataLayer.push(arguments)
-    //     }
+      // loadjs(
+      //   `https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`,
+      //   `google-analytics`,
+      //   () => {
+      //     window.dataLayer = window.dataLayer || []
+      //     function gtag() {
+      //       dataLayer.push(arguments)
+      //     }
 
-    //     gtag(`js`, new Date())
-    //     gtag(`config`, `UA-9710963-3`)
-    //   }
-    // )
+      //     gtag(`js`, new Date())
+      //     gtag(`config`, `UA-9710963-3`)
+      //   }
+      // )
+    }
   }
 }
 
