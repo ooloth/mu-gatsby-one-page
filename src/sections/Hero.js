@@ -172,7 +172,12 @@ const Invitation = ({ expanded, handleClick }) => (
   <div className="flex items-center flex-wrap">
     {expanded ? <SeeWork /> : <ReadMoreOrSeeWork handleClick={handleClick} />}
 
-    <PointingDownEmoji />
+    <Emoji
+      emoji="👇"
+      ariaLabel="Emoji of a finger pointing downwards"
+      className="dib mt4 f3"
+      style={{ transform: `translateY(.12em)` }}
+    />
   </div>
 )
 
@@ -205,23 +210,6 @@ const ReadMoreOrSeeWork = ({ handleClick }) => (
 
 /* 
  *
- * Pointing Down Emoji
- * 
- */
-
-const PointingDownEmoji = () => (
-  <span
-    role="img"
-    aria-label="Emoji of a finger pointing downwards"
-    className="dib mt4 f3"
-    style={{ transform: `translateY(.12em)` }}
-  >
-    👇
-  </span>
-)
-
-/* 
- *
  * Imports & Exports
  * 
  */
@@ -230,6 +218,7 @@ import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
 import { ReactComponent as Ribbon } from '../svg/opl-award-ribbon-right.svg'
 
+import Emoji from '../components/Emoji'
 import HyperLink from '../components/HyperLink'
 
 export default Hero

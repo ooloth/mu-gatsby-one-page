@@ -10,20 +10,16 @@ class Work extends React.Component {
     let filters = {}
 
     // TODO: turn this into a state machine (states = showOpera, showWebsites, showAll)?
-    switch (e.target.value) {
-      case `opera`:
-        if (e.target.checked) filters = { operaIsChecked: true }
-        else if (!websitesIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { operaIsChecked: false }
-        break
-
-      case `websites`:
-        if (e.target.checked) filters = { websitesIsChecked: true }
-        else if (!operaIsChecked)
-          filters = { operaIsChecked: true, websitesIsChecked: true }
-        else filters = { websitesIsChecked: false }
-        break
+    if (e.target.value === 'opera') {
+      if (e.target.checked) filters = { operaIsChecked: true }
+      else if (!websitesIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { operaIsChecked: false }
+    } else if (e.target.value === 'websites') {
+      if (e.target.checked) filters = { websitesIsChecked: true }
+      else if (!operaIsChecked)
+        filters = { operaIsChecked: true, websitesIsChecked: true }
+      else filters = { websitesIsChecked: false }
     }
 
     this.setState({ ...filters, limit: 5 })
@@ -50,7 +46,6 @@ class Work extends React.Component {
       if (operaIsChecked && websitesIsChecked) return project
       else if (operaIsChecked) return project.node.category === `Opera`
       else if (websitesIsChecked) return project.node.category === `Website`
-      else console.error(`Error in projectsInActiveCategory calculation in <Work />`)
     })
 
     // Which projects in the active category should be visible?
@@ -71,7 +66,13 @@ class Work extends React.Component {
 
         <Projects projects={visibleProjects} />
 
-        {!allLoaded && <SeeMoreProjects handleLoadMore={this.handleLoadMore} />}
+        {!allLoaded && (
+          <SeeMoreProjects
+            operaIsChecked={operaIsChecked}
+            websitesIsChecked={websitesIsChecked}
+            handleLoadMore={this.handleLoadMore}
+          />
+        )}
       </section>
     )
   }
@@ -83,13 +84,19 @@ class Work extends React.Component {
  * 
  */
 
-const SeeMoreProjects = ({ handleLoadMore }) => (
-  <div className="container pt5">
-    <button onClick={handleLoadMore} className="link">
-      See more projects
-    </button>
-  </div>
-)
+const SeeMoreProjects = ({ operaIsChecked, websitesIsChecked, handleLoadMore }) => {
+  let buttonText = 'projects'
+  if (!operaIsChecked) buttonText = 'websites'
+  if (!websitesIsChecked) buttonText = 'operas'
+
+  return (
+    <div className="container pt5">
+      <button onClick={handleLoadMore} className="link">
+        See more {buttonText}
+      </button>
+    </div>
+  )
+}
 
 /*
  *
@@ -368,70 +375,58 @@ const FeaturedImage = ({ image, alt }) => (
  * 
  */
 
+// TODO: refactor using <Quote />?
 const Reviews = ({ reviews }) =>
-  reviews.map((review, index) => {
+  reviews.map((review, i) => {
     return (
-      <blockquote key={`review-${index}`} className="mt4 pv2">
+      <blockquote key={i} className="mt4 pv2">
         <div className="bw3 bt-0 br-0 bb-0 b--green pl3 measure">
           <p
-            className="mb2 f3"
+            className="mb2 f4 sm:f3"
             dangerouslySetInnerHTML={{ __html: review.quotation }}
           />
 
           {review.link ? (
-            <cite className="f4 fw7 fs-normal">
-              <HyperLink href={review.link}>{review.source}</HyperLink>
+            <cite className="sm:f4 fw7 fs-normal">
+              <HyperLink href={review.link} className="link-inline di sm:dib">
+                {review.source}
+              </HyperLink>
             </cite>
           ) : (
-            <cite className="f4 fw7 fs-normal">{review.source}</cite>
+            <cite className="sm:f4 fw7 fs-normal">{review.source}</cite>
           )}
         </div>
       </blockquote>
     )
   })
 
-/**********
+/*
  *
  * Features
  *
- **********/
+ */
 
 const Features = ({ features }) => (
   <ul className="mt4 nb1">
-    {features.map((feature, index) => {
-      return (
-        <li key={`feature-${index}`} className="flex pb1">
-          <FeatureEmoji />
-          <FeatureText feature={feature} />
-        </li>
-      )
+    {features.map((feature, i) => {
+      return <Feature key={i} feature={feature} />
     })}
   </ul>
 )
 
-/* 
- *
- * Feature Emoji
- * 
- */
+const Feature = ({ feature }) => {
+  let ariaLabel
+  if (feature.emoji === '📺') ariaLabel = 'Emoji of a television'
+  if (feature.emoji === '📖') ariaLabel = 'Emoji of an open book'
+  if (feature.emoji === '🎧') ariaLabel = 'Emoji of a pair of headphones'
 
-// TODO: use a ternary to switch between emoji once I have more link types than just video
-
-const FeatureEmoji = () => (
-  <span role="img" aria-label="Emoji of a video camera" className="pr1">
-    📺
-  </span>
-)
-
-/* 
- *
- * Feature Text
- * 
- */
-
-const FeatureText = ({ feature }) => (
-  <p dangerouslySetInnerHTML={{ __html: feature }} className="measure" />
-)
+  return (
+    <li className="flex pb1">
+      <Emoji emoji={feature.emoji} ariaLabel={ariaLabel} className="pr1" />
+      <p dangerouslySetInnerHTML={{ __html: feature.text }} className="measure" />
+    </li>
+  )
+}
 
 /* 
  *
@@ -451,10 +446,10 @@ const Description = ({ description }) => (
 
 const Details = ({ details }) => (
   <dl className="mt4">
-    {details.map((detail, index) => {
+    {details.map((detail, i) => {
       return (
         detail.name !== `Dates` && (
-          <Fragment key={`detail-${index}`}>
+          <Fragment key={i}>
             <dt className="fl fw7">
               {detail.name}
               :&nbsp;
@@ -476,6 +471,7 @@ const Details = ({ details }) => (
 import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
 
+import Emoji from '../components/Emoji'
 import HyperLink from '../components/HyperLink'
 import Img from '../components/Img'
 

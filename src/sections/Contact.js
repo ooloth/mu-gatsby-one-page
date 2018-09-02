@@ -21,29 +21,19 @@ const Invitation = () => (
         marginLeft: `-.03em`
       }}
     >
-      Contact<span className="green">.</span>
+      Contact
+      <span className="green">.</span>
     </h2>
 
     <p
       className="mb4 pb3 measure-narrow lh-copy f4 sm:f3 fw4"
       style={{ maxWidth: `32ch` }}
     >
-      Want to work together? Tell me about your project!{` `}
-      <WavingEmoji />
+      Want to work together? Tell me about your project!
+      {` `}
+      <Emoji emoji="👋" ariaLabel="Emoji of a hand waving" />
     </p>
   </Fragment>
-)
-
-/* 
- *
- * Waving Emoji
- * 
- */
-
-const WavingEmoji = () => (
-  <span role="img" aria-label="Emoji of a hand waving">
-    👋
-  </span>
 )
 
 /***************
@@ -131,6 +121,7 @@ import FaGithub from 'react-icons/lib/fa/github'
 import FaLinkedin from 'react-icons/lib/fa/linkedin'
 import FaFacebook from 'react-icons/lib/fa/facebook'
 
+import Emoji from '../components/Emoji'
 import HyperLink from '../components/HyperLink'
 
 export default Contact

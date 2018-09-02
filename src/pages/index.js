@@ -62,7 +62,10 @@ export const query = graphql`
             source
             link
           }
-          features
+          features {
+            emoji
+            text
+          }
           details {
             name
             value
