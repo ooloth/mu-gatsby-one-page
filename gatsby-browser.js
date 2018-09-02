@@ -33,14 +33,6 @@ export const onClientEntry = () => {
  */
 
 export const onInitialClientRender = () => {
-  // A11Y: Detect keyboard vs. mouse vs. touch input (for focus styling)
-  if (!loadjs.isDefined(`what-input`)) {
-    loadjs(
-      `https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`,
-      `what-input`
-    )
-  }
-
   // GSAP for site-wide animations
   if (!loadjs.isDefined(`gsap`)) {
     loadjs(
@@ -52,21 +44,44 @@ export const onInitialClientRender = () => {
     )
   }
 
-  // Google Analytics
-  if (!loadjs.isDefined(`google-analytics`)) {
+  // A11Y: Detect keyboard vs. mouse vs. touch input (for focus styling)
+  if (!loadjs.isDefined(`what-input`)) {
     loadjs(
-      `https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`,
-      `google-analytics`,
-      () => {
-        window.dataLayer = window.dataLayer || []
-        function gtag() {
-          dataLayer.push(arguments)
-        }
+      `https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.5/what-input.min.js`,
+      `what-input`
+    )
+  }
 
-        gtag(`js`, new Date())
-        gtag(`config`, `UA-9710963-3`)
+  // Google Analytics (using ga-lite to solve caching issues with normal script)
+  // See: https://github.com/jehna/ga-lite
+  if (!loadjs.isDefined(`ga-lite`)) {
+    loadjs(
+      `https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js`,
+      `ga-lite`,
+      () => {
+        galite('create', 'UA-9710963-3', 'auto')
+        galite('send', 'pageview')
+
+        // See: https://github.com/jehna/ga-lite#onunload-tracking
+        window.addEventListener('unload', () => {
+          galite('send', 'timing', 'JS Dependencies', 'unload')
+        })
       }
     )
+
+    // loadjs(
+    //   `https://www.googletagmanager.com/gtag/js?id=UA-9710963-3`,
+    //   `google-analytics`,
+    //   () => {
+    //     window.dataLayer = window.dataLayer || []
+    //     function gtag() {
+    //       dataLayer.push(arguments)
+    //     }
+
+    //     gtag(`js`, new Date())
+    //     gtag(`config`, `UA-9710963-3`)
+    //   }
+    // )
   }
 }
 
