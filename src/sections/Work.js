@@ -421,8 +421,8 @@ const Feature = ({ feature }) => {
   if (feature.emoji === '🎧') ariaLabel = 'Emoji of a pair of headphones'
 
   return (
-    <li className="flex pb1">
-      <Emoji emoji={feature.emoji} ariaLabel={ariaLabel} className="pr1" />
+    <li className="flex align-baseline pb1">
+      <Emoji emoji={feature.emoji} ariaLabel={ariaLabel} className="flex-none pr1" />
       <p dangerouslySetInnerHTML={{ __html: feature.text }} className="measure" />
     </li>
   )
