@@ -47,8 +47,14 @@ Add all new styles here (reset, plugin, utility, component) so they are easy to 
 
 .pv-p75r { padding-top: .75rem; padding-bottom: .75rem }
 
-.trim-height:before { content: ''; display: block; margin-top: 0rem}
-.trim-height:after  { content: ''; display: block; margin-top: 0rem}
+/* .trim-height:before { content: ''; display: block; margin-top: 0rem}
+.trim-height:after  { content: ''; display: block; margin-top: 0rem} */
+
+.feature-emoji-alignment {
+  margin-top: -.15rem;
+  @media (--sm) { margin-top: -.05rem }
+  @media (--lg) { margin-top: 0rem }
+}
 
 /*
  *

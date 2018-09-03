@@ -423,13 +423,9 @@ const Feature = ({ feature }) => {
       <Emoji
         emoji={feature.emoji}
         ariaLabel={ariaLabel}
-        className="flex-none pr1"
-        style={{ marginTop: `-1px` }}
+        className="feature-emoji-alignment mr1"
       />
-      <p
-        dangerouslySetInnerHTML={{ __html: feature.text }}
-        className="flex-auto measure"
-      />
+      <p dangerouslySetInnerHTML={{ __html: feature.text }} className="measure" />
     </li>
   )
 }
