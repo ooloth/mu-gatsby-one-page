@@ -297,13 +297,11 @@ const HeaderInfo = ({ title, tags }) => (
     <h3 lang={title.lang && title.lang} className="mb2 lh-solid f2 sm:f1 fw9 ttu">
       {title.text}
     </h3>
+
     <ul className="nb2">
-      {tags.map((tag, index) => {
+      {tags.map((tag, i) => {
         return (
-          <li
-            key={`tag-${index}`}
-            className="dib mr2 mb2 bg-green pv1 ph2 sm:f4 fw4 ttl"
-          >
+          <li key={i} className="dib mr2 mb2 bg-green pv1 ph2 sm:f4 fw4 ttl">
             {tag}
           </li>
         )
@@ -422,8 +420,16 @@ const Feature = ({ feature }) => {
 
   return (
     <li className="flex align-baseline pb1">
-      <Emoji emoji={feature.emoji} ariaLabel={ariaLabel} className="flex-none pr1" />
-      <p dangerouslySetInnerHTML={{ __html: feature.text }} className="measure" />
+      <Emoji
+        emoji={feature.emoji}
+        ariaLabel={ariaLabel}
+        className="flex-none pr1"
+        style={{ marginTop: `-1px` }}
+      />
+      <p
+        dangerouslySetInnerHTML={{ __html: feature.text }}
+        className="flex-auto measure"
+      />
     </li>
   )
 }
