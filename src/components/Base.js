@@ -32,8 +32,8 @@ const Base = ({ children }) => (
 
 import '../styles/index.css'
 
-import avenirRegular from '../fonts/AvenirNextLTPro-Regular.woff2'
-import avenirHeavy from '../fonts/AvenirNextLTPro-Heavy.woff2'
+// import avenirRegular from '../fonts/AvenirNextLTPro-Regular.woff2'
+// import avenirHeavy from '../fonts/AvenirNextLTPro-Heavy.woff2'
 
 /*
  *
@@ -62,7 +62,7 @@ const SiteMetadata = ({ site }) => (
 
     {/* Preload above-the-fold static resources */}
     {/* See: https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content#Cross-origin_fetches#Cross-origin_fetches */}
-    <link
+    {/* <link
       rel="preload"
       href={avenirHeavy}
       as="font"
@@ -75,7 +75,7 @@ const SiteMetadata = ({ site }) => (
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
-    />
+    /> */}
 
     {/* Preconnect to CloudFlare CDN (for GSAP) and Google Analytics */}
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
