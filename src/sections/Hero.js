@@ -177,8 +177,8 @@ const WebDevBio = () => (
     <p className="mt4 lh-tall measure">
       Since building my first "I'm an opera singer" website, I've built dozens more
       sites for singers, freelancers and businesses looking to expand their online
-      presence. I focus on building sexy, modern sites that load instantly. In
-      addition to my own projects, I'm also the lead developer at
+      presence. I focus on building sexy, modern sites that load quickly. In addition
+      to my own projects, I'm also the lead developer at
       {` `}
       <HyperLink href="http://coffeeshopcreative.ca/" className="link-inline">
         Coffeeshop Creative
