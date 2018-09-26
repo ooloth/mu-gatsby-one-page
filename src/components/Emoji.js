@@ -1,4 +1,4 @@
-const Emoji = ({ emoji, ariaLabel, className, style }) => (
+const Emoji = ({ emoji, ariaLabel, className = ``, style = {} }) => (
   <span
     role="img"
     aria-label={ariaLabel}
