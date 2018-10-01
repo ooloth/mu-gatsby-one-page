@@ -386,7 +386,10 @@ const Reviews = ({ reviews }) =>
 
           {review.link ? (
             <cite className="sm:f4 fw7 fs-normal">
-              <HyperLink href={review.link} className="link-inline di sm:dib">
+              <HyperLink
+                href={review.link}
+                className="link-inline di sm:dib cursor-pointer"
+              >
                 {review.source}
               </HyperLink>
             </cite>

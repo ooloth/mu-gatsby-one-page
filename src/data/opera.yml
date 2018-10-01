@@ -17,11 +17,15 @@
 
   features:
   - emoji: 📺
-    text: Hear the <a href="https://www.youtube.com/watch?v=beZUnHkqU9k" target="_blank" rel="noopener" class="link-inline">Entr'acte that begins Act II</a>.
+    text: See a <a href="https://twitter.com/canadianopera/status/1042878654710259712?s=12" target="_blank" rel="noopener" class="link-inline">Hadrian rehearsal</a> in action.
+  - emoji: 📺
+    text: Watch the <a href="https://www.youtube.com/watch?v=beZUnHkqU9k" target="_blank" rel="noopener" class="link-inline">Entr'acte that begins Act II</a>.
   - emoji: 🎧
     text: Hear a <a href="https://youtu.be/hHqV15oRulE?t=18159" target="_blank" rel="noopener" class="link-inline">discussion and performance</a> of selected excerpts.
   - emoji: 📖
-    text: Get Rufus Wainwright's take on <a href="http://www.27east.com/news/article.cfm/Westhampton-Beach-Surrounding-Areas/563805/Rufus-Wainwright-On-His-Own-Terms-New-Music-Old-Music-And-A-Taste-Of-The-Roman-Empire" target="_blank" rel="noopener" class="link-inline">critics and opening nights</a>.
+    text: Read why Hadrian is a <a href="https://www.thewholenote.com/index.php/newsroom/musical-life/rear-view-mirror/28466-daring-to-walk-the-walk-the-coc-s-hadrian" target="_blank" rel="noopener" class="link-inline">guaranteed success for the COC</a>.
+  - emoji: 📖
+    text: Learn Rufus Wainwright's take on <a href="http://www.27east.com/news/article.cfm/Westhampton-Beach-Surrounding-Areas/563805/Rufus-Wainwright-On-His-Own-Terms-New-Music-Old-Music-And-A-Taste-Of-The-Roman-Empire" target="_blank" rel="noopener" class="link-inline">critics and opening nights</a>.
   - emoji: 📖
     text: Read about Rufus' <a href="https://www.theguardian.com/theobserver/2018/jun/23/rufus-wainwright-opera-transfigured-second-classical-release-change-direction?platform=hootsuite" target="_blank" rel="noopener" class="link-inline">transition from pop to opera</a>.
   - emoji: 📖
