@@ -27,7 +27,7 @@
   font-display: swap;
   font-style: normal;
   font-weight: 900;
-  src: local('Avenir Next Bold'), local('AvenirNext-Heavy'),
+  src: local('Avenir Next Heavy'), local('AvenirNext-Heavy'),
        local('Avenir Next LT Pro Heavy'), 
        local('AvenirNextLTPro-Heavy'),
        url('../fonts/AvenirNextLTPro-Heavy.woff2') format('woff2'),
