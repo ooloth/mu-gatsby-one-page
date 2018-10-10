@@ -18,7 +18,7 @@ const Base = ({ children }) => (
       <>
         <SiteMetadata site={data.site.siteMetadata} />
         {children}
-        <BasicStructuredData site={data.site.siteMetadata} />
+        <StructuredData site={data.site.siteMetadata} />
       </>
     )}
   />
@@ -119,11 +119,11 @@ const SiteMetadata = ({ site }) => (
 
 /*
  *
- * Basic Structured Data
+ * Structured Data
  * 
  */
 
-const BasicStructuredData = ({ site }) => {
+const StructuredData = ({ site }) => {
   const structuredData = `{
     "@context": "http://schema.org",
     "@type": "Person",
@@ -133,10 +133,13 @@ const BasicStructuredData = ({ site }) => {
     "image": "${site.siteUrl + siteImage.replace(`js/../`, ``)}",
     "url": "${site.siteUrl}",
     "sameAs": [
+      "http://twitter.com/ooloth",
+      "http://instagram.com/ooloth",
       "https://www.facebook.com/michaeluloth",
       "https://www.linkedin.com/in/michael-uloth-848a1b98/",
-      "http://twitter.com/ooloth",
-      "http://instagram.com/ooloth"
+      "https://github.com/ooloth",
+      "https://gitlab.com/ooloth",
+      "https://stackoverflow.com/users/8802485/ooloth"
     ]
   }`
 

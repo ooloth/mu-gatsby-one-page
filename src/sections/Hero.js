@@ -100,6 +100,10 @@ const Greeting = () => (
     >
       I'm Michael Uloth, an opera singer and web developer based in Toronto.
     </h1>
+
+    {/* <UrtLogoAndText className="w-40 bg-purple pa3" />
+
+    <UrtLogo className="bg-purple w-20 pa3" /> */}
   </Fragment>
 )
 
@@ -245,6 +249,8 @@ const ReadMoreOrSeeWork = ({ handleClick }) => (
 import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
 import { ReactComponent as Ribbon } from '../svg/opl-award-ribbon-right.svg'
+// import { ReactComponent as UrtLogo } from '../svg/logo-icon-only.svg'
+// import { ReactComponent as UrtLogoAndText } from '../svg/logo-avenir-full.svg'
 
 import Emoji from '../components/Emoji'
 import HyperLink from '../components/HyperLink'
