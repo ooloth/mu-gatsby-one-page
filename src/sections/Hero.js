@@ -83,11 +83,8 @@ const OplAwardRibbon = () => (
  */
 
 const Greeting = () => (
-  <Fragment>
-    <h2
-      className="mb0 lh-solid f-5 sm:f-7 md:f-10 fw9 ttu"
-      style={{ marginLeft: `-.051em` }}
-    >
+  <>
+    <h2 className="page-heading">
       Hello
       <span aria-hidden="true" className="green">
         .
@@ -95,101 +92,19 @@ const Greeting = () => (
     </h2>
 
     <h1
-      className="mt4 sm:mt3 measure-narrow lh-copy f4 sm:f3 fw4"
-      style={{ maxWidth: `34ch` }}
+      className="mt4 measure-narrow lh-copy f4 sm:f3 fw4"
+      style={{ maxWidth: `40ch` }}
     >
-      I'm Michael Uloth, an opera singer and web developer based in Toronto.
-    </h1>
-
-    {/* <UrtLogoAndText className="w-40 bg-purple pa3" />
-
-    <UrtLogo className="bg-purple w-20 pa3" /> */}
-  </Fragment>
-)
-
-/* 
- *
- * Opera Bio
- * 
- */
-
-const OperaBio = () => (
-  <Fragment>
-    <p className="mt4 lh-tall measure">
-      As an opera singer, I've been lucky enough to perform with wonderful companies
-      and orchestras across Canada, the United States and Europe, including the
-      Canadian Opera Company, Seattle Opera, the Glimmerglass Festival, and Opéra de
-      Lyon. You can hear examples of my singing on
-      {` `}
+      I'm Michael Uloth, an opera singer, web&nbsp;developer and creator of{' '}
       <HyperLink
-        href="https://soundcloud.com/michael-uloth/tracks"
+        href="https://www.upandrunningtutorials.com"
         className="link-inline"
       >
-        SoundCloud
-      </HyperLink>
-      ,{` `}
-      <HyperLink
-        href="https://youtu.be/pAketmvRsUU?t=1h21m08s"
-        className="link-inline"
-      >
-        YouTube
-      </HyperLink>
-      {` `}
-      and
-      {` `}
-      <HyperLink href="https://vimeo.com/24283716" className="link-inline">
-        Vimeo
-      </HyperLink>
-      {` `}
-      and read about my journey
-      {` `}
-      <HyperLink
-        href="https://www.schmopera.com/spotlight-on-michael-uloth/"
-        className="link-inline"
-      >
-        here
-      </HyperLink>
-      ,{` `}
-      <HyperLink
-        href="http://www.seattleoperablog.com/2012/03/meet-our-singers-michael-uloth-don.html"
-        className="link-inline"
-      >
-        here
-      </HyperLink>
-      {` `}
-      and
-      {` `}
-      <HyperLink
-        href="https://www.kitchenerpost.ca/whatson-story/5905471-the-voice/"
-        className="link-inline"
-      >
-        here
+        Up&nbsp;and&nbsp;Running Tutorials
       </HyperLink>
       .
-    </p>
-  </Fragment>
-)
-
-/* 
- *
- * Web Dev Bio
- * 
- */
-
-const WebDevBio = () => (
-  <Fragment>
-    <p className="mt4 lh-tall measure">
-      Since building my first "I'm an opera singer" website, I've built dozens more
-      sites for singers, freelancers and businesses looking to expand their online
-      presence. I focus on building sexy, modern sites that load quickly. In addition
-      to my own projects, I'm also the lead developer at
-      {` `}
-      <HyperLink href="http://coffeeshopcreative.ca/" className="link-inline">
-        Coffeeshop Creative
-      </HyperLink>
-      , a Toronto digital design agency.
-    </p>
-  </Fragment>
+    </h1>
+  </>
 )
 
 /* 
@@ -205,7 +120,7 @@ const Invitation = ({ expanded, handleClick }) => (
     <Emoji
       emoji="👇"
       ariaLabel="Emoji of a finger pointing downwards"
-      className="dib mt4 f3"
+      className="dib mt4 pt1 sm:pt2 f3"
       style={{ transform: `translateY(.12em)` }}
     />
   </div>
@@ -217,7 +132,9 @@ const Invitation = ({ expanded, handleClick }) => (
  * 
  */
 
-const SeeWork = () => <p className="mt4 lh-copy f4">See my recent work below.</p>
+const SeeWork = () => (
+  <p className="mt4 pt1 sm:pt2 lh-copy f4">See my recent work below.</p>
+)
 
 /* 
  *
@@ -226,17 +143,103 @@ const SeeWork = () => <p className="mt4 lh-copy f4">See my recent work below.</p
  */
 
 const ReadMoreOrSeeWork = ({ handleClick }) => (
-  <p className="dib mt4 lh-copy f4">
+  <p className="dib mt4 pt1 sm:pt2 lh-copy f4">
     <button
       onClick={handleClick}
       className="link-inline f4"
-      style={{ lineHeight: 1.1 }}
+      style={{ lineHeight: 1.3 }}
     >
       Read more
     </button>
     {` `}
     or see my recent work below.
     {` `}
+  </p>
+)
+
+/* 
+ *
+ * Opera Bio
+ * 
+ */
+
+const OperaBio = () => (
+  <p className="mt4 lh-tall measure">
+    As an opera singer, I've been lucky enough to perform with wonderful companies
+    and orchestras across Canada, the United States and Europe, including the
+    Canadian Opera Company, Seattle Opera, the Glimmerglass Festival, and Opéra de
+    Lyon. You can hear examples of my singing on
+    {` `}
+    <HyperLink
+      href="https://soundcloud.com/michael-uloth/tracks"
+      className="link-inline"
+    >
+      SoundCloud
+    </HyperLink>
+    ,{` `}
+    <HyperLink
+      href="https://youtu.be/pAketmvRsUU?t=1h21m08s"
+      className="link-inline"
+    >
+      YouTube
+    </HyperLink>
+    {` `}
+    and
+    {` `}
+    <HyperLink href="https://vimeo.com/24283716" className="link-inline">
+      Vimeo
+    </HyperLink>
+    {` `}
+    and read about my journey
+    {` `}
+    <HyperLink
+      href="https://www.schmopera.com/spotlight-on-michael-uloth/"
+      className="link-inline"
+    >
+      here
+    </HyperLink>
+    ,{` `}
+    <HyperLink
+      href="http://www.seattleoperablog.com/2012/03/meet-our-singers-michael-uloth-don.html"
+      className="link-inline"
+    >
+      here
+    </HyperLink>
+    {` `}
+    and
+    {` `}
+    <HyperLink
+      href="https://www.kitchenerpost.ca/whatson-story/5905471-the-voice/"
+      className="link-inline"
+    >
+      here
+    </HyperLink>
+    .
+  </p>
+)
+
+/* 
+ *
+ * Web Dev Bio
+ * 
+ */
+
+const WebDevBio = () => (
+  <p className="mt4 lh-tall measure">
+    Since teaching myself to code, I've created dozens of websites for artists and
+    businesses looking to improve their online presence. I focus on building clean,
+    modern sites that load quickly. In addition to these projects, I'm also the lead
+    front end developer at
+    {` `}
+    <HyperLink href="http://coffeeshopcreative.ca" className="link-inline">
+      Coffeeshop Creative
+    </HyperLink>
+    {` `} and the creator of
+    {` `}
+    <HyperLink href="https://www.upandrunningtutorials.com" className="link-inline">
+      Up & Running Tutorials
+    </HyperLink>
+    .
   </p>
 )
 
@@ -249,8 +252,6 @@ const ReadMoreOrSeeWork = ({ handleClick }) => (
 import React, { Component, Fragment } from 'react'
 import loadjs from 'loadjs'
 import { ReactComponent as Ribbon } from '../svg/opl-award-ribbon-right.svg'
-// import { ReactComponent as UrtLogo } from '../svg/logo-icon-only.svg'
-// import { ReactComponent as UrtLogoAndText } from '../svg/logo-avenir-full.svg'
 
 import Emoji from '../components/Emoji'
 import HyperLink from '../components/HyperLink'

@@ -45,7 +45,7 @@ const Invitation = () => (
  ***************/
 
 const ContactLinks = () => (
-  <div className="sm:flex">
+  <div className="sm:flex sm:items-center">
     <HyperLink
       href="mailto:hello@michaeluloth.com"
       className="link dib mr3 mb4 sm:mb0"
@@ -64,7 +64,7 @@ const ContactLinks = () => (
  */
 
 const SocialLinks = () => (
-  <nav aria-label="Social media links">
+  <nav aria-label="Social media links" className="">
     <ul>
       {links.map(link => {
         return (

@@ -47,6 +47,24 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
  *
  */
 
+.page-heading {
+  @apply ..lh-solid .f-5 .fw9 .ttu;
+  margin-left: -.051em;
+
+  /*
+  @media (--sm) { @apply .f-7 }
+  @media (--md) { @apply .f-10 }
+  */
+
+  font-size: 5.1rem;
+
+  @media (min-width: 375px) { font-size: 5.5rem } /* iPhone 6/7/8/X/XS */
+  @media (min-width: 414px) { font-size: 6rem } /* iPhone 6/7/8 Plus */
+  @media (--sm) { font-size: 8rem }
+  @media (--md) { font-size: 9rem }
+  @media (--lg) { font-size: 10rem }
+}
+
 .heading    { @apply .f2 .black }
 .subheading { @apply .f5 .ttu .tracked }
 
@@ -80,6 +98,8 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
 
 .link {
   @apply .dib .bg-black .pv2 .ph3 .lh-copy .ttu .tracked .white .animate;
+  font-size: 1.1rem;
+
   &:hover { @apply .bg-green .black }
 }
 
@@ -108,12 +128,33 @@ See: https://tailwindcss.com/docs/extracting-components#extracting-utility-patte
   &:hover { @apply .b--black .bg-black .white }
 }
 
+/*
 .link-inline { 
-  @apply .dib .animate; /* WARNING: .dib enables line-height, but prevents line-break */
+  @apply .dib .animate; 
 
   border-bottom: 1px solid var(--green);
   box-shadow: inset 0 -2px 0px 0px var(--green);
   line-height: 1.2;
 
   &:hover { box-shadow: inset 0 -10px 0px 0px var(--green) }
+}
+*/
+
+/*
+.link-inline { 
+  @apply .animate;
+
+  border-bottom: 1px solid var(--pink);
+  box-shadow: inset 0 -2px 0px 0px var(--pink);
+
+  &:hover { box-shadow: inset 0 -12px 0px 0px var(--pink) }
+}
+
+*/
+
+.link-inline { 
+  @apply .animate;
+  box-shadow: inset 0 -.2em 0 0 var(--green);
+
+  &:hover { box-shadow: inset 0 -2em 0 0 var(--green) }
 }
