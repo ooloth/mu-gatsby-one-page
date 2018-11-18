@@ -59,7 +59,7 @@
     "stylelint-no-unsupported-browser-features": "^3.0.0"
   },
   "scripts": {
-    "dev": "gatsby develop --https",
+    "dev": "gatsby develop",
     "build": "gatsby build"
   }
 }
