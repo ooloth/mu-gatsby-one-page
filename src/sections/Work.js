@@ -346,7 +346,7 @@ class ProjectDetails extends Component {
           {project.details && <Details details={project.details} />}
 
           <HyperLink href={project.link} className="link mv4 tc">
-            View site →
+            Visit site →
           </HyperLink>
         </div>
       </div>

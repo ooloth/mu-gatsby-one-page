@@ -57,10 +57,10 @@ const ContactLinks = () => (
   </div>
 )
 
-/* 
+/*
  *
  * Social Links
- * 
+ *
  */
 
 const SocialLinks = () => (
@@ -85,16 +85,16 @@ const SocialLinks = () => (
 
 const links = [
   {
+    name: `Twitter`,
+    icon: <FaTwitter className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
+    url: `https://twitter.com/ooloth`
+  },
+  {
     name: `Facebook`,
     icon: (
       <FaFacebook className="" style={{ width: `1.608rem`, height: `1.5rem` }} />
     ),
     url: `https://www.facebook.com/michaeluloth`
-  },
-  {
-    name: `Twitter`,
-    icon: <FaTwitter className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
-    url: `https://twitter.com/ooloth`
   },
   {
     name: `LinkedIn`,
@@ -110,10 +110,10 @@ const links = [
   }
 ]
 
-/* 
+/*
  *
  * Imports & Exports
- * 
+ *
  */
 
 import React, { Fragment } from 'react'

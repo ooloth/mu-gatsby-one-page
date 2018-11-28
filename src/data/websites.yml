@@ -49,6 +49,56 @@
     value: HTML, CSS, jQuery
 
 ####################
+# ILEANA MONTALBETTI
+####################
+
+- title:
+    text: Ileana Montalbetti
+
+  category: Website
+
+  tags:
+  - Website
+  - Design
+  - Code
+  
+  image: ../images/websites/ileana-montalbetti.jpg
+  alt: Canadian soprano Ileana Montalbetti. Photo by Bo Huang.
+
+  link: https://www.ileanamontalbetti.com/
+
+  description: Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of her work.
+
+  details:
+  - name: Tools
+    value: Pug, Sass, JavaScript, GitLab, Netlify
+
+#############
+# ADAM LUTHER
+#############
+
+- title:
+    text: Adam Luther
+
+  category: Website
+
+  tags:
+  - Website
+  - Design
+  - Code
+
+  image: ../images/websites/adam-luther.jpg
+  alt: Canadian tenor Adam Luther. Photo by Pierre Gautreau.
+
+  link: https://www.adamluthertenor.com/
+
+  description: Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.
+
+  details:
+  - name: Tools
+    value: Pug, Sass, JavaScript, GitLab, Netlify
+
+####################
 # J. PATRICK RAFTERY
 ####################
 
@@ -78,31 +128,6 @@
   - name: Tools
     value: React, Gatbsy, PostCSS, GitLab, Netlify
 
-#############
-# ADAM LUTHER
-#############
-
-- title:
-    text: Adam Luther
-
-  category: Website
-
-  tags:
-  - Website
-  - Design
-  - Code
-
-  image: ../images/websites/adam-luther.jpg
-  alt: Canadian tenor Adam Luther. Photo by Pierre Gautreau.
-
-  link: https://www.adamluthertenor.com/
-
-  description: Adam was ready for an updated website. We created a stark, modern look that reflects the drama of this opera singer's live performances.
-
-  details:
-  - name: Tools
-    value: Pug, Sass, JavaScript, GitLab, Netlify
-
 ##############
 # LAURA ALBINO
 ##############
@@ -124,31 +149,6 @@
 
   description: Laura is an opera singer who wanted a new website for her European audition tour. Together, we created a fresh, vibrant design to highlight her portfolio.
   
-  details:
-  - name: Tools
-    value: Pug, Sass, JavaScript, GitLab, Netlify
-
-####################
-# ILEANA MONTALBETTI
-####################
-
-- title:
-    text: Ileana Montalbetti
-
-  category: Website
-
-  tags:
-  - Website
-  - Design
-  - Code
-  
-  image: ../images/websites/ileana-montalbetti.jpg
-  alt: Canadian soprano Ileana Montalbetti. Photo by Bo Huang.
-
-  link: https://www.ileanamontalbetti.com/
-
-  description: Ileana is a fabulous opera singer who was ready for a new website. We worked together to create an elegant design that reflects the beauty of her work.
-
   details:
   - name: Tools
     value: Pug, Sass, JavaScript, GitLab, Netlify
@@ -180,6 +180,59 @@
     link: https://www.facebook.com/umezawaria/photos/a.352185358613567.1073741828.341103669721736/375590169606419/
   
   description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create a fast-loading, eye-catching portfolio for Canadian director Aria Umezawa.
+  
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
+
+###############
+# PETER BARRETT
+###############
+
+- title:
+    text: Peter Barrett
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/peter-barrett.jpg
+  alt: Canadian baritone Peter Barrett. Photo by Bo Huang.
+
+  link: https://www.peterbarrett.ca
+
+  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a clean, fast-loading portfolio site for Canadian baritone Peter Barrett.
+  
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
+
+#####################
+# KINGS VALLEY PAVING
+#####################
+
+- title:
+    text: Kings Valley Paving
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/kings-valley-paving.jpg
+  alt: A stock image of a parking lot being paved.
+
+  link: https://kingsvalleypaving.com
+
+  reviews:
+  - quotation: Excited to launch our redesigned website! Big thanks to <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener" class="link-inline">@coffeescreative</a> for the great new design.
+    source: Kings Valley Paving, Twitter
+    link: https://twitter.com/KingsPaving/status/1050733579863543808
+
+  description: I teamed with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create a fast-loading marketing site for Greater Toronto Area paving company, Kings Valley Paving.
   
   details:
   - name: Tools
@@ -243,56 +296,8 @@
   - name: Tools
     value: React, Gatbsy, PostCSS, GitLab, Netlify
 
-###############
-# Artist Center
-###############
-
-- title:
-    text: Artist Center
-
-  category: Website
-
-  tags:
-  - Website
-  - Code
-
-  image: ../images/websites/artist-center.png
-  alt: Artist Center graphic, designed by Stephen Bell.
-
-  link: https://artistcenter.netlify.com
-
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to create an attractive landing page for the launch of Artist.Center, an app that helps connect operatic artists to opera companies.
-  
-  details:
-  - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
-
-#########
-# DG VOLO
-#########
-
-- title:
-    text: DG Volo & Company
-
-  category: Website
-
-  tags:
-  - Website
-  - Code
-
-  image: ../images/websites/david-woloviec.jpg
-  alt: David Woloviec, founder of DG Volo & Company.
-
-  link: http://dgvolo.com
-
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.
-
-  details:
-  - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
-
 ##############
-# Shawna Lucey
+# SHAWNA LUCEY
 ##############
 
 - title:
@@ -320,12 +325,12 @@
   - name: Tools
     value: React, Gatbsy, PostCSS, GitLab, Netlify
 
-##############
-# RACHEL KREHM
-##############
+#########
+# DG VOLO
+#########
 
 - title:
-    text: Rachel Krehm
+    text: DG Volo & Company
 
   category: Website
 
@@ -333,20 +338,64 @@
   - Website
   - Code
 
-  image: ../images/websites/rachel-krehm-1.jpg
-  alt: Canadian soprano, director, writer and producer Rachel Krehm.
+  image: ../images/websites/david-woloviec.jpg
+  alt: David Woloviec, founder of DG Volo & Company.
 
-  link: https://www.rachelkrehm.com/
+  link: https://www.dgvolo.com
 
-  reviews:
-  - quotation: So excited to show the world my new website! Thank you to <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener" class="link-inline">@coffeescreative</a> for the beautiful job!
-    source: Rachel Krehm, Twitter
-    link: https://twitter.com/RachelKrehm/status/931216429294280706
-  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create an energetic portfolio site for Rachel Krehm, an opera, theatre and comedy performer and the co-founder and General Director of Opera&nbsp;5.
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a crisp, multi-page business site for DG Volo & Company, a Toronto-based investment consultancy.
+
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
+
+##################
+# HOME CARE QUOTES
+##################
+
+- title:
+    text: Home Care Quotes
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/home-care-quotes.jpg
+  alt: A stock image of a nurse visiting a patient at home.
+
+  link: https://www.homecarequotes.ca
+
+  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create an interactive directory of home care providers and medical supply stores that allows Southern Ontario residents to compare service rates for providers located near their home.
+
+  details:
+  - name: Tools
+    value: Pug, Sass, JavaScript, GitLab, Netlify
+
+###############
+# ARTIST CENTER
+###############
+
+- title:
+    text: Artist Center
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/artist-center.png
+  alt: Artist Center graphic, designed by Stephen Bell.
+
+  link: https://artistcenter.netlify.com
+
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener nofollow" class="link-inline">Coffeeshop Creative</a> to create an attractive landing page for the launch of Artist.Center, an app that helps connect operatic artists to opera companies.
   
   details:
   - name: Tools
-    value: React, Gatbsy, Styled Components, GitLab, Netlify
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
 
 ###################
 # RICCARDO IANNELLO
@@ -372,33 +421,57 @@
   - name: Tools
     value: Pug, Sass, jQuery
 
-############
-# JOHN GREER
-############
+##################
+# GATSBY TUTORIALS
+##################
 
 - title:
-    text: John Greer
+    text: Gatsby Tutorials
 
   category: Website
 
   tags:
   - Website
+  - Design
   - Code
-  
-  image: ../images/websites/john-greer-caricature.jpg
-  alt: Caricature of Canadian composer John Greer by Michael Willhoite.
 
-  link: https://johngreermusic.com
+  image: ../images/websites/gatsby-tutorials.png
+  alt: The Gatsby Tutorials website.
+
+  link: https://www.gatsbytutorials.com/
 
   reviews:
-  - quotation: It's been launched AT LAST! My new personal website! Warmest thanks to Stephen Bell and the talented crew at <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> for making this longtime dream come true! Check it out!
-    source: John Greer, Facebook
-    link: https://www.facebook.com/john.l.greer.1/posts/10155831888508169
+  - quotation: Where were you three months ago?!
+    source: '@MishaSholte, Twitter'
+    link: https://twitter.com/MishaScholte/status/1062621103657488384
 
-  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a comprehensive multi-page portfolio site for Canadian composer John&nbsp;Greer.
+  description: As a side project, I build a searchable/filterable directory of GatsbyJS tutorials for web developers. It's a community-updated list of learning resources that aims to help coders build more performant websites.
 
   details:
   - name: Tools
-    value: Pug, Sass, jQuery
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
 
+########################
+# UP & RUNNING TUTORIALS
+########################
 
+- title:
+    text: Up & Running Tutorials
+
+  category: Website
+
+  tags:
+  - Website
+  - Design
+  - Code
+
+  image: ../images/websites/up-and-running-tutorials.png
+  alt: The Up & Running Tutorials website.
+
+  link: https://www.upandrunningtutorials.com/
+
+  description: When not building websites for clients, I create and share free coding tutorials for web developers at Up & Running Tutorials.
+
+  details:
+  - name: Tools
+    value: React, Gatbsy, PostCSS, GitLab, Netlify
