@@ -10,30 +10,31 @@
   tags:
   - Canadian Opera Company
 
-  image: '../images/opera/hadrian.jpg'
-  alt: Marble bust of Hadrian, emperor of Rome from 117 to 138 AD.
+  image: '../images/opera/hadrian-2.jpg'
+  alt: Ambur Braid, Roger Honeywell, Thomas Hampson, Isaiah Bell and Karita Mattila in the Canadian Opera Company's production of Hadrian. Photo by Michael Cooper.
 
   link: https://www.coc.ca/productions/16480
 
+  reviews:
+  - quotation: ...beguiling, inventive and unabashedly romantic.
+    source: Anthony Tommasini, New&nbsp;York&nbsp;Times
+    link: https://www.nytimes.com/2018/10/14/arts/music/hadrian-opera-review-rufus-wainwright.html
+
   features:
   - emoji: 📺
-    text: See a <a href="https://twitter.com/canadianopera/status/1042878654710259712?s=12" target="_blank" rel="noopener" class="link-inline">Hadrian rehearsal</a> in action.
+    text: Watch a quick <a href="https://www.youtube.com/watch?v=oHqdEKmonTw" target="_blank" rel="noopener" class="link-inline">preview</a>.
   - emoji: 📺
-    text: Watch the <a href="https://www.youtube.com/watch?v=beZUnHkqU9k" target="_blank" rel="noopener" class="link-inline">Entr'acte that begins Act II</a>.
-  - emoji: 🎧
-    text: Hear a <a href="https://youtu.be/hHqV15oRulE?t=18159" target="_blank" rel="noopener" class="link-inline">discussion and performance</a> of selected excerpts.
-  - emoji: 📖
-    text: Read Rufus Wainwright's take on <a href="https://www.coc.ca/COC-news1?Page=1&EntryID=18380" target="_blank" rel="noopener" class="link-inline">his place in the opera world</a>.
-  - emoji: 📖
-    text: Follow tenor Isaiah Bell's <a href="https://www.coc.ca/COC-news1?Page=1&EntryID=18380" target="_blank" rel="noopener" class="link-inline">daily journal</a> during the rehearsal process.
-  - emoji: 📖
-    text: Read why Hadrian may be a <a href="https://www.thewholenote.com/index.php/newsroom/musical-life/rear-view-mirror/28466-daring-to-walk-the-walk-the-coc-s-hadrian" target="_blank" rel="noopener" class="link-inline">guaranteed success for the COC</a>.
-  - emoji: 📖
-    text: Learn how Daniel MacIvor approached <a href="https://www.thewholenote.com/index.php/newsroom/beatcolumns-sp-2121861476/choral-opera2/28464-wainwright-s-playwright-daniel-macivor-on-hadrian" target="_blank" rel="noopener" class="link-inline">writing the libretto</a>.
-  - emoji: 📖
-    text: Read about Rufus' <a href="https://www.theguardian.com/theobserver/2018/jun/23/rufus-wainwright-opera-transfigured-second-classical-release-change-direction?platform=hootsuite" target="_blank" rel="noopener" class="link-inline">transition from pop to opera</a>.
-  - emoji: 📖
-    text: Discover the <a href="https://www.citybeat.com/music/music-feature/article/20999010/rufus-wainwright-workshops-his-latest-opera-in-cincinnati-ahead-of-its-october-premiere" target="_blank" rel="noopener" class="link-inline">longtime influence of opera</a> on Rufus' music.
+    text: See an excerpt from the <a href="https://twitter.com/CanadianOpera/status/1051466860711927809" target="_blank" rel="noopener" class="link-inline">Act III love scene</a>.
+  - emoji: 📺
+    text: Watch the end of soprano Ambur Braid's <a href="https://twitter.com/CanadianOpera/status/1052574441740361728" target="_blank" rel="noopener" class="link-inline">Act II aria</a>.
+  - emoji: 📺
+    text: See part of soprano Karita Mattila's <a href="https://twitter.com/CanadianOpera/status/1054770899944136704" target="_blank" rel="noopener" class="link-inline">Act I aria</a>.
+  - emoji: 📺
+    text: Check out a <a href="https://twitter.com/canadianopera/status/1042878654710259712?s=12" target="_blank" rel="noopener" class="link-inline">Hadrian rehearsal</a> in action.
+  - emoji: 📺
+    text: Hear the <a href="https://www.youtube.com/watch?v=beZUnHkqU9k" target="_blank" rel="noopener" class="link-inline">music that begins Act II</a>.
+  - emoji: 📺
+    text: Watch the creative team <a href="https://www.youtube.com/watch?v=Lsh1fJzzuDo" target="_blank" rel="noopener" class="link-inline">discuss the production</a>.
 
   details:
   - name: Company
@@ -41,7 +42,7 @@
   - name: Opera
     value: Hadrian (world premiere)
   - name: Role
-    value: Third Senator (cover)
+    value: Superior Senator (cover)
   - name: Composer
     value: Rufus Wainwright
   - name: Librettist

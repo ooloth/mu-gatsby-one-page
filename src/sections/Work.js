@@ -78,10 +78,10 @@ class Work extends React.Component {
   }
 }
 
-/* 
+/*
  *
  * Load More Projects
- * 
+ *
  */
 
 const SeeMoreProjects = ({ operaIsChecked, websitesIsChecked, handleLoadMore }) => {
@@ -101,7 +101,7 @@ const SeeMoreProjects = ({ operaIsChecked, websitesIsChecked, handleLoadMore }) 
 /*
  *
  * Filters
- * 
+ *
  */
 
 const Filters = ({ operaIsChecked, websitesIsChecked, handleChange }) => (
@@ -168,10 +168,10 @@ const Filter = ({ category, handleChange, operaIsChecked, websitesIsChecked }) =
   )
 }
 
-/* 
+/*
  *
  * Projects
- * 
+ *
  */
 
 const Projects = ({ projects }) => (
@@ -182,10 +182,10 @@ const Projects = ({ projects }) => (
   </ul>
 )
 
-/* 
+/*
  *
  * Project
- * 
+ *
  */
 
 // DOCS: https://github.com/muicss/loadjs#documentation
@@ -279,10 +279,10 @@ class Project extends React.Component {
   }
 }
 
-/* 
+/*
  *
  * Project Header
- * 
+ *
  */
 
 const ProjectHeader = ({ title, tags, expanded }) => (
@@ -354,10 +354,10 @@ class ProjectDetails extends Component {
   }
 }
 
-/* 
+/*
  *
  * Featured Image
- * 
+ *
  */
 
 const FeaturedImage = ({ image, alt }) => (
@@ -367,13 +367,12 @@ const FeaturedImage = ({ image, alt }) => (
   </figure>
 )
 
-/* 
+/*
  *
  * Reviews
- * 
+ *
  */
 
-// TODO: refactor using <Quote />?
 const Reviews = ({ reviews }) =>
   reviews.map((review, i) => {
     return (
@@ -390,7 +389,7 @@ const Reviews = ({ reviews }) =>
                 href={review.link}
                 className="link-inline di sm:dib cursor-pointer"
               >
-                {review.source}
+                <span dangerouslySetInnerHTML={{ __html: review.source }} />
               </HyperLink>
             </cite>
           ) : (
@@ -433,20 +432,20 @@ const Feature = ({ feature }) => {
   )
 }
 
-/* 
+/*
  *
  * Description
- * 
+ *
  */
 
 const Description = ({ description }) => (
   <p dangerouslySetInnerHTML={{ __html: description }} className="mt4 measure" />
 )
 
-/* 
+/*
  *
  * Details
- * 
+ *
  */
 
 const Details = ({ details }) => (
@@ -467,10 +466,10 @@ const Details = ({ details }) => (
   </dl>
 )
 
-/* 
+/*
  *
  * Imports & Exports
- * 
+ *
  */
 
 import React, { Component, Fragment } from 'react'
