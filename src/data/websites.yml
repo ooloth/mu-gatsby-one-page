@@ -126,7 +126,7 @@
 
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ##############
 # LAURA ALBINO
@@ -183,7 +183,60 @@
   
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
+
+###############
+# AZOOR SOCIETY
+###############
+
+- title:
+    text: AZOOR Society
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/azoor-society.png
+  alt: The AZOOR Society's logo, depicting an eye. Created by Stephen Bell.
+
+  link: https://www.theazoorsociety.org
+
+  description: I collaborated with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build a colourful, user-friendly website for The AZOOR Society, a UK-based charity committed to promoting awareness of Acute Zonal Occult Outer Retinopathy.
+  
+  details:
+  - name: Tools
+    value: React, Gatsby, React Spring, PostCSS, GitLab, Netlify
+
+################
+# ASHLEY THOURET
+################
+
+- title:
+    text: Ashley Thouret
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+
+  image: ../images/websites/ashley-thouret.jpg
+  alt: Canadian soprano Ashley Thouret. Photo by Dario Acosta.
+
+  link: https://www.ashleythouret.com
+
+  reviews:
+  - quotation: THANK YOU <a href="https://twitter.com/coffeescreative" target="_blank" rel="noopener" class="link-inline">@coffeescreative</a> for the beautiful website redesign!!!
+    source: Ashley Thouret, Twitter
+    link: https://twitter.com/AshleyThouret/status/1073219939278995456
+
+  description: I collaborated with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to build an elegant portfolio site for Canadian soprano Ashley Thouret.
+  
+  details:
+  - name: Tools
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ###############
 # PETER BARRETT
@@ -207,7 +260,7 @@
   
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 #####################
 # KINGS VALLEY PAVING
@@ -236,7 +289,7 @@
   
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ###################
 # POMEGRANATE OPERA
@@ -265,7 +318,7 @@
   
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ###############
 # DANIEL CABENA
@@ -294,7 +347,7 @@
   
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ##############
 # SHAWNA LUCEY
@@ -323,7 +376,7 @@
 
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 #########
 # DG VOLO
@@ -347,7 +400,7 @@
 
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ##################
 # HOME CARE QUOTES
@@ -395,7 +448,7 @@
   
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ###################
 # RICCARDO IANNELLO
@@ -449,7 +502,7 @@
 
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
 
 ########################
 # UP & RUNNING TUTORIALS
@@ -474,4 +527,4 @@
 
   details:
   - name: Tools
-    value: React, Gatbsy, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, GitLab, Netlify
