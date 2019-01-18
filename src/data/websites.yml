@@ -153,6 +153,61 @@
   - name: Tools
     value: Pug, Sass, JavaScript, GitLab, Netlify
 
+########################
+# UP & RUNNING TUTORIALS
+########################
+
+- title:
+    text: Up & Running Tutorials
+
+  category: Website
+
+  tags:
+  - Website
+  - Design
+  - Code
+
+  image: ../images/websites/up-and-running-tutorials.png
+  alt: The Up & Running Tutorials home page.
+
+  link: https://www.upandrunningtutorials.com/
+
+  description: I create free coding tutorials for web developers at <a href="https://www.upandrunningtutorials.com/" target="_blank" rel="noopener" class="link-inline">Up & Running Tutorials</a>. If you want to learn how to code, come check it out!
+
+  details:
+  - name: Tools
+    value: React, Gatsby, PostCSS, GitLab, Netlify
+
+##################
+# GATSBY TUTORIALS
+##################
+
+- title:
+    text: Gatsby Tutorials
+
+  category: Website
+
+  tags:
+  - Website
+  - Design
+  - Code
+
+  image: ../images/websites/gatsby-tutorials.png
+  alt: The Gatsby Tutorials website.
+
+  link: https://www.gatsbytutorials.com/
+
+  reviews:
+  - quotation: Where were you three months ago?!
+    source: '@MishaSholte, Twitter'
+    link: https://twitter.com/MishaScholte/status/1062621103657488384
+
+  description: As a side project, I build a searchable/filterable directory of GatsbyJS tutorials for web developers. It's a community-updated list of learning resources to help coders build faster websites with less effort.
+
+  details:
+  - name: Tools
+    value: React, Gatsby, PostCSS, GitLab, Netlify
+
 ##############
 # ARIA UMEZAWA
 ##############
@@ -473,58 +528,3 @@
   details:
   - name: Tools
     value: Pug, Sass, jQuery
-
-##################
-# GATSBY TUTORIALS
-##################
-
-- title:
-    text: Gatsby Tutorials
-
-  category: Website
-
-  tags:
-  - Website
-  - Design
-  - Code
-
-  image: ../images/websites/gatsby-tutorials.png
-  alt: The Gatsby Tutorials website.
-
-  link: https://www.gatsbytutorials.com/
-
-  reviews:
-  - quotation: Where were you three months ago?!
-    source: '@MishaSholte, Twitter'
-    link: https://twitter.com/MishaScholte/status/1062621103657488384
-
-  description: As a side project, I build a searchable/filterable directory of GatsbyJS tutorials for web developers. It's a community-updated list of learning resources that aims to help coders build more performant websites.
-
-  details:
-  - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
-
-########################
-# UP & RUNNING TUTORIALS
-########################
-
-- title:
-    text: Up & Running Tutorials
-
-  category: Website
-
-  tags:
-  - Website
-  - Design
-  - Code
-
-  image: ../images/websites/up-and-running-tutorials.png
-  alt: The Up & Running Tutorials website.
-
-  link: https://www.upandrunningtutorials.com/
-
-  description: When not building websites for clients, I create and share free coding tutorials for web developers at Up & Running Tutorials.
-
-  details:
-  - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
