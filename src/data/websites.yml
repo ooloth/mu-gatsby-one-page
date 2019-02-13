@@ -21,7 +21,7 @@
 
   details:
   - name: Tools
-    value: Pug, Sass, JavaScript, Gulp, GitLab, Netlify
+    value: Pug, Sass, JavaScript, Gulp, Git, Netlify
 
 ###############
 # EGO FILM ARTS
@@ -71,7 +71,7 @@
 
   details:
   - name: Tools
-    value: Pug, Sass, JavaScript, GitLab, Netlify
+    value: Pug, Sass, JavaScript, Git, Netlify
 
 #############
 # ADAM LUTHER
@@ -96,7 +96,7 @@
 
   details:
   - name: Tools
-    value: Pug, Sass, JavaScript, GitLab, Netlify
+    value: Pug, Sass, JavaScript, Git, Netlify
 
 ####################
 # J. PATRICK RAFTERY
@@ -126,7 +126,7 @@
 
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ##############
 # LAURA ALBINO
@@ -151,7 +151,7 @@
   
   details:
   - name: Tools
-    value: Pug, Sass, JavaScript, GitLab, Netlify
+    value: Pug, Sass, JavaScript, Git, Netlify
 
 ########################
 # UP & RUNNING TUTORIALS
@@ -176,7 +176,7 @@
 
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ##################
 # GATSBY TUTORIALS
@@ -209,7 +209,31 @@
 
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
+
+############
+# Steve Haid
+############
+
+- title:
+    text: Steve Haid
+
+  category: Website
+
+  tags:
+  - Website
+  - Code
+  
+  image: ../images/websites/steve-haid.jpg
+  alt: Toronto-based real estate agent Steve Haid.
+
+  link: https://www.stevehaid.com/
+  
+  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create an engaging marketing site for Toronto-based real estate agent Steve Haid.
+  
+  details:
+  - name: Tools
+    value: React, Gatsby, Styled Components, Git, Netlify
 
 ##############
 # ARIA UMEZAWA
@@ -237,11 +261,11 @@
     source: Aria Umezawa, Facebook
     link: https://www.facebook.com/umezawaria/photos/a.352185358613567.1073741828.341103669721736/375590169606419/
   
-  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create a fast-loading, eye-catching portfolio for Canadian director Aria Umezawa.
+  description: I partnered with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create an eye-catching and fast-loading portfolio for Canadian director Aria Umezawa.
   
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ###############
 # AZOOR SOCIETY
@@ -265,7 +289,7 @@
   
   details:
   - name: Tools
-    value: React, Gatsby, React Spring, PostCSS, GitLab, Netlify
+    value: React, Gatsby, React Spring, PostCSS, Git, Netlify
 
 ################
 # ASHLEY THOURET
@@ -294,7 +318,7 @@
   
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ###############
 # PETER BARRETT
@@ -318,7 +342,7 @@
   
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 #####################
 # KINGS VALLEY PAVING
@@ -347,7 +371,7 @@
   
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ###################
 # POMEGRANATE OPERA
@@ -376,7 +400,7 @@
   
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ###############
 # DANIEL CABENA
@@ -405,7 +429,7 @@
   
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ##############
 # SHAWNA LUCEY
@@ -434,7 +458,7 @@
 
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 #########
 # DG VOLO
@@ -458,7 +482,7 @@
 
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ##################
 # HOME CARE QUOTES
@@ -482,7 +506,7 @@
 
   details:
   - name: Tools
-    value: Pug, Sass, JavaScript, GitLab, Netlify
+    value: Pug, Sass, JavaScript, Git, Netlify
 
 ###############
 # ARTIST CENTER
@@ -506,7 +530,7 @@
   
   details:
   - name: Tools
-    value: React, Gatsby, PostCSS, GitLab, Netlify
+    value: React, Gatsby, PostCSS, Git, Netlify
 
 ###################
 # RICCARDO IANNELLO
