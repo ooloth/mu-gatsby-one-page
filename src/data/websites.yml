@@ -198,12 +198,15 @@
   link: https://www.gatsbytutorials.com/
 
   reviews:
-  - quotation: Wow, how have I never seen this?
-    source: '@micahbrich, Twitter'
-    link: https://twitter.com/micahbrich/status/1086393968189952002
+  - quotation: This is genius!
+    source: '@ajmalafif, Twitter'
+    link: https://twitter.com/ajmalafif/status/1062610482748522497
   - quotation: Where were you three months ago?!
     source: '@MishaSholte, Twitter'
     link: https://twitter.com/MishaScholte/status/1062621103657488384
+  - quotation: Wow, how have I never seen this?
+    source: '@micahbrich, Twitter'
+    link: https://twitter.com/micahbrich/status/1086393968189952002
 
   description: As a side project, I build a searchable/filterable directory of GatsbyJS tutorials for web developers. It's a community-updated list of learning resources to help coders build faster websites with less effort.
 
