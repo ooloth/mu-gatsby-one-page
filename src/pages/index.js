@@ -31,10 +31,10 @@ const IndexPage = ({ data }) => {
   )
 }
 
-/* 
+/*
  *
  * Queries
- * 
+ *
  */
 
 export const query = graphql`
@@ -74,6 +74,7 @@ export const query = graphql`
         }
       }
     }
+
     allWebsitesYaml {
       edges {
         node {
@@ -107,10 +108,10 @@ export const query = graphql`
   }
 `
 
-/* 
+/*
  *
  * Imports & Exports
- * 
+ *
  */
 
 import React from 'react'
