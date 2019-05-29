@@ -76,10 +76,10 @@ const OplAwardRibbon = () => (
   </HyperLink>
 )
 
-/* 
+/*
  *
  * Greeting
- * 
+ *
  */
 
 const Greeting = () => (
@@ -107,10 +107,10 @@ const Greeting = () => (
   </>
 )
 
-/* 
+/*
  *
  * Invitation
- * 
+ *
  */
 
 const Invitation = ({ expanded, handleClick }) => (
@@ -126,20 +126,20 @@ const Invitation = ({ expanded, handleClick }) => (
   </div>
 )
 
-/* 
+/*
  *
  * See Work
- * 
+ *
  */
 
 const SeeWork = () => (
   <p className="mt4 pt1 sm:pt2 lh-copy f4">See my recent work below.</p>
 )
 
-/* 
+/*
  *
  * Read More or See Work
- * 
+ *
  */
 
 const ReadMoreOrSeeWork = ({ handleClick }) => (
@@ -157,10 +157,10 @@ const ReadMoreOrSeeWork = ({ handleClick }) => (
   </p>
 )
 
-/* 
+/*
  *
  * Opera Bio
- * 
+ *
  */
 
 const OperaBio = () => (
@@ -218,35 +218,46 @@ const OperaBio = () => (
   </p>
 )
 
-/* 
+/*
  *
  * Web Dev Bio
- * 
+ *
  */
 
 const WebDevBio = () => (
   <p className="mt4 lh-tall measure">
-    Since teaching myself to code, I've created dozens of websites for artists and
-    businesses looking to improve their online presence. I focus on building clean,
-    modern sites that load quickly. In addition to these projects, I'm also the lead
-    front end developer at
+    Since teaching myself to code, I've spent four years building 35+ client sites
+    and guiding them to production. I specialize in building fast-loading sites
+    with{` `}
+    <HyperLink href="https://reactjs.org" className="link-inline">
+      React
+    </HyperLink>{' '}
+    and{` `}
+    <HyperLink href="https://www.gatsbyjs.org" className="link-inline">
+      Gatsby
+    </HyperLink>
+    , but always enjoy learning new technologies as well. In addition to designing
+    and building my own projects, I'm the lead front-end developer at
     {` `}
     <HyperLink href="http://coffeeshopcreative.ca" className="link-inline">
       Coffeeshop Creative
     </HyperLink>
     {` `} and the creator of
     {` `}
-    <HyperLink href="https://www.upandrunningtutorials.com" className="link-inline">
-      Up & Running Tutorials
+    <HyperLink
+      href="https://www.upandrunningtutorials.com"
+      className="link-inline"
+    >
+      Up&nbsp;&&nbsp;Running Tutorials
     </HyperLink>
     .
   </p>
 )
 
-/* 
+/*
  *
  * Imports & Exports
- * 
+ *
  */
 
 import React, { Component, Fragment } from 'react'
