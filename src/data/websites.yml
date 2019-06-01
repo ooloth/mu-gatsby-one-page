@@ -100,6 +100,31 @@
   - name: Tools
     value: React, Gatsby, PostCSS, GSAP, Git, Netlify
 
+###############
+# LESLEY BARBER
+###############
+
+- title:
+    text: Lesley Barber
+
+  category: Website
+
+  tags:
+  - Website
+  - Design
+  - Code
+
+  image: ../images/websites/lesley-barber-wide.jpg
+  alt: Canadian film composer Lesley Barber.
+
+  link: https://www.lesleybarber.com
+
+  description: I worked with Canadian film composer Lesley Barber to craft a clean, minimal portfolio to showcase music from her films.
+
+  details:
+  - name: Tools
+    value: React, Gatsby, Styled Components, XState, Git, Netlify
+
 #############
 # ALAINA VIAU
 #############
