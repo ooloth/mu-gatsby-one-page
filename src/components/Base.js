@@ -27,7 +27,7 @@ const Base = ({ children }) => (
 /*
  *
  * Global styles & preloaded font files (above-the-fold webfonts not handled by subfont)
- * 
+ *
  */
 
 import '../styles/index.css'
@@ -38,7 +38,7 @@ import avenirHeavy from '../fonts/AvenirNextLTPro-Heavy.woff2'
 /*
  *
  * Metadata
- * 
+ *
  */
 
 // See: https://github.com/nfl/react-helmet + https://megatags.co + https://gethead.info
@@ -77,8 +77,9 @@ const SiteMetadata = ({ site }) => (
       crossOrigin="anonymous"
     />
 
-    {/* Preconnect to CloudFlare CDN (for GSAP) and Google Analytics */}
+    {/* Preconnect to third-party origins */}
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://www.jsdelivr.com" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
     {/* <link rel="preconnect" href="https://www.googletagmanager.com" /> */}
@@ -113,14 +114,16 @@ const SiteMetadata = ({ site }) => (
     {site.facebookAppId && (
       <meta property="fb:app_id" content={site.facebookAppId} />
     )}
-    {site.twitterHandle && <meta name="twitter:site" content={site.twitterHandle} />}
+    {site.twitterHandle && (
+      <meta name="twitter:site" content={site.twitterHandle} />
+    )}
   </Helmet>
 )
 
 /*
  *
  * Structured Data
- * 
+ *
  */
 
 const StructuredData = ({ site }) => {
@@ -154,7 +157,7 @@ const StructuredData = ({ site }) => {
 /*
  *
  * Imports & Exports
- * 
+ *
  */
 
 import React from 'react'
