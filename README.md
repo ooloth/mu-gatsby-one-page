@@ -5,7 +5,7 @@ This is the source code for my personal website.
 ## Project Structure
 
 - The site is built in [React](https://reactjs.org) using [Gatsby](https://www.gatsbyjs.org). (If you're new to Gatsby, check it out! It's a game-changer.)
-- The `CSS` architecture uses a [utility-first](https://tailwindcss.com/docs/utility-first/) (aka. atomic, functional) approach powered by [Tailwind CSS](https://tailwindcss.com) and [PostCSS](https://postcss.org)
+- The `CSS` architecture uses a [utility-first](https://tailwindcss.com/docs/utility-first/) (a.k.a. atomic, functional) approach powered by [Tailwind CSS](https://tailwindcss.com) and [PostCSS](https://postcss.org)
 - The content is stored in `YAML` files in `src/data` (for easy updating)
 - The site uses [GraphQL](https://graphql.org) to pull content from the `YAML` files into the relevant React components
 
