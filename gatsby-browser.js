@@ -51,29 +51,6 @@ export const onInitialClientRender = () => {
       `what-input`
     )
   }
-
-  // Google Analytics (using ga-lite to allow caching)
-  // See: https://github.com/jehna/ga-lite
-  // Don't waste any time on this on localhost
-  if (window.location.hostname !== 'localhost') {
-    if (!loadjs.isDefined(`ga-lite`)) {
-      loadjs(
-        `https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js`,
-        `ga-lite`,
-        () => {
-          require('dotenv').config()
-          // See: https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#automatic_cookie_domain_configuration
-          galite('create', process.env.GOOGLE_ANALYTICS_API_KEY, 'auto') // auto prevents tracking on localhost
-          galite('send', 'pageview')
-
-          // See: https://github.com/jehna/ga-lite#onunload-tracking
-          window.addEventListener('unload', () => {
-            galite('send', 'timing', 'JS Dependencies', 'unload')
-          })
-        }
-      )
-    }
-  }
 }
 
 /*
