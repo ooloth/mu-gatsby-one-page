@@ -101,7 +101,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-        head: true, // Puts tracking script in the head instead of the body
+        head: true, // https://csswizardry.com/2018/11/css-and-network-performance/
         anonymize: true,
         respectDNT: true
       }
