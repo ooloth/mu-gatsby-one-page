@@ -7,7 +7,7 @@
 /*
  *
  * Urgent polyfills (before first render)
- * 
+ *
  */
 
 export const onClientEntry = () => {
@@ -29,7 +29,7 @@ export const onClientEntry = () => {
 /*
  *
  * Non-urgent scripts (after first render)
- * 
+ *
  */
 
 export const onInitialClientRender = () => {
@@ -61,8 +61,9 @@ export const onInitialClientRender = () => {
         `https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js`,
         `ga-lite`,
         () => {
+          require('dotenv').config()
           // See: https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#automatic_cookie_domain_configuration
-          galite('create', 'UA-9710963-3', 'auto') // auto prevents tracking on localhost
+          galite('create', process.env.GOOGLE_ANALYTICS_API_KEY, 'auto') // auto prevents tracking on localhost
           galite('send', 'pageview')
 
           // See: https://github.com/jehna/ga-lite#onunload-tracking
@@ -78,7 +79,7 @@ export const onInitialClientRender = () => {
 /*
  *
  * Imports
- * 
+ *
  */
 
 import loadjs from 'loadjs'
