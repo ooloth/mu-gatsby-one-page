@@ -1,28 +1,21 @@
-const IndexPage = ({ data }) => {
-  // Merge opera and website projects (alternate website, opera, website, etc.)
-  const array1 = data.allOperaYaml.edges
-  const array2 = data.allWebsitesYaml.edges
-  let combinedArray = []
+const IndexPage = () => {
+  const operas = useOperaData()
+  const websites = useWebsitesData()
 
-  // Merge arrays in an alternating pattern
-  for (let i = 0; i < 10000; i++) {
-    if (array1[i] && array2[i]) combinedArray.push(array1[i], array2[i])
-    else if (array1[i]) combinedArray.push(array1[i])
-    else if (array2[i]) combinedArray.push(array2[i])
+  // Merge operas and websites in an alternating pattern
+  let projects = []
+  for (let i = 0; i < operas.length + websites.length; i++) {
+    if (operas[i] && websites[i]) projects.push(operas[i], websites[i])
+    else if (operas[i]) projects.push(operas[i])
+    else if (websites[i]) projects.push(websites[i])
     else break
   }
-
-  // Add a unique key to each project (to prevent unnecessary rerendering)
-  const projectsWithKeys = [...combinedArray].map(project => {
-    project.key = shortid.generate()
-    return project
-  })
 
   return (
     <Base>
       <main>
         <Hero />
-        <Work projects={projectsWithKeys} />
+        <Work projects={projects} />
         <Contact />
       </main>
 
@@ -31,97 +24,16 @@ const IndexPage = ({ data }) => {
   )
 }
 
-/*
- *
- * Queries
- *
- */
-
-export const query = graphql`
-  query {
-    allOperaYaml {
-      edges {
-        node {
-          title {
-            text
-            lang
-          }
-          category
-          tags
-          image {
-            childImageSharp {
-              fluid(maxWidth: 940) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          alt
-          link
-          reviews {
-            quotation
-            source
-            link
-          }
-          features {
-            emoji
-            text
-          }
-          details {
-            name
-            value
-            lang
-          }
-        }
-      }
-    }
-
-    allWebsitesYaml {
-      edges {
-        node {
-          title {
-            text
-          }
-          category
-          tags
-          image {
-            childImageSharp {
-              fluid(maxWidth: 940) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          alt
-          link
-          reviews {
-            quotation
-            source
-            link
-          }
-          description
-          details {
-            name
-            value
-          }
-        }
-      }
-    }
-  }
-`
-
-/*
- *
- * Imports & Exports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
-import { graphql } from 'gatsby'
-import shortid from 'shortid'
 
 import Base from '../components/Base'
 import Hero from '../sections/Hero'
 import Work from '../sections/Work'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
+import useOperaData from '../queries/useOperaData'
+import useWebsitesData from '../queries/useWebsitesData'
 
 export default IndexPage
