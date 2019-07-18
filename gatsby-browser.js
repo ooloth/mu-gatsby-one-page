@@ -1,37 +1,3 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-/*
- *
- * Urgent polyfills (before first render)
- *
- */
-
-export const onClientEntry = () => {
-  // IntersectionObserver polyfill for gatsby-image (Safari, IE)
-  if (typeof window.IntersectionObserver === `undefined`) {
-    require(`intersection-observer`)
-  }
-
-  // Object-fit/Object-position polyfill for gatsby-image (IE)
-  const testImg = document.createElement(`img`)
-  if (
-    typeof testImg.style.objectFit === `undefined` ||
-    typeof testImg.style.objectPosition === `undefined`
-  ) {
-    require(`object-fit-images`)()
-  }
-}
-
-/*
- *
- * Non-urgent scripts (after first render)
- *
- */
-
 export const onInitialClientRender = () => {
   // GSAP for site-wide animations
   if (!loadjs.isDefined(`gsap`)) {
@@ -53,10 +19,6 @@ export const onInitialClientRender = () => {
   }
 }
 
-/*
- *
- * Imports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
 
 import loadjs from 'loadjs'
