@@ -54,10 +54,7 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "stylelint": "^9.2.0",
-    "stylelint-config-recommended": "^2.2.0",
-    "stylelint-no-unsupported-browser-features": "^3.0.2"
+    "eslint-plugin-react-hooks": "^1.6.1"
   },
   "scripts": {
     "dev": "gatsby develop",
