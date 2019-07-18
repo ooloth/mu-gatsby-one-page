@@ -5,9 +5,9 @@
   "version": "1.0.0",
   "author": "Michael Uloth <hello@michaeluloth.com>",
   "browserslist": [
-    ">0.25%",
-    "not ie < 11",
-    "not op_mini all"
+    "defaults",
+    "not ie 11",
+    "not ie_mob 11"
   ],
   "dependencies": {
     "@babel/plugin-transform-react-constant-elements": "^7.5.0",
