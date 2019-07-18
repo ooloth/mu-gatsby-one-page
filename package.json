@@ -1,7 +1,7 @@
 {
   "name": "michael-uloth",
-  "description": "Official website of Canadian opera singer and web developer Michael Uloth.",
-  "repository": "github:ooloth/michael-uloth.git",
+  "description": "Official website of Canadian web developer and opera singer Michael Uloth.",
+  "repository": "github:ooloth/michaeluloth.com.git",
   "version": "1.0.0",
   "author": "Michael Uloth <hello@michaeluloth.com>",
   "browserslist": [
@@ -10,7 +10,6 @@
     "not ie_mob 11"
   ],
   "dependencies": {
-    "@babel/plugin-transform-react-constant-elements": "^7.5.0",
     "@svgr/webpack": "^4.3.2",
     "autoprefixer": "^9.6.1",
     "dotenv": "^8.0.0",
@@ -37,9 +36,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-transition-group": "^2.3.1",
-    "react-waypoint": "^8.0.1",
-    "shortid": "^2.2.14",
     "tailwindcss": "^0.6.5",
     "what-input": "^5.2.3"
   },
