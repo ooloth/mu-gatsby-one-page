@@ -125,12 +125,11 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`, // must come last
       options: {
         headers: {
-          '/*.html': [`Cache-Control: public, max-age=0, must-revalidate`],
-          '/*.js': [`Cache-Control: public, max-age=0, must-revalidate`],
-          '/sw.js': [`Cache-Control: no-cache`],
+          '/*.html': [`Cache-Control: public,max-age=0,must-revalidate`],
+          '/*.js': [`Cache-Control: public,max-age=0,must-revalidate`],
+          '/sw.js': [`Cache-Control: max-age=0,no-cache,no-store,must-revalidate`],
           '/icons/*': [`Cache-Control: public,max-age=31536000,immutable`],
-          '/static/*': [`Cache-Control: public,max-age=31536000,immutable`],
-          '/subfont/*': [`Cache-Control: public,max-age=31536000,immutable`]
+          '/static/*': [`Cache-Control: public,max-age=31536000,immutable`]
         }
       }
     }
