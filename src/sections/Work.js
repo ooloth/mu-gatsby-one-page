@@ -44,8 +44,8 @@ class Work extends React.Component {
     // Which projects are in the active category? (Keep separate to calculate allLoaded.)
     const projectsInActiveCategory = projects.filter(project => {
       if (operaIsChecked && websitesIsChecked) return project
-      else if (operaIsChecked) return project.node.category === `Opera`
-      else if (websitesIsChecked) return project.node.category === `Website`
+      else if (operaIsChecked) return project.category === `Opera`
+      else if (websitesIsChecked) return project.category === `Website`
     })
 
     // Which projects in the active category should be visible?
@@ -84,7 +84,11 @@ class Work extends React.Component {
  *
  */
 
-const SeeMoreProjects = ({ operaIsChecked, websitesIsChecked, handleLoadMore }) => {
+const SeeMoreProjects = ({
+  operaIsChecked,
+  websitesIsChecked,
+  handleLoadMore
+}) => {
   let buttonText = 'projects'
   if (!operaIsChecked) buttonText = 'websites'
   if (!websitesIsChecked) buttonText = 'operas'
@@ -177,7 +181,12 @@ const Filter = ({ category, handleChange, operaIsChecked, websitesIsChecked }) =
 const Projects = ({ projects }) => (
   <ul>
     {projects.map(project => {
-      return <Project key={project.key} project={project.node} />
+      return (
+        <Project
+          key={project.image.childImageSharp.fluid.src + project.link}
+          project={project}
+        />
+      )
     })}
   </ul>
 )
@@ -342,7 +351,9 @@ class ProjectDetails extends Component {
         <div onClick={this.handleClick}>
           {project.reviews && <Reviews reviews={project.reviews} />}
           {project.features && <Features features={project.features} />}
-          {project.description && <Description description={project.description} />}
+          {project.description && (
+            <Description description={project.description} />
+          )}
           {project.details && <Details details={project.details} />}
 
           <HyperLink href={project.link} className="link mv4 tc">
