@@ -361,7 +361,7 @@ function ProjectDetails({ project }) {
 function FeaturedImage({ image, alt }) {
   return (
     <figure>
-      <Img fluid={image} alt={alt} className="shadow-lg" />
+      <Image fluid={image} alt={alt} className="shadow-lg" />
       <figcaption className="o-50 pt1 f6">{alt}</figcaption>
     </figure>
   )
@@ -460,10 +460,10 @@ function Details({ details }) {
 ///////////////////////////////////////////////////////////////////////////////////
 
 import React, { Fragment, useState, useRef } from 'react'
+import Image from 'gatsby-image'
 import loadjs from 'loadjs'
 
 import Emoji from '../components/Emoji'
 import Link from '../components/Link'
-import Img from '../components/Img'
 
 export default Work
