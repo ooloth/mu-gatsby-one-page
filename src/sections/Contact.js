@@ -108,20 +108,6 @@ const links = [
     url: `https://github.com/ooloth`
   },
   {
-    name: `Facebook`,
-    icon: (
-      <FacebookSVG
-        style={{
-          width: `1.608rem`,
-          height: `1.5rem`,
-          verticalAlign: `middle`,
-          padding: `.035rem 0`
-        }}
-      />
-    ),
-    url: `https://www.facebook.com/michaeluloth`
-  },
-  {
     name: `Dev.to`,
     icon: (
       <DevSVG
@@ -145,7 +131,6 @@ import { ReactComponent as TwitterSVG } from '../svg/twitter-brands.svg'
 import { ReactComponent as GitHubSVG } from '../svg/github-brands.svg'
 import { ReactComponent as DevSVG } from '../svg/dev-brands.svg'
 import { ReactComponent as LinkedInSVG } from '../svg/linkedin-in-brands.svg'
-import { ReactComponent as FacebookSVG } from '../svg/facebook-f-brands.svg'
 
 import Emoji from '../components/Emoji'
 import Link from '../components/Link'
