@@ -47,7 +47,7 @@
     "what-input": "^5.2.3"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",
     "eslint-config-react-app": "^4.0.1",
     "eslint-plugin-flowtype": "^3.11.1",
