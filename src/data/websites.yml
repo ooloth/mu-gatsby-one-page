@@ -583,11 +583,11 @@
 
   link: https://www.homecarequotes.ca
 
-  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create an interactive directory of home care providers and medical supply stores that allows Southern Ontario residents to compare service rates for providers located near their home.
+  description: I worked with designer Stephen Bell of <a href="http://coffeeshopcreative.ca" target="_blank" rel="noopener" class="link-inline">Coffeeshop Creative</a> to create an interactive directory of home care providers and medical supply stores that allows Southern Ontario residents to enter their postal code and see rates for care providers located near their home.
 
   details:
   - name: Tools
-    value: Pug, Sass, JavaScript, Git, Netlify
+    value: Vue, jQuery, Pug, Sass, Geocoder.ca API
 
 ###############
 # ARTIST CENTER
