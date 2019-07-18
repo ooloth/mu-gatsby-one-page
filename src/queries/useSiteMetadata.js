@@ -4,12 +4,27 @@ function useSiteMetadata() {
       query {
         site {
           siteMetadata {
-            description
-            language
-            locale
             title
-            twitterHandle
+            jobTitle
+            description
             siteUrl
+            lang
+            locale
+            email
+            telephone
+            address {
+              street
+              locality
+              region
+              postalCode
+              country
+            }
+            socialLinks
+            structuredDataType
+            twitterSite
+            twitterCreator
+            facebookAppId
+            googleSiteVerification
           }
         }
       }

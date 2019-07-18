@@ -1,9 +1,7 @@
-/*
- *
- * Robots.txt variables
- *
- */
+// Use environment variables for Google Analytics + Search Console
+dotenv.config()
 
+// Robots.txt variables
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = `https://www.michaeluloth.com`,
@@ -13,24 +11,40 @@ const {
 const isNetlifyProduction = NETLIFY_ENV === `production`
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
-// Set up dotenv for Google Analytics tracking ID
-///////////////////////////////////////////////////////////////////////////////////
-require('dotenv').config()
-
-/*
- *
- * Config
- *
- */
-
+// Config
 module.exports = {
   siteMetadata: {
     title: `Michael Uloth`,
-    description: `I'm an opera singer and web developer based in Toronto. Check out my recent work and get in touch to collaborate on your next project.`,
-    siteUrl: `https://www.michaeluloth.com`,
-    language: `en`,
+    jobTitle: `Web Developer and Opera Singer`,
+    description: `Hi! 👋 I'm a web developer and opera singer currently based in Toronto. Check out my recent work and feel free to reach out if you'd like to collaborate.`,
+    siteUrl: `https://www.michaeluloth.com`, // no trailing slash
+    lang: `en`,
     locale: `en_CA`,
-    twitterHandle: `@ooloth`
+    email: `hello@michaeluloth.com`,
+    telephone: ``,
+    address: {
+      street: ``,
+      locality: `Toronto`,
+      region: `ON`,
+      postalCode: ``,
+      country: `CA`
+    },
+    socialLinks: [
+      `https://twitter.com/ooloth`,
+      `https://www.linkedin.com/in/michael-uloth-848a1b98`,
+      `https://github.com/ooloth`,
+      `https://stackoverflow.com/users/8802485/ooloth`,
+      `https://dev.to/ooloth`,
+      `https://www.freecodecamp.org/news/author/ooloth/`,
+      `https://medium.com/@michaeluloth`,
+      `https://www.facebook.com/michaeluloth`,
+      `https://www.instagram.com/ooloth/`
+    ],
+    structuredDataType: `Person`,
+    twitterSite: `@ooloth`,
+    twitterCreator: `@ooloth`,
+    facebookAppId: ``,
+    googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION_STRING // GSC
   },
   plugins: [
     {
@@ -122,3 +136,7 @@ module.exports = {
     }
   ]
 }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+import dotenv from 'dotenv'
