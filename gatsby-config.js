@@ -120,7 +120,7 @@ module.exports = {
         respectDNT: true
       }
     },
-    // `gatsby-plugin-netlify-cache`,
+    `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-plugin-netlify`, // must come last
       options: {
