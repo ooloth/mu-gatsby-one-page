@@ -1,5 +1,5 @@
 // Use environment variables for Google Analytics + Search Console
-dotenv.config()
+require(`dotenv`).config()
 
 // Robots.txt variables
 const {
@@ -136,7 +136,3 @@ module.exports = {
     }
   ]
 }
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import dotenv from 'dotenv'
