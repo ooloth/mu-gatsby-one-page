@@ -46,12 +46,9 @@ const Invitation = () => (
 
 const ContactLinks = () => (
   <div className="sm:flex sm:items-center">
-    <HyperLink
-      href="mailto:hello@michaeluloth.com"
-      className="link dib mr3 mb4 sm:mb0"
-    >
+    <Link href="mailto:hello@michaeluloth.com" className="link dib mr3 mb4 sm:mb0">
       Email me
-    </HyperLink>
+    </Link>
 
     <SocialLinks />
   </div>
@@ -69,13 +66,13 @@ const SocialLinks = () => (
       {links.map(link => {
         return (
           <li key={link.name} className="dib mr3 f3">
-            <HyperLink
+            <Link
               href={link.url}
               className="icon"
               srText={`Follow me on ${link.name}`}
             >
               {link.icon}
-            </HyperLink>
+            </Link>
           </li>
         )
       })}
@@ -86,7 +83,9 @@ const SocialLinks = () => (
 const links = [
   {
     name: `Twitter`,
-    icon: <FaTwitter className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
+    icon: (
+      <FaTwitter className="" style={{ width: `1.608rem`, height: `1.5rem` }} />
+    ),
     url: `https://twitter.com/ooloth`
   },
   {
@@ -105,7 +104,9 @@ const links = [
   },
   {
     name: `GitHub`,
-    icon: <FaGithub className="" style={{ width: `1.608rem`, height: `1.5rem` }} />,
+    icon: (
+      <FaGithub className="" style={{ width: `1.608rem`, height: `1.5rem` }} />
+    ),
     url: `https://github.com/ooloth`
   }
 ]
@@ -124,6 +125,6 @@ import FaLinkedin from 'react-icons/lib/fa/linkedin'
 import FaFacebook from 'react-icons/lib/fa/facebook'
 
 import Emoji from '../components/Emoji'
-import HyperLink from '../components/HyperLink'
+import Link from '../components/Link'
 
 export default Contact
