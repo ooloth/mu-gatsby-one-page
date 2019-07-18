@@ -8,6 +8,7 @@ This is the source code for my personal website.
 - The `CSS` architecture uses a [utility-first](https://tailwindcss.com/docs/utility-first/) (a.k.a. atomic, functional) approach powered by [Tailwind CSS](https://tailwindcss.com) and [PostCSS](https://postcss.org)
 - The content is stored in `YAML` files in `src/data` (for easy updating)
 - The site uses [GraphQL](https://graphql.org) to pull content from the `YAML` files into the relevant React components
+- The accordion animations (i.e. expanding/collapsing sections) are built with [Greensock (GSAP)](https://greensock.com)
 
 ## Deployment
 
