@@ -1,7 +1,7 @@
 {
-  "name": "michael-uloth",
+  "name": "michael-uloth-v5",
   "description": "Official website of Canadian web developer and opera singer Michael Uloth.",
-  "repository": "github:ooloth/michaeluloth.com.git",
+  "repository": "github:ooloth/michael-uloth-v5.git",
   "version": "1.0.0",
   "author": "Michael Uloth <hello@michaeluloth.com>",
   "browserslist": [
