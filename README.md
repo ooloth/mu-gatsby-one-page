@@ -2,8 +2,6 @@
 
 This is the source code for the 5th version my personal website.
 
-(Looking for the latest version? That repo is [here](https://github.com/ooloth/michaeluloth.com) and the live site is [here](https://www.michaeluloth.com).)
-
 ## Project Structure
 
 - The site is built in [React](https://reactjs.org) using [Gatsby](https://www.gatsbyjs.org). (If you're new to Gatsby, check it out! It's a game-changer.)
