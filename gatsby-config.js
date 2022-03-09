@@ -1,15 +1,15 @@
 // Use environment variables for Google Analytics + Search Console
-require(`dotenv`).config()
+require(`dotenv`).config();
 
 // Robots.txt variables
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = `https://www.michaeluloth.com`,
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env
-const isNetlifyProduction = NETLIFY_ENV === `production`
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === `production`;
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 // Config
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
       locality: `Toronto`,
       region: `ON`,
       postalCode: ``,
-      country: `CA`
+      country: `CA`,
     },
     socialLinks: [
       `https://twitter.com/ooloth`,
@@ -38,21 +38,21 @@ module.exports = {
       `https://www.freecodecamp.org/news/author/ooloth/`,
       `https://medium.com/@michaeluloth`,
       `https://www.facebook.com/michaeluloth`,
-      `https://www.instagram.com/ooloth/`
+      `https://www.instagram.com/ooloth/`,
     ],
     structuredDataType: `Person`,
     twitterSite: `@ooloth`,
     twitterCreator: `@ooloth`,
     facebookAppId: ``,
-    googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION_STRING // GSC
+    googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION_STRING, // GSC
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`
-      }
+        path: `${__dirname}/src/`,
+      },
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
@@ -63,13 +63,13 @@ module.exports = {
       resolve: `gatsby-plugin-svgr`,
       options: {
         // see https://github.com/smooth-code/svgr for a list of all options
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/lab`, `/lab/*`]
-      }
+        exclude: [`/lab`, `/lab/*`],
+      },
     },
     {
       resolve: `gatsby-plugin-robots-txt`,
@@ -78,20 +78,20 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: `*` }]
+            policy: [{ userAgent: `*` }],
           },
-          'branch-deploy': {
+          "branch-deploy": {
             policy: [{ userAgent: `*`, disallow: [`/`] }],
             sitemap: null,
-            host: null
+            host: null,
           },
-          'deploy-preview': {
+          "deploy-preview": {
             policy: [{ userAgent: `*`, disallow: [`/`] }],
             sitemap: null,
-            host: null
-          }
-        }
-      }
+            host: null,
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -107,8 +107,8 @@ module.exports = {
         // Multiple icons will be generated for various devices.
         // Multiple favicons will be generated and added to each HTML page.
         // This path is relative to the root of the site.
-        icon: `src/images/favicon.png`
-      }
+        icon: `src/images/favicon.png`,
+      },
     },
     `gatsby-plugin-offline`,
     {
@@ -117,21 +117,22 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         head: true, // https://csswizardry.com/2018/11/css-and-network-performance/
         anonymize: true,
-        respectDNT: true
-      }
+        respectDNT: true,
+      },
     },
-    `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-plugin-netlify`, // must come last
       options: {
         headers: {
-          '/*.html': [`Cache-Control: public,max-age=0,must-revalidate`],
-          '/*.js': [`Cache-Control: public,max-age=0,must-revalidate`],
-          '/sw.js': [`Cache-Control: max-age=0,no-cache,no-store,must-revalidate`],
-          '/icons/*': [`Cache-Control: public,max-age=31536000,immutable`],
-          '/static/*': [`Cache-Control: public,max-age=31536000,immutable`]
-        }
-      }
-    }
-  ]
-}
+          "/*.html": [`Cache-Control: public,max-age=0,must-revalidate`],
+          "/*.js": [`Cache-Control: public,max-age=0,must-revalidate`],
+          "/sw.js": [
+            `Cache-Control: max-age=0,no-cache,no-store,must-revalidate`,
+          ],
+          "/icons/*": [`Cache-Control: public,max-age=31536000,immutable`],
+          "/static/*": [`Cache-Control: public,max-age=31536000,immutable`],
+        },
+      },
+    },
+  ],
+};

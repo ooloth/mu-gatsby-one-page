@@ -2,7 +2,6 @@
   "name": "mu-gatsby-one-page",
   "description": "Official website of Canadian web developer and opera singer Michael Uloth.",
   "repository": "github:ooloth/mu-gatsby-one-page.git",
-  "version": "1.0.0",
   "author": "Michael Uloth <hello@michaeluloth.com>",
   "browserslist": [
     "defaults",
